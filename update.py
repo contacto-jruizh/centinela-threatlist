@@ -145,8 +145,30 @@ ff02::2 ip6-allrouters
     out_path.write_text(out, encoding="utf-8")
     print(f"[ok] {args.output}: {len(domains)} dominios")
 
-    # adlist.txt formato Pi-hole: un dominio por linea
-    adlist = "\n".join(domains) + "\n"
+    # adlist.txt formato Pi-hole (las lineas # son comentarios, Pi-hole las ignora)
+    adlist_head = f"""# Title: Centinela ThreatList - by Jesus Ruiz
+#
+# Feed curado de threat intelligence: phishing / OAuth-abuse / malware / tracking,
+# mas agregacion de fuentes reputadas (estilo StevenBlack/hosts).
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: {now}
+# Number of unique domains: {len(domains):,} ({len(own)} curaduria propia + {len(bulk):,} agregados)
+#
+# Fetch the latest version of this file: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+# BLOQUE 1 - CURADURIA CENTINELA (Jesus Ruiz)
+# Amenazas detectadas en campo: van primero para que se vean.
+# ===============================================================
+"""
+    adlist = (adlist_head
+              + ("\n".join(own) + "\n" if own else "")
+              + "\n# ===============================================================\n"
+              + "# BLOQUE 2 - FUENTES AGREGADAS (StevenBlack + AdAway + URLHaus + yoyo)\n"
+              + "# ===============================================================\n"
+              + "\n".join(bulk) + "\n")
     (ROOT / "adlist.txt").write_text(adlist, encoding="utf-8")
     print(f"[ok] adlist.txt: {len(domains)} dominios (Pi-hole Adlist)")
 

@@ -1,3 +1,25 @@
+# Title: Centinela ThreatList - by Jesus Ruiz
+#
+# Feed curado de threat intelligence: phishing / OAuth-abuse / malware / tracking,
+# mas agregacion de fuentes reputadas (estilo StevenBlack/hosts).
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: 29 September 2026 22:47:54 (UTC)
+# Number of unique domains: 74,845 (2 curaduria propia + 74,843 agregados)
+#
+# Fetch the latest version of this file: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+# BLOQUE 1 - CURADURIA CENTINELA (Jesus Ruiz)
+# Amenazas detectadas en campo: van primero para que se vean.
+# ===============================================================
+biograft.my.canva.site
+nidir.info
+
+# ===============================================================
+# BLOQUE 2 - FUENTES AGREGADAS (StevenBlack + AdAway + URLHaus + yoyo)
+# ===============================================================
 0.0.0.0.creative.hpyrdr.com
 0.0.0.0.hpyrdr.com
 0.ackzany.com
@@ -10864,7 +10886,6 @@ bink.uk.intellitxt.com
 binomo.com
 bio4you.pl
 bioforce.digital
-biograft.my.canva.site
 biomagin.com
 biomindz.de
 bionnomesh.site
@@ -32146,7 +32167,6 @@ nicemice.cf
 niche247.trade
 nickde.oewabox.at
 nicolosi.pl
-nidir.info
 nidocapitorio-digital.pages.dev
 nidocapitorioai.com
 nidozo-tuceku.info
