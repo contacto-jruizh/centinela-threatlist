@@ -88,3 +88,8 @@ yarn-error.log*
 # --- Cache local del generador (opcional: descomenta si no quieres versionar caches) ---
 # data/*/hosts
 # *.log
+data/tranco/
+# JSON crudo de PhishTank: contiene URLs-cebo de atacantes con patrones que
+# activan GitHub Push Protection (AWSAccessKeyId en URLs S3 pre-firmadas).
+# No aporta nada publicado: update.py lo re-fetcha en cada --auto.
+data/PhishTank/

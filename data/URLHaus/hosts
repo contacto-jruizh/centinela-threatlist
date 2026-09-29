@@ -1,6 +1,6 @@
 ################################################################
 # abuse.ch URLhaus Host file                                   #
-# Last updated: 2026-09-29 22:34:15 (UTC)                      #
+# Last updated: 2026-09-29 23:32:17 (UTC)                      #
 #                                                              #
 # Terms Of Use: https://urlhaus.abuse.ch/api/                  #
 # For questions please contact urlhaus [at] abuse.ch           #
@@ -16,6 +16,7 @@
 127.0.0.1	4flng-filedrive.sbs
 127.0.0.1	acc.jiangsujiaxue.com
 127.0.0.1	acms.saleseos.com
+127.0.0.1	acrilicoporto.pt
 127.0.0.1	adcentral.com.mx
 127.0.0.1	admin.byte.in.ua
 127.0.0.1	admin.gestroom.it
@@ -32,6 +33,7 @@
 127.0.0.1	audicontadores.com
 127.0.0.1	backupso.com
 127.0.0.1	balanced-red-emhnkdfj-dp7g2kvqxx8n.edgeone.dev
+127.0.0.1	beak.in
 127.0.0.1	beoauto.alexion.rs
 127.0.0.1	blankeyeo.com
 127.0.0.1	blaxllantas.com
@@ -47,13 +49,13 @@
 127.0.0.1	bserail.com
 127.0.0.1	build.polysupport.team
 127.0.0.1	cambodiatouristservice.com
+127.0.0.1	carcaran.com
 127.0.0.1	casasmediterraneas.com
 127.0.0.1	cat.dashabi.in
 127.0.0.1	cat.xiaojiji.nl
 127.0.0.1	cat.xiaoshabi.nl
 127.0.0.1	catbaparadisehotel.com.vn
 127.0.0.1	cdaonline.com.ar
-127.0.0.1	cdn.file6.goodid.com
 127.0.0.1	celebratingseniors.net
 127.0.0.1	chat-server.maverickpreviews.com
 127.0.0.1	checkfivem.com
@@ -70,6 +72,7 @@
 127.0.0.1	coolairesgroup.com
 127.0.0.1	coralasargetia.ro
 127.0.0.1	cpc188.day
+127.0.0.1	cpofficial.com
 127.0.0.1	crazypianoswebshop.nl
 127.0.0.1	crystalbranchtw.blog
 127.0.0.1	crystalpvp.ru
@@ -102,11 +105,11 @@
 127.0.0.1	download.kaobeitu.com
 127.0.0.1	download.pdf00.cn
 127.0.0.1	download.pdf00.com
-127.0.0.1	download.youlovemybiba.com
 127.0.0.1	dreamwatchevent.com
 127.0.0.1	electri.billregulator.com
 127.0.0.1	elisans.novayonetim.com
 127.0.0.1	elrneba.com
+127.0.0.1	embedone.com
 127.0.0.1	en.taichuan.com
 127.0.0.1	endpoint.project0.cc
 127.0.0.1	envs.sh
@@ -119,6 +122,7 @@
 127.0.0.1	farschid.de
 127.0.0.1	fd.v2downf.shop
 127.0.0.1	file.blackint3.com
+127.0.0.1	file.uhsea.com
 127.0.0.1	filerit.com
 127.0.0.1	first-security-verden.de
 127.0.0.1	floppaclient.com
@@ -171,8 +175,8 @@
 127.0.0.1	lindnerelektroanlagen.de
 127.0.0.1	local-update.com
 127.0.0.1	lomejordesalamanca.es
+127.0.0.1	loop-lumen.com
 127.0.0.1	luizmatoso.com.br
-127.0.0.1	lumacrea.com
 127.0.0.1	luminexclient.com
 127.0.0.1	luminexclient.net
 127.0.0.1	luminouspower.com.pk
@@ -182,12 +186,10 @@
 127.0.0.1	makemewin.club
 127.0.0.1	malupieng.com.br
 127.0.0.1	meteorclients.com
-127.0.0.1	metrics.gocloudmaps.com
 127.0.0.1	mibd.org
 127.0.0.1	miriamgualda.com.br
 127.0.0.1	mitreart.com
 127.0.0.1	mkconstructions.net
-127.0.0.1	mm-mvshahacademy.ac.ke
 127.0.0.1	mnurlogistics.az
 127.0.0.1	mogimall.com
 127.0.0.1	moniquejhingon.com
@@ -223,8 +225,10 @@
 127.0.0.1	polinexclient.org
 127.0.0.1	postelnini.mk
 127.0.0.1	practisingcertificateprotection.com
+127.0.0.1	preciosasjoyitas.com.mx
 127.0.0.1	prestigeclient.st
 127.0.0.1	profitable-pink-0y9btnew-dpk6vqe6eheo.edgeone.dev
+127.0.0.1	protherapycenter.com
 127.0.0.1	public.demo.securecloudsandbox.com
 127.0.0.1	pvsa.gxfugy.cn
 127.0.0.1	qiniuyunxz.yxflzs.com
@@ -240,6 +244,7 @@
 127.0.0.1	reservphotoinstaynow.shop
 127.0.0.1	reutilizemais.co.mz
 127.0.0.1	rheddh.com
+127.0.0.1	riderspin.com
 127.0.0.1	robertrowe.com
 127.0.0.1	romeopirlanta.com
 127.0.0.1	royalcuts.co.uk
@@ -260,7 +265,6 @@
 127.0.0.1	sec.xiaoshabi.nl
 127.0.0.1	seismophonic.com
 127.0.0.1	semencepourlavie.org
-127.0.0.1	seputartuban.com
 127.0.0.1	sg123.net
 127.0.0.1	shqdown.ggzuhao.com
 127.0.0.1	sigmaclient.net
@@ -377,4 +381,4 @@
 127.0.0.1	zamilgroups.com
 127.0.0.1	zhigao5191.com
 127.0.0.1	zycdjz.com
-# Number of entries: 371
+# Number of entries: 375

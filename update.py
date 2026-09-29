@@ -4,7 +4,8 @@ Uso:
   python3 update.py --auto        # fetch + genera hosts
   python3 update.py --noupdate    # solo usa archivos locales en data/
 """
-import argparse, re, urllib.request, pathlib, datetime
+import argparse, re, gzip, io, zipfile, urllib.request, pathlib, datetime
+from urllib.parse import urlparse
 
 ROOT = pathlib.Path(__file__).parent
 SOURCES = {
@@ -13,13 +14,68 @@ SOURCES = {
     "AdAway": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
     "URLHaus": "https://urlhaus.abuse.ch/downloads/hostfile/",
     "yoyo": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0",
+    # --- anti-phishing (URLhaus NO cubre phishing: solo malware) ---
+    "HaGeZi-TIF": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.txt",
+    "PhishingArmy": "https://phishing.army/download/phishing_army_blocklist_extended.txt",
+    "BlocklistProject-phishing": "https://blocklistproject.github.io/Lists/phishing.txt",
+    # --- phishing activo por URL (formato URL crudo) ---
+    "OpenPhish": "https://openphish.com/feed.txt",
+    "PhishTank": "https://data.phishtank.com/data/online-valid.json.gz",
 }
+
+# Fuentes sin curar manualmente: NO pueden bloquear nada del Tranco Top-1M
+# (evita FP tipo absa.co.za / uvm.edu / vkontakte.ru). Si un dominio popular
+# es malicioso de verdad, se anade explicitamente en blacklist.txt (gana siempre).
+GUARDED = {"HaGeZi-TIF", "PhishingArmy", "BlocklistProject-phishing",
+            "OpenPhish", "PhishTank"}
+TRANCAN_URL = "https://tranco-list.eu/top-1m.csv.zip"
+TRANCAN_CACHE = ROOT / "data/tranco/top-1m.csv.zip"
 DOMAIN_RE = re.compile(r"^\s*(?:0\.0\.0\.0|127\.0\.0\.1)\s+(\S+)", re.I)
+ABP_RE = re.compile(r"^\|\|([A-Za-z0-9_.-]+\.[A-Za-z]{2,})(\^.*)?$")
 
 def fetch(url, timeout=30):
     req = urllib.request.Request(url, headers={"User-Agent": "centinela-threatlist/1.0"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8", errors="ignore")
+        raw = r.read()
+    # PhishTank sirve .gz
+    if raw[:2] == b"\x1f\x8b":
+        raw = gzip.GzipFile(fileobj=io.BytesIO(raw)).read()
+    return raw.decode("utf-8", errors="ignore")
+
+def load_tranco(allow_fetch=True):
+    """Tranco Top-1M como set de dominios. Devuelve None si no hay guard
+    disponible (sin red y sin cache): el caller debe abortar para no publicar
+    fuentes sin curar sin proteccion anti-FP."""
+    raw = None
+    if allow_fetch:
+        try:
+            print("[fetch] Tranco Top-1M (guard anti-FP) ...")
+            req = urllib.request.Request(TRANCAN_URL,
+                                         headers={"User-Agent": "centinela-threatlist/1.0"})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                raw = r.read()
+            TRANCAN_CACHE.parent.mkdir(parents=True, exist_ok=True)
+            TRANCAN_CACHE.write_bytes(raw)
+        except Exception as e:
+            print(f"  !! fallo Tranco remoto: {e}")
+    if raw is None and TRANCAN_CACHE.exists():
+        raw = TRANCAN_CACHE.read_bytes()
+        print("[guard] Tranco: usando cache local")
+    if raw is None:
+        return None
+    try:
+        out = set()
+        with zipfile.ZipFile(io.BytesIO(raw)) as z:
+            with z.open(z.namelist()[0]) as fh:
+                for line in io.TextIOWrapper(fh, encoding="utf-8", errors="ignore"):
+                    _, _, dom = line.partition(",")
+                    dom = dom.strip().lower()
+                    if dom:
+                        out.add(dom)
+        return out
+    except Exception as e:
+        print(f"  !! cache Tranco ilegible: {e}")
+        return None
 
 def parse_domains(text):
     out = set()
@@ -36,9 +92,24 @@ def parse_domains(text):
                      "ip6-allnodes", "ip6-allrouters", "ip6-allhosts", "0.0.0.0"):
                 continue
             out.add(d)
+        # formato Adblock Plus (HaGeZi TIF): ||dominio^
+        elif ABP_RE.match(line):
+            out.add(ABP_RE.match(line).group(1).lower())
         # también acepta línea con solo dominio (tu lista custom)
         elif re.match(r"^[a-z0-9_.-]+\.[a-z]{2,}$", line, re.I):
             out.add(line.lower())
+        # formato URL crudo (OpenPhish)
+        elif re.match(r"^https?://", line, re.I):
+            h = urlparse(line).hostname
+            if h:
+                out.add(h.lower())
+        # formato JSON PhishTank (array en 1 línea, slashes escapados "https:\/\/")
+        elif line[0] in "{[" and '"url"' in line:
+            for m2 in re.finditer(r'"url"\s*:\s*"((?:https?:)?(?:\\?/){2}[^"]+)"', line):
+                u = m2.group(1).replace("\\/", "/")
+                h = urlparse(u).hostname
+                if h:
+                    out.add(h.lower())
     return out
 
 def load_list(path):
@@ -57,6 +128,29 @@ def main():
 
     all_domains = set()
 
+    # 0. guard anti-FP: Tranco Top-1M (solo protege a las fuentes sin curar)
+    guard = None
+    if GUARDED:
+        guard = load_tranco(allow_fetch=bool(args.auto and not args.noupdate))
+        if guard is None:
+            raise SystemExit(
+                "error: guard Tranco Top-1M no disponible (sin red y sin cache "
+                f"{TRANCAN_CACHE.relative_to(ROOT)}). Aborto: publicar las "
+                "fuentes sin curar sin guard puede meter FP (bancos, univ, "
+                "RRSS). Ejecuta con conexion una vez para poblar la cache.")
+        print(f"[guard] Tranco Top-1M: {len(guard):,} dominios populares protegidos")
+
+    def ingest(name, text):
+        doms = parse_domains(text)
+        if name in GUARDED and guard is not None:
+            before = len(doms)
+            doms -= guard
+            print(f"  -> {before:,} dominios; guard descarta "
+                  f"{before - len(doms):,} populares; {len(doms):,} retenidos")
+        else:
+            print(f"  -> {len(doms):,} dominios")
+        all_domains.update(doms)
+
     # 1. fuentes remotas
     if args.auto and not args.noupdate:
         for name, url in SOURCES.items():
@@ -66,16 +160,17 @@ def main():
                 text = fetch(url)
                 cache.parent.mkdir(parents=True, exist_ok=True)
                 cache.write_text(text, encoding="utf-8")
-                all_domains |= parse_domains(text)
-                print(f"  -> {len(parse_domains(text))} dominios")
+                ingest(name, text)
             except Exception as e:
                 print(f"  !! fallo {name}: {e}, uso cache local")
                 if cache.exists():
-                    all_domains |= parse_domains(cache.read_text(encoding="utf-8", errors="ignore"))
+                    ingest(name, cache.read_text(encoding="utf-8", errors="ignore"))
     else:
-        # usa lo que haya en data/*/hosts
+        # usa lo que haya en data/*/hosts (el nombre del dir identifica la fuente)
         for f in (ROOT / "data").rglob("hosts"):
-            all_domains |= parse_domains(f.read_text(encoding="utf-8", errors="ignore"))
+            if f.parent.name == "custom":
+                continue  # curaduria propia se anade despues, sin guard
+            ingest(f.parent.name, f.read_text(encoding="utf-8", errors="ignore"))
 
     # 2. lista custom local (curaduria propia: va en encabezado)
     custom_domains = load_list("data/custom/hosts")
@@ -124,7 +219,7 @@ ff02::2 ip6-allrouters
 
 # ===============================================================
 # BLOQUE 1 - CURADURIA CENTINELA (Jesus Ruiz)
-# Amenazas detectadas en campo: van primero para que se vean.
+# Amenazas detectadas en campo
 # ===============================================================
 """
     myhosts_path = ROOT / "myhosts"
@@ -160,7 +255,7 @@ ff02::2 ip6-allrouters
 #
 # ===============================================================
 # BLOQUE 1 - CURADURIA CENTINELA (Jesus Ruiz)
-# Amenazas detectadas en campo: van primero para que se vean.
+# Amenazas detectadas en campo
 # ===============================================================
 """
     adlist = (adlist_head
