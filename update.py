@@ -77,8 +77,9 @@ def main():
         for f in (ROOT / "data").rglob("hosts"):
             all_domains |= parse_domains(f.read_text(encoding="utf-8", errors="ignore"))
 
-    # 2. lista custom local
-    all_domains |= load_list("data/custom/hosts")
+    # 2. lista custom local (curaduria propia: va en encabezado)
+    custom_domains = load_list("data/custom/hosts")
+    all_domains |= custom_domains
     print(f"[total sin filtrar] {len(all_domains)}")
 
     # 3. whitelist (partial match como StevenBlack)
@@ -89,20 +90,27 @@ def main():
         return any(d == w or d.endswith("." + w) for w in whitelist)
     all_domains = {d for d in all_domains if not whitelisted(d)}
 
-    # 4. blacklist (siempre entran)
-    all_domains |= load_list("blacklist.txt")
+    # 4. blacklist (siempre entran, tambien curaduria propia)
+    custom_domains |= load_list("blacklist.txt")
+    all_domains |= custom_domains
 
     domains = sorted(all_domains)
+    own = sorted(custom_domains)
+    bulk = sorted(all_domains - custom_domains)
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%d %B %Y %H:%M:%S (UTC)")
 
-    header = f"""# Title: Centinela ThreatList - by Asesor Cyberseguridad
+    header = f"""# Title: Centinela ThreatList - by Jesus Ruiz
 #
-# Threat feed: phishing / OAuth-abuse / malware / tracking
-# Generada: {now}
-# Dominios unicos: {len(domains)}
+# Feed curado de threat intelligence: phishing / OAuth-abuse / malware / tracking,
+# mas agregacion de fuentes reputadas (estilo StevenBlack/hosts).
 #
-# Uso raw Pi-hole: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
-# Uso raw hosts: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/hosts
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: {now}
+# Number of unique domains: {len(domains):,} ({len(own)} curaduria propia + {len(bulk):,} agregados)
+#
+# Fetch the latest version of this file: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/hosts
+# Pi-hole Adlist version: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
 # Inspirado en: https://github.com/StevenBlack/hosts
 #
 # ===============================================================
@@ -114,13 +122,23 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 0.0.0.0 0.0.0.0
 
-# Custom host records - mi myhosts
+# ===============================================================
+# BLOQUE 1 - CURADURIA CENTINELA (Jesus Ruiz)
+# Amenazas detectadas en campo: van primero para que se vean.
+# ===============================================================
 """
     myhosts_path = ROOT / "myhosts"
     myhosts = myhosts_path.read_text(encoding="utf-8").strip() if myhosts_path.exists() and myhosts_path.read_text().strip() else ""
-    body = "\n".join(f"{args.ip} {d}" for d in domains)
+    own_body = "\n".join(f"{args.ip} {d}" for d in own)
+    bulk_body = "\n".join(f"{args.ip} {d}" for d in bulk)
 
-    out = header + (myhosts + "\n\n" if myhosts else "") + "# Start centinela-threatlist\n\n" + body + "\n"
+    out = (header
+           + (myhosts + "\n\n" if myhosts else "")
+           + (own_body + "\n" if own_body else "")
+           + "\n# ===============================================================\n"
+           + "# BLOQUE 2 - FUENTES AGREGADAS (StevenBlack + AdAway + URLHaus + yoyo)\n"
+           + "# ===============================================================\n\n"
+           + bulk_body + "\n")
     out_path = (ROOT / args.output).resolve()
     if ROOT.resolve() not in out_path.parents and out_path != (ROOT.resolve() / args.output):
         raise SystemExit("error: --output debe quedar dentro del repo")

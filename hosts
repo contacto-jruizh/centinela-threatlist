@@ -1,11 +1,15 @@
-# Title: Centinela ThreatList - by Asesor Cyberseguridad
+# Title: Centinela ThreatList - by Jesus Ruiz
 #
-# Threat feed: phishing / OAuth-abuse / malware / tracking
-# Generada: 29 September 2026 22:40:30 (UTC)
-# Dominios unicos: 74845
+# Feed curado de threat intelligence: phishing / OAuth-abuse / malware / tracking,
+# mas agregacion de fuentes reputadas (estilo StevenBlack/hosts).
 #
-# Uso raw Pi-hole: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
-# Uso raw hosts: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/hosts
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: 29 September 2026 22:45:37 (UTC)
+# Number of unique domains: 74,845 (2 curaduria propia + 74,843 agregados)
+#
+# Fetch the latest version of this file: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/hosts
+# Pi-hole Adlist version: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
 # Inspirado en: https://github.com/StevenBlack/hosts
 #
 # ===============================================================
@@ -17,12 +21,20 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 0.0.0.0 0.0.0.0
 
-# Custom host records - mi myhosts
+# ===============================================================
+# BLOQUE 1 - CURADURIA CENTINELA (Jesus Ruiz)
+# Amenazas detectadas en campo: van primero para que se vean.
+# ===============================================================
 # myhosts - mapeos propios (PUBLICO: todo lo que pongas aquí se publica en GitHub)
 # NO pongas IPs internas ni hostnames de tu infra privada.
 # Formato: IP dominio  (ej: 0.0.0.0 ejemplo.local)
 
-# Start centinela-threatlist
+0.0.0.0 biograft.my.canva.site
+0.0.0.0 nidir.info
+
+# ===============================================================
+# BLOQUE 2 - FUENTES AGREGADAS (StevenBlack + AdAway + URLHaus + yoyo)
+# ===============================================================
 
 0.0.0.0 0.0.0.0.creative.hpyrdr.com
 0.0.0.0 0.0.0.0.hpyrdr.com
@@ -10890,7 +10902,6 @@ ff02::2 ip6-allrouters
 0.0.0.0 binomo.com
 0.0.0.0 bio4you.pl
 0.0.0.0 bioforce.digital
-0.0.0.0 biograft.my.canva.site
 0.0.0.0 biomagin.com
 0.0.0.0 biomindz.de
 0.0.0.0 bionnomesh.site
@@ -32172,7 +32183,6 @@ ff02::2 ip6-allrouters
 0.0.0.0 niche247.trade
 0.0.0.0 nickde.oewabox.at
 0.0.0.0 nicolosi.pl
-0.0.0.0 nidir.info
 0.0.0.0 nidocapitorio-digital.pages.dev
 0.0.0.0 nidocapitorioai.com
 0.0.0.0 nidozo-tuceku.info
