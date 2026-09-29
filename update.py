@@ -9,7 +9,7 @@ import argparse, re, urllib.request, pathlib, datetime
 ROOT = pathlib.Path(__file__).parent
 SOURCES = {
     # nombre: url  (puedes añadir/quitar a gusto)
-    "StevenBlack": "https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts",
+    "StevenBlack": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
     "AdAway": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
     "URLHaus": "https://urlhaus.abuse.ch/downloads/hostfile/",
     "yoyo": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0",
