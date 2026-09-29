@@ -1,0 +1,4 @@
+# Whitelist - dominios que NUNCA se bloquean (partial match)
+# Ejemplo:
+# canva.com
+# microsoftonline.com

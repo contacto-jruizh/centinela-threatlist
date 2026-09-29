@@ -1,0 +1,90 @@
+# ===== Centinela ThreatList - .gitignore =====
+# NO subir secretos, tokens ni basura local
+
+# --- Secretos / API keys / credenciales ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.asc
+*.gpg
+credentials*.json
+*credentials*.json
+secrets*.json
+*secret*.txt
+config.local.json
+*.token
+.github/workflows/secrets/
+
+# --- Archivos de agente / memoria local (NO versionar) ---
+AGENTS.md
+MEMORY.md
+.opencode/
+.claude/
+.opendev/
+.ai/
+memory/
+sessions/
+
+# --- macOS basura ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+
+# --- Windows basura ---
+Thumbs.db
+Thumbs.db:encryptionkey
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# --- Linux basura ---
+*~
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# --- Node (por si agregas tooling) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Editores / IDE ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.swn
+.project
+.classpath
+.settings/
+
+# --- Cache local del generador (opcional: descomenta si no quieres versionar caches) ---
+# data/*/hosts
+# *.log

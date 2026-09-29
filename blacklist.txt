@@ -1,0 +1,4 @@
+# Blacklist - siempre se incluyen aunque vengan de whitelist
+# Ataque dirigido 29-sep-2026: OAuth phishing + Canva stepping-stone
+0.0.0.0 nidir.info
+0.0.0.0 biograft.my.canva.site
