@@ -164,11 +164,11 @@ ff02::2 ip6-allrouters
 # ===============================================================
 """
     adlist = (adlist_head
-              + ("\n".join(own) + "\n" if own else "")
+              + ("\n".join(f"0.0.0.0 {d}" for d in own) + "\n" if own else "")
               + "\n# ===============================================================\n"
               + "# BLOQUE 2 - FUENTES AGREGADAS (StevenBlack + AdAway + URLHaus + yoyo)\n"
               + "# ===============================================================\n"
-              + "\n".join(bulk) + "\n")
+              + "\n".join(f"0.0.0.0 {d}" for d in bulk) + "\n")
     (ROOT / "adlist.txt").write_text(adlist, encoding="utf-8")
     print(f"[ok] adlist.txt: {len(domains)} dominios (Pi-hole Adlist)")
 
