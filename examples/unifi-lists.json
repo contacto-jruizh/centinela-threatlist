@@ -1,0 +1,68 @@
+{
+  "lists": [
+    {
+      "category": "phishing_database",
+      "display_name": "Phishing Database",
+      "name_template": "Phishing Database %d",
+      "group_type": "address-group",
+      "min_groups": 4,
+      "auto_expand_groups": false,
+      "url": "https://phish.co.za/latest/phishing-IPs-ACTIVE.txt"
+    },
+    {
+      "category": "feodo_tracker",
+      "display_name": "Feodo Tracker C2",
+      "name_template": "Feodo Tracker",
+      "group_type": "address-group",
+      "min_groups": 1,
+      "auto_expand_groups": false,
+      "url": "https://feodotracker.abuse.ch/downloads/ipblocklist.txt"
+    },
+    {
+      "category": "firehol_level1",
+      "display_name": "Firehol Level 1",
+      "name_template": "Firehol Level 1-%d",
+      "group_type": "address-group",
+      "min_groups": 2,
+      "auto_expand_groups": false,
+      "url": "https://iplists.firehol.org/files/firehol_level1.netset"
+    },
+    {
+      "category": "firehol_webclient",
+      "display_name": "Firehol Webclient",
+      "name_template": "Firehol Webclient",
+      "group_type": "address-group",
+      "min_groups": 1,
+      "auto_expand_groups": false,
+      "url": "https://iplists.firehol.org/files/firehol_webclient.netset"
+    },
+    {
+      "category": "spamhaus_drop",
+      "display_name": "Spamhaus DROP",
+      "name_template": "Spamhaus DROP",
+      "group_type": "address-group",
+      "min_groups": 1,
+      "auto_expand_groups": false,
+      "url": "https://www.spamhaus.org/drop/drop.txt",
+      "preprocess": "cut -d' ' -f1"
+    },
+    {
+      "category": "emerging_threats_compromised",
+      "display_name": "Emerging Threats Compromised",
+      "name_template": "Emerging Threats Compromised",
+      "group_type": "address-group",
+      "min_groups": 1,
+      "auto_expand_groups": false,
+      "url": "https://rules.emergingthreats.net/blockrules/compromised-ips.txt"
+    },
+    {
+      "category": "ipsum_level5",
+      "display_name": "IPsum Level 5",
+      "name_template": "IPsum Level 5-%d",
+      "group_type": "address-group",
+      "min_groups": 2,
+      "auto_expand_groups": false,
+      "url": "https://raw.githubusercontent.com/stamparm/ipsum/master/levels/5.txt"
+    }
+  ]
+}
