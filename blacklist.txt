@@ -2,3 +2,21 @@
 # Ataque dirigido 29-sep-2026: OAuth phishing + Canva stepping-stone
 0.0.0.0 nidir.info
 0.0.0.0 biograft.my.canva.site
+
+# Campana "automatic_billing" / Client-server.Automail - 30-sep-2026
+# Firma estatica del kit (identica en todas las muestras):
+#   campaign_label=automatic_billing, utm_campaign=billing_payment_success,
+#   email_sent=1777632925, euid=A3_da8ZlXJuINNEG4n2qRKkXaqzg,
+#   eaid=37075122222, x_eaid=084add0ccf
+# Muestras:30-sep-2026 (propia) + Joe Sandbox jun-jul 2026 (dunnfirst,
+# momentumprojectlab, trikongroup, raunaqengg)
+# Envio de la muestra propia (30-sep-2026)
+0.0.0.0 merrillwoodranch.com
+# Landing final de credential-harvest (cadena google.com.bn ->
+# adservice.google.com.ph -> aqui); 8/28 vendors la marcan phishing
+0.0.0.0 ruslanstudio.com
+# Dominios de envio del kit (buzones comprometidos o suplantados)
+0.0.0.0 dunnfirst.com
+0.0.0.0 momentumprojectlab.com
+0.0.0.0 raunaqengg.com
+0.0.0.0 trikongroup.co.uk
