@@ -108,5 +108,6 @@ data/tranco/
 # No aporta nada publicado: update.py lo re-fetcha en cada --auto.
 data/PhishTank/
 
-# bulk.txt (~70 MB) vive en la rama `bulk`, no en main.
+# bulk por categorias: dist/*.txt se publican en la rama `bulk`, no en main.
+# (la carpeta dist/ ya esta ignorada mas abajo)
 bulk.txt

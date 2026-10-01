@@ -6,11 +6,13 @@ Listas separadas para **control** y **velocidad**:
 |---|---|---|---|
 | `adlist.txt` | **Solo curaduría manual** (Pi-hole) | ~KB | inmediata |
 | `hosts` | **Solo curaduría manual** (`/etc/hosts`) | ~KB | inmediata |
-| `bulk.txt` | **Solo fuentes agregadas** (Pi-hole) | ~70 MB | mensual / manual |
+| `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
+| `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
+| `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
+| `bulk/threat-intel.txt` | Agregado: threat intel (HaGeZi TIF) | ~58 MB | mensual |
 
 Fuentes curadas: `data/custom/hosts` + `blacklist.txt`.
-Fuentes agregadas: StevenBlack, AdAway, URLHaus, yoyo, HaGeZi-TIF, PhishingArmy,
-BlocklistProject, OpenPhish, PhishTank (con guard anti-FP contra Tranco Top-1M).
+Fuentes agregadas por categoría (rama `bulk`), con guard anti-FP contra Tranco Top-1M.
 
 ## Agregar un dominio (rápido, sin red)
 
@@ -23,15 +25,21 @@ python3 update.py --curated      # regenera adlist.txt + hosts en segundos
 
 1. Sube este repo a GitHub como `centinela-threatlist`.
 2. Pi-hole Admin → Group Management → Adlists → Add:
-   - **Curaduría (principal, ligera):**
-     `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt`
-   - **Agregado (opcional, pesado):**
-     `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/bulk.txt`
+
+   **Requerida (curaduría, ligera):**
+   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt`
+
+   **Opcionales por categoría (elige las que quieras):**
+   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/ads-trackers.txt`
+   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/malware.txt`
+   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/phishing.txt`
+   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/threat-intel.txt`
 3. Tools → Update Gravity.
 4. Verifica: `pihole -q nidir.info` debe dar match.
 
-> Usa solo `adlist.txt` para el control rápido de lo que agregas a mano.
-> Añade `bulk.txt` solo si quieres el bloqueo masivo (se actualiza 1×/mes).
+> Empieza con `adlist.txt` + las categorías que te interesen. `threat-intel.txt`
+> es la más pesada (~58 MB); puedes omitirla y aún cubres phishing/malware/ads
+> con las otras tres.
 
 Bloqueo extra recomendado en Pi-hole → Domains → Regex:
 ```
@@ -43,8 +51,8 @@ Esto cubre subdominios del atacante.
 
 ```bash
 python3 update.py --curated               # curaduría (rápido, sin red) -> adlist.txt + hosts
-python3 update.py --noupdate              # agregado desde caché local -> bulk.txt
-python3 update.py --auto                  # fetch fuentes remotas -> bulk.txt
+python3 update.py --noupdate              # agregado desde caché local -> dist/*.txt
+python3 update.py --auto                  # fetch fuentes remotas -> dist/*.txt
 python3 update.py --curated --noupdate    # ambos
 ```
 

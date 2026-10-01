@@ -4,12 +4,13 @@
 Archivos generados:
   adlist.txt -> SOLO curaduria manual (Pi-hole, ligero, actualizacion inmediata)
   hosts      -> SOLO curaduria manual (formato /etc/hosts, ligero)
-  bulk.txt   -> SOLO fuentes publicas agregadas (Pi-hole, pesado, mensual)
+  dist/*.txt -> fuentes agregadas POR CATEGORIA (Pi-hole, mensual):
+                ads-trackers.txt, malware.txt, phishing.txt, threat-intel.txt
 
 Uso:
   python3 update.py --curated              # curaduria (rapido, sin red) -> adlist.txt + hosts
-  python3 update.py --auto                 # fetch fuentes + bulk.txt (pesado)
-  python3 update.py --noupdate             # usa cache local en data/ + bulk.txt (pesado)
+  python3 update.py --auto                 # fetch fuentes + dist/*.txt (por categoria)
+  python3 update.py --noupdate             # usa cache local en data/ + dist/*.txt
   python3 update.py --curated --noupdate   # ambos
   python3 update.py                        # por defecto: curaduria (seguro, sin red)
 """
@@ -38,6 +39,14 @@ SOURCES = {
 # es malicioso de verdad, se anade explicitamente en blacklist.txt (gana siempre).
 GUARDED = {"HaGeZi-TIF", "PhishingArmy", "BlocklistProject-phishing",
             "OpenPhish", "PhishTank"}
+
+# Agrupacion de fuentes por categoria -> un archivo dist/<categoria>.txt.
+CATEGORIES = {
+    "ads-trackers": ["StevenBlack", "AdAway", "yoyo"],
+    "malware": ["URLHaus"],
+    "phishing": ["PhishingArmy", "BlocklistProject-phishing", "OpenPhish", "PhishTank"],
+    "threat-intel": ["HaGeZi-TIF"],
+}
 TRANCAN_URL = "https://tranco-list.eu/top-1m.csv.zip"
 TRANCAN_CACHE = ROOT / "data/tranco/top-1m.csv.zip"
 DOMAIN_RE = re.compile(r"^\s*(?:0\.0\.0\.0|127\.0\.0\.1)\s+(\S+)", re.I)
@@ -135,10 +144,10 @@ def load_whitelist():
     return [l.strip().lower() for l in wl_path.read_text().splitlines()
             if l.strip() and not l.strip().startswith("#")]
 
-def collect_bulk(args, custom_domains):
-    """Ingesta fuentes agregadas (con guard Tranco) y devuelve el bulk
-    (agregado MENOS la curaduria, que vive en adlist.txt)."""
-    all_domains = set()
+def collect_by_source(args):
+    """Ingesta cada fuente (con guard Tranco en las no curadas).
+    Devuelve dict: nombre_fuente -> set(dominios)."""
+    by_source = {}
 
     guard = load_tranco(allow_fetch=bool(args.auto and not args.noupdate))
     if guard is None:
@@ -151,14 +160,14 @@ def collect_bulk(args, custom_domains):
 
     def ingest(name, text):
         doms = parse_domains(text)
-        if name in GUARDED and guard is not None:
+        if name in GUARDED:
             before = len(doms)
             doms -= guard
-            print(f"  -> {before:,} dominios; guard descarta "
+            print(f"  -> {name}: {before:,} dominios; guard descarta "
                   f"{before - len(doms):,} populares; {len(doms):,} retenidos")
         else:
-            print(f"  -> {len(doms):,} dominios")
-        all_domains.update(doms)
+            print(f"  -> {name}: {len(doms):,} dominios")
+        by_source.setdefault(name, set()).update(doms)
 
     # 1. fuentes remotas
     if args.auto and not args.noupdate:
@@ -181,30 +190,21 @@ def collect_bulk(args, custom_domains):
                 continue  # curaduria propia va aparte, sin guard
             ingest(f.parent.name, f.read_text(encoding="utf-8", errors="ignore"))
 
-    print(f"[total sin filtrar] {len(all_domains):,}")
-
-    # 2. whitelist (partial match como StevenBlack) + curaduria gana siempre
-    wl = load_whitelist()
-    def whitelisted(d):
-        return any(d == w or d.endswith("." + w) for w in wl)
-    all_domains = {d for d in all_domains if not whitelisted(d)}
-    all_domains |= custom_domains
-
-    return sorted(all_domains - custom_domains)
+    return by_source
 
 def write_curated(own, args, now):
     """adlist.txt (Pi-hole) + hosts (/etc/hosts): SOLO curaduria."""
     adlist_head = f"""# Title: Centinela ThreatList - curaduria manual (by Jesus Ruiz)
 #
 # SOLO curaduria propia (amenazas detectadas en campo). Ligero y de
-# actualizacion inmediata. Fuentes agregadas van aparte en bulk.txt.
+# actualizacion inmediata. Fuentes agregadas por categoria en la rama `bulk`.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
 # Date: {now}
 # Dominios curados: {len(own)}
 #
 # Este archivo (Pi-hole Adlist): {REPO}/adlist.txt
-# Agregado opcional (pesado):    {REPO}/bulk.txt
+# Agregado por categoria:        {REPO}/bulk/<categoria>.txt
 # Project home page: https://github.com/contacto-jruizh/centinela-threatlist
 #
 # ===============================================================
@@ -218,7 +218,7 @@ def write_curated(own, args, now):
 
     hosts_head = f"""# Title: Centinela ThreatList - curaduria manual (by Jesus Ruiz)
 #
-# Formato /etc/hosts. SOLO curaduria propia; el agregado pesado va en bulk.txt.
+# Formato /etc/hosts. SOLO curaduria propia; el agregado va por categoria.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
 # Date: {now}
@@ -248,35 +248,42 @@ ff02::2 ip6-allrouters
     out_path.write_text(out, encoding="utf-8")
     print(f"[ok] {args.output}: {len(own)} dominios (curaduria)")
 
-def write_bulk(bulk, now):
-    """bulk.txt (Pi-hole): SOLO fuentes agregadas."""
-    head = f"""# Title: Centinela ThreatList - fuentes agregadas (bulk)
+def write_categories(by_source, custom_domains, now):
+    """Un archivo por categoria en dist/ (Pi-hole), con whitelist y sin curaduria."""
+    wl = load_whitelist()
+    def whitelisted(d):
+        return any(d == w or d.endswith("." + w) for w in wl)
+
+    outdir = ROOT / "dist"
+    outdir.mkdir(exist_ok=True)
+    for cat, sources in CATEGORIES.items():
+        doms = set()
+        for s in sources:
+            doms |= by_source.get(s, set())
+        doms = {d for d in doms if not whitelisted(d)} - custom_domains
+        head = f"""# Title: Centinela ThreatList - categoria: {cat}
 #
-# SOLO fuentes publicas agregadas (StevenBlack, AdAway, URLHaus, yoyo,
-# HaGeZi-TIF, PhishingArmy, BlocklistProject, OpenPhish, PhishTank) con
-# guard anti-FP contra Tranco Top-1M. NO incluye la curaduria manual.
+# Fuentes: {", ".join(sources)}
+# Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
 # Date: {now}
-# Dominios agregados: {len(bulk):,}
+# Dominios en esta categoria: {len(doms):,}
 #
-# Este archivo (Pi-hole Adlist, PESADO): {REPO}/bulk.txt
-# Curaduria manual (ligero):             {REPO}/adlist.txt
-# Actualizacion: mensual / manual (no cambia a diario)
+# Pi-hole Adlist (categoria {cat}): {REPO}/bulk/{cat}.txt
+# Curaduria manual (ligero):        {REPO}/adlist.txt
 # Project home page: https://github.com/contacto-jruizh/centinela-threatlist
 #
 # ===============================================================
-# BLOQUE 2 - FUENTES AGREGADAS
-# ===============================================================
 """
-    body = "\n".join(f"0.0.0.0 {d}" for d in bulk)
-    (ROOT / "bulk.txt").write_text(head + body + "\n", encoding="utf-8")
-    print(f"[ok] bulk.txt: {len(bulk):,} dominios (agregado)")
+        body = "\n".join(f"0.0.0.0 {d}" for d in sorted(doms))
+        (outdir / f"{cat}.txt").write_text(head + body + "\n", encoding="utf-8")
+        print(f"[ok] dist/{cat}.txt: {len(doms):,} dominios")
 
 def main():
     ap = argparse.ArgumentParser(description="Centinela ThreatList generator")
-    ap.add_argument("--auto", action="store_true", help="fetch fuentes remotas y genera bulk.txt")
-    ap.add_argument("--noupdate", action="store_true", help="usa cache local data/ y genera bulk.txt")
+    ap.add_argument("--auto", action="store_true", help="fetch fuentes remotas y genera dist/*.txt (por categoria)")
+    ap.add_argument("--noupdate", action="store_true", help="usa cache local data/ y genera dist/*.txt (por categoria)")
     ap.add_argument("--curated", action="store_true", help="solo curaduria (rapido, sin red): adlist.txt + hosts")
     ap.add_argument("--ip", default="0.0.0.0", help="IP objetivo (default 0.0.0.0)")
     ap.add_argument("--output", default="hosts", help="nombre del hosts curado (default hosts)")
@@ -294,8 +301,8 @@ def main():
     if do_curated:
         write_curated(own, args, now)
     if do_bulk:
-        bulk = collect_bulk(args, custom_domains)
-        write_bulk(bulk, now)
+        by_source = collect_by_source(args)
+        write_categories(by_source, custom_domains, now)
 
 if __name__ == "__main__":
     main()
