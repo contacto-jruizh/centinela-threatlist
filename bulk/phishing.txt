@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 01 October 2026 02:40:19 (UTC)
-# Dominios en esta categoria: 358,173
+# Date: 01 October 2026 04:19:29 (UTC)
+# Dominios en esta categoria: 358,166
 #
 # Pi-hole Adlist (categoria phishing): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/phishing.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -4538,7 +4538,6 @@
 0.0.0.0 5svtef6.lat
 0.0.0.0 5sz.jk8jie.casa
 0.0.0.0 5t.x8jtrv.casa
-0.0.0.0 5t4b99t3.duckdns.org
 0.0.0.0 5tet3t.pics
 0.0.0.0 5teye6y.lol
 0.0.0.0 5thavenue.com.pk
@@ -25991,6 +25990,7 @@
 0.0.0.0 allegrolokalnie.pl-643763784.lol
 0.0.0.0 allegrolokalnie.pl-647295.sbs
 0.0.0.0 allegrolokalnie.pl-651241.cyou
+0.0.0.0 allegrolokalnie.pl-6528721876758135236.top
 0.0.0.0 allegrolokalnie.pl-65412.lol
 0.0.0.0 allegrolokalnie.pl-65423.lol
 0.0.0.0 allegrolokalnie.pl-65434.lol
@@ -46776,7 +46776,6 @@
 0.0.0.0 bhdaqui26d0.iceiy.com
 0.0.0.0 bhdbeneficios.webcindario.com
 0.0.0.0 bhdcard1.webcindario.com
-0.0.0.0 bhdclientes-beneficios.netlify.app
 0.0.0.0 bhdconfirmardato.webcindario.com
 0.0.0.0 bhdconfirmarenlinea0.zya.me
 0.0.0.0 bhdcontrado2026.iceiy.com
@@ -77792,7 +77791,6 @@
 0.0.0.0 diogame.ga
 0.0.0.0 dioiok.com
 0.0.0.0 diometangh.store
-0.0.0.0 diometrygvbaz.weebly.com
 0.0.0.0 dionaen.shop
 0.0.0.0 dionefashion.com
 0.0.0.0 dioninica.com
@@ -162224,7 +162222,6 @@
 0.0.0.0 myindiapass.com
 0.0.0.0 myinfo-group.com
 0.0.0.0 myinfo.ns12-wistee.fr
-0.0.0.0 myinfusecu-acctverifyalrt.weebly.com
 0.0.0.0 myinhue.org
 0.0.0.0 myinnovationlab.org
 0.0.0.0 myinporter.com
@@ -172430,7 +172427,6 @@
 0.0.0.0 office-ce1ca.firebaseapp.com
 0.0.0.0 office-ce1ca.web.app
 0.0.0.0 office-document.com
-0.0.0.0 office-fredo.webhop.me
 0.0.0.0 office-helper.info
 0.0.0.0 office-helper.net
 0.0.0.0 office-lexware.org
@@ -210900,7 +210896,6 @@
 0.0.0.0 s.onous.co
 0.0.0.0 s.ousic.co
 0.0.0.0 s.packshaomai.com
-0.0.0.0 s.pnj.ac.id
 0.0.0.0 s.przelewy24.pl
 0.0.0.0 s.pu.go.id
 0.0.0.0 s.pushtan-verifizierung.top
@@ -231777,7 +231772,6 @@
 0.0.0.0 submitooters.info
 0.0.0.0 submitted.formspark.io
 0.0.0.0 submityourgfr.firebaseapp.com
-0.0.0.0 submityourgfr.web.app
 0.0.0.0 submjl.site
 0.0.0.0 submt.net
 0.0.0.0 submucous-chancesmns.000webhostapp.com
@@ -349274,7 +349268,6 @@
 0.0.0.0 wwwmaxslr.top
 0.0.0.0 wwwmbank-secure.por-online.website
 0.0.0.0 wwwmbank.por-online.website
-0.0.0.0 wwwmicrosoft-com-en-us-microsoft-365-outlook-email.framer.website
 0.0.0.0 wwwmyphonesupport.com
 0.0.0.0 wwwmywellsfargorewards.com
 0.0.0.0 wwwnetflixcom.com
