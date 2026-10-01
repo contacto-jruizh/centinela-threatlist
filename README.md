@@ -9,10 +9,10 @@ Listas separadas para **control** y **velocidad**:
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
-| `bulk/threat-intel.txt` | Agregado: threat intel (HaGeZi TIF) | ~58 MB | mensual |
+| `bulk/threat-intel.txt` | Agregado: threat intel (HaGeZi pro) | ~6 MB | mensual |
 
 Fuentes curadas: `data/custom/hosts` + `blacklist.txt`.
-Fuentes agregadas por categoría (rama `bulk`), con guard anti-FP contra Tranco Top-1M.
+Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tranco Top-1M.
 
 ## Agregar un dominio (rápido, sin red)
 
@@ -30,16 +30,16 @@ python3 update.py --curated      # regenera adlist.txt + hosts en segundos
    `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt`
 
    **Opcionales por categoría (elige las que quieras):**
-   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/ads-trackers.txt`
-   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/malware.txt`
-   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/phishing.txt`
-   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/threat-intel.txt`
+   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/ads-trackers.txt`
+   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/malware.txt`
+   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/phishing.txt`
+   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/threat-intel.txt`
 3. Tools → Update Gravity.
 4. Verifica: `pihole -q nidir.info` debe dar match.
 
 > Empieza con `adlist.txt` + las categorías que te interesen. `threat-intel.txt`
-> es la más pesada (~58 MB); puedes omitirla y aún cubres phishing/malware/ads
-> con las otras tres.
+> (HaGeZi pro, ~6 MB) es la más pesada; puedes omitirla y aún cubres
+> phishing/malware/ads con las otras tres.
 
 Bloqueo extra recomendado en Pi-hole → Domains → Regex:
 ```

@@ -4,13 +4,13 @@
 Archivos generados:
   adlist.txt -> SOLO curaduria manual (Pi-hole, ligero, actualizacion inmediata)
   hosts      -> SOLO curaduria manual (formato /etc/hosts, ligero)
-  dist/*.txt -> fuentes agregadas POR CATEGORIA (Pi-hole, mensual):
+  bulk/*.txt -> fuentes agregadas POR CATEGORIA (Pi-hole, mensual):
                 ads-trackers.txt, malware.txt, phishing.txt, threat-intel.txt
 
 Uso:
   python3 update.py --curated              # curaduria (rapido, sin red) -> adlist.txt + hosts
-  python3 update.py --auto                 # fetch fuentes + dist/*.txt (por categoria)
-  python3 update.py --noupdate             # usa cache local en data/ + dist/*.txt
+  python3 update.py --auto                 # fetch fuentes + bulk/*.txt (por categoria)
+  python3 update.py --noupdate             # usa cache local en data/ + bulk/*.txt
   python3 update.py --curated --noupdate   # ambos
   python3 update.py                        # por defecto: curaduria (seguro, sin red)
 """
@@ -26,7 +26,9 @@ SOURCES = {
     "URLHaus": "https://urlhaus.abuse.ch/downloads/hostfile/",
     "yoyo": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0",
     # --- anti-phishing (URLhaus NO cubre phishing: solo malware) ---
-    "HaGeZi-TIF": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.txt",
+    # HaGeZi `pro`: ads/tracking/malware/phishing/scam/crypto, buen balance peso/cobertura.
+    # (se evita `tif` = threat-intel agresivo: ~49 MB y mas FP)
+    "HaGeZi-pro": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt",
     "PhishingArmy": "https://phishing.army/download/phishing_army_blocklist_extended.txt",
     "BlocklistProject-phishing": "https://blocklistproject.github.io/Lists/phishing.txt",
     # --- phishing activo por URL (formato URL crudo) ---
@@ -37,15 +39,15 @@ SOURCES = {
 # Fuentes sin curar manualmente: NO pueden bloquear nada del Tranco Top-1M
 # (evita FP tipo absa.co.za / uvm.edu / vkontakte.ru). Si un dominio popular
 # es malicioso de verdad, se anade explicitamente en blacklist.txt (gana siempre).
-GUARDED = {"HaGeZi-TIF", "PhishingArmy", "BlocklistProject-phishing",
+GUARDED = {"HaGeZi-pro", "PhishingArmy", "BlocklistProject-phishing",
             "OpenPhish", "PhishTank"}
 
-# Agrupacion de fuentes por categoria -> un archivo dist/<categoria>.txt.
+# Agrupacion de fuentes por categoria -> un archivo bulk/<categoria>.txt.
 CATEGORIES = {
     "ads-trackers": ["StevenBlack", "AdAway", "yoyo"],
     "malware": ["URLHaus"],
     "phishing": ["PhishingArmy", "BlocklistProject-phishing", "OpenPhish", "PhishTank"],
-    "threat-intel": ["HaGeZi-TIF"],
+    "threat-intel": ["HaGeZi-pro"],
 }
 TRANCAN_URL = "https://tranco-list.eu/top-1m.csv.zip"
 TRANCAN_CACHE = ROOT / "data/tranco/top-1m.csv.zip"
@@ -249,12 +251,12 @@ ff02::2 ip6-allrouters
     print(f"[ok] {args.output}: {len(own)} dominios (curaduria)")
 
 def write_categories(by_source, custom_domains, now):
-    """Un archivo por categoria en dist/ (Pi-hole), con whitelist y sin curaduria."""
+    """Un archivo por categoria en bulk/ (Pi-hole), con whitelist y sin curaduria."""
     wl = load_whitelist()
     def whitelisted(d):
         return any(d == w or d.endswith("." + w) for w in wl)
 
-    outdir = ROOT / "dist"
+    outdir = ROOT / "bulk"
     outdir.mkdir(exist_ok=True)
     for cat, sources in CATEGORIES.items():
         doms = set()
@@ -278,12 +280,12 @@ def write_categories(by_source, custom_domains, now):
 """
         body = "\n".join(f"0.0.0.0 {d}" for d in sorted(doms))
         (outdir / f"{cat}.txt").write_text(head + body + "\n", encoding="utf-8")
-        print(f"[ok] dist/{cat}.txt: {len(doms):,} dominios")
+        print(f"[ok] bulk/{cat}.txt: {len(doms):,} dominios")
 
 def main():
     ap = argparse.ArgumentParser(description="Centinela ThreatList generator")
-    ap.add_argument("--auto", action="store_true", help="fetch fuentes remotas y genera dist/*.txt (por categoria)")
-    ap.add_argument("--noupdate", action="store_true", help="usa cache local data/ y genera dist/*.txt (por categoria)")
+    ap.add_argument("--auto", action="store_true", help="fetch fuentes remotas y genera bulk/*.txt (por categoria)")
+    ap.add_argument("--noupdate", action="store_true", help="usa cache local data/ y genera bulk/*.txt (por categoria)")
     ap.add_argument("--curated", action="store_true", help="solo curaduria (rapido, sin red): adlist.txt + hosts")
     ap.add_argument("--ip", default="0.0.0.0", help="IP objetivo (default 0.0.0.0)")
     ap.add_argument("--output", default="hosts", help="nombre del hosts curado (default hosts)")

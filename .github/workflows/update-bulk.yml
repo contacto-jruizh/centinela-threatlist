@@ -1,6 +1,6 @@
 name: update-bulk
 
-# Fuentes agregadas POR CATEGORIA: viven en la rama `bulk`, NO en main.
+# Fuentes agregadas POR CATEGORIA -> bulk/*.txt en main.
 # Mensual (dia 1, 04:00 UTC) o manual desde la pestana Actions.
 on:
   schedule:
@@ -14,20 +14,12 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Generar categorias (dist/*.txt)
+      - name: Generar categorias (bulk/*.txt)
         run: python3 update.py --auto
-      - name: Publicar en la rama `bulk` (commit unico, sin historial pesado)
-        run: |
-          git config user.name  "centinela-bot"
-          git config user.email "335770001+contacto-jruizh@users.noreply.github.com"
-          git checkout --orphan bulk
-          git reset
-          cp dist/*.txt .
-          git add -f ads-trackers.txt malware.txt phishing.txt threat-intel.txt
-          git commit -m "chore: update bulk categories [skip ci]"
-          git push -f origin bulk
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update bulk categories [skip ci]"
+          file_pattern: "bulk/*.txt"

@@ -108,6 +108,4 @@ data/tranco/
 # No aporta nada publicado: update.py lo re-fetcha en cada --auto.
 data/PhishTank/
 
-# bulk por categorias: dist/*.txt se publican en la rama `bulk`, no en main.
-# (la carpeta dist/ ya esta ignorada mas abajo)
-bulk.txt
+# Nota: bulk/ (categorias) SI se versiona en main. dist/ queda ignorado (scratch).
