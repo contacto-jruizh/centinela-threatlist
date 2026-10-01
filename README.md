@@ -26,7 +26,7 @@ python3 update.py --curated      # regenera adlist.txt + hosts en segundos
    - **Curaduría (principal, ligera):**
      `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt`
    - **Agregado (opcional, pesado):**
-     `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk.txt`
+     `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/bulk/bulk.txt`
 3. Tools → Update Gravity.
 4. Verifica: `pihole -q nidir.info` debe dar match.
 

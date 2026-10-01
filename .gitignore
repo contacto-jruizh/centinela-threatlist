@@ -98,11 +98,15 @@ yarn-error.log*
 .classpath
 .settings/
 
-# --- Cache local del generador (opcional: descomenta si no quieres versionar caches) ---
-# data/*/hosts
-# *.log
+# --- Cache local del generador (NO versionar: CI los re-baja con --auto) ---
+data/*/hosts
+!data/custom/hosts
+*.log
 data/tranco/
 # JSON crudo de PhishTank: contiene URLs-cebo de atacantes con patrones que
 # activan GitHub Push Protection (AWSAccessKeyId en URLs S3 pre-firmadas).
 # No aporta nada publicado: update.py lo re-fetcha en cada --auto.
 data/PhishTank/
+
+# bulk.txt (~70 MB) vive en la rama `bulk`, no en main.
+bulk.txt
