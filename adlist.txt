@@ -1,14 +1,14 @@
 # Title: Centinela ThreatList - curaduria manual (by Jesus Ruiz)
 #
 # SOLO curaduria propia (amenazas detectadas en campo). Ligero y de
-# actualizacion inmediata. Fuentes agregadas van aparte en bulk.txt.
+# actualizacion inmediata. Fuentes agregadas por categoria en la rama `bulk`.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 01 October 2026 02:27:25 (UTC)
+# Date: 01 October 2026 02:34:37 (UTC)
 # Dominios curados: 8
 #
 # Este archivo (Pi-hole Adlist): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
-# Agregado opcional (pesado):    https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk.txt
+# Agregado por categoria:        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/<categoria>.txt
 # Project home page: https://github.com/contacto-jruizh/centinela-threatlist
 #
 # ===============================================================
