@@ -1,0 +1,25 @@
+name: update-bulk
+
+# Fuentes agregadas (pesado ~70 MB): NO se actualiza a diario.
+# Mensual (dia 1, 04:00 UTC) o manual desde la pestana Actions.
+on:
+  schedule:
+    - cron: "0 4 1 * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generar bulk.txt (agregado + guard Tranco)
+        run: python3 update.py --auto
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update bulk list [skip ci]"
+          file_pattern: "bulk.txt"

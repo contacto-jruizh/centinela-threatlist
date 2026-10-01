@@ -1,0 +1,31 @@
+name: update-curated
+
+# Curaduria manual: rapido, sin red. Se dispara cuando cambian las fuentes
+# curadas (blacklist / custom / whitelist / myhosts / el propio generador).
+on:
+  push:
+    branches: [main]
+    paths:
+      - "blacklist.txt"
+      - "data/custom/hosts"
+      - "whitelist.txt"
+      - "myhosts"
+      - "update.py"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generar adlist.txt + hosts (curaduria)
+        run: python3 update.py --curated
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update curated adlist [skip ci]"
+          file_pattern: "adlist.txt hosts"

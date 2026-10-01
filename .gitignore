@@ -17,6 +17,19 @@ secrets*.json
 *secret*.txt
 config.local.json
 *.token
+.npmrc
+.envrc
+id_rsa*
+id_ed25519*
+*.jks
+*.keystore
+google-services.json
+GoogleService-Info.plist
+*.mobileprovision
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.auto.tfvars
 .github/workflows/secrets/
 
 # --- Archivos de agente / memoria local (NO versionar) ---

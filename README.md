@@ -1,22 +1,37 @@
 # Centinela ThreatList — feed de asesor en cyberseguridad para Pi-hole
 
-Fuentes iniciales: `data/custom/hosts` + `blacklist.txt`.
-Genera `hosts` (formato 0.0.0.0) y `adlist.txt` (1 dominio/línea, para Pi-hole).
+Listas separadas para **control** y **velocidad**:
 
-## Agregar un dominio
+| Archivo | Contenido | Tamaño | Cadencia |
+|---|---|---|---|
+| `adlist.txt` | **Solo curaduría manual** (Pi-hole) | ~KB | inmediata |
+| `hosts` | **Solo curaduría manual** (`/etc/hosts`) | ~KB | inmediata |
+| `bulk.txt` | **Solo fuentes agregadas** (Pi-hole) | ~70 MB | mensual / manual |
+
+Fuentes curadas: `data/custom/hosts` + `blacklist.txt`.
+Fuentes agregadas: StevenBlack, AdAway, URLHaus, yoyo, HaGeZi-TIF, PhishingArmy,
+BlocklistProject, OpenPhish, PhishTank (con guard anti-FP contra Tranco Top-1M).
+
+## Agregar un dominio (rápido, sin red)
 
 ```bash
 echo "malicioso.ejemplo.com" >> data/custom/hosts
-python3 update.py --noupdate
+python3 update.py --curated      # regenera adlist.txt + hosts en segundos
 ```
 
 ## Usar en Pi-hole
 
 1. Sube este repo a GitHub como `centinela-threatlist`.
 2. Pi-hole Admin → Group Management → Adlists → Add:
-   `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt`
+   - **Curaduría (principal, ligera):**
+     `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt`
+   - **Agregado (opcional, pesado):**
+     `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk.txt`
 3. Tools → Update Gravity.
 4. Verifica: `pihole -q nidir.info` debe dar match.
+
+> Usa solo `adlist.txt` para el control rápido de lo que agregas a mano.
+> Añade `bulk.txt` solo si quieres el bloqueo masivo (se actualiza 1×/mes).
 
 Bloqueo extra recomendado en Pi-hole → Domains → Regex:
 ```
@@ -27,9 +42,12 @@ Esto cubre subdominios del atacante.
 ## Comandos
 
 ```bash
-python3 update.py --noupdate  # solo local, rápido
-python3 update.py --auto      # trae StevenBlack + AdAway + URLHaus + yoyo y regenera
+python3 update.py --curated               # curaduría (rápido, sin red) -> adlist.txt + hosts
+python3 update.py --noupdate              # agregado desde caché local -> bulk.txt
+python3 update.py --auto                  # fetch fuentes remotas -> bulk.txt
+python3 update.py --curated --noupdate    # ambos
 ```
+
 
 ## Manual de uso
 
