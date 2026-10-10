@@ -25,9 +25,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Generar adlist.txt + hosts + ai-block.txt (curaduria)
+      - name: Generar adlist.txt + hosts + ai-block.txt + unifi (curaduria)
         run: python3 update.py --curated
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update curated adlist [skip ci]"
-          file_pattern: "adlist.txt hosts ai-block.txt"
+          file_pattern: "adlist.txt hosts ai-block.txt unifi/*.txt"

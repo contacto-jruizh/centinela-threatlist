@@ -6,6 +6,8 @@ Archivos generados:
   hosts      -> SOLO curaduria manual (formato /etc/hosts, ligero)
   ai-block.txt -> bloqueo de IA y sus APIs (Pi-hole Adlist, curaduria)
                   desde data/custom/ai-hosts, menos lo permitido en ai-allow.txt
+  unifi/*.txt  -> mismas listas de IA en formato UniFi (sin IP; por linea y
+                  variante -inline.txt separada por ';')
   bulk/*.txt -> fuentes agregadas POR CATEGORIA (Pi-hole, mensual):
                 ads-trackers.txt, malware.txt, phishing.txt, threat-intel.txt
 
@@ -284,15 +286,21 @@ def write_categories(by_source, custom_domains, now):
         (outdir / f"{cat}.txt").write_text(head + body + "\n", encoding="utf-8")
         print(f"[ok] bulk/{cat}.txt: {len(doms):,} dominios")
 
-def write_ai_block(now):
-    """ai-block.txt (Pi-hole Adlist): bloquea IA/APIs de data/custom/ai-hosts.
-    Resta lo permitido en ai-allow.txt (allowlist; p.ej. Claude/Anthropic).
-    Formato hosts "0.0.0.0 dominio". Match exacto: se enumeran subdominios."""
+def ai_domains():
+    """Devuelve (block, allow): dominios IA a bloquear y a permitir.
+    block = data/custom/ai-hosts menos ai-allow.txt (allowlist gana)."""
     source = load_list("data/custom/ai-hosts")
     allow = load_list("ai-allow.txt")
     def allowed(d):
         return d in allow or any(d.endswith("." + a) for a in allow)
-    doms = sorted(d for d in source if not allowed(d))
+    block = sorted(d for d in source if not allowed(d))
+    return block, sorted(allow)
+
+def write_ai_block(now):
+    """ai-block.txt (Pi-hole Adlist): bloquea IA/APIs de data/custom/ai-hosts.
+    Resta lo permitido en ai-allow.txt (allowlist; p.ej. Claude/Anthropic).
+    Formato hosts "0.0.0.0 dominio". Match exacto: se enumeran subdominios."""
+    doms, _ = ai_domains()
     head = f"""# Title: Centinela ThreatList - bloqueo de IA y sus APIs
 #
 # Bloquea proveedores de IA y sus endpoints/APIs (OpenAI/ChatGPT, Gemini,
@@ -307,6 +315,7 @@ def write_ai_block(now):
 #
 # Pi-hole Adlist (bloqueo IA):   {REPO}/ai-block.txt
 # Pi-hole Allowlist (permitir):  {REPO}/ai-allow.txt
+# UniFi (formato UniFi):         {REPO}/unifi/ai-block.txt
 # Curaduria (adlist.txt):        {REPO}/adlist.txt
 # Project home page: https://github.com/contacto-jruizh/centinela-threatlist
 #
@@ -315,6 +324,19 @@ def write_ai_block(now):
     body = "\n".join(f"0.0.0.0 {d}" for d in doms)
     (ROOT / "ai-block.txt").write_text(head + body + "\n", encoding="utf-8")
     print(f"[ok] ai-block.txt: {len(doms)} dominios (bloqueo IA)")
+
+def write_unifi(now):
+    """unifi/*.txt: mismas listas de IA en formato UniFi (sin IP, sin comentarios).
+    UniFi acepta un dominio por linea o todos en una linea separados por ';'.
+    Se generan ambas variantes: ai-block.txt / ai-allow.txt (por linea) e
+    *-inline.txt (una sola linea separada por punto y coma)."""
+    block, allow = ai_domains()
+    outdir = ROOT / "unifi"
+    outdir.mkdir(exist_ok=True)
+    for name, doms in (("ai-block", block), ("ai-allow", allow)):
+        (outdir / f"{name}.txt").write_text("\n".join(doms) + "\n", encoding="utf-8")
+        (outdir / f"{name}-inline.txt").write_text(";".join(doms) + "\n", encoding="utf-8")
+    print(f"[ok] unifi/ai-block.txt: {len(block)} dominios | unifi/ai-allow.txt: {len(allow)} dominios")
 
 def main():
     ap = argparse.ArgumentParser(description="Centinela ThreatList generator")
@@ -337,6 +359,7 @@ def main():
     if do_curated:
         write_curated(own, args, now)
         write_ai_block(now)
+        write_unifi(now)
     if do_bulk:
         by_source = collect_by_source(args)
         write_categories(by_source, custom_domains, now)

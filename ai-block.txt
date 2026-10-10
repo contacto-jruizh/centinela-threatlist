@@ -7,11 +7,12 @@
 # Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 10 October 2026 19:47:58 (UTC)
+# Date: 10 October 2026 19:48:58 (UTC)
 # Dominios bloqueados: 152
 #
 # Pi-hole Adlist (bloqueo IA):   https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-block.txt
 # Pi-hole Allowlist (permitir):  https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-allow.txt
+# UniFi (formato UniFi):         https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-block.txt
 # Curaduria (adlist.txt):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
 # Project home page: https://github.com/contacto-jruizh/centinela-threatlist
 #

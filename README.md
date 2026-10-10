@@ -85,6 +85,38 @@ Bloqueo extra recomendado en Pi-hole → Domains → Regex:
 ```
 Esto cubre subdominios del atacante.
 
+## Usar en UniFi
+
+UniFi (Firewall / Content Filter) acepta dominios **uno por línea** o **todos en
+una sola línea separados por `;`**. La carpeta `unifi/` trae las mismas listas de
+IA en ese formato (sin IP, sin comentarios):
+
+| Archivo | Formato | Uso |
+|---|---|---|
+| `unifi/ai-block.txt` | un dominio por línea | pegar en la lista **Block** |
+| `unifi/ai-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/ai-allow.txt` | un dominio por línea | pegar en la lista **Allow** |
+| `unifi/ai-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+
+Ejemplo (formato inline):
+```
+example.com;example.net
+```
+
+- **Bloquear IA:** `unifi/ai-block.txt` (o el `-inline`). Incluye
+  `gemini.google.com`, `chatgpt.com`, `api.openai.com`, `chat.deepseek.com`, etc.
+- **Permitir IA (Claude):** `unifi/ai-allow.txt` (o el `-inline`). El allow de
+  UniFi tiene prioridad; sirve para que Claude no se bloquee aunque esté en una
+  regla amplia.
+
+URLs para copiar:
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-block.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-allow.txt`
+
+> Si tu versión de UniFi solo tiene un campo de texto, usa los `*-inline.txt`
+> (una sola línea con `;`). Para añadir otra IA, edita `data/custom/ai-hosts`
+> (bloqueo) o `ai-allow.txt` (permitir) y vuelve a correr `python3 update.py --curated`.
+
 ## Comandos
 
 ```bash
