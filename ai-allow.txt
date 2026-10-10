@@ -1,0 +1,34 @@
+# ai-allow - Centinela: WHITELIST de IA permitidas (Allowlist Pi-hole)
+#
+# Dominios que se PERMITEN aunque esten (o puedan estar) en ai-block.txt.
+# Pi-hole: el Allowlist gana SIEMPRE al bloqueo.
+#
+# Claude / Anthropic (web + API). Nota: claude.ai es el MISMO dominio para el
+# plan gratis y el de pago; Pi-hole es DNS y no distingue suscripcion. Permitir
+# el dominio habilita tu Claude de pago (web) y la API. No hay regla DNS que
+# aisle "solo el plan de pago".
+#
+# Formato: un dominio por linea. Se publica como Allowlist (Pi-hole v6).
+
+# --- Claude web / apps ---
+claude.ai
+claude.com
+claude.dev
+claudeusercontent.com
+academy.claude.com
+# --- Anthropic API / Console ---
+anthropic.com
+api.anthropic.com
+console.anthropic.com
+platform.claude.com
+statsig.anthropic.com
+# --- Descargas CLI / short URL ---
+downloads.claude.ai
+clau.de
+
+# --- Opcionales (soporte/telemetria; descomentar si algo falla) ---
+# cdn.usefathom.com
+# cdn.growthbook.io
+# *.intercom.io
+# *.intercomcdn.com
+# *.sentry.io

@@ -1,0 +1,170 @@
+# Title: Centinela ThreatList - bloqueo de IA y sus APIs
+#
+# Bloquea proveedores de IA y sus endpoints/APIs (OpenAI/ChatGPT, Gemini,
+# Copilot, Perplexity, xAI/Grok, Mistral, Cohere, DeepSeek, etc.).
+#
+# Claude / Anthropic NO se bloquean: se permiten via ai-allow.txt (Allowlist).
+# Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: 10 October 2026 19:45:24 (UTC)
+# Dominios bloqueados: 152
+#
+# Pi-hole Adlist (bloqueo IA):   https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-block.txt
+# Pi-hole Allowlist (permitir):  https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-allow.txt
+# Curaduria (adlist.txt):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+0.0.0.0 ai.google.dev
+0.0.0.0 ai.meta.com
+0.0.0.0 ai21.com
+0.0.0.0 aisandbox-pa.googleapis.com
+0.0.0.0 aistudio.baidu.com
+0.0.0.0 aistudio.google.com
+0.0.0.0 antigravity.google
+0.0.0.0 api-docs.deepseek.com
+0.0.0.0 api-inference.huggingface.co
+0.0.0.0 api.ai21.com
+0.0.0.0 api.cerebras.ai
+0.0.0.0 api.cohere.ai
+0.0.0.0 api.cohere.com
+0.0.0.0 api.deepseek.com
+0.0.0.0 api.elevenlabs.io
+0.0.0.0 api.eu.residency.elevenlabs.io
+0.0.0.0 api.fireworks.ai
+0.0.0.0 api.groq.com
+0.0.0.0 api.ideogram.ai
+0.0.0.0 api.leonardo.ai
+0.0.0.0 api.lumalabs.ai
+0.0.0.0 api.mistral.ai
+0.0.0.0 api.openai.com
+0.0.0.0 api.openrouter.ai
+0.0.0.0 api.perplexity.ai
+0.0.0.0 api.replicate.com
+0.0.0.0 api.runwayml.com
+0.0.0.0 api.sambanova.ai
+0.0.0.0 api.stability.ai
+0.0.0.0 api.suno.ai
+0.0.0.0 api.together.ai
+0.0.0.0 api.together.xyz
+0.0.0.0 api.us.elevenlabs.io
+0.0.0.0 api.x.ai
+0.0.0.0 api.you.com
+0.0.0.0 api.z.ai
+0.0.0.0 app.leonardo.ai
+0.0.0.0 app.runwayml.com
+0.0.0.0 bard.google.com
+0.0.0.0 baseten.co
+0.0.0.0 beta.character.ai
+0.0.0.0 cdn-lfs.huggingface.co
+0.0.0.0 cdn-o.suno.com
+0.0.0.0 cdn.openaimerge.com
+0.0.0.0 cdn1.suno.ai
+0.0.0.0 cerebras.ai
+0.0.0.0 character.ai
+0.0.0.0 characterai.com
+0.0.0.0 chat.com
+0.0.0.0 chat.deepseek.com
+0.0.0.0 chat.mistral.ai
+0.0.0.0 chat.openai.com
+0.0.0.0 chat.qwen.ai
+0.0.0.0 chat.z.ai
+0.0.0.0 chatglm.cn
+0.0.0.0 chatgpt.com
+0.0.0.0 chatgpt.site
+0.0.0.0 civitai.com
+0.0.0.0 civitai.work
+0.0.0.0 cloud.cerebras.ai
+0.0.0.0 cloudaicompanion.googleapis.com
+0.0.0.0 cloudcode-pa.googleapis.com
+0.0.0.0 cohere.ai
+0.0.0.0 cohere.com
+0.0.0.0 community.groq.com
+0.0.0.0 console.groq.com
+0.0.0.0 console.mistral.ai
+0.0.0.0 console.x.ai
+0.0.0.0 copilot.cloud.microsoft
+0.0.0.0 copilot.com
+0.0.0.0 copilot.microsoft.com
+0.0.0.0 copilot.microsoft365.com
+0.0.0.0 coral.cohere.com
+0.0.0.0 crixet.com
+0.0.0.0 dashboard.cohere.com
+0.0.0.0 dashscope.aliyuncs.com
+0.0.0.0 deepmind.com
+0.0.0.0 deepmind.google
+0.0.0.0 deepseek.com
+0.0.0.0 docs.z.ai
+0.0.0.0 dreamstudio.ai
+0.0.0.0 edgeservices.bing.com
+0.0.0.0 eleven-public-cdn.elevenlabs.io
+0.0.0.0 elevenlabs.com
+0.0.0.0 elevenlabs.io
+0.0.0.0 endpoints.huggingface.cloud
+0.0.0.0 ernie.baidu.com
+0.0.0.0 fireworks.ai
+0.0.0.0 gemini.google.com
+0.0.0.0 generativelanguage.googleapis.com
+0.0.0.0 grok.com
+0.0.0.0 grok.x.ai
+0.0.0.0 groq.com
+0.0.0.0 heypi.com
+0.0.0.0 hf.co
+0.0.0.0 huggingface.co
+0.0.0.0 huggingface.com
+0.0.0.0 ideogram.ai
+0.0.0.0 kimi.moonshot.cn
+0.0.0.0 lechat.mistral.ai
+0.0.0.0 leonardo.ai
+0.0.0.0 llama.com
+0.0.0.0 llama.meta.com
+0.0.0.0 lumalabs.ai
+0.0.0.0 makersuite.google.com
+0.0.0.0 meta.ai
+0.0.0.0 midjourney.com
+0.0.0.0 mistral.ai
+0.0.0.0 moonshot.cn
+0.0.0.0 novita.ai
+0.0.0.0 oaistatic.com
+0.0.0.0 oaistatsig.com
+0.0.0.0 oaiusercontent.com
+0.0.0.0 open.bigmodel.cn
+0.0.0.0 openai.azure.com
+0.0.0.0 openai.com
+0.0.0.0 openrouter.ai
+0.0.0.0 openrouter.com
+0.0.0.0 perplexity.ai
+0.0.0.0 perplexity.com
+0.0.0.0 pi.ai
+0.0.0.0 pika.art
+0.0.0.0 platform.deepseek.com
+0.0.0.0 platform.openai.com
+0.0.0.0 platform.stability.ai
+0.0.0.0 poe.com
+0.0.0.0 poecdn.com
+0.0.0.0 replicate.com
+0.0.0.0 replicate.delivery
+0.0.0.0 replicate.dev
+0.0.0.0 router.huggingface.co
+0.0.0.0 runwayml.com
+0.0.0.0 sambanova.ai
+0.0.0.0 sora.com
+0.0.0.0 stability.ai
+0.0.0.0 studio-api.prod.suno.com
+0.0.0.0 studio-api.suno.ai
+0.0.0.0 suno.ai
+0.0.0.0 suno.com
+0.0.0.0 sydney.bing.com
+0.0.0.0 together.ai
+0.0.0.0 together.xyz
+0.0.0.0 tongyi.aliyun.com
+0.0.0.0 vibe.mistral.ai
+0.0.0.0 withpi.ai
+0.0.0.0 www.midjourney.com
+0.0.0.0 www.perplexity.ai
+0.0.0.0 x.ai
+0.0.0.0 yiyan.baidu.com
+0.0.0.0 you.com
+0.0.0.0 z.ai
+0.0.0.0 zhipuai.cn

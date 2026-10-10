@@ -1,0 +1,269 @@
+# ai-hosts - Centinela: BLOQUEO de IA y sus APIs (curaduria manual)
+# Formato: "0.0.0.0 dominio". Se publica como ai-block.txt (Pi-hole Adlist).
+#
+# IMPORTANTE (Pi-hole): cada linea es un match EXACTO. openai.com NO bloquea
+# api.openai.com; por eso se enumeran los subdominios y endpoints de API/fallback.
+#
+# Claude / Anthropic NO estan aqui a proposito: se PERMITEN aparte via
+# whitelist.txt (el Allowlist de Pi-hole gana siempre al bloqueo).
+# Nota: claude.ai es el MISMO dominio para plan gratis y de pago. Pi-hole es
+# DNS y no distingue suscripcion; permitir el dominio habilita tu Claude de pago
+# (web) y la API. No existe una regla DNS "solo el plan de pago".
+
+# ===============================================================
+# OpenAI / ChatGPT (allowlist oficial de OpenAI + aliases legacy)
+# ===============================================================
+0.0.0.0 openai.com
+0.0.0.0 chatgpt.com
+0.0.0.0 chatgpt.site
+0.0.0.0 chat.com
+0.0.0.0 chat.openai.com
+0.0.0.0 crixet.com
+0.0.0.0 api.openai.com
+0.0.0.0 platform.openai.com
+0.0.0.0 openai.azure.com
+0.0.0.0 oaistatic.com
+0.0.0.0 oaiusercontent.com
+0.0.0.0 oaistatsig.com
+0.0.0.0 cdn.openaimerge.com
+0.0.0.0 sora.com
+
+# ===============================================================
+# Google Gemini / DeepMind / Antigravity / Gemini Code Assist
+# ===============================================================
+0.0.0.0 gemini.google.com
+0.0.0.0 aistudio.google.com
+0.0.0.0 makersuite.google.com
+0.0.0.0 bard.google.com
+0.0.0.0 generativelanguage.googleapis.com
+0.0.0.0 ai.google.dev
+0.0.0.0 antigravity.google
+0.0.0.0 cloudcode-pa.googleapis.com
+0.0.0.0 cloudaicompanion.googleapis.com
+0.0.0.0 aisandbox-pa.googleapis.com
+0.0.0.0 deepmind.com
+0.0.0.0 deepmind.google
+
+# ===============================================================
+# Microsoft Copilot (web, M365 y Copilot in Edge)
+# ===============================================================
+0.0.0.0 copilot.microsoft.com
+0.0.0.0 copilot.microsoft365.com
+0.0.0.0 copilot.cloud.microsoft
+0.0.0.0 copilot.com
+0.0.0.0 edgeservices.bing.com
+0.0.0.0 sydney.bing.com
+
+# ===============================================================
+# Meta AI / Llama
+# ===============================================================
+0.0.0.0 meta.ai
+0.0.0.0 ai.meta.com
+0.0.0.0 llama.com
+0.0.0.0 llama.meta.com
+
+# ===============================================================
+# Perplexity
+# ===============================================================
+0.0.0.0 perplexity.ai
+0.0.0.0 www.perplexity.ai
+0.0.0.0 perplexity.com
+0.0.0.0 api.perplexity.ai
+
+# ===============================================================
+# xAI / Grok
+# ===============================================================
+0.0.0.0 x.ai
+0.0.0.0 api.x.ai
+0.0.0.0 console.x.ai
+0.0.0.0 grok.com
+0.0.0.0 grok.x.ai
+
+# ===============================================================
+# Mistral (Le Chat / Vibe / Studio)
+# ===============================================================
+0.0.0.0 mistral.ai
+0.0.0.0 chat.mistral.ai
+0.0.0.0 lechat.mistral.ai
+0.0.0.0 vibe.mistral.ai
+0.0.0.0 api.mistral.ai
+0.0.0.0 console.mistral.ai
+
+# ===============================================================
+# Cohere
+# ===============================================================
+0.0.0.0 cohere.com
+0.0.0.0 cohere.ai
+0.0.0.0 api.cohere.ai
+0.0.0.0 api.cohere.com
+0.0.0.0 dashboard.cohere.com
+0.0.0.0 coral.cohere.com
+
+# ===============================================================
+# DeepSeek
+# ===============================================================
+0.0.0.0 deepseek.com
+0.0.0.0 chat.deepseek.com
+0.0.0.0 api.deepseek.com
+0.0.0.0 platform.deepseek.com
+0.0.0.0 api-docs.deepseek.com
+
+# ===============================================================
+# Groq
+# ===============================================================
+0.0.0.0 groq.com
+0.0.0.0 api.groq.com
+0.0.0.0 console.groq.com
+0.0.0.0 community.groq.com
+
+# ===============================================================
+# Together AI
+# ===============================================================
+0.0.0.0 together.ai
+0.0.0.0 together.xyz
+0.0.0.0 api.together.xyz
+0.0.0.0 api.together.ai
+
+# ===============================================================
+# OpenRouter
+# ===============================================================
+0.0.0.0 openrouter.ai
+0.0.0.0 openrouter.com
+0.0.0.0 api.openrouter.ai
+
+# ===============================================================
+# Hugging Face (hub + inferencia)
+# ===============================================================
+0.0.0.0 huggingface.co
+0.0.0.0 huggingface.com
+0.0.0.0 hf.co
+0.0.0.0 api-inference.huggingface.co
+0.0.0.0 router.huggingface.co
+0.0.0.0 cdn-lfs.huggingface.co
+0.0.0.0 endpoints.huggingface.cloud
+
+# ===============================================================
+# Replicate
+# ===============================================================
+0.0.0.0 replicate.com
+0.0.0.0 api.replicate.com
+0.0.0.0 replicate.delivery
+0.0.0.0 replicate.dev
+
+# ===============================================================
+# Stability AI
+# ===============================================================
+0.0.0.0 stability.ai
+0.0.0.0 api.stability.ai
+0.0.0.0 platform.stability.ai
+0.0.0.0 dreamstudio.ai
+
+# ===============================================================
+# Midjourney
+# ===============================================================
+0.0.0.0 midjourney.com
+0.0.0.0 www.midjourney.com
+
+# ===============================================================
+# Runway
+# ===============================================================
+0.0.0.0 runwayml.com
+0.0.0.0 app.runwayml.com
+0.0.0.0 api.runwayml.com
+
+# ===============================================================
+# ElevenLabs (incluye endpoints regionales)
+# ===============================================================
+0.0.0.0 elevenlabs.io
+0.0.0.0 elevenlabs.com
+0.0.0.0 api.elevenlabs.io
+0.0.0.0 api.us.elevenlabs.io
+0.0.0.0 api.eu.residency.elevenlabs.io
+0.0.0.0 eleven-public-cdn.elevenlabs.io
+
+# ===============================================================
+# Suno (web + API interna + CDN)
+# ===============================================================
+0.0.0.0 suno.com
+0.0.0.0 suno.ai
+0.0.0.0 api.suno.ai
+0.0.0.0 studio-api.prod.suno.com
+0.0.0.0 studio-api.suno.ai
+0.0.0.0 cdn1.suno.ai
+0.0.0.0 cdn-o.suno.com
+
+# ===============================================================
+# Character.AI / Poe / Pi
+# ===============================================================
+0.0.0.0 character.ai
+0.0.0.0 characterai.com
+0.0.0.0 beta.character.ai
+0.0.0.0 poe.com
+0.0.0.0 poecdn.com
+0.0.0.0 pi.ai
+0.0.0.0 heypi.com
+0.0.0.0 withpi.ai
+
+# ===============================================================
+# You.com
+# ===============================================================
+0.0.0.0 you.com
+0.0.0.0 api.you.com
+
+# ===============================================================
+# Otros proveedores de inferencia / API
+# ===============================================================
+0.0.0.0 cerebras.ai
+0.0.0.0 api.cerebras.ai
+0.0.0.0 cloud.cerebras.ai
+0.0.0.0 fireworks.ai
+0.0.0.0 api.fireworks.ai
+0.0.0.0 sambanova.ai
+0.0.0.0 api.sambanova.ai
+0.0.0.0 ai21.com
+0.0.0.0 api.ai21.com
+0.0.0.0 novita.ai
+0.0.0.0 baseten.co
+
+# ===============================================================
+# Imagen / video generativo
+# ===============================================================
+0.0.0.0 civitai.com
+0.0.0.0 civitai.work
+0.0.0.0 leonardo.ai
+0.0.0.0 app.leonardo.ai
+0.0.0.0 api.leonardo.ai
+0.0.0.0 ideogram.ai
+0.0.0.0 api.ideogram.ai
+0.0.0.0 lumalabs.ai
+0.0.0.0 api.lumalabs.ai
+0.0.0.0 pika.art
+
+# ===============================================================
+# China / regionales (web + API)
+# ===============================================================
+0.0.0.0 z.ai
+0.0.0.0 api.z.ai
+0.0.0.0 chat.z.ai
+0.0.0.0 docs.z.ai
+0.0.0.0 chat.qwen.ai
+0.0.0.0 dashscope.aliyuncs.com
+0.0.0.0 tongyi.aliyun.com
+0.0.0.0 yiyan.baidu.com
+0.0.0.0 ernie.baidu.com
+0.0.0.0 aistudio.baidu.com
+0.0.0.0 chatglm.cn
+0.0.0.0 open.bigmodel.cn
+0.0.0.0 zhipuai.cn
+0.0.0.0 kimi.moonshot.cn
+0.0.0.0 moonshot.cn
+
+# ===============================================================
+# OPTIONAL - runners locales (descomentar si quieres bloquearlos)
+# ===============================================================
+# 0.0.0.0 ollama.com
+# 0.0.0.0 ollama.ai
+# 0.0.0.0 lmstudio.ai
+# 0.0.0.0 jan.ai
+# 0.0.0.0 gpt4all.io
+# 0.0.0.0 openwebui.com

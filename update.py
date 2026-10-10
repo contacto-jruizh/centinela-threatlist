@@ -4,6 +4,8 @@
 Archivos generados:
   adlist.txt -> SOLO curaduria manual (Pi-hole, ligero, actualizacion inmediata)
   hosts      -> SOLO curaduria manual (formato /etc/hosts, ligero)
+  ai-block.txt -> bloqueo de IA y sus APIs (Pi-hole Adlist, curaduria)
+                  desde data/custom/ai-hosts, menos lo permitido en ai-allow.txt
   bulk/*.txt -> fuentes agregadas POR CATEGORIA (Pi-hole, mensual):
                 ads-trackers.txt, malware.txt, phishing.txt, threat-intel.txt
 
@@ -282,6 +284,38 @@ def write_categories(by_source, custom_domains, now):
         (outdir / f"{cat}.txt").write_text(head + body + "\n", encoding="utf-8")
         print(f"[ok] bulk/{cat}.txt: {len(doms):,} dominios")
 
+def write_ai_block(now):
+    """ai-block.txt (Pi-hole Adlist): bloquea IA/APIs de data/custom/ai-hosts.
+    Resta lo permitido en ai-allow.txt (allowlist; p.ej. Claude/Anthropic).
+    Formato hosts "0.0.0.0 dominio". Match exacto: se enumeran subdominios."""
+    source = load_list("data/custom/ai-hosts")
+    allow = load_list("ai-allow.txt")
+    def allowed(d):
+        return d in allow or any(d.endswith("." + a) for a in allow)
+    doms = sorted(d for d in source if not allowed(d))
+    head = f"""# Title: Centinela ThreatList - bloqueo de IA y sus APIs
+#
+# Bloquea proveedores de IA y sus endpoints/APIs (OpenAI/ChatGPT, Gemini,
+# Copilot, Perplexity, xAI/Grok, Mistral, Cohere, DeepSeek, etc.).
+#
+# Claude / Anthropic NO se bloquean: se permiten via ai-allow.txt (Allowlist).
+# Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: {now}
+# Dominios bloqueados: {len(doms)}
+#
+# Pi-hole Adlist (bloqueo IA):   {REPO}/ai-block.txt
+# Pi-hole Allowlist (permitir):  {REPO}/ai-allow.txt
+# Curaduria (adlist.txt):        {REPO}/adlist.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+"""
+    body = "\n".join(f"0.0.0.0 {d}" for d in doms)
+    (ROOT / "ai-block.txt").write_text(head + body + "\n", encoding="utf-8")
+    print(f"[ok] ai-block.txt: {len(doms)} dominios (bloqueo IA)")
+
 def main():
     ap = argparse.ArgumentParser(description="Centinela ThreatList generator")
     ap.add_argument("--auto", action="store_true", help="fetch fuentes remotas y genera bulk/*.txt (por categoria)")
@@ -302,6 +336,7 @@ def main():
 
     if do_curated:
         write_curated(own, args, now)
+        write_ai_block(now)
     if do_bulk:
         by_source = collect_by_source(args)
         write_categories(by_source, custom_domains, now)

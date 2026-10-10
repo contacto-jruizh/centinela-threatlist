@@ -6,20 +6,50 @@ Listas separadas para **control** y **velocidad**:
 |---|---|---|---|
 | `adlist.txt` | **Solo curaduría manual** (Pi-hole) | ~KB | inmediata |
 | `hosts` | **Solo curaduría manual** (`/etc/hosts`) | ~KB | inmediata |
+| `ai-block.txt` | Bloqueo de IA y sus APIs (Pi-hole Adlist) | ~KB | inmediata |
+| `ai-allow.txt` | Whitelist de IA permitidas (Pi-hole Allowlist) | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
 | `bulk/threat-intel.txt` | Agregado: threat intel (HaGeZi pro) | ~6 MB | mensual |
 
 Fuentes curadas: `data/custom/hosts` + `blacklist.txt`.
+Listas de IA: `data/custom/ai-hosts` (bloqueo) y `ai-allow.txt` (permitir).
 Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tranco Top-1M.
 
 ## Agregar un dominio (rápido, sin red)
 
 ```bash
 echo "malicioso.ejemplo.com" >> data/custom/hosts
-python3 update.py --curated      # regenera adlist.txt + hosts en segundos
+python3 update.py --curated      # regenera adlist.txt + hosts + ai-block.txt en segundos
 ```
+
+## Bloquear IA y permitir solo las que quieras
+
+Dos listas complementarias:
+
+| Lista | Archivo | Rol en Pi-hole |
+|---|---|---|
+| Bloqueo IA + APIs | `ai-block.txt` | **Adlist** (bloquea) |
+| IA permitidas | `ai-allow.txt` | **Allowlist** (permite) |
+
+- `ai-block.txt` bloquea proveedores de IA y sus endpoints/APIs (OpenAI/ChatGPT,
+  Gemini, Copilot, Perplexity, xAI/Grok, Mistral, Cohere, DeepSeek, Zhipu/z.ai,
+  etc.). Se genera desde `data/custom/ai-hosts`.
+- `ai-allow.txt` **permite** dominios que de otro modo se bloquearían. De fábrica
+  solo lleva **Claude / Anthropic** (web + API). El Allowlist de Pi-hole gana
+  SIEMPRE al bloqueo, así que aunque un dominio esté en las dos listas, se permite.
+
+Para bloquear otra IA: añade su dominio (y subdominios de API) a `data/custom/ai-hosts`.
+Para permitir otra IA: añade su dominio a `ai-allow.txt`.
+
+> **DNS no distingue pago de gratis.** `claude.ai` es el mismo dominio para el
+> plan gratis y el de pago; Pi-hole no sabe tu suscripción. Permitir el dominio
+> habilita tu Claude de pago (web) y la API; no existe una regla DNS que deje
+> pasar "solo el plan de pago".
+
+En Pi-hole v6, `ai-allow.txt` se añade como **Allowlist** (lista suscrita tipo
+antilist). En v5 o si prefieres manual, pega los dominios en **Domains → Allowlist**.
 
 ## Usar en Pi-hole
 
@@ -34,12 +64,20 @@ python3 update.py --curated      # regenera adlist.txt + hosts en segundos
    `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/malware.txt`
    `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/phishing.txt`
    `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/threat-intel.txt`
+
+   **IA (opcional):**
+   - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-block.txt`
+   - Allowlist (permitir Claude): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-allow.txt`
 3. Tools → Update Gravity.
 4. Verifica: `pihole -q nidir.info` debe dar match.
 
 > Empieza con `adlist.txt` + las categorías que te interesen. `threat-intel.txt`
 > (HaGeZi pro, ~6 MB) es la más pesada; puedes omitirla y aún cubres
 > phishing/malware/ads con las otras tres.
+
+> Para IA: añade `ai-block.txt` como **Adlist** y `ai-allow.txt` como **Allowlist**.
+> Si Pi-hole v6 no tiene Allowlist por URL, pega los dominios de `ai-allow.txt`
+> manualmente en **Domains → Allowlist**.
 
 Bloqueo extra recomendado en Pi-hole → Domains → Regex:
 ```
@@ -50,9 +88,9 @@ Esto cubre subdominios del atacante.
 ## Comandos
 
 ```bash
-python3 update.py --curated               # curaduría (rápido, sin red) -> adlist.txt + hosts
-python3 update.py --noupdate              # agregado desde caché local -> dist/*.txt
-python3 update.py --auto                  # fetch fuentes remotas -> dist/*.txt
+python3 update.py --curated               # curaduría (rápido, sin red) -> adlist.txt + hosts + ai-block.txt
+python3 update.py --noupdate              # agregado desde caché local -> bulk/*.txt
+python3 update.py --auto                  # fetch fuentes remotas -> bulk/*.txt
 python3 update.py --curated --noupdate    # ambos
 ```
 
