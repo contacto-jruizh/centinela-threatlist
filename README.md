@@ -8,6 +8,8 @@ Listas separadas para **control** y **velocidad**:
 | `hosts` | **Solo curaduría manual** (`/etc/hosts`) | ~KB | inmediata |
 | `ai-block.txt` | Bloqueo de IA y sus APIs (Pi-hole Adlist) | ~KB | inmediata |
 | `ai-allow.txt` | Whitelist de IA permitidas (Pi-hole Allowlist) | ~KB | inmediata |
+| `unifi/ai-block.txt` (+`-inline`) | IA a bloquear, formato UniFi | ~KB | inmediata |
+| `unifi/ai-allow.txt` (+`-inline`) | IA permitidas (Claude), formato UniFi | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
@@ -109,13 +111,16 @@ example.com;example.net
   UniFi tiene prioridad; sirve para que Claude no se bloquee aunque esté en una
   regla amplia.
 
-URLs para copiar:
+URLs para copiar (las 4 están publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-block.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-block-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-allow-inline.txt`
 
 > Si tu versión de UniFi solo tiene un campo de texto, usa los `*-inline.txt`
-> (una sola línea con `;`). Para añadir otra IA, edita `data/custom/ai-hosts`
-> (bloqueo) o `ai-allow.txt` (permitir) y vuelve a correr `python3 update.py --curated`.
+> (una sola línea con `;`); si admite pegar varias líneas, usa los normales.
+> Para añadir otra IA, edita `data/custom/ai-hosts` (bloqueo) o `ai-allow.txt`
+> (permitir) y vuelve a correr `python3 update.py --curated`.
 
 ## Comandos
 
