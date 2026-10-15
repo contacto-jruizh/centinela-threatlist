@@ -331,17 +331,18 @@ def write_unifi(key, source_path, allow_path, emit_blacklist=False):
     """unifi/<key>-*.txt: misma lista en formato UniFi (sin IP, sin comentarios).
     UniFi acepta un dominio por linea o todos en una linea separados por ';'.
     Se generan ambas variantes (normal y *-inline.txt). Si emit_blacklist,
-    tambien <key>-blacklist.txt / -inline.txt (alias del bloqueo)."""
+    tambien <key>-blacklist.txt / -inline.txt en formato hosts (0.0.0.0 dominio)."""
     block, allow = named_domains(source_path, allow_path)
     outdir = ROOT / "unifi"
     outdir.mkdir(exist_ok=True)
-    pairs = [(f"{key}-block", block), (f"{key}-allow", allow)]
+    pairs = [(f"{key}-block", block, False), (f"{key}-allow", allow, False)]
     if emit_blacklist:
-        pairs.append((f"{key}-blacklist", block))
-    for name, doms in pairs:
-        (outdir / f"{name}.txt").write_text("\n".join(doms) + "\n", encoding="utf-8")
-        (outdir / f"{name}-inline.txt").write_text(";".join(doms) + "\n", encoding="utf-8")
-    extra = f" | unifi/{key}-blacklist.txt: {len(block)} dominios" if emit_blacklist else ""
+        pairs.append((f"{key}-blacklist", block, True))
+    for name, doms, hosts_fmt in pairs:
+        body = [f"0.0.0.0 {d}" for d in doms] if hosts_fmt else doms
+        (outdir / f"{name}.txt").write_text("\n".join(body) + "\n", encoding="utf-8")
+        (outdir / f"{name}-inline.txt").write_text(";".join(body) + "\n", encoding="utf-8")
+    extra = f" | unifi/{key}-blacklist.txt: {len(block)} dominios (0.0.0.0)" if emit_blacklist else ""
     print(f"[ok] unifi/{key}-block.txt: {len(block)} dominios | unifi/{key}-allow.txt: {len(allow)} dominios{extra}")
 
 # Listas curadas: una fuente de bloqueo (data/custom/<key>-hosts) y su allowlist.
@@ -388,9 +389,12 @@ def verify_lists():
         uni_inline = {t for t in
                       (ROOT / "unifi" / f"{key}-block-inline.txt").read_text().strip().split(";") if t}
         if L.get("blacklist"):
-            uni_black = {l for l in (ROOT / "unifi" / f"{key}-blacklist.txt").read_text().splitlines() if l}
-            uni_black_inline = {t for t in
-                                (ROOT / "unifi" / f"{key}-blacklist-inline.txt").read_text().strip().split(";") if t}
+            uni_black = {l.split()[1] for l in
+                         (ROOT / "unifi" / f"{key}-blacklist.txt").read_text().splitlines()
+                         if l.startswith("0.0.0.0 ")}
+            uni_black_inline = {t.split()[1] for t in
+                                (ROOT / "unifi" / f"{key}-blacklist-inline.txt").read_text().strip().split(";")
+                                if t.startswith("0.0.0.0 ")}
         else:
             uni_black = uni_black_inline = uni
         checks = {
