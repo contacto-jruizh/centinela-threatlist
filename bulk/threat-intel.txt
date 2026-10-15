@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 14:52:23 (UTC)
-# Dominios en esta categoria: 220,254
+# Date: 15 October 2026 15:17:18 (UTC)
+# Dominios en esta categoria: 220,236
 #
 # Pi-hole Adlist (categoria threat-intel): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/threat-intel.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -19146,7 +19146,6 @@
 0.0.0.0 aep.analytics.bpi.com.ph
 0.0.0.0 aep.att.com
 0.0.0.0 aepnxvhkmqvfk.online
-0.0.0.0 aepxlg.adobe.com
 0.0.0.0 aeqfjsa.icu
 0.0.0.0 aeqfuyc.com
 0.0.0.0 aeqnvirziyfof.space
@@ -23495,7 +23494,6 @@
 0.0.0.0 analytics.admiralcloud.com
 0.0.0.0 analytics.admon.com.vn
 0.0.0.0 analytics.adnequin.fr
-0.0.0.0 analytics.adobe.com
 0.0.0.0 analytics.adobe.io
 0.0.0.0 analytics.adonia.de
 0.0.0.0 analytics.adp-appnet.de
@@ -28086,7 +28084,6 @@
 0.0.0.0 analytics.pnc.com
 0.0.0.0 analytics.pneumologie.de
 0.0.0.0 analytics.pnn.webformat.cloud
-0.0.0.0 analytics.pnw.appsvc.an.adobe.com
 0.0.0.0 analytics.pobo.space
 0.0.0.0 analytics.pocket-id.org
 0.0.0.0 analytics.pocketaustria.at
@@ -49801,7 +49798,6 @@
 0.0.0.0 cilolamall.xyz
 0.0.0.0 cilsammwcblcv.com
 0.0.0.0 cima-club.club
-0.0.0.0 cimage.adobe.com
 0.0.0.0 cimarendazgo.net
 0.0.0.0 cimb.data.adobedc.net
 0.0.0.0 cimb.sc.omtrdc.net
@@ -55929,7 +55925,6 @@
 0.0.0.0 cr-brands.net
 0.0.0.0 cr-input.mxpnl.net
 0.0.0.0 cr-nielsen.com
-0.0.0.0 cr.adobe.com
 0.0.0.0 cr.adsappier.com
 0.0.0.0 cr.naver.com
 0.0.0.0 cr036.com
@@ -56513,7 +56508,6 @@
 0.0.0.0 crklu.jottnar.com
 0.0.0.0 crktcutlery.com
 0.0.0.0 crlcw.link
-0.0.0.0 crlog-crcn.adobe.com
 0.0.0.0 crm-analytics.imweb.ru
 0.0.0.0 crm-data-analytics.marketing-automation-software.dailybustleinfo.com
 0.0.0.0 crm.agency
@@ -60684,7 +60678,6 @@
 0.0.0.0 data.diagnostics.onstar.com.data.adobedc.net
 0.0.0.0 data.diariosur.es
 0.0.0.0 data.diariovasco.com
-0.0.0.0 data.digital.adobe.com
 0.0.0.0 data.digitalks.az
 0.0.0.0 data.dm.casio.com
 0.0.0.0 data.dm.casio.com.data.adobedc.net
@@ -60698,7 +60691,6 @@
 0.0.0.0 data.drkoncerthuset.dk
 0.0.0.0 data.ds.dumont.de
 0.0.0.0 data.dvderotik.com
-0.0.0.0 data.e.adobe.com
 0.0.0.0 data.e.msccruceros.es
 0.0.0.0 data.e.msccruceros.es.data.adobedc.net
 0.0.0.0 data.e.msccruises.at
@@ -72599,7 +72591,6 @@
 0.0.0.0 eu-stsdk.vivoglobal.com
 0.0.0.0 eu-survey.com
 0.0.0.0 eu-sync.richaudience.com
-0.0.0.0 eu-teams.events.data.microsoft.com
 0.0.0.0 eu-timesync.vivoglobal.com
 0.0.0.0 eu-trader.io
 0.0.0.0 eu-vcode-api.vivoglobal.com
@@ -79810,7 +79801,6 @@
 0.0.0.0 fpss.allsmart.gr
 0.0.0.0 fpt.absa.co.za
 0.0.0.0 fpt.altibox.no
-0.0.0.0 fpt.commerce.adobe.com
 0.0.0.0 fpt.norton.com
 0.0.0.0 fpt.windowsazure.com
 0.0.0.0 fptls3.com
@@ -83135,7 +83125,6 @@
 0.0.0.0 genusskeller.com
 0.0.0.0 genymotion.org
 0.0.0.0 geo-analytics-data.trafficmanager.net
-0.0.0.0 geo.adobe.com
 0.0.0.0 geo.bandlab.io
 0.0.0.0 geo.brobible.com
 0.0.0.0 geo.digitalpoint.com
@@ -89567,8 +89556,6 @@
 0.0.0.0 hbr.data.adobedc.net
 0.0.0.0 hbr.sc.omtrdc.net
 0.0.0.0 hbr2czm7pfy994i.rest
-0.0.0.0 hbrcv.adobe.com
-0.0.0.0 hbrt.adobe.com
 0.0.0.0 hbsjx.sh.cn
 0.0.0.0 hbucccjxiljwy.site
 0.0.0.0 hbuilderx.cc
@@ -121684,7 +121671,6 @@
 0.0.0.0 metrics.adintime.com
 0.0.0.0 metrics.adlerinn.com
 0.0.0.0 metrics.adlibris.com
-0.0.0.0 metrics.adobe.com
 0.0.0.0 metrics.advisorchannel.com
 0.0.0.0 metrics.aeon.co
 0.0.0.0 metrics.aesio.fr
@@ -131950,7 +131936,6 @@
 0.0.0.0 nrxqoe.lovedatinglive.net
 0.0.0.0 nryfifdmpeotb.site
 0.0.0.0 nryqr.cn
-0.0.0.0 ns.adobe.com
 0.0.0.0 ns.donneespersonnelles.fr
 0.0.0.0 ns.hn
 0.0.0.0 ns.inmobi.com
@@ -181281,7 +181266,6 @@
 0.0.0.0 stats.adlice.com
 0.0.0.0 stats.administrarweb.es
 0.0.0.0 stats.administrator.technology
-0.0.0.0 stats.adobe.com
 0.0.0.0 stats.adultswim.com
 0.0.0.0 stats.aeries.com
 0.0.0.0 stats.agence-11h10.fr
@@ -186768,7 +186752,6 @@
 0.0.0.0 targeting.voxus.tv
 0.0.0.0 targetingnow.com
 0.0.0.0 targetix.net
-0.0.0.0 targetlr.adobe.com
 0.0.0.0 targetman.ru
 0.0.0.0 targetmatch.co
 0.0.0.0 targetmusty.com
@@ -187328,7 +187311,6 @@
 0.0.0.0 teams-events-data.trafficmanager.net
 0.0.0.0 teams-live.com
 0.0.0.0 teams-xu.com
-0.0.0.0 teams.events.data.microsoft.com
 0.0.0.0 teams.nel.measure.office.net
 0.0.0.0 teams.nel.measure.office.net.cardano.com
 0.0.0.0 teamsmarched.com

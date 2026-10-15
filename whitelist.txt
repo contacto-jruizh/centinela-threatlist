@@ -11,6 +11,7 @@ licdn.com
 whatsapp.com
 whatsapp.net
 wa.me
+dit.whatsapp.net
 # WhatsApp Business / Cloud API (Meta Graph API)
 graph.facebook.com
 
@@ -40,6 +41,12 @@ ap-guc3.spotify.com
 partiality.itunes.apple.com
 partiality.itunes.apple.com.edgekey.net
 partiality.itunes-apple.com.akadns.net
+mask.icloud.com
+
+# NUNCA bloquear Microsoft Teams (telemetria) ni Adobe.
+teams.events.data.microsoft.com
+eu-teams.events.data.microsoft.com
+adobe.com
 
 # NUNCA bloquear Claude / Anthropic (claude.ai + Claude Code).
 anthropic.com

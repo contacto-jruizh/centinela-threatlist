@@ -9,6 +9,7 @@
 whatsapp.com
 whatsapp.net
 wa.me
+dit.whatsapp.net
 # LinkedIn
 linkedin.com
 lnkd.in

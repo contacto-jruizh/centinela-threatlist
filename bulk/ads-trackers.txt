@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 14:52:23 (UTC)
-# Dominios en esta categoria: 74,790
+# Date: 15 October 2026 15:17:18 (UTC)
+# Dominios en esta categoria: 74,775
 #
 # Pi-hole Adlist (categoria ads-trackers): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/ads-trackers.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -709,11 +709,6 @@
 0.0.0.0 3date.de
 0.0.0.0 3dbluerayplayer.com
 0.0.0.0 3dcgfx.net
-0.0.0.0 3dns-1.adobe.com
-0.0.0.0 3dns-2.adobe.com
-0.0.0.0 3dns-3.adobe.com
-0.0.0.0 3dns-4.adobe.com
-0.0.0.0 3dns.adobe.com
 0.0.0.0 3donlinegames.de
 0.0.0.0 3dpassport.com
 0.0.0.0 3ds.ero-advertising.com
@@ -3126,7 +3121,6 @@
 0.0.0.0 adedy.com
 0.0.0.0 adef-residences.fr
 0.0.0.0 adeimptrck.com
-0.0.0.0 adelogs.adobe.com
 0.0.0.0 adelphic-partners.tremorhub.com
 0.0.0.0 ademails.com
 0.0.0.0 adengage.com
@@ -5518,7 +5512,6 @@
 0.0.0.0 adtag.ad.smaato.net
 0.0.0.0 adtag.cc
 0.0.0.0 adtag.msn.ca
-0.0.0.0 adtag.primetime.adobe.com
 0.0.0.0 adtag.sympatico.ca
 0.0.0.0 adtagj.portal-factory.com
 0.0.0.0 adtago.s3.amazonaws.com
@@ -9348,7 +9341,6 @@
 0.0.0.0 atrium-konie.pl
 0.0.0.0 atriumset.com
 0.0.0.0 ats.rlcdn.com
-0.0.0.0 atsmetrics.adobe.com
 0.0.0.0 atspace.de.intellitxt.com
 0.0.0.0 attacrodri.store
 0.0.0.0 attanthiev.store
@@ -12405,7 +12397,6 @@
 0.0.0.0 camgo.pl
 0.0.0.0 camormembr.store
 0.0.0.0 campaign.ad-brix.com
-0.0.0.0 campaign.adobe.com
 0.0.0.0 campaign.bharatmatrimony.com
 0.0.0.0 campaign.brand.zing.vn
 0.0.0.0 campaign.budgethyve.com
@@ -21979,7 +21970,6 @@
 0.0.0.0 genvixtrade-v96.pro
 0.0.0.0 geo-location.s-onetag.com
 0.0.0.0 geo-tracker.smadex.com
-0.0.0.0 geo.adobe.com
 0.0.0.0 geo.adpushup.com
 0.0.0.0 geo.atlassbx.com
 0.0.0.0 geo.celtra.com
@@ -29563,7 +29553,6 @@
 0.0.0.0 mcafee-home.7eer.net
 0.0.0.0 mccafee-orientador.com-br.site
 0.0.0.0 mcclatchy.112.2o7.net
-0.0.0.0 mcd-mkt-prod31-lb.campaign.adobe.com
 0.0.0.0 mcdlks.com
 0.0.0.0 mcdn.batmobi.net
 0.0.0.0 mcdp-chidc2.outbrain.com
@@ -34567,7 +34556,6 @@
 0.0.0.0 panasphoto.store
 0.0.0.0 pandasoftware.112.2o7.net
 0.0.0.0 pandg.tapad.com
-0.0.0.0 pandoramedia-mkt-prod1-t.campaign.adobe.com
 0.0.0.0 panel-ofertowy.makeup
 0.0.0.0 panel-v-830194.eu.cc
 0.0.0.0 panel.kaprila.com
@@ -43140,7 +43128,6 @@
 0.0.0.0 sspintrafmsmt.com
 0.0.0.0 ssptrk.adpopcorn.com
 0.0.0.0 sstatic1.histats.com
-0.0.0.0 sstats.adobe.com
 0.0.0.0 sstats.teenvogue.com
 0.0.0.0 sstraderstrade.com
 0.0.0.0 ssum-sec.casalemedia.com
@@ -47568,7 +47555,6 @@
 0.0.0.0 tsyndicate.net
 0.0.0.0 tt.omtrdc.net
 0.0.0.0 tt.onthe.io
-0.0.0.0 tt11.adobe.com
 0.0.0.0 ttarget.adbureau.net
 0.0.0.0 ttnet.yandex.com.tr
 0.0.0.0 ttoc8ok.com
@@ -50462,7 +50448,6 @@
 0.0.0.0 wdm29.com
 0.0.0.0 wdmwebs.us
 0.0.0.0 wdomu24.pl
-0.0.0.0 wdpro-mkt-prod2-lb.campaign.adobe.com
 0.0.0.0 we-are-gamers.com
 0.0.0.0 wealthamenzee-digital.pages.dev
 0.0.0.0 wealthanchorpro.com

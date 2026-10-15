@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 14:52:23 (UTC)
-# Dominios en esta categoria: 358,168
+# Date: 15 October 2026 15:17:18 (UTC)
+# Dominios en esta categoria: 358,161
 #
 # Pi-hole Adlist (categoria phishing): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/phishing.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -8832,7 +8832,6 @@
 0.0.0.0 acrepublicans.org
 0.0.0.0 acretailconsultancy.com
 0.0.0.0 acrilicosespeciales.com.mx
-0.0.0.0 acrobat.adobe.com
 0.0.0.0 acrogenic-bays.000webhostapp.com
 0.0.0.0 acrolithic-glossari.000webhostapp.com
 0.0.0.0 acromercanzia-app.com
@@ -37691,7 +37690,6 @@
 0.0.0.0 assetrecovery.click
 0.0.0.0 assetronspark.net
 0.0.0.0 assets-desktop.wixstudio.com
-0.0.0.0 assets.adobe.com
 0.0.0.0 assets.devdesenvolvimento.com.br
 0.0.0.0 assets.emailsagency.com
 0.0.0.0 assets.pictor.tv
@@ -92037,7 +92035,6 @@
 0.0.0.0 express-usservices.com
 0.0.0.0 express-van.com
 0.0.0.0 express-zpedidos.vercel.app
-0.0.0.0 express.adobe.com
 0.0.0.0 express.arthritisidpro.org
 0.0.0.0 express.dadi99.com
 0.0.0.0 express.lboutika.com
@@ -124346,7 +124343,6 @@
 0.0.0.0 indavibuervole.com
 0.0.0.0 indavuyrecbdnsj.com
 0.0.0.0 indbbistinguishabilities.info
-0.0.0.0 indd.adobe.com
 0.0.0.0 indeboarde.site
 0.0.0.0 indebrisch.cyou
 0.0.0.0 indebted.pbphgwbr.in
@@ -163078,7 +163074,6 @@
 0.0.0.0 na20raslou.web.app
 0.0.0.0 na2tionlus.com
 0.0.0.0 na4-docusignv1-52fe74b0160e448ceb80dfbd0a1159128ace1fb4dc97c9b1.edgeone.dev
-0.0.0.0 na4.documents.adobe.com
 0.0.0.0 na546na45n.blogspot.com
 0.0.0.0 naabbusiness.ir
 0.0.0.0 naadjdoadkasfdosfs.site
@@ -166074,7 +166069,6 @@
 0.0.0.0 new.datzcreative.com
 0.0.0.0 new.denverfamilies.com
 0.0.0.0 new.egeavenue.com
-0.0.0.0 new.express.adobe.com
 0.0.0.0 new.ferring.com.ar
 0.0.0.0 new.froid-guyader.fr
 0.0.0.0 new.fullbodywine.com
@@ -192627,7 +192621,6 @@
 0.0.0.0 postnbgf.weebly.com
 0.0.0.0 postnorddks.com
 0.0.0.0 postoffice-co-za.web.app
-0.0.0.0 postoffice.adobe.com
 0.0.0.0 postopetrolina.com.br
 0.0.0.0 postoral-scraps.000webhostapp.com
 0.0.0.0 postorders.lat
