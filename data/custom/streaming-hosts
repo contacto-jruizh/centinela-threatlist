@@ -1,0 +1,216 @@
+# streaming-hosts - Centinela: BLOQUEO de streaming (video, musica, TV)
+# Formato: "0.0.0.0 dominio". Se publica como streaming-block.txt (Pi-hole Adlist)
+# y en unifi/streaming-block.txt (formato UniFi).
+#
+# IMPORTANTE (Pi-hole): cada linea es match EXACTO. netflix.com NO bloquea
+# nflxvideo.net; por eso se enumeran CDNs/APIs de cada servicio.
+#
+# No se bloquean dominios raiz compartidos (amazon.com, google.com, apple.com,
+# microsoft.com) porque romperian compras/otros servicios; se usan subdominios
+# y CDNs especificos de cada plataforma. Lo que quieras permitir: streaming-allow.txt.
+
+# ===============================================================
+# Netflix
+# ===============================================================
+0.0.0.0 netflix.com
+0.0.0.0 netflix.net
+0.0.0.0 nflxvideo.net
+0.0.0.0 nflximg.net
+0.0.0.0 nflximg.com
+0.0.0.0 nflxext.com
+0.0.0.0 nflxso.net
+0.0.0.0 fast.com
+
+# ===============================================================
+# YouTube / YouTube Music / YouTube TV
+# ===============================================================
+0.0.0.0 youtube.com
+0.0.0.0 m.youtube.com
+0.0.0.0 music.youtube.com
+0.0.0.0 tv.youtube.com
+0.0.0.0 youtu.be
+0.0.0.0 yt.be
+0.0.0.0 youtube-nocookie.com
+0.0.0.0 youtubekids.com
+0.0.0.0 ytimg.com
+0.0.0.0 ytstatic.com
+0.0.0.0 googlevideo.com
+0.0.0.0 youtubemusic.com
+
+# ===============================================================
+# Amazon Prime Video (sin bloquear amazon.com)
+# ===============================================================
+0.0.0.0 primevideo.com
+0.0.0.0 amazonvideo.com
+0.0.0.0 amazonprimevideo.com
+0.0.0.0 aiv-cdn.net
+0.0.0.0 aiv-delivery.net
+0.0.0.0 pv-cdn.net
+
+# ===============================================================
+# Disney+ / Hulu / ESPN
+# ===============================================================
+0.0.0.0 disneyplus.com
+0.0.0.0 disney-plus.net
+0.0.0.0 disneystreaming.com
+0.0.0.0 bamgrid.com
+0.0.0.0 dssott.com
+0.0.0.0 disney.com
+0.0.0.0 hulu.com
+0.0.0.0 huluim.com
+0.0.0.0 hulustream.com
+0.0.0.0 espn.com
+0.0.0.0 espncdn.com
+0.0.0.0 espnplus.com
+
+# ===============================================================
+# Max / HBO / Warner
+# ===============================================================
+0.0.0.0 max.com
+0.0.0.0 hbomax.com
+0.0.0.0 hbomaxcdn.com
+0.0.0.0 hbo.com
+
+# ===============================================================
+# Roku
+# ===============================================================
+0.0.0.0 roku.com
+0.0.0.0 roktv.com
+0.0.0.0 ro.ku
+
+# ===============================================================
+# Peacock / Paramount+ / Starz / Showtime
+# ===============================================================
+0.0.0.0 peacocktv.com
+0.0.0.0 peacock.com
+0.0.0.0 paramountplus.com
+0.0.0.0 cbsivideo.com
+0.0.0.0 cbsaavideo.com
+0.0.0.0 starz.com
+0.0.0.0 showtime.com
+0.0.0.0 sho.com
+
+# ===============================================================
+# Apple TV+ (solo subdominio; NO se bloquea apple.com)
+# ===============================================================
+0.0.0.0 tv.apple.com
+
+# ===============================================================
+# Twitch / Kick / Rumble / Odysee / Vimeo / Dailymotion
+# ===============================================================
+0.0.0.0 twitch.tv
+0.0.0.0 ttvnw.net
+0.0.0.0 jtvnw.net
+0.0.0.0 twitchcdn.net
+0.0.0.0 ext-twitch.tv
+0.0.0.0 kick.com
+0.0.0.0 rumble.com
+0.0.0.0 odysee.com
+0.0.0.0 lbry.tv
+0.0.0.0 lbry.com
+0.0.0.0 vimeo.com
+0.0.0.0 vimeocdn.com
+0.0.0.0 dailymotion.com
+0.0.0.0 dmcdn.net
+0.0.0.0 dm-event.net
+
+# ===============================================================
+# FAST / AVOD (gratis con anuncios)
+# ===============================================================
+0.0.0.0 tubitv.com
+0.0.0.0 tubi.io
+0.0.0.0 pluto.tv
+0.0.0.0 crackle.com
+0.0.0.0 vudu.com
+0.0.0.0 fandango.com
+0.0.0.0 vevo.com
+
+# ===============================================================
+# Discovery+ / educacion / documentales
+# ===============================================================
+0.0.0.0 discoveryplus.com
+0.0.0.0 discovery.com
+0.0.0.0 curiositystream.com
+0.0.0.0 kanopy.com
+
+# ===============================================================
+# Anime / asiatico
+# ===============================================================
+0.0.0.0 crunchyroll.com
+0.0.0.0 crunchyrollcdn.com
+0.0.0.0 vrv.co
+0.0.0.0 bilibili.com
+0.0.0.0 bilivideo.com
+0.0.0.0 bilibili.tv
+0.0.0.0 nicovideo.jp
+0.0.0.0 nimg.jp
+0.0.0.0 iq.com
+0.0.0.0 iqiyi.com
+0.0.0.0 wetv.vip
+0.0.0.0 viki.com
+0.0.0.0 zee5.com
+0.0.0.0 jiocinema.com
+0.0.0.0 hotstar.com
+0.0.0.0 sonyliv.com
+0.0.0.0 abema.tv
+
+# ===============================================================
+# TV en vivo / operadores / regionales
+# ===============================================================
+0.0.0.0 sling.com
+0.0.0.0 fubo.tv
+0.0.0.0 philo.com
+0.0.0.0 directv.com
+0.0.0.0 dazn.com
+0.0.0.0 viaplay.com
+0.0.0.0 nowtv.com
+0.0.0.0 sky.com
+0.0.0.0 bbc.co.uk
+0.0.0.0 bbc.com
+0.0.0.0 bbci.co.uk
+0.0.0.0 itv.com
+0.0.0.0 itvx.com
+0.0.0.0 channel4.com
+0.0.0.0 mubi.com
+0.0.0.0 rakuten.tv
+0.0.0.0 canalplus.com
+0.0.0.0 movistarplus.es
+0.0.0.0 atresplayer.com
+0.0.0.0 filmin.es
+0.0.0.0 rtve.es
+0.0.0.0 stan.com.au
+0.0.0.0 video.unext.jp
+
+# ===============================================================
+# Musica en streaming
+# ===============================================================
+0.0.0.0 spotify.com
+0.0.0.0 spotifycdn.com
+0.0.0.0 scdn.co
+0.0.0.0 spotifycharts.com
+0.0.0.0 spotify.link
+0.0.0.0 soundcloud.com
+0.0.0.0 sndcdn.com
+0.0.0.0 deezer.com
+0.0.0.0 dzcdn.net
+0.0.0.0 tidal.com
+0.0.0.0 tidalhifi.com
+0.0.0.0 pandora.com
+0.0.0.0 iheart.com
+0.0.0.0 iheartradio.com
+0.0.0.0 tunein.com
+0.0.0.0 last.fm
+0.0.0.0 qobuz.com
+0.0.0.0 anghami.com
+0.0.0.0 jiosaavn.com
+0.0.0.0 napster.com
+0.0.0.0 audiomack.com
+0.0.0.0 bandcamp.com
+0.0.0.0 mixcloud.com
+0.0.0.0 siriusxm.com
+
+# ===============================================================
+# OPTIONAL - Plex (ojo: plex.tv tambien autentica Plex local)
+# ===============================================================
+# 0.0.0.0 plex.tv
+# 0.0.0.0 plexapp.com

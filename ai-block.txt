@@ -1,19 +1,18 @@
 # Title: Centinela ThreatList - bloqueo de IA y sus APIs
 #
 # Bloquea proveedores de IA y sus endpoints/APIs (OpenAI/ChatGPT, Gemini,
-# Perplexity, xAI/Grok, Mistral, Cohere, DeepSeek, etc.).
+# Perplexity, xAI/Grok, Mistral, Cohere, DeepSeek, Zhipu/z.ai, etc.).
 #
-# Claude / Anthropic NO se bloquean: se permiten via ai-allow.txt (Allowlist).
+# Claude y Microsoft Copilot NO se bloquean: van en ai-allow.txt (Allowlist).
 # Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 01:34:29 (UTC)
+# Date: 15 October 2026 01:45:20 (UTC)
 # Dominios bloqueados: 146
 #
-# Pi-hole Adlist (bloqueo IA):   https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-block.txt
+# Pi-hole Adlist (bloqueo):      https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-block.txt
 # Pi-hole Allowlist (permitir):  https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-allow.txt
 # UniFi (formato UniFi):         https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-block.txt
-# Curaduria (adlist.txt):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
 # Project home page: https://github.com/contacto-jruizh/centinela-threatlist
 #
 # ===============================================================

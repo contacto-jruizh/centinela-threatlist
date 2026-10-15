@@ -10,6 +10,10 @@ Listas separadas para **control** y **velocidad**:
 | `ai-allow.txt` | Whitelist de IA permitidas (Pi-hole Allowlist) | ~KB | inmediata |
 | `unifi/ai-block.txt` (+`-inline`) | IA a bloquear, formato UniFi | ~KB | inmediata |
 | `unifi/ai-allow.txt` (+`-inline`) | IA permitidas (Claude + Copilot), formato UniFi | ~KB | inmediata |
+| `streaming-block.txt` | Bloqueo de streaming (Pi-hole Adlist) | ~KB | inmediata |
+| `streaming-allow.txt` | Whitelist de streaming (vacía por defecto) | ~KB | inmediata |
+| `unifi/streaming-block.txt` (+`-inline`) | Streaming a bloquear, formato UniFi | ~KB | inmediata |
+| `unifi/streaming-allow.txt` (+`-inline`) | Streaming permitido, formato UniFi | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
@@ -17,13 +21,14 @@ Listas separadas para **control** y **velocidad**:
 
 Fuentes curadas: `data/custom/hosts` + `blacklist.txt`.
 Listas de IA: `data/custom/ai-hosts` (bloqueo) y `ai-allow.txt` (permitir).
+Listas de streaming: `data/custom/streaming-hosts` (bloqueo) y `streaming-allow.txt`.
 Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tranco Top-1M.
 
 ## Agregar un dominio (rápido, sin red)
 
 ```bash
 echo "malicioso.ejemplo.com" >> data/custom/hosts
-python3 update.py --curated      # regenera adlist.txt + hosts + ai-block.txt en segundos
+python3 update.py --curated      # regenera adlist.txt + hosts + *-block.txt + unifi/ en segundos
 ```
 
 ## Bloquear IA y permitir solo las que quieras
@@ -57,6 +62,32 @@ Para permitir otra IA: añade su dominio a `ai-allow.txt`.
 En Pi-hole v6, `ai-allow.txt` se añade como **Allowlist** (lista suscrita tipo
 antilist). En v5 o si prefieres manual, pega los dominios en **Domains → Allowlist**.
 
+## Bloquear streaming
+
+Misma mecánica que las IA: una fuente de bloqueo y una allowlist opcional.
+
+| Lista | Archivo | Rol |
+|---|---|---|
+| Bloqueo streaming | `streaming-block.txt` | **Adlist** (bloquea) |
+| Streaming permitido | `streaming-allow.txt` | **Allowlist** (permite; vacía por defecto) |
+
+- `streaming-block.txt` bloquea Netflix, YouTube (+`googlevideo.com`), Prime
+  Video, Disney+, Hulu, Max/HBO, Roku, Peacock, Paramount+, Twitch, Spotify,
+  Deezer, Tidal, Bilibili, Crunchyroll, operadores de TV, etc. Se genera desde
+  `data/custom/streaming-hosts`.
+- `streaming-allow.txt` está **vacía** por defecto (se bloquea todo). Para dejar
+  pasar algo, añade el dominio (y sus CDNs) y Pi-hole/UniFi lo permitirá aunque
+  siga en la lista de bloqueo.
+- No se bloquean dominios raíz compartidos (`amazon.com`, `google.com`,
+  `apple.com`, `microsoft.com`) para no romper compras u otros servicios; se
+  usan subdominios y CDNs específicos.
+
+Para bloquear otro servicio: añade su dominio y CDNs a `data/custom/streaming-hosts`.
+
+URLs de Pi-hole:
+- Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-block.txt`
+- Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-allow.txt`
+
 ## Usar en Pi-hole
 
 1. Sube este repo a GitHub como `centinela-threatlist`.
@@ -73,7 +104,11 @@ antilist). En v5 o si prefieres manual, pega los dominios en **Domains → Allow
 
    **IA (opcional):**
    - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-block.txt`
-   - Allowlist (permitir Claude): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-allow.txt`
+   - Allowlist (permitir Claude/Copilot): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-allow.txt`
+
+   **Streaming (opcional):**
+   - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-block.txt`
+   - Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-allow.txt`
 3. Tools → Update Gravity.
 4. Verifica: `pihole -q nidir.info` debe dar match.
 
@@ -103,6 +138,10 @@ IA en ese formato (sin IP, sin comentarios):
 | `unifi/ai-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 | `unifi/ai-allow.txt` | un dominio por línea | pegar en la lista **Allow** |
 | `unifi/ai-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/streaming-block.txt` | un dominio por línea | pegar en la lista **Block** |
+| `unifi/streaming-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/streaming-allow.txt` | un dominio por línea | pegar en la lista **Allow** |
+| `unifi/streaming-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 
 Ejemplo (formato inline):
 ```
@@ -115,11 +154,15 @@ example.com;example.net
   `-inline`). El allow de UniFi tiene prioridad; sirve para que Claude y Copilot
   no se bloqueen aunque estén en una regla amplia.
 
-URLs para copiar (las 4 están publicadas):
+URLs para copiar (todas publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-block.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-block-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-allow-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/streaming-block.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/streaming-block-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/streaming-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/streaming-allow-inline.txt`
 
 > Si tu versión de UniFi solo tiene un campo de texto, usa los `*-inline.txt`
 > (una sola línea con `;`); si admite pegar varias líneas, usa los normales.
@@ -129,7 +172,7 @@ URLs para copiar (las 4 están publicadas):
 ## Comandos
 
 ```bash
-python3 update.py --curated               # curaduría (rápido, sin red) -> adlist.txt + hosts + ai-block.txt
+python3 update.py --curated               # curaduría (rápido, sin red) -> adlist.txt + hosts + *-block.txt + unifi/
 python3 update.py --noupdate              # agregado desde caché local -> bulk/*.txt
 python3 update.py --auto                  # fetch fuentes remotas -> bulk/*.txt
 python3 update.py --curated --noupdate    # ambos

@@ -1,0 +1,13 @@
+# streaming-allow - Centinela: WHITELIST de streaming permitido (Allowlist)
+#
+# Dominios que se PERMITEN aunque esten (o puedan estar) en streaming-block.txt.
+# Pi-hole / UniFi: el Allowlist gana siempre al bloqueo.
+#
+# Vacio por defecto (se bloquea todo lo de data/custom/streaming-hosts).
+# Ejemplos: para dejar pasar YouTube o Netflix en ciertos equipos, agrega:
+#   youtube.com
+#   googlevideo.com
+#   netflix.com
+#   nflxvideo.net
+#
+# Formato: un dominio por linea.
