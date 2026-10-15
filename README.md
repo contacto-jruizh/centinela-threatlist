@@ -24,6 +24,20 @@ Listas de IA: `data/custom/ai-hosts` (bloqueo) y `ai-allow.txt` (permitir).
 Listas de streaming: `data/custom/streaming-hosts` (bloqueo) y `streaming-allow.txt`.
 Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tranco Top-1M.
 
+## Nunca bloquear (regla fija)
+
+**WhatsApp NUNCA se bloquea, ni la web ni su API.** Está en `whitelist.txt`
+(partial match) y no se incluye en ninguna lista de bloqueo:
+
+| Uso | Dominios |
+|---|---|
+| WhatsApp web / app / media | `whatsapp.com`, `whatsapp.net`, `wa.me` |
+| WhatsApp Business / Cloud API | `graph.facebook.com` |
+
+`whitelist.txt` es el filtro anti-FP que se aplica a las listas agregadas
+(`bulk/`), así que ningún feed puede bloquear WhatsApp. Si añades una lista
+nueva, respeta esta regla.
+
 ## Agregar un dominio (rápido, sin red)
 
 ```bash

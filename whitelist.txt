@@ -1,6 +1,15 @@
-# Whitelist - dominios que NUNCA se bloquean (partial match)
+# Whitelist - dominios que NUNCA se bloquean (partial match: cubre subdominios)
 google.com
 linkedin.com
+
+# REGLA PERMANENTE: NUNCA bloquear WhatsApp (ni web ni API).
+# Web/app y media
+whatsapp.com
+whatsapp.net
+wa.me
+# WhatsApp Business / Cloud API (Meta Graph API)
+graph.facebook.com
+
 # Ejemplo:
 # canva.com
 # microsoftonline.com
