@@ -49,8 +49,6 @@ copilot.cloud.microsoft
 m365.cloud.microsoft
 copilot.com
 m365copilot.com
-# Microsoft recomienda permitir TODO *.cloud.microsoft
-cloud.microsoft
 # Copilot en Edge / backend legacy (Bing)
 edgeservices.bing.com
 sydney.bing.com

@@ -3,7 +3,6 @@ aadcdn.msftauth.net
 account.microsoft.com
 assets.online.office.com
 cdn.office.net
-cloud.microsoft
 copilot.cloud.microsoft
 copilot.com
 copilot.microsoft.com

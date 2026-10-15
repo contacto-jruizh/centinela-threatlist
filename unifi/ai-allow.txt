@@ -7,7 +7,6 @@ claude.ai
 claude.com
 claude.dev
 claudeusercontent.com
-cloud.microsoft
 code.claude.com
 console.anthropic.com
 copilot.cloud.microsoft

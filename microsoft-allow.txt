@@ -3,8 +3,8 @@
 # Dominios PERMITIDOS (microsoft). Formato: uno por linea.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 15:22:55 (UTC)
-# Dominios: 49
+# Date: 15 October 2026 15:27:44 (UTC)
+# Dominios: 48
 #
 # Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/microsoft-allow.txt
 # UniFi:             https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/microsoft-allow.txt
@@ -16,7 +16,6 @@ aadcdn.msftauth.net
 account.microsoft.com
 assets.online.office.com
 cdn.office.net
-cloud.microsoft
 copilot.cloud.microsoft
 copilot.com
 copilot.microsoft.com
