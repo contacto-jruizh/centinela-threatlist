@@ -4,9 +4,9 @@
 Archivos generados:
   adlist.txt -> SOLO curaduria manual (Pi-hole, ligero, actualizacion inmediata)
   hosts      -> SOLO curaduria manual (formato /etc/hosts, ligero)
-  ai-block.txt / streaming-block.txt / social-block.txt -> bloqueo curado
-                  (Pi-hole Adlist) desde data/custom/{ai,streaming,social}-hosts,
-                  menos el allowlist ({key}-allow.txt)
+  ai-block.txt / streaming-block.txt / social-block.txt / vpn-block.txt ->
+                  bloqueo curado (Pi-hole Adlist) desde data/custom/
+                  {ai,streaming,social,vpn}-hosts, menos el allowlist ({key}-allow.txt)
   unifi/*.txt  -> mismas listas curadas en formato UniFi (sin IP; por linea y
                   variante -inline.txt separada por ';')
 
@@ -368,6 +368,13 @@ LISTS = [
              "# Snapchat, WeChat, Douyin, Kuaishou, Pinterest, Discord, etc.).",
         note="# NUNCA se bloquean WhatsApp, LinkedIn ni Telegram: van en social-allow.txt.",
         blacklist=True,
+    ),
+    dict(
+        key="vpn", source="data/custom/vpn-hosts", allow="vpn-allow.txt",
+        title="botnet / anonimizadores / VPN",
+        desc="# Bloquea VPN, anonimizadores, proxies y botnets (Urban VPN, Hola,\n"
+             "# Hotspot Shield, Psiphon, Tor, etc.).",
+        note="# VPN permitidas: vpn-allow.txt (vacio por ahora).",
     ),
 ]
 

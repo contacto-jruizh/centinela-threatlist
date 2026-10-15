@@ -1,0 +1,68 @@
+# Title: Centinela ThreatList - botnet / anonimizadores / VPN
+#
+# Bloquea VPN, anonimizadores, proxies y botnets (Urban VPN, Hola,
+# Hotspot Shield, Psiphon, Tor, etc.).
+#
+# VPN permitidas: vpn-allow.txt (vacio por ahora).
+# Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: 15 October 2026 03:10:01 (UTC)
+# Dominios bloqueados: 50
+#
+# Pi-hole Adlist (bloqueo):      https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/vpn-block.txt
+# Pi-hole Allowlist (permitir):  https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/vpn-allow.txt
+# UniFi (formato UniFi):         https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-block.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+0.0.0.0 airvpn.org
+0.0.0.0 analytics-toolbar.urban-vpn.com
+0.0.0.0 anti-phishing-protection-toolbar.urban-vpn.com
+0.0.0.0 anti-phishing-protection.urban-vpn.com
+0.0.0.0 authentication.urban-vpn.com
+0.0.0.0 betternet.co
+0.0.0.0 betternetvpn.com
+0.0.0.0 config-toolbar.urban-vpn.com
+0.0.0.0 croxyproxy.com
+0.0.0.0 cyberghostvpn.com
+0.0.0.0 expressvpn.com
+0.0.0.0 freevpn.me
+0.0.0.0 getlantern.org
+0.0.0.0 hide.me
+0.0.0.0 hideipvpn.com
+0.0.0.0 hidemyass.com
+0.0.0.0 hola.org
+0.0.0.0 holavpn.com
+0.0.0.0 holavpn.net
+0.0.0.0 hotspotshield.com
+0.0.0.0 hsselite.com
+0.0.0.0 ipvanish.com
+0.0.0.0 ivpn.net
+0.0.0.0 lantern.io
+0.0.0.0 mullvad.net
+0.0.0.0 nordvpn.com
+0.0.0.0 onion.link
+0.0.0.0 onion.to
+0.0.0.0 ovpn.com
+0.0.0.0 perfect-privacy.com
+0.0.0.0 privateinternetaccess.com
+0.0.0.0 protonvpn.com
+0.0.0.0 protonvpn.net
+0.0.0.0 proxysite.com
+0.0.0.0 psiphon.ca
+0.0.0.0 psiphon3.com
+0.0.0.0 purevpn.com
+0.0.0.0 softether.org
+0.0.0.0 surfshark.com
+0.0.0.0 tor2web.org
+0.0.0.0 torguard.net
+0.0.0.0 torproject.org
+0.0.0.0 tunnelbear.com
+0.0.0.0 ultrasurf.us
+0.0.0.0 urban-vpn.com
+0.0.0.0 vpnbook.com
+0.0.0.0 vpngate.com
+0.0.0.0 vpngate.net
+0.0.0.0 windscribe.com
+0.0.0.0 zenmate.com

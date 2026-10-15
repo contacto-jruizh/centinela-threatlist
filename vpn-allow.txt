@@ -1,0 +1,8 @@
+# vpn-allow - Centinela: WHITELIST de VPN permitidas (Allowlist)
+#
+# Dominios que se PERMITEN aunque esten (o puedan estar) en vpn-block.txt.
+# Pi-hole / UniFi: el Allowlist gana siempre al bloqueo.
+#
+# De momento NO hay VPN permitidas (vacio). Para permitir una, agrega su
+# dominio (y sus servidores/CDNs) aqui, uno por linea. Ejemplo:
+#   miempresa-vpn.com

@@ -18,6 +18,10 @@ Listas separadas para **control** y **velocidad**:
 | `social-allow.txt` | Whitelist social (WhatsApp/LinkedIn/Telegram) | ~KB | inmediata |
 | `unifi/social-block.txt` (+`-inline`) | Redes sociales a bloquear, formato UniFi | ~KB | inmediata |
 | `unifi/social-allow.txt` (+`-inline`) | Redes permitidas, formato UniFi | ~KB | inmediata |
+| `vpn-block.txt` | Bloqueo VPN/anonimizadores/botnets (Pi-hole Adlist) | ~KB | inmediata |
+| `vpn-allow.txt` | VPN permitidas (vacía por ahora) | ~KB | inmediata |
+| `unifi/vpn-block.txt` (+`-inline`) | VPN a bloquear, formato UniFi | ~KB | inmediata |
+| `unifi/vpn-allow.txt` (+`-inline`) | VPN permitidas, formato UniFi | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
@@ -142,6 +146,29 @@ URLs de UniFi (formato UniFi; también `-inline.txt` con `;`):
 - Blacklist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-blacklist.txt`
 - Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-allow.txt`
 
+## Bloquear VPN / anonimizadores (botnet_anonimizadores)
+
+| Lista | Archivo | Rol |
+|---|---|---|
+| Bloqueo VPN/anonimizadores | `vpn-block.txt` | **Adlist** (bloquea) |
+| VPN permitidas | `vpn-allow.txt` | **Allowlist** (vacía por ahora) |
+
+- `vpn-block.txt` bloquea VPN, anonimizadores, proxies y botnets. Incluye los
+  IoCs observados de **Urban VPN** (`urban-vpn.com` y sus subdominios
+  `authentication`, `config-toolbar`, `analytics-toolbar`,
+  `anti-phishing-protection-toolbar`, `anti-phishing-protection`) más Hola,
+  Hotspot Shield, Psiphon, Tor, NordVPN, ExpressVPN, etc.
+- `vpn-allow.txt` está **vacía**: por ahora no hay VPN permitidas. Para permitir
+  una, agrega su dominio (y servidores/CDNs) y tendrá prioridad sobre el bloqueo.
+
+URLs de Pi-hole:
+- Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/vpn-block.txt`
+- Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/vpn-allow.txt`
+
+URLs de UniFi (formato UniFi; también `-inline.txt` con `;`):
+- Blacklist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-block.txt`
+- Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-allow.txt`
+
 ## Usar en Pi-hole
 
 1. Sube este repo a GitHub como `centinela-threatlist`.
@@ -167,6 +194,10 @@ URLs de UniFi (formato UniFi; también `-inline.txt` con `;`):
    **Redes sociales (opcional):**
    - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-block.txt`
    - Allowlist (permitir WhatsApp/LinkedIn/Telegram): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-allow.txt`
+
+   **VPN / anonimizadores (opcional):**
+   - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/vpn-block.txt`
+   - Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/vpn-allow.txt`
 3. Tools → Update Gravity.
 4. Verifica: `pihole -q nidir.info` debe dar match.
 
@@ -206,6 +237,10 @@ IA en ese formato (sin IP, sin comentarios):
 | `unifi/social-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 | `unifi/social-blacklist.txt` | `0.0.0.0 dominio` (una por línea) | **blacklist** social (hosts) |
 | `unifi/social-blacklist-inline.txt` | dominios separados por `;` (sin IP) | pegar en el campo de dominio |
+| `unifi/vpn-block.txt` | un dominio por línea | pegar en la lista **Block** |
+| `unifi/vpn-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/vpn-allow.txt` | un dominio por línea | pegar en la lista **Allow** |
+| `unifi/vpn-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 
 Ejemplo (formato inline):
 ```
@@ -233,6 +268,10 @@ URLs para copiar (todas publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-allow-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-blacklist.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-blacklist-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-block.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-block-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-allow-inline.txt`
 
 > Si tu versión de UniFi solo tiene un campo de texto, usa los `*-inline.txt`
 > (una sola línea con `;`); si admite pegar varias líneas, usa los normales.

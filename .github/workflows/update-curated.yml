@@ -11,9 +11,11 @@ on:
       - "data/custom/ai-hosts"
       - "data/custom/streaming-hosts"
       - "data/custom/social-hosts"
+      - "data/custom/vpn-hosts"
       - "ai-allow.txt"
       - "streaming-allow.txt"
       - "social-allow.txt"
+      - "vpn-allow.txt"
       - "whitelist.txt"
       - "myhosts"
       - "update.py"
@@ -29,9 +31,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Generar adlist.txt + hosts + listas IA/streaming/social + unifi
+      - name: Generar adlist.txt + hosts + listas IA/streaming/social/vpn + unifi
         run: python3 update.py --curated
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update curated adlist [skip ci]"
-          file_pattern: "adlist.txt hosts ai-block.txt streaming-block.txt social-block.txt unifi/*.txt"
+          file_pattern: "adlist.txt hosts ai-block.txt streaming-block.txt social-block.txt vpn-block.txt unifi/*.txt"
