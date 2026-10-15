@@ -236,6 +236,37 @@ URLs Pi-hole (Allowlist):
 > Si Pi-hole v6 no tiene Allowlist por URL, pega los dominios de `ai-allow.txt`
 > manualmente en **Domains → Allowlist**.
 
+## Whitelist en Pi-hole (permitir siempre) — proceso inverso
+
+Para **permitir siempre** un dominio (no el proceso de bloquear, sino el
+contrario), Pi-hole usa el **Allowlist / Antilist**:
+
+1. Elige el archivo según el tipo de servicio (un dominio = **una sola** lista):
+   - Global / nunca bloquear (aplica a las `bulk/`): `whitelist.txt`.
+   - Por categoría: `ai-allow.txt`, `streaming-allow.txt`, `social-allow.txt`, `vpn-allow.txt`.
+   - Por fabricante: `microsoft-allow.txt`, `apple-allow.txt`, `whatsapp-allow.txt`
+     (fuentes en `data/custom/`).
+2. Añade el dominio (uno por línea) y regenera:
+   ```bash
+   python3 update.py --curated     # ai/streaming/social/vpn + fabricante
+   python3 update.py --noupdate    # solo si tocaste whitelist.txt (afecta bulk/)
+   ```
+3. En Pi-hole v6, súbelo como **Allowlist** (lista suscrita), o pega los dominios
+   en **Domains → Allowlist**. Luego Tools → Update Gravity (`pihole -g`).
+
+URLs de Allowlist (Pi-hole):
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whitelist.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/vpn-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/microsoft-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/apple-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt`
+
+> Regla: **un dominio = una sola lista** (UniFi/Pi-hole exigen únicos).
+> `verify_allow_disjoint()` aborta si un dominio aparece en dos listas de allow.
+
 Bloqueo extra recomendado en Pi-hole → Domains → Regex:
 ```
 \.nidir\.info$
