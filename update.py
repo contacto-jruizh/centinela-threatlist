@@ -9,6 +9,10 @@ Archivos generados:
                   ({key}-allow.txt)
   unifi/*.txt  -> mismas listas curadas en formato UniFi (sin IP; por linea y
                   variante -inline.txt separada por ';')
+
+Tras generar, verify_lists() valida bloqueo vs permitido y Pi-hole vs UniFi
+(falla con exit 1 si un dominio permitido quedo en el bloqueo o si las salidas
+no coinciden). Regla: verificar SIEMPRE bloqueo vs allow/exclusiones al cambiar.
   bulk/*.txt -> fuentes agregadas POR CATEGORIA (Pi-hole, mensual):
                 ads-trackers.txt, malware.txt, phishing.txt, threat-intel.txt
 
@@ -353,6 +357,36 @@ LISTS = [
     ),
 ]
 
+def verify_lists():
+    """Comprueba consistencia BLOQUEO vs PERMITIDO/EXCLUSIONES en cada lista.
+    Falla (exit 1) si: (a) un dominio permitido sigue en el bloqueo, o
+    (b) los .txt de Pi-hole y UniFi (normal e inline) no coinciden.
+    Regla: tras CUALQUIER cambio, bloquear/allow y Pi-hole/UniFi deben cuadrar."""
+    ok = True
+    for L in LISTS:
+        key = L["key"]
+        block, allow = named_domains(L["source"], L["allow"])
+        leaks = [d for d in block
+                 if any(d == a or d.endswith("." + a) for a in allow)]
+        pihole = {l.split()[1] for l in
+                  (ROOT / f"{key}-block.txt").read_text().splitlines()
+                  if l.startswith("0.0.0.0 ")}
+        uni = {l for l in (ROOT / "unifi" / f"{key}-block.txt").read_text().splitlines() if l}
+        uni_inline = {t for t in
+                      (ROOT / "unifi" / f"{key}-block-inline.txt").read_text().strip().split(";") if t}
+        checks = {
+            "leaks(allow en bloqueo)": len(leaks),
+            "pihole==unifi": pihole == uni,
+            "unifi linea==inline": uni == uni_inline,
+        }
+        bad = bool(leaks) or pihole != uni or uni != uni_inline
+        ok = ok and not bad
+        flag = "FALLO" if bad else "ok"
+        print(f"[check] {key}: block={len(block)} allow={len(allow)} "
+              f"leaks={len(leaks)} unifi_ok={pihole == uni} inline_ok={uni == uni_inline} -> {flag}")
+    if not ok:
+        raise SystemExit("error: inconsistencia bloqueo/allow o Pi-hole/UniFi (ver [check] arriba)")
+
 def main():
     ap = argparse.ArgumentParser(description="Centinela ThreatList generator")
     ap.add_argument("--auto", action="store_true", help="fetch fuentes remotas y genera bulk/*.txt (por categoria)")
@@ -377,6 +411,7 @@ def main():
             write_pihole_block(L["key"], L["source"], L["allow"],
                                L["title"], L["desc"], L["note"], now)
             write_unifi(L["key"], L["source"], L["allow"])
+        verify_lists()
     if do_bulk:
         by_source = collect_by_source(args)
         write_categories(by_source, custom_domains, now)
