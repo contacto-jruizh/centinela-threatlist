@@ -22,20 +22,8 @@
 0.0.0.0 fast.com
 
 # ===============================================================
-# YouTube / YouTube Music / YouTube TV
+# YouTube: PERMITIDO (no se bloquea). Ver whitelist.txt
 # ===============================================================
-0.0.0.0 youtube.com
-0.0.0.0 m.youtube.com
-0.0.0.0 music.youtube.com
-0.0.0.0 tv.youtube.com
-0.0.0.0 youtu.be
-0.0.0.0 yt.be
-0.0.0.0 youtube-nocookie.com
-0.0.0.0 youtubekids.com
-0.0.0.0 ytimg.com
-0.0.0.0 ytstatic.com
-0.0.0.0 googlevideo.com
-0.0.0.0 youtubemusic.com
 
 # ===============================================================
 # Amazon Prime Video (sin bloquear amazon.com)

@@ -357,8 +357,9 @@ LISTS = [
     dict(
         key="streaming", source="data/custom/streaming-hosts", allow="streaming-allow.txt",
         title="bloqueo de streaming (video, musica, TV)",
-        desc="# Bloquea servicios de streaming (Netflix, YouTube, Prime Video, Disney+,\n"
-             "# Max, Roku, Twitch, etc.). Spotify y WhatsApp nunca se bloquean.",
+        desc="# Bloquea servicios de streaming (Netflix, Prime Video, Disney+, Max,\n"
+             "# Roku, Twitch, deportes, torrents, etc.). Spotify, WhatsApp y YouTube\n"
+             "# nunca se bloquean.",
         note="# Lo que quieras permitir va en streaming-allow.txt (Allowlist).",
     ),
     dict(
@@ -380,7 +381,7 @@ LISTS = [
 ]
 
 # Allowlists por fabricante (SOLO permitidos, sin bloqueo asociado).
-ALLOW_LISTS = ["microsoft", "apple", "whatsapp"]
+ALLOW_LISTS = ["microsoft", "apple", "whatsapp", "youtube"]
 
 def write_vendor_allows(now):
     """Allowlists por fabricante -> <vendor>-allow.txt (Pi-hole) y

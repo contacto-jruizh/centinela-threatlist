@@ -61,6 +61,8 @@ registry.npmjs.org
 translate.google.com
 rae.es
 
+# YouTube va en su lista aparte: youtube-allow.txt
+
 # Ejemplo:
 # canva.com
 # microsoftonline.com

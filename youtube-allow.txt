@@ -1,0 +1,25 @@
+# Title: Centinela ThreatList - allowlist youtube
+#
+# Dominios PERMITIDOS (youtube). Formato: uno por linea.
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: 15 October 2026 16:43:23 (UTC)
+# Dominios: 12
+#
+# Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/youtube-allow.txt
+# UniFi:             https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/youtube-allow.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+googlevideo.com
+m.youtube.com
+music.youtube.com
+tv.youtube.com
+youtu.be
+youtube-nocookie.com
+youtube.com
+youtubekids.com
+youtubemusic.com
+yt.be
+ytimg.com
+ytstatic.com

@@ -105,7 +105,6 @@ gogoanime.bid
 gogoanimehd.io
 gomovies.sx
 gomovies.to
-googlevideo.com
 goojara.to
 gtv.com.tr
 hbo.com
@@ -146,7 +145,6 @@ livetv.ru
 livetv.sx
 lookmovie.ag
 lookmovie.to
-m.youtube.com
 m4ufree.tv
 m4uhd.tv
 max.com
@@ -162,7 +160,6 @@ moviesjoy.plus
 moviesjoy.to
 movistarplus.es
 mubi.com
-music.youtube.com
 myflixer.pw
 myflixer.to
 napster.com
@@ -273,7 +270,6 @@ tubi.io
 tubitv.com
 tunein.com
 tv.apple.com
-tv.youtube.com
 twitch.tv
 twitchcdn.net
 ufc.com
@@ -303,17 +299,9 @@ wetv.vip
 wwe.com
 yesmovies.ag
 yesmovies.to
-youtu.be
-youtube-nocookie.com
-youtube.com
-youtubekids.com
-youtubemusic.com
-yt.be
-ytimg.com
 yts.lt
 yts.mx
 yts.rs
-ytstatic.com
 zee5.com
 zooqle.com
 zoro.to

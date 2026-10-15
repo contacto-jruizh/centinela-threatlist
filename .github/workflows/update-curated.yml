@@ -15,6 +15,7 @@ on:
       - "data/custom/microsoft-allow"
       - "data/custom/apple-allow"
       - "data/custom/whatsapp-allow"
+      - "data/custom/youtube-allow"
       - "ai-allow.txt"
       - "streaming-allow.txt"
       - "social-allow.txt"
@@ -39,4 +40,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update curated adlist [skip ci]"
-          file_pattern: "adlist.txt hosts ai-block.txt streaming-block.txt social-block.txt vpn-block.txt microsoft-allow.txt apple-allow.txt whatsapp-allow.txt unifi/*.txt"
+          file_pattern: "adlist.txt hosts ai-block.txt streaming-block.txt social-block.txt vpn-block.txt microsoft-allow.txt apple-allow.txt whatsapp-allow.txt youtube-allow.txt unifi/*.txt"

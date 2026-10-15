@@ -1,0 +1,17 @@
+# youtube-allow - Centinela: ALLOWLIST YouTube (permitir siempre)
+# Formato: un dominio por linea. Se publica como youtube-allow.txt (Pi-hole)
+# y unifi/youtube-allow.txt (formato UniFi).
+# (Cambio de planes: YouTube ya NO se bloquea en streaming-block.txt.)
+
+youtube.com
+m.youtube.com
+music.youtube.com
+tv.youtube.com
+youtubemusic.com
+youtu.be
+yt.be
+youtube-nocookie.com
+youtubekids.com
+ytimg.com
+ytstatic.com
+googlevideo.com

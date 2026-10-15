@@ -102,8 +102,9 @@ Misma mecánica que las IA: una fuente de bloqueo y una allowlist opcional.
 | Streaming permitido | `streaming-allow.txt` | **Allowlist** (permite; vacía por defecto) |
 
 - `streaming-block.txt` bloquea:
-  - **Video**: Netflix, YouTube (+`googlevideo.com`), Prime Video, Disney+, Hulu,
-    Max/HBO, Roku, Peacock, Paramount+, Twitch, Vimeo, Dailymotion, etc.
+  - **Video**: Netflix, Prime Video, Disney+, Hulu, Max/HBO, Roku, Peacock,
+    Paramount+, Twitch, Vimeo, Dailymotion, etc. (**YouTube no se bloquea**;
+    está en `youtube-allow.txt`).
   - **Deportes**: oficiales (ESPN+, DAZN, Fubo, NBA/NFL/MLB/NHL, UFC, F1 TV…) y
     agregadores pirata (Streameast, Crackstreams, Buffstreams, VIPBox, Methstreams,
     Sportsurge, Rojadirecta, Footybite…).
@@ -182,16 +183,19 @@ Listas de **solo permitidos** para subir a UniFi (o Pi-hole), sin bloqueo asocia
 | Microsoft | M365/Office (login, Office, Outlook, Teams, SharePoint, OneDrive, Graph, Copilot) | **juegos/Xbox** (xbox.com, xboxlive.com, minecraft.net…) |
 | Apple | iCloud, App Store/iTunes, push, updates, cuenta | **Apple TV** (`tv.apple.com`) |
 | WhatsApp | web/app, media (`*.whatsapp.net`), API (Graph) | — |
+| YouTube | web, music, TV, CDN (`googlevideo.com`) | — |
 
 URLs UniFi (formato UniFi; también `-inline.txt` con `;`):
 - Microsoft: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/microsoft-allow.txt`
 - Apple: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/apple-allow.txt`
 - WhatsApp: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/whatsapp-allow.txt`
+- YouTube: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/youtube-allow.txt`
 
 URLs Pi-hole (Allowlist):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/microsoft-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/apple-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/youtube-allow.txt`
 
 > Editar fuentes: `data/custom/microsoft-allow`, `data/custom/apple-allow`,
 > `data/custom/whatsapp-allow` (un dominio por línea) y correr `update.py --curated`.
@@ -263,6 +267,7 @@ URLs de Allowlist (Pi-hole):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/microsoft-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/apple-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/youtube-allow.txt`
 
 > Regla: **un dominio = una sola lista** (UniFi/Pi-hole exigen únicos).
 > `verify_allow_disjoint()` aborta si un dominio aparece en dos listas de allow.

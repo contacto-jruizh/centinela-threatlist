@@ -1,14 +1,15 @@
 # Title: Centinela ThreatList - bloqueo de streaming (video, musica, TV)
 #
-# Bloquea servicios de streaming (Netflix, YouTube, Prime Video, Disney+,
-# Max, Roku, Twitch, etc.). Spotify y WhatsApp nunca se bloquean.
+# Bloquea servicios de streaming (Netflix, Prime Video, Disney+, Max,
+# Roku, Twitch, deportes, torrents, etc.). Spotify, WhatsApp y YouTube
+# nunca se bloquean.
 #
 # Lo que quieras permitir va en streaming-allow.txt (Allowlist).
 # Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 15:40:37 (UTC)
-# Dominios bloqueados: 319
+# Date: 15 October 2026 16:43:23 (UTC)
+# Dominios bloqueados: 307
 #
 # Pi-hole Adlist (bloqueo):      https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-block.txt
 # Pi-hole Allowlist (permitir):  https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-allow.txt
@@ -123,7 +124,6 @@
 0.0.0.0 gogoanimehd.io
 0.0.0.0 gomovies.sx
 0.0.0.0 gomovies.to
-0.0.0.0 googlevideo.com
 0.0.0.0 goojara.to
 0.0.0.0 gtv.com.tr
 0.0.0.0 hbo.com
@@ -164,7 +164,6 @@
 0.0.0.0 livetv.sx
 0.0.0.0 lookmovie.ag
 0.0.0.0 lookmovie.to
-0.0.0.0 m.youtube.com
 0.0.0.0 m4ufree.tv
 0.0.0.0 m4uhd.tv
 0.0.0.0 max.com
@@ -180,7 +179,6 @@
 0.0.0.0 moviesjoy.to
 0.0.0.0 movistarplus.es
 0.0.0.0 mubi.com
-0.0.0.0 music.youtube.com
 0.0.0.0 myflixer.pw
 0.0.0.0 myflixer.to
 0.0.0.0 napster.com
@@ -291,7 +289,6 @@
 0.0.0.0 tubitv.com
 0.0.0.0 tunein.com
 0.0.0.0 tv.apple.com
-0.0.0.0 tv.youtube.com
 0.0.0.0 twitch.tv
 0.0.0.0 twitchcdn.net
 0.0.0.0 ufc.com
@@ -321,17 +318,9 @@
 0.0.0.0 wwe.com
 0.0.0.0 yesmovies.ag
 0.0.0.0 yesmovies.to
-0.0.0.0 youtu.be
-0.0.0.0 youtube-nocookie.com
-0.0.0.0 youtube.com
-0.0.0.0 youtubekids.com
-0.0.0.0 youtubemusic.com
-0.0.0.0 yt.be
-0.0.0.0 ytimg.com
 0.0.0.0 yts.lt
 0.0.0.0 yts.mx
 0.0.0.0 yts.rs
-0.0.0.0 ytstatic.com
 0.0.0.0 zee5.com
 0.0.0.0 zooqle.com
 0.0.0.0 zoro.to
