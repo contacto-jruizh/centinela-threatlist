@@ -4,7 +4,7 @@
 # actualizacion inmediata. Fuentes agregadas por categoria en la rama `bulk`.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 16:56:30 (UTC)
+# Date: 15 October 2026 16:56:55 (UTC)
 # Dominios curados: 8
 #
 # Este archivo (Pi-hole Adlist): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
