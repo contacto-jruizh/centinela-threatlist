@@ -304,7 +304,7 @@ def write_ai_block(now):
     head = f"""# Title: Centinela ThreatList - bloqueo de IA y sus APIs
 #
 # Bloquea proveedores de IA y sus endpoints/APIs (OpenAI/ChatGPT, Gemini,
-# Copilot, Perplexity, xAI/Grok, Mistral, Cohere, DeepSeek, etc.).
+# Perplexity, xAI/Grok, Mistral, Cohere, DeepSeek, etc.).
 #
 # Claude / Anthropic NO se bloquean: se permiten via ai-allow.txt (Allowlist).
 # Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
