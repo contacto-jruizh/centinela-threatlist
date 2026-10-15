@@ -3,7 +3,7 @@
 # Dominios PERMITIDOS (apple). Formato: uno por linea.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 15:31:43 (UTC)
+# Date: 15 October 2026 15:31:54 (UTC)
 # Dominios: 25
 #
 # Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/apple-allow.txt
