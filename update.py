@@ -352,7 +352,7 @@ LISTS = [
         key="streaming", source="data/custom/streaming-hosts", allow="streaming-allow.txt",
         title="bloqueo de streaming (video, musica, TV)",
         desc="# Bloquea servicios de streaming (Netflix, YouTube, Prime Video, Disney+,\n"
-             "# Max, Roku, Spotify, Twitch, etc.).",
+             "# Max, Roku, Twitch, etc.). Spotify y WhatsApp nunca se bloquean.",
         note="# Lo que quieras permitir va en streaming-allow.txt (Allowlist).",
     ),
 ]

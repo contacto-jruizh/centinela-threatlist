@@ -11,3 +11,10 @@
 #   nflxvideo.net
 #
 # Formato: un dominio por linea.
+
+# EXCLUSION PERMANENTE: Spotify nunca se bloquea (musica permitida).
+spotify.com
+spotifycdn.com
+scdn.co
+spotifycharts.com
+spotify.link

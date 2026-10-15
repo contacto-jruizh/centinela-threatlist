@@ -11,7 +11,7 @@ Listas separadas para **control** y **velocidad**:
 | `unifi/ai-block.txt` (+`-inline`) | IA a bloquear, formato UniFi | ~KB | inmediata |
 | `unifi/ai-allow.txt` (+`-inline`) | IA permitidas (Claude + Copilot), formato UniFi | ~KB | inmediata |
 | `streaming-block.txt` | Bloqueo de streaming (Pi-hole Adlist) | ~KB | inmediata |
-| `streaming-allow.txt` | Whitelist de streaming (vacía por defecto) | ~KB | inmediata |
+| `streaming-allow.txt` | Whitelist de streaming (Spotify permitido) | ~KB | inmediata |
 | `unifi/streaming-block.txt` (+`-inline`) | Streaming a bloquear, formato UniFi | ~KB | inmediata |
 | `unifi/streaming-allow.txt` (+`-inline`) | Streaming permitido, formato UniFi | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
@@ -26,17 +26,19 @@ Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tra
 
 ## Nunca bloquear (regla fija)
 
-**WhatsApp NUNCA se bloquea, ni la web ni su API.** Está en `whitelist.txt`
-(partial match) y no se incluye en ninguna lista de bloqueo:
+**WhatsApp y Spotify NUNCA se bloquean** (ni WhatsApp web ni su API). Están en
+`whitelist.txt` (partial match) y no se incluyen en ninguna lista de bloqueo:
 
 | Uso | Dominios |
 |---|---|
 | WhatsApp web / app / media | `whatsapp.com`, `whatsapp.net`, `wa.me` |
 | WhatsApp Business / Cloud API | `graph.facebook.com` |
+| Spotify (música) | `spotify.com`, `spotifycdn.com`, `scdn.co`, `spotifycharts.com`, `spotify.link` |
 
 `whitelist.txt` es el filtro anti-FP que se aplica a las listas agregadas
-(`bulk/`), así que ningún feed puede bloquear WhatsApp. Si añades una lista
-nueva, respeta esta regla.
+(`bulk/`), así que ningún feed puede bloquear WhatsApp ni Spotify. Además
+Spotify está en `streaming-allow.txt`, por lo que tampoco aparece en
+`streaming-block.txt`. Si añades una lista nueva, respeta esta regla.
 
 ## Agregar un dominio (rápido, sin red)
 
@@ -86,12 +88,12 @@ Misma mecánica que las IA: una fuente de bloqueo y una allowlist opcional.
 | Streaming permitido | `streaming-allow.txt` | **Allowlist** (permite; vacía por defecto) |
 
 - `streaming-block.txt` bloquea Netflix, YouTube (+`googlevideo.com`), Prime
-  Video, Disney+, Hulu, Max/HBO, Roku, Peacock, Paramount+, Twitch, Spotify,
-  Deezer, Tidal, Bilibili, Crunchyroll, operadores de TV, etc. Se genera desde
-  `data/custom/streaming-hosts`.
-- `streaming-allow.txt` está **vacía** por defecto (se bloquea todo). Para dejar
-  pasar algo, añade el dominio (y sus CDNs) y Pi-hole/UniFi lo permitirá aunque
-  siga en la lista de bloqueo.
+  Video, Disney+, Hulu, Max/HBO, Roku, Peacock, Paramount+, Twitch, Deezer,
+  Tidal, Bilibili, Crunchyroll, operadores de TV, etc. Se genera desde
+  `data/custom/streaming-hosts`. **Spotify no se bloquea** (está excluido).
+- `streaming-allow.txt` **excluye** dominios del bloqueo. De fábrica lleva
+  Spotify; añade aquí lo que quieras permitir (y sus CDNs) y Pi-hole/UniFi lo
+  dejará pasar aunque siga en `streaming-hosts`.
 - No se bloquean dominios raíz compartidos (`amazon.com`, `google.com`,
   `apple.com`, `microsoft.com`) para no romper compras u otros servicios; se
   usan subdominios y CDNs específicos.

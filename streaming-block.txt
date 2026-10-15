@@ -1,14 +1,14 @@
 # Title: Centinela ThreatList - bloqueo de streaming (video, musica, TV)
 #
 # Bloquea servicios de streaming (Netflix, YouTube, Prime Video, Disney+,
-# Max, Roku, Spotify, Twitch, etc.).
+# Max, Roku, Twitch, etc.). Spotify y WhatsApp nunca se bloquean.
 #
 # Lo que quieras permitir va en streaming-allow.txt (Allowlist).
 # Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 01:57:20 (UTC)
-# Dominios bloqueados: 144
+# Date: 15 October 2026 02:07:01 (UTC)
+# Dominios bloqueados: 139
 #
 # Pi-hole Adlist (bloqueo):      https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-block.txt
 # Pi-hole Allowlist (permitir):  https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-allow.txt
@@ -117,7 +117,6 @@
 0.0.0.0 roku.com
 0.0.0.0 rtve.es
 0.0.0.0 rumble.com
-0.0.0.0 scdn.co
 0.0.0.0 sho.com
 0.0.0.0 showtime.com
 0.0.0.0 siriusxm.com
@@ -126,10 +125,6 @@
 0.0.0.0 sndcdn.com
 0.0.0.0 sonyliv.com
 0.0.0.0 soundcloud.com
-0.0.0.0 spotify.com
-0.0.0.0 spotify.link
-0.0.0.0 spotifycdn.com
-0.0.0.0 spotifycharts.com
 0.0.0.0 stan.com.au
 0.0.0.0 starz.com
 0.0.0.0 tidal.com

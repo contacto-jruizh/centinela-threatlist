@@ -99,7 +99,6 @@ roktv.com
 roku.com
 rtve.es
 rumble.com
-scdn.co
 sho.com
 showtime.com
 siriusxm.com
@@ -108,10 +107,6 @@ sling.com
 sndcdn.com
 sonyliv.com
 soundcloud.com
-spotify.com
-spotify.link
-spotifycdn.com
-spotifycharts.com
 stan.com.au
 starz.com
 tidal.com
