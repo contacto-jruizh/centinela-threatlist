@@ -327,17 +327,22 @@ def write_pihole_block(key, source_path, allow_path, title, desc, note, now):
     (ROOT / f"{key}-block.txt").write_text(head + body + "\n", encoding="utf-8")
     print(f"[ok] {key}-block.txt: {len(doms)} dominios")
 
-def write_unifi(key, source_path, allow_path):
+def write_unifi(key, source_path, allow_path, emit_blacklist=False):
     """unifi/<key>-*.txt: misma lista en formato UniFi (sin IP, sin comentarios).
     UniFi acepta un dominio por linea o todos en una linea separados por ';'.
-    Se generan ambas variantes (normal y *-inline.txt)."""
+    Se generan ambas variantes (normal y *-inline.txt). Si emit_blacklist,
+    tambien <key>-blacklist.txt / -inline.txt (alias del bloqueo)."""
     block, allow = named_domains(source_path, allow_path)
     outdir = ROOT / "unifi"
     outdir.mkdir(exist_ok=True)
-    for name, doms in ((f"{key}-block", block), (f"{key}-allow", allow)):
+    pairs = [(f"{key}-block", block), (f"{key}-allow", allow)]
+    if emit_blacklist:
+        pairs.append((f"{key}-blacklist", block))
+    for name, doms in pairs:
         (outdir / f"{name}.txt").write_text("\n".join(doms) + "\n", encoding="utf-8")
         (outdir / f"{name}-inline.txt").write_text(";".join(doms) + "\n", encoding="utf-8")
-    print(f"[ok] unifi/{key}-block.txt: {len(block)} dominios | unifi/{key}-allow.txt: {len(allow)} dominios")
+    extra = f" | unifi/{key}-blacklist.txt: {len(block)} dominios" if emit_blacklist else ""
+    print(f"[ok] unifi/{key}-block.txt: {len(block)} dominios | unifi/{key}-allow.txt: {len(allow)} dominios{extra}")
 
 # Listas curadas: una fuente de bloqueo (data/custom/<key>-hosts) y su allowlist.
 LISTS = [
@@ -361,6 +366,7 @@ LISTS = [
         desc="# Bloquea redes sociales (Facebook, Instagram, TikTok, X/Twitter, Reddit,\n"
              "# Snapchat, WeChat, Douyin, Kuaishou, Pinterest, Discord, etc.).",
         note="# NUNCA se bloquean WhatsApp, LinkedIn ni Telegram: van en social-allow.txt.",
+        blacklist=True,
     ),
 ]
 
@@ -381,16 +387,24 @@ def verify_lists():
         uni = {l for l in (ROOT / "unifi" / f"{key}-block.txt").read_text().splitlines() if l}
         uni_inline = {t for t in
                       (ROOT / "unifi" / f"{key}-block-inline.txt").read_text().strip().split(";") if t}
+        if L.get("blacklist"):
+            uni_black = {l for l in (ROOT / "unifi" / f"{key}-blacklist.txt").read_text().splitlines() if l}
+            uni_black_inline = {t for t in
+                                (ROOT / "unifi" / f"{key}-blacklist-inline.txt").read_text().strip().split(";") if t}
+        else:
+            uni_black = uni_black_inline = uni
         checks = {
             "leaks(allow en bloqueo)": len(leaks),
             "pihole==unifi": pihole == uni,
             "unifi linea==inline": uni == uni_inline,
+            "blacklist==bloqueo": uni_black == pihole and uni_black_inline == pihole,
         }
-        bad = bool(leaks) or pihole != uni or uni != uni_inline
+        bad = bool(leaks) or pihole != uni or uni != uni_inline or uni_black != pihole or uni_black_inline != pihole
         ok = ok and not bad
         flag = "FALLO" if bad else "ok"
         print(f"[check] {key}: block={len(block)} allow={len(allow)} "
-              f"leaks={len(leaks)} unifi_ok={pihole == uni} inline_ok={uni == uni_inline} -> {flag}")
+              f"leaks={len(leaks)} unifi_ok={pihole == uni} inline_ok={uni == uni_inline} "
+              f"blacklist_ok={uni_black == pihole} -> {flag}")
     if not ok:
         raise SystemExit("error: inconsistencia bloqueo/allow o Pi-hole/UniFi (ver [check] arriba)")
 
@@ -417,7 +431,7 @@ def main():
         for L in LISTS:
             write_pihole_block(L["key"], L["source"], L["allow"],
                                L["title"], L["desc"], L["note"], now)
-            write_unifi(L["key"], L["source"], L["allow"])
+            write_unifi(L["key"], L["source"], L["allow"], L.get("blacklist", False))
         verify_lists()
     if do_bulk:
         by_source = collect_by_source(args)

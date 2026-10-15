@@ -138,6 +138,10 @@ URLs de Pi-hole:
 - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-block.txt`
 - Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-allow.txt`
 
+URLs de UniFi (formato UniFi; también `-inline.txt` con `;`):
+- Blacklist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-blacklist.txt`
+- Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-allow.txt`
+
 ## Usar en Pi-hole
 
 1. Sube este repo a GitHub como `centinela-threatlist`.
@@ -200,6 +204,8 @@ IA en ese formato (sin IP, sin comentarios):
 | `unifi/social-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 | `unifi/social-allow.txt` | un dominio por línea | pegar en la lista **Allow** |
 | `unifi/social-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/social-blacklist.txt` | un dominio por línea | **blacklist** de social (bloqueo) |
+| `unifi/social-blacklist-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 
 Ejemplo (formato inline):
 ```
@@ -225,6 +231,8 @@ URLs para copiar (todas publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-block-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-allow-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-blacklist.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-blacklist-inline.txt`
 
 > Si tu versión de UniFi solo tiene un campo de texto, usa los `*-inline.txt`
 > (una sola línea con `;`); si admite pegar varias líneas, usa los normales.
