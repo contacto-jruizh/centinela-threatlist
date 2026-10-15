@@ -3,8 +3,8 @@
 # Dominios PERMITIDOS (youtube). Formato: uno por linea.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 16:43:36 (UTC)
-# Dominios: 12
+# Date: 15 October 2026 16:48:02 (UTC)
+# Dominios: 10
 #
 # Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/youtube-allow.txt
 # UniFi:             https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/youtube-allow.txt
@@ -15,11 +15,9 @@ googlevideo.com
 m.youtube.com
 music.youtube.com
 tv.youtube.com
-youtu.be
 youtube-nocookie.com
 youtube.com
 youtubekids.com
 youtubemusic.com
-yt.be
 ytimg.com
 ytstatic.com
