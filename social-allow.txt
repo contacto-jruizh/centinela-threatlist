@@ -3,13 +3,9 @@
 # Dominios que se PERMITEN aunque esten (o puedan estar) en social-block.txt.
 # Pi-hole / UniFi: el Allowlist gana siempre al bloqueo.
 #
-# REGLA FIJA: NUNCA bloquear WhatsApp, LinkedIn ni Telegram.
+# REGLA FIJA: NUNCA bloquear LinkedIn ni Telegram aqui.
+# WhatsApp vive en whatsapp-allow.txt para no duplicar (UniFi exige unicos).
 
-# WhatsApp (web/app/media)
-whatsapp.com
-whatsapp.net
-wa.me
-dit.whatsapp.net
 # LinkedIn
 linkedin.com
 lnkd.in

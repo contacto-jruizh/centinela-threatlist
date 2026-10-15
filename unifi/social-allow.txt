@@ -1,4 +1,3 @@
-dit.whatsapp.net
 licdn.com
 linkedin.com
 lnkd.in
@@ -9,6 +8,3 @@ telegram.dog
 telegram.me
 telegram.org
 tg.dev
-wa.me
-whatsapp.com
-whatsapp.net

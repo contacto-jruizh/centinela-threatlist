@@ -408,6 +408,23 @@ def write_vendor_allows(now):
         (outdir / f"{name}-allow-inline.txt").write_text(";".join(doms) + "\n", encoding="utf-8")
         print(f"[ok] {name}-allow.txt: {len(doms)} dominios | unifi/{name}-allow.txt")
 
+def verify_allow_disjoint():
+    """Ningun dominio permitido puede repetirse entre listas de allow
+    (UniFi exige dominios unicos). Falla con exit 1 si hay duplicados."""
+    names = [L["key"] for L in LISTS] + ALLOW_LISTS
+    owner, dups = {}, []
+    for n in names:
+        for d in load_list(f"{n}-allow.txt"):
+            if d in owner and owner[d] != n:
+                dups.append((d, owner[d], n))
+            else:
+                owner[d] = n
+    if dups:
+        for d, a, b in sorted(dups):
+            print(f"[check] DUPLICADO allow: {d} en '{a}' y '{b}'")
+        raise SystemExit("error: dominios duplicados entre listas de allow (UniFi exige unicos)")
+    print(f"[check] allows sin duplicados ({len(owner)} dominios)")
+
 def verify_lists():
     """Comprueba consistencia BLOQUEO vs PERMITIDO/EXCLUSIONES en cada lista.
     Falla (exit 1) si: (a) un dominio permitido sigue en el bloqueo, o
@@ -475,6 +492,7 @@ def main():
             write_unifi(L["key"], L["source"], L["allow"], L.get("blacklist", False))
         verify_lists()
         write_vendor_allows(now)
+        verify_allow_disjoint()
     if do_bulk:
         by_source = collect_by_source(args)
         write_categories(by_source, custom_domains, now)

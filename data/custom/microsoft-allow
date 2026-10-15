@@ -31,7 +31,6 @@ o365cdn.com
 cdn.office.net
 officecdn.microsoft.com
 microsoft365.com
-m365.cloud.microsoft
 portal.office.com
 products.office.com
 support.office.com
@@ -57,11 +56,8 @@ onedrive.com
 onedrive.live.com
 storage.live.com
 
-# --- Graph / Whiteboard / Copilot (M365) ---
+# --- Graph / Whiteboard ---
 graph.microsoft.com
 whiteboard.microsoft.com
-copilot.microsoft.com
-copilot.microsoft365.com
-copilot.cloud.microsoft
-copilot.com
-m365copilot.com
+# Copilot (copilot.*, m365copilot.com, m365.cloud.microsoft) vive en ai-allow.txt
+# para no duplicar entre listas (UniFi exige dominios unicos).
