@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 16:43:18 (UTC)
-# Dominios en esta categoria: 220,236
+# Date: 15 October 2026 16:56:30 (UTC)
+# Dominios en esta categoria: 220,125
 #
 # Pi-hole Adlist (categoria threat-intel): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/threat-intel.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -11928,7 +11928,6 @@
 0.0.0.0 acessousuariopj.com
 0.0.0.0 acevupgymfcdc.website
 0.0.0.0 aceyearling.com
-0.0.0.0 acfeedbackws.icloud.com
 0.0.0.0 acg669.com
 0.0.0.0 acgbase.com
 0.0.0.0 acgbmh.com
@@ -13619,7 +13618,6 @@
 0.0.0.0 ad3.sina.com.cn
 0.0.0.0 ad3.udn.com
 0.0.0.0 ad3.xrea.com
-0.0.0.0 ad30.outlook.com
 0.0.0.0 ad321.7daklolkl.info
 0.0.0.0 ad4.com.cn
 0.0.0.0 ad4.fluxvpnguard.ru
@@ -17172,7 +17170,6 @@
 0.0.0.0 ads.yirmidort.tv
 0.0.0.0 ads.youngermommy.com
 0.0.0.0 ads.youniversalnext.com
-0.0.0.0 ads.youtube.com
 0.0.0.0 ads.yuepenghk.com
 0.0.0.0 ads.yuepenghk.com.w.kunlungr.com
 0.0.0.0 ads.yupmanga.com
@@ -25820,7 +25817,6 @@
 0.0.0.0 analytics.gipermobile.fozzy.ua
 0.0.0.0 analytics.gismart.xyz
 0.0.0.0 analytics.gist.science
-0.0.0.0 analytics.github.com
 0.0.0.0 analytics.githubassets.com
 0.0.0.0 analytics.gitlab.com
 0.0.0.0 analytics.gitopen.dev
@@ -30204,7 +30200,6 @@
 0.0.0.0 analytics.youplusweb.it
 0.0.0.0 analytics.youronlinechoices.com
 0.0.0.0 analytics.yourtoken.io
-0.0.0.0 analytics.youtube.com
 0.0.0.0 analytics.yoxo.ro
 0.0.0.0 analytics.yten.com
 0.0.0.0 analytics.ytica.com
@@ -34657,7 +34652,6 @@
 0.0.0.0 aubhgnoealbnx.space
 0.0.0.0 aubsauwhault.net
 0.0.0.0 auburn9819.com
-0.0.0.0 auc-visio-telemetry.officeapps.live.com
 0.0.0.0 aucaanucppxjn.space
 0.0.0.0 aucdn.net
 0.0.0.0 aucepscapital.com
@@ -43126,7 +43120,6 @@
 0.0.0.0 brbeast.com
 0.0.0.0 brbez.stevemadden.com
 0.0.0.0 brbmzvizpivki.site
-0.0.0.0 brc-visio-telemetry.officeapps.live.com
 0.0.0.0 brcttuc.com
 0.0.0.0 brd-schwindel.ru
 0.0.0.0 brditqozcvagl.site
@@ -45623,7 +45616,6 @@
 0.0.0.0 cablishgenial.com
 0.0.0.0 cabvrkooukotb.website
 0.0.0.0 cabywork.shop
-0.0.0.0 cac-visio-telemetry.officeapps.live.com
 0.0.0.0 cac.runna.com
 0.0.0.0 cac4460a8b9de3ca9d20ee8c2a34f9b9d1c5b6f766105f4df4a55ff0.com
 0.0.0.0 cacafly.com
@@ -48979,7 +48971,6 @@
 0.0.0.0 chazanstiewig.com
 0.0.0.0 chbn.ru
 0.0.0.0 chbwe.space
-0.0.0.0 chc-visio-telemetry.officeapps.live.com
 0.0.0.0 chcgwqlrforbz.space
 0.0.0.0 chchoice.112.2o7.net
 0.0.0.0 chcierekci.cc
@@ -52333,7 +52324,6 @@
 0.0.0.0 collector-be.notino.luigisbox.com
 0.0.0.0 collector-bg-2.notino.luigisbox.com
 0.0.0.0 collector-bg.notino.luigisbox.com
-0.0.0.0 collector-cdn.github.com
 0.0.0.0 collector-ch-2.notino.luigisbox.com
 0.0.0.0 collector-ch.notino.luigisbox.com
 0.0.0.0 collector-cz-2.notino.luigisbox.com
@@ -53350,7 +53340,6 @@
 0.0.0.0 collector.gamechanger.io
 0.0.0.0 collector.gamezop.com
 0.0.0.0 collector.getyourguide.com
-0.0.0.0 collector.github.com
 0.0.0.0 collector.githubapp.com
 0.0.0.0 collector.hifiklubben.de
 0.0.0.0 collector.hifiklubben.dk
@@ -59305,7 +59294,6 @@
 0.0.0.0 d35xxde4fgg0cx.cloudfront.net
 0.0.0.0 d361oi6ppvq2ym.cloudfront.net
 0.0.0.0 d362plazjjo29c.cloudfront.net
-0.0.0.0 d365bc.nel.measure.office.net
 0.0.0.0 d36e0jkwnyz61b.cloudfront.net
 0.0.0.0 d36gnquzy6rtyp.cloudfront.net
 0.0.0.0 d36nbgnuno71tn.cloudfront.net
@@ -61906,7 +61894,6 @@
 0.0.0.0 deburrfleshes.com
 0.0.0.0 debutknee.com
 0.0.0.0 debutpoignantsudden.com
-0.0.0.0 dec-visio-telemetry.officeapps.live.com
 0.0.0.0 dec0c1a14f.com
 0.0.0.0 dec1daff38.com
 0.0.0.0 decacopy.com
@@ -72641,13 +72628,8 @@
 0.0.0.0 euamonudes.com
 0.0.0.0 eubiofficial.com
 0.0.0.0 euboicarmpit.top
-0.0.0.0 euc-excel-telemetry.officeapps.live.com
 0.0.0.0 euc-excel-telemetry.wac.trafficmanager.net
-0.0.0.0 euc-onenote-telemetry.officeapps.live.com
-0.0.0.0 euc-powerpoint-telemetry.officeapps.live.com
 0.0.0.0 euc-powerpoint-telemetry.wac.trafficmanager.net
-0.0.0.0 euc-visio-telemetry.officeapps.live.com
-0.0.0.0 euc-word-telemetry.officeapps.live.com
 0.0.0.0 euc-word-telemetry.wac.trafficmanager.net
 0.0.0.0 euchems.me
 0.0.0.0 euclaseselenic.com
@@ -72754,7 +72736,6 @@
 0.0.0.0 eur.lc
 0.0.0.0 eurelian.com
 0.0.0.0 eurenzo.com
-0.0.0.0 eurffc-word-telemetry.officeapps.live.com
 0.0.0.0 eurffc-word-telemetry.wac.trafficmanager.net
 0.0.0.0 eurl-container.com
 0.0.0.0 eurlexodus.com
@@ -72888,9 +72869,6 @@
 0.0.0.0 eurowings.com.ssl.sc.omtrdc.net
 0.0.0.0 eurowingsaviationgmb.tt.omtrdc.net
 0.0.0.0 eurozakupy.shop
-0.0.0.0 eurppc-excel-telemetry.officeapps.live.com
-0.0.0.0 eurppc-powerpoint-telemetry.officeapps.live.com
-0.0.0.0 eurppc-word-telemetry.officeapps.live.com
 0.0.0.0 eurshopping.com
 0.0.0.0 eurwtukwbgmec.website
 0.0.0.0 euryllucub.store
@@ -73699,7 +73677,6 @@
 0.0.0.0 exceiientdates.net
 0.0.0.0 exceilentdates.com
 0.0.0.0 exceklcmicrosftprotection.pages.dev
-0.0.0.0 excel-telemetry.officeapps.live.com
 0.0.0.0 excel-telemetry.wac.trafficmanager.net
 0.0.0.0 excelia.net
 0.0.0.0 excelientdates.com
@@ -73709,7 +73686,6 @@
 0.0.0.0 excellentpartialarm.com
 0.0.0.0 excellentswatch.com
 0.0.0.0 excellingvista.com
-0.0.0.0 excelonline.nel.measure.office.net
 0.0.0.0 excelonline.nel.measure.office.net.cardano.com
 0.0.0.0 excelsepeti.com
 0.0.0.0 exceltechguru.com
@@ -73900,7 +73876,6 @@
 0.0.0.0 exnesstrack.net
 0.0.0.0 exnzg.de
 0.0.0.0 exo-marketing.com
-0.0.0.0 exo.nel.measure.office.net
 0.0.0.0 exo.nel.measure.office.net.cardano.com
 0.0.0.0 exo1.georealcdn.com
 0.0.0.0 exobafrgdf.com
@@ -75664,7 +75639,6 @@
 0.0.0.0 fclouddown.co
 0.0.0.0 fclwdhwqjzof.com
 0.0.0.0 fcm-collect-api.alyac.com
-0.0.0.0 fcmatch.youtube.com
 0.0.0.0 fcmsplqtivmls.space
 0.0.0.0 fcnbkyzloyfgx.site
 0.0.0.0 fcnhjomrydsct.website
@@ -75868,8 +75842,6 @@
 0.0.0.0 feedbackws.fe.apple-dns.cn
 0.0.0.0 feedbackws.fe.apple-dns.net
 0.0.0.0 feedbackws.fe2.apple-dns.net
-0.0.0.0 feedbackws.icloud.com
-0.0.0.0 feedbackws.icloud.com.cn
 0.0.0.0 feedcat.net
 0.0.0.0 feederme.com
 0.0.0.0 feederruten.com
@@ -76271,8 +76243,6 @@
 0.0.0.0 ffbdatxllaeco.website
 0.0.0.0 ffbdohvyginlok.xyz
 0.0.0.0 ffbhosting.org
-0.0.0.0 ffc-excel-telemetry.officeapps.live.com
-0.0.0.0 ffc-word-telemetry.officeapps.live.com
 0.0.0.0 ffcb0a79ec.com
 0.0.0.0 ffcnjt9y5bin1k.rest
 0.0.0.0 ffdagjkfnjmil.site
@@ -76369,7 +76339,6 @@
 0.0.0.0 fgqymntnqmcby.website
 0.0.0.0 fgqyxgbqfxyot.website
 0.0.0.0 fgsuxvboquxjg.website
-0.0.0.0 fgteu1-word-telemetry-vip.officeapps.live.com
 0.0.0.0 fgtpvheoxosfk.site
 0.0.0.0 fgvdd.nectarsleep.com
 0.0.0.0 fgwuw.com
@@ -80073,7 +80042,6 @@
 0.0.0.0 frbrzyywsuapj.online
 0.0.0.0 frbsdeaewuhou.website
 0.0.0.0 frbzojrsotdov.space
-0.0.0.0 frc-visio-telemetry.officeapps.live.com
 0.0.0.0 frceaptntlcn.com
 0.0.0.0 frchavvati.com
 0.0.0.0 frclarks.shop
@@ -94711,7 +94679,6 @@
 0.0.0.0 identifyweek.com
 0.0.0.0 identinsp.pro
 0.0.0.0 identity.browserapps.amazon.de
-0.0.0.0 identity.nel.measure.office.net
 0.0.0.0 identity.nel.measure.office.net.cardano.com
 0.0.0.0 identity.treeumapp.net
 0.0.0.0 identity39.com
@@ -96209,7 +96176,6 @@
 0.0.0.0 inboxtag.com
 0.0.0.0 inbredkhoka.cyou
 0.0.0.0 inc-metrics.upwork.com
-0.0.0.0 inc-visio-telemetry.officeapps.live.com
 0.0.0.0 incaddition.com
 0.0.0.0 incanamman.click
 0.0.0.0 incanwurmal.cfd
@@ -113673,7 +113639,6 @@
 0.0.0.0 m3-campus.de
 0.0.0.0 m3-shop.ru
 0.0.0.0 m30bh0coz2.com
-0.0.0.0 m365cdn.nel.measure.office.net
 0.0.0.0 m365cdn.nel.measure.office.net.cardano.com
 0.0.0.0 m365log.com
 0.0.0.0 m367.michigansthumb.com
@@ -120350,7 +120315,6 @@
 0.0.0.0 measure.minch.dev
 0.0.0.0 measure.moevenpick-wein.com
 0.0.0.0 measure.netcup.com
-0.0.0.0 measure.office.com
 0.0.0.0 measure.office.com.akamaized.net
 0.0.0.0 measure.orrefors.se
 0.0.0.0 measure.oway.com
@@ -121566,7 +121530,6 @@
 0.0.0.0 metrics-collector.noffice.conceptboard.com
 0.0.0.0 metrics-collector.prod.sketch.com
 0.0.0.0 metrics-collector.tidio.co
-0.0.0.0 metrics-config.icloud.com
 0.0.0.0 metrics-content.duckduckgo.com
 0.0.0.0 metrics-cpa.webflow.io
 0.0.0.0 metrics-dev-1.comwww.imdb.comforums.newtek.comforums.macrumors.comanswers.sap.comforum.duolingo.com
@@ -122243,7 +122206,6 @@
 0.0.0.0 metrics.i-run.pt
 0.0.0.0 metrics.i19.se
 0.0.0.0 metrics.iclinic.com.br
-0.0.0.0 metrics.icloud.com
 0.0.0.0 metrics.ideal.es
 0.0.0.0 metrics.idtid.com
 0.0.0.0 metrics.ilovecheese.nl
@@ -122498,7 +122460,6 @@
 0.0.0.0 metrics.myticket.de
 0.0.0.0 metrics.mytrendyphone.dk
 0.0.0.0 metrics.mytrendyphone.se
-0.0.0.0 metrics.mzstatic.com
 0.0.0.0 metrics.n-tv.de
 0.0.0.0 metrics.n-tv.de.gg
 0.0.0.0 metrics.napista.com.br
@@ -129115,7 +129076,6 @@
 0.0.0.0 nelonenmedia-pmd-ads-audio.nm-stream.nelonenmedia.fi
 0.0.0.0 nelonenmedia-pmd-ads-spotgate.nm-stream.nelonenmedia.fi
 0.0.0.0 nelp-defender.pro
-0.0.0.0 nelsdf.measure.office.net
 0.0.0.0 neluren.com
 0.0.0.0 nelvyvlfyjksw.space
 0.0.0.0 nemansnlssphf.website
@@ -130958,7 +130918,6 @@
 0.0.0.0 nobulldeutschland.de
 0.0.0.0 nobullosterreich.com
 0.0.0.0 nobulprojectnederland.me
-0.0.0.0 noc-visio-telemetry.officeapps.live.com
 0.0.0.0 nocccxnarymvl.store
 0.0.0.0 nocedsmxlz.com
 0.0.0.0 nochesdemar.com
@@ -133829,7 +133788,6 @@
 0.0.0.0 officecornsoftware.com
 0.0.0.0 officedepot.com.data.adobedc.net
 0.0.0.0 officedepot.tt.omtrdc.net
-0.0.0.0 officehub.nel.measure.office.net
 0.0.0.0 officehub.nel.measure.office.net.cardano.com
 0.0.0.0 officence.com
 0.0.0.0 officerpersonalimmersed.com
@@ -135056,7 +135014,6 @@
 0.0.0.0 onenetworkdirect.com
 0.0.0.0 onenews24.ru
 0.0.0.0 onenightfriend.com
-0.0.0.0 onenoteonline.nel.measure.office.net
 0.0.0.0 oneotheacon.cc
 0.0.0.0 onepieceshopparis2024.fr
 0.0.0.0 oneplus1life.com
@@ -140475,55 +140432,11 @@
 0.0.0.0 pgsoloddwczpn.online
 0.0.0.0 pgssl.com
 0.0.0.0 pgt1.voyage-prive.es
-0.0.0.0 pgtbr1-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtbr1-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtbr1-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtbr2-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtbr2-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtbr2-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtca1-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtca1-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtca1-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu1-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu1-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu1-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu2-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu2-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu2-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu3-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu3-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu3-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu4-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu4-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu4-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu5-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu5-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgteu5-word-telemetry-vip.officeapps.live.com
 0.0.0.0 pgtewvykilowm.site
-0.0.0.0 pgtmx1-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtmx1-word-telemetry-vip.officeapps.live.com
 0.0.0.0 pgtopc05.me
 0.0.0.0 pgtopc09.me
 0.0.0.0 pgtopc21.me
 0.0.0.0 pgtqqjngory.com
-0.0.0.0 pgtus1-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus1-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus1-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus2-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus2-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus2-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus3-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus3-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus3-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus4-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus4-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus4-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus5-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus5-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus5-word-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus6-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus6-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 pgtus6-word-telemetry-vip.officeapps.live.com
 0.0.0.0 pgubarjtdghvg.site
 0.0.0.0 pgvdhmjeqgkxy.site
 0.0.0.0 pgxtf6861m918w45g.cfd
@@ -146141,9 +146054,7 @@
 0.0.0.0 powerlinks.com
 0.0.0.0 powermovesport.shop
 0.0.0.0 poweromasch.shop
-0.0.0.0 powerpoint-telemetry.officeapps.live.com
 0.0.0.0 powerpoint-telemetry.wac.trafficmanager.net
-0.0.0.0 powerpointonline.nel.measure.office.net
 0.0.0.0 powerracer.com
 0.0.0.0 powerrename.com
 0.0.0.0 powerrename.net
@@ -146188,12 +146099,8 @@
 0.0.0.0 ppbbhvizrkryo.website
 0.0.0.0 ppbtdj.icu
 0.0.0.0 ppc-direct.com
-0.0.0.0 ppc-excel-telemetry.officeapps.live.com
 0.0.0.0 ppc-excel-telemetry.wac.trafficmanager.net
-0.0.0.0 ppc-onenote-telemetry.officeapps.live.com
-0.0.0.0 ppc-powerpoint-telemetry.officeapps.live.com
 0.0.0.0 ppc-powerpoint-telemetry.wac.trafficmanager.net
-0.0.0.0 ppc-word-telemetry.officeapps.live.com
 0.0.0.0 ppc-word-telemetry.wac.trafficmanager.net
 0.0.0.0 ppcchem.com
 0.0.0.0 ppcent.org
@@ -164120,7 +164027,6 @@
 0.0.0.0 sentry.okfn.de
 0.0.0.0 sentry.okolo.market
 0.0.0.0 sentry.olc.cz
-0.0.0.0 sentry.olkai.outlook.com
 0.0.0.0 sentry.olx.com.br
 0.0.0.0 sentry.omni.news
 0.0.0.0 sentry.omnicomm.ru
@@ -169249,9 +169155,6 @@
 0.0.0.0 sgtp.ikosresorts.com
 0.0.0.0 sgtravelinfo.com
 0.0.0.0 sgtruffe.com
-0.0.0.0 sgtus1-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 sgtus1-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 sgtus1-word-telemetry-vip.officeapps.live.com
 0.0.0.0 sgua.jp
 0.0.0.0 sgusacco.com
 0.0.0.0 sgusclugsa.store
@@ -175213,7 +175116,6 @@
 0.0.0.0 spnuninugr.com
 0.0.0.0 spnut.com
 0.0.0.0 spnx.jp
-0.0.0.0 spo.nel.measure.office.net
 0.0.0.0 spo.nel.measure.office.net.cardano.com
 0.0.0.0 spoaven.top
 0.0.0.0 spoaven.top.whecloud.com
@@ -187311,7 +187213,6 @@
 0.0.0.0 teams-events-data.trafficmanager.net
 0.0.0.0 teams-live.com
 0.0.0.0 teams-xu.com
-0.0.0.0 teams.nel.measure.office.net
 0.0.0.0 teams.nel.measure.office.net.cardano.com
 0.0.0.0 teamsmarched.com
 0.0.0.0 teamsoutspoken.com
@@ -189182,7 +189083,6 @@
 0.0.0.0 tfjhjrqmu.icu
 0.0.0.0 tfkic.worldmarket.com
 0.0.0.0 tfl.d3.sc.omtrdc.net
-0.0.0.0 tfl.nel.measure.office.net
 0.0.0.0 tflerpqk.com
 0.0.0.0 tflrggrhfbepr.site
 0.0.0.0 tflurbzcqgpii.website
@@ -189267,9 +189167,6 @@
 0.0.0.0 tgt.maep.ibm.com
 0.0.0.0 tgtmedia.com
 0.0.0.0 tgtrjjlpjntes.space
-0.0.0.0 tgtus1-excel-telemetry-vip.officeapps.live.com
-0.0.0.0 tgtus1-powerpoint-telemetry-vip.officeapps.live.com
-0.0.0.0 tgtus1-word-telemetry-vip.officeapps.live.com
 0.0.0.0 tgurcoinei.com
 0.0.0.0 tguyxzkrxgzqt.online
 0.0.0.0 tgverify.us
@@ -197812,8 +197709,6 @@
 0.0.0.0 ukavnjwlr.com
 0.0.0.0 ukbanners.com
 0.0.0.0 ukbriefline.com
-0.0.0.0 ukc-onenote-telemetry.officeapps.live.com
-0.0.0.0 ukc-visio-telemetry.officeapps.live.com
 0.0.0.0 ukchristmasdecor.com
 0.0.0.0 ukconomouswom.org
 0.0.0.0 ukcurrenthub.com
@@ -200581,8 +200476,6 @@
 0.0.0.0 usbpalsmfz.com
 0.0.0.0 usbuildingmaterial.com
 0.0.0.0 usbview.com
-0.0.0.0 usc-onenote-telemetry.officeapps.live.com
-0.0.0.0 usc-visio-telemetry.officeapps.live.com
 0.0.0.0 usc8nll40.com
 0.0.0.0 uscahcjmcjyuj.space
 0.0.0.0 uscc.ua
@@ -204346,7 +204239,6 @@
 0.0.0.0 visiertripods.qpon
 0.0.0.0 visilabs.com
 0.0.0.0 visinature.com
-0.0.0.0 visio-telemetry.officeapps.live.com
 0.0.0.0 visio-x.fr
 0.0.0.0 vision123.cn
 0.0.0.0 visionary-business-52.com
@@ -204368,7 +204260,6 @@
 0.0.0.0 visionmemorable.com
 0.0.0.0 visionneo.top
 0.0.0.0 visionsage.com
-0.0.0.0 visioonline.nel.measure.office.net
 0.0.0.0 visistat.com
 0.0.0.0 visit-prod-us.occa.ocs.oraclecloud.com
 0.0.0.0 visit-server.inmobi-choice.io
@@ -210702,7 +210593,6 @@
 0.0.0.0 wopsstocker.shop
 0.0.0.0 woralvinta.world
 0.0.0.0 word-bi.zenkube.com
-0.0.0.0 word-telemetry.officeapps.live.com
 0.0.0.0 word-telemetry.wac.trafficmanager.net
 0.0.0.0 word-v1.tuanguwen.com
 0.0.0.0 wordads.co
@@ -210712,7 +210602,6 @@
 0.0.0.0 wordfever.com
 0.0.0.0 wordmanupblast.com
 0.0.0.0 wordmarkets.com
-0.0.0.0 wordonline.nel.measure.office.net
 0.0.0.0 wordpowerrake.com
 0.0.0.0 wordpress-wordpress.nvm1fj.easypanel.host
 0.0.0.0 wordsdelivery.com

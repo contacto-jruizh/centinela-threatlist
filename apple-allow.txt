@@ -3,8 +3,8 @@
 # Dominios PERMITIDOS (apple). Formato: uno por linea.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 16:48:13 (UTC)
-# Dominios: 25
+# Date: 15 October 2026 16:56:30 (UTC)
+# Dominios: 28
 #
 # Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/apple-allow.txt
 # UniFi:             https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/apple-allow.txt
@@ -31,6 +31,9 @@ mask.icloud.com
 mesu.apple.com
 mzstatic.com
 ocsp.apple.com
+partiality.itunes-apple.com.akadns.net
+partiality.itunes.apple.com
+partiality.itunes.apple.com.edgekey.net
 push.apple.com
 store.apple.com
 support.apple.com

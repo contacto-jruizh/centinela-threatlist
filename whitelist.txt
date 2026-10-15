@@ -1,67 +1,19 @@
-# Whitelist - dominios que NUNCA se bloquean (partial match: cubre subdominios)
+# Whitelist - dominios "globales" que NUNCA se bloquean (partial match: cubre subdominios)
+#
+# NOTA: los dominios por servicio ya viven en su propia allowlist
+# (ai-allow, streaming-allow, social-allow, vpn-allow, microsoft-allow,
+#  apple-allow, whatsapp-allow, youtube-allow). AQUI solo los globales.
+# Regla: un dominio = una sola lista (no duplicar; UniFi exige unicos).
+# El generador aplica whitelist.txt + TODAS las *-allow.txt al bulk.
+
 google.com
 
-# REGLA PERMANENTE: NUNCA bloquear LinkedIn.
-linkedin.com
-lnkd.in
-licdn.com
-
-# REGLA PERMANENTE: NUNCA bloquear WhatsApp (ni web ni API).
-# Web/app y media
-whatsapp.com
-whatsapp.net
-wa.me
-dit.whatsapp.net
-# WhatsApp Business / Cloud API (Meta Graph API)
-graph.facebook.com
-
-# REGLA PERMANENTE: NUNCA bloquear Telegram.
-telegram.org
-telegram.me
-t.me
-telegra.ph
-telegram.dog
-tg.dev
-telegram-cdn.org
-
-# REGLA PERMANENTE: NUNCA bloquear Spotify (musica).
-spotify.com
-spotifycdn.com
-scdn.co
-spotifycharts.com
-spotify.link
-# hosts usados por Spotify web/app (explicitos):
-spclient.wg.spotify.com
-www.spotify.com
-ap-gew4.spotify.com
-ap-gue1.spotify.com
-ap-guc3.spotify.com
-
-# NUNCA bloquear Apple (necesario; HaGeZi lo bloquea).
-partiality.itunes.apple.com
-partiality.itunes.apple.com.edgekey.net
-partiality.itunes-apple.com.akadns.net
-mask.icloud.com
-
-# NUNCA bloquear Microsoft Teams (telemetria) ni Adobe.
-teams.events.data.microsoft.com
-eu-teams.events.data.microsoft.com
-adobe.com
-
-# NUNCA bloquear Claude / Anthropic (claude.ai + Claude Code).
-anthropic.com
-claude.ai
-claude.com
-claude.dev
-claudeusercontent.com
-storage.googleapis.com
-registry.npmjs.org
-
-# Permitir siempre: traduccion y diccionario
+# Permitir siempre: traduccion / diccionario
 translate.google.com
 rae.es
 
-# YouTube va en su lista aparte: youtube-allow.txt
+# Permitir siempre: Adobe
+adobe.com
 
 # Ejemplo:
 # canva.com

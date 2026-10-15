@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 16:43:18 (UTC)
-# Dominios en esta categoria: 74,775
+# Date: 15 October 2026 16:56:30 (UTC)
+# Dominios en esta categoria: 74,770
 #
 # Pi-hole Adlist (categoria ads-trackers): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/ads-trackers.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -4709,7 +4709,6 @@
 0.0.0.0 ads.yimg.com.edgesuite.net
 0.0.0.0 ads.yldmgrimg.net
 0.0.0.0 ads.ynot.com
-0.0.0.0 ads.youtube.com
 0.0.0.0 ads.yumenetworks.com
 0.0.0.0 ads.zalo.me
 0.0.0.0 ads.zaloapp.com
@@ -29619,7 +29618,6 @@
 0.0.0.0 mealrentyard.com
 0.0.0.0 measlymiddle.com
 0.0.0.0 measure.ameblo.jp
-0.0.0.0 measure.office.com
 0.0.0.0 measure.pti.com.vn
 0.0.0.0 measure.vndirect.com.vn
 0.0.0.0 measuread.com
@@ -30136,7 +30134,6 @@
 0.0.0.0 metrics.homebase.co.uk
 0.0.0.0 metrics.hoovers.com
 0.0.0.0 metrics.hrblock.com
-0.0.0.0 metrics.icloud.com
 0.0.0.0 metrics.iconfitness.com
 0.0.0.0 metrics.ikea.com
 0.0.0.0 metrics.ilsole24ore.com
@@ -30169,7 +30166,6 @@
 0.0.0.0 metrics.more.com
 0.0.0.0 metrics.myprime.com
 0.0.0.0 metrics.mysanantonio.com
-0.0.0.0 metrics.mzstatic.com
 0.0.0.0 metrics.natmags.co.uk
 0.0.0.0 metrics.nba.com
 0.0.0.0 metrics.necn.com
@@ -32075,7 +32071,6 @@
 0.0.0.0 nexus-ai.live
 0.0.0.0 nexus-invest-ai.com
 0.0.0.0 nexus.ensighten.com
-0.0.0.0 nexus.officeapps.live.com
 0.0.0.0 nexussakura.org
 0.0.0.0 nexutebrillopro.com
 0.0.0.0 nexvoraelitetrade.com

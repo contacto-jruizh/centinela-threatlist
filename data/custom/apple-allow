@@ -28,6 +28,11 @@ amp-api.apps.apple.com
 # --- CDN / assets ---
 mzstatic.com
 
+# --- iTunes / negocio (HaGeZi lo bloqueaba; rompia Spotify/iTunes) ---
+partiality.itunes.apple.com
+partiality.itunes.apple.com.edgekey.net
+partiality.itunes-apple.com.akadns.net
+
 # --- Actualizaciones / push ---
 mesu.apple.com
 gdmf.apple.com

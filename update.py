@@ -260,8 +260,12 @@ ff02::2 ip6-allrouters
     print(f"[ok] {args.output}: {len(own)} dominios (curaduria)")
 
 def write_categories(by_source, custom_domains, now):
-    """Un archivo por categoria en bulk/ (Pi-hole), con whitelist y sin curaduria."""
-    wl = load_whitelist()
+    """Un archivo por categoria en bulk/ (Pi-hole), con whitelist y sin curaduria.
+    El guard de exclusiones = whitelist.txt + TODAS las allowlists (*-allow.txt)."""
+    wl = set(load_whitelist())
+    for f in ALLOW_FILES:
+        wl |= load_list(f)
+    wl = sorted(wl)
     def whitelisted(d):
         return any(d == w or d.endswith("." + w) for w in wl)
 
@@ -383,6 +387,9 @@ LISTS = [
 # Allowlists por fabricante (SOLO permitidos, sin bloqueo asociado).
 ALLOW_LISTS = ["microsoft", "apple", "whatsapp", "youtube"]
 
+# Todos los .txt de allowlist (categoria + fabricante): el bulk los respeta.
+ALLOW_FILES = [f"{L['key']}-allow.txt" for L in LISTS] + [f"{n}-allow.txt" for n in ALLOW_LISTS]
+
 def write_vendor_allows(now):
     """Allowlists por fabricante -> <vendor>-allow.txt (Pi-hole) y
     unifi/<vendor>-allow.txt (+ -inline.txt con ';'). Sin comentarios en UniFi."""
@@ -411,15 +418,19 @@ def write_vendor_allows(now):
 
 def verify_allow_disjoint():
     """Ningun dominio permitido puede repetirse entre listas de allow
-    (UniFi exige dominios unicos). Falla con exit 1 si hay duplicados."""
-    names = [L["key"] for L in LISTS] + ALLOW_LISTS
+    (whitelist + *-allow.txt). UniFi exige dominios unicos."""
+    files = {"whitelist": "whitelist.txt"}
+    for L in LISTS:
+        files[L["key"]] = f"{L['key']}-allow.txt"
+    for n in ALLOW_LISTS:
+        files[n] = f"{n}-allow.txt"
     owner, dups = {}, []
-    for n in names:
-        for d in load_list(f"{n}-allow.txt"):
-            if d in owner and owner[d] != n:
-                dups.append((d, owner[d], n))
+    for name, path in files.items():
+        for d in load_list(path):
+            if d in owner and owner[d] != name:
+                dups.append((d, owner[d], name))
             else:
-                owner[d] = n
+                owner[d] = name
     if dups:
         for d, a, b in sorted(dups):
             print(f"[check] DUPLICADO allow: {d} en '{a}' y '{b}'")

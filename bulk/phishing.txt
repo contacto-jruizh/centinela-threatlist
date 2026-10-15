@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 16:43:18 (UTC)
-# Dominios en esta categoria: 358,161
+# Date: 15 October 2026 16:56:30 (UTC)
+# Dominios en esta categoria: 357,978
 #
 # Pi-hole Adlist (categoria phishing): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/phishing.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -6989,7 +6989,6 @@
 0.0.0.0 aapkichai.com
 0.0.0.0 aaple-verify-uk-support.com
 0.0.0.0 aaplinfra.com
-0.0.0.0 aapnp-my.sharepoint.com
 0.0.0.0 aapple.info
 0.0.0.0 aapplee.com
 0.0.0.0 aapresid.org.ar
@@ -9396,7 +9395,6 @@
 0.0.0.0 adeccotraining.peexprod.com
 0.0.0.0 adecinternacional.com
 0.0.0.0 adeckservicos.com.br
-0.0.0.0 adecotech-my.sharepoint.com
 0.0.0.0 adecpeproertti.site
 0.0.0.0 adecpertoertti.site
 0.0.0.0 adecqqoertti.site
@@ -10279,7 +10277,6 @@
 0.0.0.0 adwords-login.net
 0.0.0.0 adwords-seclogin.com
 0.0.0.0 adwvwro.co.uk
-0.0.0.0 adyaglobal-my.sharepoint.com
 0.0.0.0 adyapg.com
 0.0.0.0 adzelefield.site
 0.0.0.0 ae-arquitectura.com.ar
@@ -29616,7 +29613,6 @@
 0.0.0.0 amelok.jino.ru
 0.0.0.0 ameltek.com
 0.0.0.0 amenable.pbphgwbr.in
-0.0.0.0 amenainvest-my.sharepoint.com
 0.0.0.0 amend.pbphgwbr.in
 0.0.0.0 amendamerica.org
 0.0.0.0 amendbroom.cyou
@@ -30395,7 +30391,6 @@
 0.0.0.0 ancoralucrancia.live
 0.0.0.0 ancorechimice.ro
 0.0.0.0 ancorottiperfume.com
-0.0.0.0 ancorr-my.sharepoint.com
 0.0.0.0 ancorsonag.cyou
 0.0.0.0 ancqind.com
 0.0.0.0 ancrage-invexus-software.com
@@ -31178,7 +31173,6 @@
 0.0.0.0 antewealth.com
 0.0.0.0 anthaigroup.vn
 0.0.0.0 anthawinvietnam.com
-0.0.0.0 anthera-my.sharepoint.com
 0.0.0.0 antheshop.com
 0.0.0.0 anthesmacc.cyou
 0.0.0.0 anthinyblsco.000webhostapp.com
@@ -35096,8 +35090,6 @@
 0.0.0.0 apprenty.com
 0.0.0.0 appreriseg.store
 0.0.0.0 apprise.okcftyze.in
-0.0.0.0 appriver3651009905-my.sharepoint.com
-0.0.0.0 appriver3651012916-my.sharepoint.com
 0.0.0.0 appriverpasswordexp.firebaseapp.com
 0.0.0.0 appriverpasswordexp.web.app
 0.0.0.0 approach.cf
@@ -36067,7 +36059,6 @@
 0.0.0.0 arefbr23.000webhostapp.com
 0.0.0.0 areflz.site
 0.0.0.0 arefriar.com
-0.0.0.0 arekommun-my.sharepoint.com
 0.0.0.0 arelectronic.co.il
 0.0.0.0 arely.es
 0.0.0.0 arem.it
@@ -36408,7 +36399,6 @@
 0.0.0.0 arnotasactuales.com
 0.0.0.0 arnovisser.be
 0.0.0.0 arnsseghe.autos
-0.0.0.0 aro365521842-my.sharepoint.com
 0.0.0.0 arobase-rdc.com
 0.0.0.0 arocada.com
 0.0.0.0 arodglass.com
@@ -37867,7 +37857,6 @@
 0.0.0.0 astardrip.com
 0.0.0.0 astardrycleaner.com
 0.0.0.0 astarperformance.com
-0.0.0.0 astarrestorationltd-my.sharepoint.com
 0.0.0.0 astarswear.top
 0.0.0.0 astatcolle.cyou
 0.0.0.0 asteam.it
@@ -38336,7 +38325,6 @@
 0.0.0.0 atlasandelia.com
 0.0.0.0 atlasconstruction808.com
 0.0.0.0 atlasconsultinggroupinc.com
-0.0.0.0 atlascoso365-my.sharepoint.com
 0.0.0.0 atlascresttrade.com
 0.0.0.0 atlasdeck.site
 0.0.0.0 atlasepm.com.au
@@ -39243,7 +39231,6 @@
 0.0.0.0 auriclendmere.com
 0.0.0.0 auriclendmere.live
 0.0.0.0 auricportex-app.com
-0.0.0.0 auricprojects-my.sharepoint.com
 0.0.0.0 aurilinebtc82trade.com
 0.0.0.0 aurilio-valtrion-solution.com
 0.0.0.0 auriliovaltrion-engine.com
@@ -42477,7 +42464,6 @@
 0.0.0.0 bafkreihuwsmynlll4to4pzv7dq2ke76huvkbcni7eh4khw5ids3wt4x5su.ipfs.dweb.link
 0.0.0.0 bafkreihwxjc5smgeg7lpfwlkwepv23vqeyz3faomgcjhirplsepb7vct44.ipfs.dweb.link
 0.0.0.0 bafokeng.net
-0.0.0.0 bafruag-my.sharepoint.com
 0.0.0.0 bafsems.edu.bd
 0.0.0.0 bafybeia4xxkcyvqugdxj4fea7pibrgarzoxby4yvq64caq76wurr2wvqzy.ipfs.inbrowser.link
 0.0.0.0 bafybeiaamq7qrezzm7cbko4e6hl5c3fcjqntup4343z5as3j2jnxs7s4p4.ipfs.dweb.link
@@ -43922,7 +43908,6 @@
 0.0.0.0 bartholomewlawfirm.com
 0.0.0.0 bartholomewschool.com
 0.0.0.0 barthssirunio.com
-0.0.0.0 bartingredients-my.sharepoint.com
 0.0.0.0 bartjam.shop
 0.0.0.0 bartmaes.000webhostapp.com
 0.0.0.0 bartrender.ro
@@ -45621,7 +45606,6 @@
 0.0.0.0 bendosmads.com.fozzyhost.com
 0.0.0.0 bendwise-contacts.000webhostapp.com
 0.0.0.0 bendwolfdencottage.com
-0.0.0.0 benecare-my.sharepoint.com
 0.0.0.0 benedgeor.shop
 0.0.0.0 benedict-controls.com
 0.0.0.0 benedictine.edu.ph
@@ -49609,7 +49593,6 @@
 0.0.0.0 bltskisn.com
 0.0.0.0 blttinex.com
 0.0.0.0 blu1skips.co.uk
-0.0.0.0 bluberi-my.sharepoint.com
 0.0.0.0 blubox.cl
 0.0.0.0 blucasanova.com
 0.0.0.0 blucer.biz
@@ -51483,7 +51466,6 @@
 0.0.0.0 bowling8ball.it
 0.0.0.0 bowlingpalatset.se
 0.0.0.0 bowlszw.co.zw
-0.0.0.0 bowmanconsultinggroup-my.sharepoint.com
 0.0.0.0 bowmanmarketing.com
 0.0.0.0 bowmanrealtygroup.us
 0.0.0.0 bowo.org
@@ -52421,7 +52403,6 @@
 0.0.0.0 braziliantimes.com
 0.0.0.0 brazilnyc.com
 0.0.0.0 brazilwebupdate.weebly.com
-0.0.0.0 brazosbendguardianship-my.sharepoint.com
 0.0.0.0 brazrrilwoods.info
 0.0.0.0 brazzver.wixsite.com
 0.0.0.0 brbbanknetbrbcombr.ml
@@ -52967,7 +52948,6 @@
 0.0.0.0 brightport-vionexpro.com
 0.0.0.0 brightportvionexpro.com
 0.0.0.0 brightquarry.eu
-0.0.0.0 brightree1-my.sharepoint.com
 0.0.0.0 brightrenditange.net
 0.0.0.0 brightshade.click
 0.0.0.0 brightshelldental.com
@@ -53225,7 +53205,6 @@
 0.0.0.0 britkonedgeval.pro
 0.0.0.0 britmarkdigital.live
 0.0.0.0 britmarkflow.shop
-0.0.0.0 britney544-my.sharepoint.com
 0.0.0.0 britneyle.aba.ae
 0.0.0.0 britons.000webhostapp.com
 0.0.0.0 britstrade-ai.com
@@ -53330,7 +53309,6 @@
 0.0.0.0 brocomonor.cyou
 0.0.0.0 brodeshel.shop
 0.0.0.0 brodiebarton.com
-0.0.0.0 brodietl.sharepoint.com
 0.0.0.0 brodinspekt.hr
 0.0.0.0 brodsky.co.za
 0.0.0.0 broeudet.info
@@ -58289,10 +58267,8 @@
 0.0.0.0 caring-quicker-964590.framer.app
 0.0.0.0 caring-set-504270.framer.app
 0.0.0.0 caring-situation-645586.framer.app
-0.0.0.0 caringhomes-my.sharepoint.com
 0.0.0.0 caringkidsconcerts.org
 0.0.0.0 caringplushomecare.com
-0.0.0.0 carinity-my.sharepoint.com
 0.0.0.0 carinsurancequotesanfrancisco.com
 0.0.0.0 carinsurancesalvage.com
 0.0.0.0 carioexcee.store
@@ -60311,7 +60287,6 @@
 0.0.0.0 cenforan.cfd
 0.0.0.0 cenfotecmemorygame.firebaseapp.com
 0.0.0.0 cenfotecmemorygame.web.app
-0.0.0.0 cengageo365-my.sharepoint.com
 0.0.0.0 cengizgulec.com
 0.0.0.0 cengizhanmuderrisoglu.com
 0.0.0.0 cengolio.bid
@@ -63271,7 +63246,6 @@
 0.0.0.0 cincapa.xyz
 0.0.0.0 cinchsemih.cyou
 0.0.0.0 cincinatibell.weebly.com
-0.0.0.0 cincinnati-my.sharepoint.com
 0.0.0.0 cincinnaticleaning.net
 0.0.0.0 cincinnatixx.cf
 0.0.0.0 cincuentenario.com
@@ -63556,7 +63530,6 @@
 0.0.0.0 citybikes.ky
 0.0.0.0 citybooker.gr
 0.0.0.0 citybriefly.top
-0.0.0.0 citybuildinginc-my.sharepoint.com
 0.0.0.0 citybvnk0nline.weebly.com
 0.0.0.0 citycentermotorhotel.com
 0.0.0.0 citycentrepickering.com
@@ -64569,7 +64542,6 @@
 0.0.0.0 climate-film.com
 0.0.0.0 climatestrange.com
 0.0.0.0 climaticline.com
-0.0.0.0 climaxportable-my.sharepoint.com
 0.0.0.0 climaxsoftware.com
 0.0.0.0 climaxsolution.digital
 0.0.0.0 climbrnasty.searchitbetter.com
@@ -65316,7 +65288,6 @@
 0.0.0.0 coachjohnnyw.info
 0.0.0.0 coachmg.com
 0.0.0.0 coachschool.com.ua
-0.0.0.0 coachwiseltd-my.sharepoint.com
 0.0.0.0 coadvradun.rest
 0.0.0.0 coaf.fazenda.gov.br
 0.0.0.0 coaguaccio.cyou
@@ -65929,7 +65900,6 @@
 0.0.0.0 colegioselc.com.br
 0.0.0.0 colemaninsuranceassoc.com
 0.0.0.0 colenesphotography.co.za
-0.0.0.0 colenetlaw-my.sharepoint.com
 0.0.0.0 coleugeniodiaz.com
 0.0.0.0 colfarina.com
 0.0.0.0 colfisiokinsj.com.ar
@@ -66091,7 +66061,6 @@
 0.0.0.0 colorado4u.com
 0.0.0.0 coloradocigars.com
 0.0.0.0 coloradoed.org
-0.0.0.0 coloradomanagement-my.sharepoint.com
 0.0.0.0 coloradonannyagency.com
 0.0.0.0 coloradosoundsystem.com
 0.0.0.0 coloradospringsx.gq
@@ -66741,7 +66710,6 @@
 0.0.0.0 communitybkcb2goonlineregainclaim.weebly.com
 0.0.0.0 communitybkk2goaccessrecliamonlll.weebly.com
 0.0.0.0 communitycatalog.info
-0.0.0.0 communitychurch-my.sharepoint.com
 0.0.0.0 communitycollegeofallleghenycounty.ukit.me
 0.0.0.0 communitycollegeofphiladelphiaemailupdatee.ukit.me
 0.0.0.0 communitycollegeoofphiladelphia.ukit.me
@@ -66826,7 +66794,6 @@
 0.0.0.0 compascalf.rest
 0.0.0.0 compassbizdirectory.com
 0.0.0.0 compassdm.com.au
-0.0.0.0 compassholdings-my.sharepoint.com
 0.0.0.0 compassionallted.info
 0.0.0.0 compassionart.co.za
 0.0.0.0 compassionate-hiring-458007.framer.app
@@ -69522,7 +69489,6 @@
 0.0.0.0 cpc125276-lewi24-2-0-cust559.2-4.cable.virginm.net
 0.0.0.0 cpcac.pe
 0.0.0.0 cpcalendars.20-244-7-98.cprapid.com
-0.0.0.0 cpccivils-my.sharepoint.com
 0.0.0.0 cpcef.org.ar
 0.0.0.0 cpcicostarica.com
 0.0.0.0 cpcigva.com
@@ -69962,7 +69928,6 @@
 0.0.0.0 creativelyone.com
 0.0.0.0 creativemediaconceptkenya.net
 0.0.0.0 creativemindworks.com
-0.0.0.0 creativemobilityproducts-my.sharepoint.com
 0.0.0.0 creativepaste.com
 0.0.0.0 creativepool.mk
 0.0.0.0 creativeprintdepot.com
@@ -71428,7 +71393,6 @@
 0.0.0.0 cubepro-7420d.web.app
 0.0.0.0 cuberreality.com
 0.0.0.0 cubesatkit.net
-0.0.0.0 cubetek-my.sharepoint.com
 0.0.0.0 cubetrade.net
 0.0.0.0 cubfoundation.org
 0.0.0.0 cubialturas.com
@@ -71972,7 +71936,6 @@
 0.0.0.0 cv.mason.org.tr
 0.0.0.0 cv.vhvpybze.in
 0.0.0.0 cv3jhr.top
-0.0.0.0 cvag-my.sharepoint.com
 0.0.0.0 cvanhoek.com
 0.0.0.0 cvbb.org.br
 0.0.0.0 cvbjodgklr.shop
@@ -72524,7 +72487,6 @@
 0.0.0.0 d1-eta.vercel.app
 0.0.0.0 d131b80a-9b6a-4719-a4fd-b2f7beaa9c33-00-tyex5w8ljwxl.riker.replit.dev
 0.0.0.0 d15.godaddysites.com
-0.0.0.0 d158-my.sharepoint.com
 0.0.0.0 d1823e94.ngrok.io
 0.0.0.0 d1cdej.top
 0.0.0.0 d1f829cb.vcstrading.com
@@ -76639,7 +76601,6 @@
 0.0.0.0 dfkrezd.web.app
 0.0.0.0 dfl8.com
 0.0.0.0 dflavin.com
-0.0.0.0 dflegal-my.sharepoint.com
 0.0.0.0 dfllacetion.uk
 0.0.0.0 dfmman-gio.gq
 0.0.0.0 dfmvepno.ca6a8b74-32ac-45ea-84f0-fb607b8789ab.click
@@ -78403,7 +78364,6 @@
 0.0.0.0 dissovolum.cyou
 0.0.0.0 dissyredim.store
 0.0.0.0 distababoo.cyou
-0.0.0.0 distalsrl-my.sharepoint.com
 0.0.0.0 distamusic.autos
 0.0.0.0 distanakbun.minutkab.go.id
 0.0.0.0 distancia-radio.com
@@ -78936,7 +78896,6 @@
 0.0.0.0 dlshouxian.com
 0.0.0.0 dlsht.com
 0.0.0.0 dlsite.trade
-0.0.0.0 dlszobel-my.sharepoint.com
 0.0.0.0 dltorch.com
 0.0.0.0 dltpaypal.com
 0.0.0.0 dluropet.com
@@ -83814,7 +83773,6 @@
 0.0.0.0 easeavino.com
 0.0.0.0 easec.com.au
 0.0.0.0 easehomey.com
-0.0.0.0 easeintoretirement-my.sharepoint.com
 0.0.0.0 easemind.com
 0.0.0.0 easier-aims-844040.framer.app
 0.0.0.0 easierusa.com
@@ -83889,7 +83847,6 @@
 0.0.0.0 easttserverdataencryptetttwefiukljyhgn.weebly.com
 0.0.0.0 eastvalleyorthopedicsurgeon.com
 0.0.0.0 eastway.cz
-0.0.0.0 eastwestcollege-my.sharepoint.com
 0.0.0.0 eastwestnursingcollegebd.com
 0.0.0.0 eastwestyogatours.com
 0.0.0.0 eastwingexpress.ltd
@@ -83978,7 +83935,6 @@
 0.0.0.0 easying-f9b8c.firebaseapp.com
 0.0.0.0 easying-f9b8c.web.app
 0.0.0.0 easyinstagram.com
-0.0.0.0 easyit.sharepoint.com
 0.0.0.0 easyitine.xyz
 0.0.0.0 easyjewelrystore.com
 0.0.0.0 easyjobs.com
@@ -85079,7 +85035,6 @@
 0.0.0.0 edirnesu.com
 0.0.0.0 edirnetemizlik.net
 0.0.0.0 edisonstraat.cf
-0.0.0.0 edisonweldinginstitute.sharepoint.com
 0.0.0.0 edisphere.com
 0.0.0.0 edit-online.com-now.com
 0.0.0.0 edit.insight-ict.co.uk
@@ -85706,7 +85661,6 @@
 0.0.0.0 eiffagebtp.com
 0.0.0.0 eiffel-lycee.fr
 0.0.0.0 eiffeltechsolutions.com
-0.0.0.0 eifionjones1-my.sharepoint.com
 0.0.0.0 eig-kristinjangro.com
 0.0.0.0 eigenwahrenzehrliches.com
 0.0.0.0 eigert.site
@@ -86450,7 +86404,6 @@
 0.0.0.0 eliteinspect251.000webhostapp.com
 0.0.0.0 eliteloungegroup.com.au
 0.0.0.0 elitels.mom
-0.0.0.0 elitelv-my.sharepoint.com
 0.0.0.0 elitemasllc.com
 0.0.0.0 elitemotorsolutions.co.uk
 0.0.0.0 elitenekretnine.ba
@@ -86519,7 +86472,6 @@
 0.0.0.0 elkiosco.com.co
 0.0.0.0 elkom.gr
 0.0.0.0 elkrapidssuites.com
-0.0.0.0 elkriverbiz.sharepoint.com
 0.0.0.0 elkspringworkshop.com
 0.0.0.0 elktw8u.duckdns.org
 0.0.0.0 ellafind.000webhostapp.com
@@ -86562,7 +86514,6 @@
 0.0.0.0 ellipalsetup.live
 0.0.0.0 ellipticals-forsale.com
 0.0.0.0 ellisahospitality.com
-0.0.0.0 ellisandco-my.sharepoint.com
 0.0.0.0 ellisgroupofma.info
 0.0.0.0 ellisonlifestylegroup.com
 0.0.0.0 ellisplanningassociates.com
@@ -89130,7 +89081,6 @@
 0.0.0.0 ersenwe-43257.firebaseapp.com
 0.0.0.0 ersenwe-43257.web.app
 0.0.0.0 ersetompl.com
-0.0.0.0 ersfilter-my.sharepoint.com
 0.0.0.0 ersfkspekrowkdper.site
 0.0.0.0 ersfrtiolmnytred.weebly.com
 0.0.0.0 ershadturk.com
@@ -89416,7 +89366,6 @@
 0.0.0.0 eslemployer.com
 0.0.0.0 eslineskim.firebaseapp.com
 0.0.0.0 esljobsplanet.com
-0.0.0.0 esloaninsurance-my.sharepoint.com
 0.0.0.0 eslorg.weebly.com
 0.0.0.0 eslowa.casa
 0.0.0.0 eslowman.tk
@@ -92427,7 +92376,6 @@
 0.0.0.0 f1q7vh.lat
 0.0.0.0 f1s88nnlyncxvl6zlfh6zon7b42l97fcwuqw1ueravnnakh8xh.xyz
 0.0.0.0 f1savannahcats.com
-0.0.0.0 f1support25.sharepoint.com
 0.0.0.0 f1yapiinsaat.com
 0.0.0.0 f1z7nc.lat
 0.0.0.0 f2-okx.com
@@ -95647,7 +95595,6 @@
 0.0.0.0 fieldstonehome.eu
 0.0.0.0 fieldstonepaper.eu
 0.0.0.0 fieldstonepost.eu
-0.0.0.0 fieldstonerp-my.sharepoint.com
 0.0.0.0 fieldthere.rushstpizzaonlineordering.com
 0.0.0.0 fieldtrips.fun
 0.0.0.0 fieldwallhaze.vip
@@ -100136,7 +100083,6 @@
 0.0.0.0 flybac.phoenixlodge144.com
 0.0.0.0 flybuys.durablesites.com
 0.0.0.0 flybuyyreward.weebly.com
-0.0.0.0 flyerelectic-my.sharepoint.com
 0.0.0.0 flyfast.com.br
 0.0.0.0 flyff-penya.virdeal.com
 0.0.0.0 flygalaxyair.com
@@ -100786,7 +100732,6 @@
 0.0.0.0 foreverdentistry.com
 0.0.0.0 foreverenterprise.co.ke
 0.0.0.0 foreverf4.net
-0.0.0.0 foreverfriends-my.sharepoint.com
 0.0.0.0 foreverinmemory.site
 0.0.0.0 foreverkidsstore.com
 0.0.0.0 forevermadison.com
@@ -101014,7 +100959,6 @@
 0.0.0.0 forms.cloud.microsoft
 0.0.0.0 forms.framestr.com
 0.0.0.0 forms.kyano.app
-0.0.0.0 forms.office.com
 0.0.0.0 forms.sendpulse.com
 0.0.0.0 forms.visme.co
 0.0.0.0 forms.zohopublic.com
@@ -101326,7 +101270,6 @@
 0.0.0.0 fortvermenz.de
 0.0.0.0 fortvermenz.live
 0.0.0.0 fortvexa.com
-0.0.0.0 fortwnty-my.sharepoint.com
 0.0.0.0 fortworthphysicaltherapist.com
 0.0.0.0 forty678.wixsite.com
 0.0.0.0 fortylocker.life
@@ -101588,7 +101531,6 @@
 0.0.0.0 fouroaksfarm.org
 0.0.0.0 fouronetwos.com
 0.0.0.0 fourplanet.co.uk
-0.0.0.0 fourpointhr-my.sharepoint.com
 0.0.0.0 fourseasonsatsilvermaple.com
 0.0.0.0 fourseasonsautowash.co.uk
 0.0.0.0 fourseasonsbuffet.online
@@ -102764,7 +102706,6 @@
 0.0.0.0 frontlinebulletinhub.pro
 0.0.0.0 frontlineclothing.id
 0.0.0.0 frontlineflashreport.pro
-0.0.0.0 frontlineinc-my.sharepoint.com
 0.0.0.0 frontlinepulsewire.pro
 0.0.0.0 frontlinerollforms.com
 0.0.0.0 frontlinesecurityservices.net
@@ -103574,7 +103515,6 @@
 0.0.0.0 furorpsoro.store
 0.0.0.0 furry-axle.com
 0.0.0.0 furryfamilypetshop.com
-0.0.0.0 furtherllc-my.sharepoint.com
 0.0.0.0 furtuosoadvogados.com.br
 0.0.0.0 furusetparkour.no
 0.0.0.0 furuspesialisten.com
@@ -103844,7 +103784,6 @@
 0.0.0.0 fwcpublicarchive.com
 0.0.0.0 fwcxhq.site
 0.0.0.0 fwdfw.suf.guidegoods.net
-0.0.0.0 fwdoccationcom-my.sharepoint.com
 0.0.0.0 fwefwefwww.hotmail.ru
 0.0.0.0 fweregtfv.igg.biz
 0.0.0.0 fwgwz4.webwave.dev
@@ -104491,7 +104430,6 @@
 0.0.0.0 galvanizboru.net
 0.0.0.0 galvanosur.com.ar
 0.0.0.0 galvarez.do
-0.0.0.0 galvbay-my.sharepoint.com
 0.0.0.0 galvestonx.cf
 0.0.0.0 galvezmonteagudo.pe
 0.0.0.0 galvins16.wixsite.com
@@ -105899,7 +105837,6 @@
 0.0.0.0 geoaran.site
 0.0.0.0 geobyte.site
 0.0.0.0 geocad.com.mx
-0.0.0.0 geocal-my.sharepoint.com
 0.0.0.0 geocean.co.id
 0.0.0.0 geoceunpro.cyou
 0.0.0.0 geochic.com
@@ -106613,7 +106550,6 @@
 0.0.0.0 gfhfsw.weebly.com
 0.0.0.0 gfhgjhfjfhfh.000webhostapp.com
 0.0.0.0 gfhrtryrtsefwvegrvrhryrr5grbdhdgubfgfufbdshdgfyrgdhd.weebly.com
-0.0.0.0 gfii-my.sharepoint.com
 0.0.0.0 gfjfgjfgjfgkfdgkfkfgkfgkfgkgf.blogspot.com
 0.0.0.0 gfjhfyjfgg.weebly.com
 0.0.0.0 gfjhtj.usa.cc
@@ -106817,7 +106753,6 @@
 0.0.0.0 ghr.lb1vso.sbs
 0.0.0.0 ghreiotumerdas.weebly.com
 0.0.0.0 ghruypotash.com
-0.0.0.0 ghsahq-my.sharepoint.com
 0.0.0.0 ghsin52f.lat
 0.0.0.0 ghsins1f.lat
 0.0.0.0 ghsins2f.lat
@@ -107632,7 +107567,6 @@
 0.0.0.0 gliduvlytics.site
 0.0.0.0 glifaseritomas.site
 0.0.0.0 gligerth.com
-0.0.0.0 glighting-my.sharepoint.com
 0.0.0.0 gligiora.site
 0.0.0.0 gliis-group.qpon
 0.0.0.0 glimbedryp.site
@@ -107807,7 +107741,6 @@
 0.0.0.0 globalbusinessprocessing.com
 0.0.0.0 globalcalcium.com
 0.0.0.0 globalcallnetwork.com
-0.0.0.0 globalcareerlink-my.sharepoint.com
 0.0.0.0 globalchauffeuralliance.com
 0.0.0.0 globalcitizengroup.com
 0.0.0.0 globalcitizentehran.com
@@ -108042,7 +107975,6 @@
 0.0.0.0 globavortexiora.info
 0.0.0.0 globedevp.com
 0.0.0.0 globeetours.com
-0.0.0.0 globehealer.sharepoint.com
 0.0.0.0 globehydraulic.co.za
 0.0.0.0 globelhk.com
 0.0.0.0 globelineltd.com
@@ -111422,7 +111354,6 @@
 0.0.0.0 groupinsuranceschemes.org
 0.0.0.0 groupkv.com
 0.0.0.0 grouploot.co.uk
-0.0.0.0 groupmatrix-my.sharepoint.com
 0.0.0.0 groupmgmt.ferreracademy.com
 0.0.0.0 groupmoneygoodinvestttplpllplpl.com
 0.0.0.0 groupnar.com
@@ -114514,7 +114445,6 @@
 0.0.0.0 headcase.gr
 0.0.0.0 headfire.pt
 0.0.0.0 headhreogr.cyou
-0.0.0.0 headlamleisureltd-my.sharepoint.com
 0.0.0.0 headlandengineering.com.au
 0.0.0.0 headldiluv.shop
 0.0.0.0 headldisul.cyou
@@ -114609,7 +114539,6 @@
 0.0.0.0 healthinsurance-kansascity.com
 0.0.0.0 healthinsuranceleads.com
 0.0.0.0 healthinsureusa.com
-0.0.0.0 healthlinkmedicalcenter-my.sharepoint.com
 0.0.0.0 healthmass.xyz
 0.0.0.0 healthmed-bd.com
 0.0.0.0 healthnharmony.org
@@ -118071,7 +118000,6 @@
 0.0.0.0 hoodedwrap.shop
 0.0.0.0 hoodguyzfranchise.com
 0.0.0.0 hoodhobin623723.servebeer.com
-0.0.0.0 hoodpkg-my.sharepoint.com
 0.0.0.0 hoodyandtshirt.com
 0.0.0.0 hoodyyy.ml
 0.0.0.0 hoofaggra.rest
@@ -118782,7 +118710,6 @@
 0.0.0.0 housing-aj5.pages.dev
 0.0.0.0 housing-nexus.com
 0.0.0.0 housingfinancecommission.com
-0.0.0.0 housingheadquarters-my.sharepoint.com
 0.0.0.0 housingrecipe.com
 0.0.0.0 housitba5.firebaseapp.com
 0.0.0.0 housitba5.web.app
@@ -118926,7 +118853,6 @@
 0.0.0.0 hpg.xitil.guidegoods.net
 0.0.0.0 hphac.com
 0.0.0.0 hphlouisiana.com
-0.0.0.0 hphotel-my.sharepoint.com
 0.0.0.0 hpiyeskf.shop
 0.0.0.0 hpkaainer.biz
 0.0.0.0 hplanners.com
@@ -120494,7 +120420,6 @@
 0.0.0.0 hydronengineers.com
 0.0.0.0 hydroperoxidsse.info
 0.0.0.0 hydropneuengg.com
-0.0.0.0 hydroprosolutions-my.sharepoint.com
 0.0.0.0 hydroscler.autos
 0.0.0.0 hydroshifa.shop
 0.0.0.0 hydrospafitness.com
@@ -120792,7 +120717,6 @@
 0.0.0.0 i3rcmm.top
 0.0.0.0 i3siaw.qpon
 0.0.0.0 i3vdaw.cfd
-0.0.0.0 i4business-my.sharepoint.com
 0.0.0.0 i4ezelsej9czvini.fantom.neriobazzano.it
 0.0.0.0 i4hurxn9.life
 0.0.0.0 i4iyxt.cfd
@@ -122170,7 +122094,6 @@
 0.0.0.0 idioticccalcocoon.info
 0.0.0.0 idirectsecure.login.ingdirect.clienti.acceso.exotichardwood.com
 0.0.0.0 idis.com.ua
-0.0.0.0 idiseasee3-my.sharepoint.com
 0.0.0.0 idisp.phillytoday.com
 0.0.0.0 idiveboat.com
 0.0.0.0 idiyasgallery.com
@@ -126362,7 +126285,6 @@
 0.0.0.0 inspirefinances.biz
 0.0.0.0 inspireflow.info
 0.0.0.0 inspirekaty.com
-0.0.0.0 inspiresleep.sharepoint.com
 0.0.0.0 inspirionweb.net
 0.0.0.0 inspirwood.com
 0.0.0.0 inspissatioeen.info
@@ -130580,7 +130502,6 @@
 0.0.0.0 jansbdjiasdas.webcindario.com
 0.0.0.0 jansiggs.com
 0.0.0.0 jansportpolska.pl
-0.0.0.0 janssonentreprenadab-my.sharepoint.com
 0.0.0.0 jansulek.com
 0.0.0.0 jansutherlandfloristry.com
 0.0.0.0 jansweeneyphotography.com
@@ -131019,7 +130940,6 @@
 0.0.0.0 jdarch07.github.io
 0.0.0.0 jdavxy.p5yjlf31w6hve12yktuwmenkyz07nk.lat
 0.0.0.0 jdbzfwre.shop
-0.0.0.0 jdcoksa-my.sharepoint.com
 0.0.0.0 jdcorporate.co.za
 0.0.0.0 jdcpz.com
 0.0.0.0 jdcredit.com.au
@@ -131291,7 +131211,6 @@
 0.0.0.0 jens-sehm-furniture.com
 0.0.0.0 jens.quest
 0.0.0.0 jensenautomotive.com.au
-0.0.0.0 jensenbowers-my.sharepoint.com
 0.0.0.0 jensites.com
 0.0.0.0 jenstratton.shop
 0.0.0.0 jentmeter.site
@@ -131320,7 +131239,6 @@
 0.0.0.0 jeoqaa.icu
 0.0.0.0 jepogafril.000webhostapp.com
 0.0.0.0 jeppelyst.shop
-0.0.0.0 jequipit-my.sharepoint.com
 0.0.0.0 jeraicage.com
 0.0.0.0 jeramaxdata.biz
 0.0.0.0 jeraooddpaskdoadpo.site
@@ -131542,7 +131460,6 @@
 0.0.0.0 jghg.ml
 0.0.0.0 jghxcgtg.weebly.com
 0.0.0.0 jginspecao.com.br
-0.0.0.0 jgioutdooradvertising1-my.sharepoint.com
 0.0.0.0 jgiq1hvc.forms.app
 0.0.0.0 jgkjsdflkscmaslakdsfds.com
 0.0.0.0 jgmeiring.us
@@ -133076,7 +132993,6 @@
 0.0.0.0 jslhba.com
 0.0.0.0 jslyde.com
 0.0.0.0 jsmindia.org
-0.0.0.0 jsmorton-my.sharepoint.com
 0.0.0.0 jsmshdhgbvbv.info
 0.0.0.0 jsmultivision.net
 0.0.0.0 jsnectrese.firebaseapp.com
@@ -134955,7 +134871,6 @@
 0.0.0.0 kaprika.com.au
 0.0.0.0 kapriz-podolsk.ru
 0.0.0.0 kapromdress.com
-0.0.0.0 kapsengineers-my.sharepoint.com
 0.0.0.0 kapsero.net
 0.0.0.0 kapsglobal.ae
 0.0.0.0 kaptagro.com.br
@@ -135330,7 +135245,6 @@
 0.0.0.0 katherinelutz.shop
 0.0.0.0 katherinemackenziesmith.com
 0.0.0.0 katherinerichards.com
-0.0.0.0 kathleenchapman-my.sharepoint.com
 0.0.0.0 kathmanduhealing.org
 0.0.0.0 kathmorss1.000webhostapp.com
 0.0.0.0 kathrinknoepfle.de
@@ -135879,7 +135793,6 @@
 0.0.0.0 kelkut.com
 0.0.0.0 keller--na.com
 0.0.0.0 kellerbrewer.com
-0.0.0.0 kellercloud-my.sharepoint.com
 0.0.0.0 kelleyjames.com
 0.0.0.0 kelleyk-9photography.com
 0.0.0.0 kelleylawoffice.ca
@@ -136133,7 +136046,6 @@
 0.0.0.0 kernlogixtrade.de
 0.0.0.0 kernluxeron.net
 0.0.0.0 kernmode65.site
-0.0.0.0 kernowenvirowise-my.sharepoint.com
 0.0.0.0 kernpragur-trading-denmark.sbs
 0.0.0.0 kernpragur-trading-netherlands.sbs
 0.0.0.0 kernpragur-trading-norway.sbs
@@ -136392,7 +136304,6 @@
 0.0.0.0 kg5.04d.mytemp.website
 0.0.0.0 kg5.t2ltdy.top
 0.0.0.0 kg7y1y-espj1w-u0w-egt-vy4y5.pages.dev
-0.0.0.0 kgaisol-my.sharepoint.com
 0.0.0.0 kgbavira.shop
 0.0.0.0 kgcbxfyt.usw-1.sealos.app
 0.0.0.0 kgcustoms.gov.vn
@@ -138150,7 +138061,6 @@
 0.0.0.0 kodamakagu.com
 0.0.0.0 kodera.jp
 0.0.0.0 kodi1.jibhd.com
-0.0.0.0 kodkodenterprises-my.sharepoint.com
 0.0.0.0 kodmindia.com
 0.0.0.0 kodsolutions.tech
 0.0.0.0 koelemarktholm-ai.com
@@ -139109,7 +139019,6 @@
 0.0.0.0 krolfondstvoai.com
 0.0.0.0 krolfondstvopl.com
 0.0.0.0 kroll-id324923.eu.cc
-0.0.0.0 kroll8568-my.sharepoint.com
 0.0.0.0 kromel.shop
 0.0.0.0 kromzel.shop
 0.0.0.0 kron-peakai.com
@@ -142129,7 +142038,6 @@
 0.0.0.0 leadity.pics
 0.0.0.0 leadjoreio-apps.wasmer.app
 0.0.0.0 leadoutdigital.com
-0.0.0.0 leadpartners-my.sharepoint.com
 0.0.0.0 leadpile.com
 0.0.0.0 leadpluss.com
 0.0.0.0 leadpushs.com
@@ -145354,8 +145262,6 @@
 0.0.0.0 livenews-confinish.xyz
 0.0.0.0 livenews-elitespac.xyz
 0.0.0.0 livenews-plewin.xyz
-0.0.0.0 livenmitac-my.sharepoint.com
-0.0.0.0 livenorthcentral-my.sharepoint.com
 0.0.0.0 livenpilates.com
 0.0.0.0 liveoffice.myvnc.com
 0.0.0.0 liveonlineupdates.com
@@ -146201,7 +146107,6 @@
 0.0.0.0 lodgescono.cyou
 0.0.0.0 lodgevinasdelsol.com
 0.0.0.0 lodging.pbphgwbr.in
-0.0.0.0 lodgingeconometrics-my.sharepoint.com
 0.0.0.0 lodhatrade.com
 0.0.0.0 lodocyy.com
 0.0.0.0 lodomiker.com
@@ -149194,7 +149099,6 @@
 0.0.0.0 luxetra.shop
 0.0.0.0 luxeupio.com
 0.0.0.0 luxeworldwidetravel.com
-0.0.0.0 luxexcel-my.sharepoint.com
 0.0.0.0 luxhealer7.cloudaccess.host
 0.0.0.0 luxhouse.com.br
 0.0.0.0 luxiano.hub848245.pro
@@ -149706,7 +149610,6 @@
 0.0.0.0 m3best.com.br
 0.0.0.0 m3cx-6de-8miepj-ek0-47m-dki.pages.dev
 0.0.0.0 m3dfrance.com
-0.0.0.0 m3gc-my.sharepoint.com
 0.0.0.0 m3j8kr.cam
 0.0.0.0 m3kuo.info
 0.0.0.0 m3musa.com
@@ -150058,7 +149961,6 @@
 0.0.0.0 madeforbrownskin.com
 0.0.0.0 madeinchinaali.5gbfree.com
 0.0.0.0 madeincomilla.com
-0.0.0.0 madeinnature-my.sharepoint.com
 0.0.0.0 madeinpaysdauge.com
 0.0.0.0 madeintheshadessi.com
 0.0.0.0 madeinthurwa.com
@@ -152332,7 +152234,6 @@
 0.0.0.0 mardacom.net
 0.0.0.0 mardan.pl
 0.0.0.0 mardelua.com
-0.0.0.0 mardeniebla-my.sharepoint.com
 0.0.0.0 mardetymardinsyah.com
 0.0.0.0 mardianistr.id
 0.0.0.0 mardickoula.blogspot.com
@@ -152526,7 +152427,6 @@
 0.0.0.0 marinitrasporti.it
 0.0.0.0 marinofx.com
 0.0.0.0 marinoinvestello.net
-0.0.0.0 marinschools-my.sharepoint.com
 0.0.0.0 mario-goldstein.com
 0.0.0.0 marioacevedo.com
 0.0.0.0 mariobarroso.pt
@@ -155918,7 +155818,6 @@
 0.0.0.0 metropolitanoagora.com.br
 0.0.0.0 metropoliten.com
 0.0.0.0 metroscripts.com
-0.0.0.0 metrotrade-my.sharepoint.com
 0.0.0.0 metrovent.com
 0.0.0.0 metrovision.co.za
 0.0.0.0 metrr.ru
@@ -156371,7 +156270,6 @@
 0.0.0.0 mickkrometre.info
 0.0.0.0 mickkropores.info
 0.0.0.0 micmovies.com
-0.0.0.0 micmx-my.sharepoint.com
 0.0.0.0 miconlinestore.com
 0.0.0.0 micpatna.org
 0.0.0.0 micr0s0ft0ffice.webnode.com
@@ -158121,7 +158019,6 @@
 0.0.0.0 mntamasklogen.gitbook.io
 0.0.0.0 mntechnologies.com.co
 0.0.0.0 mnuhjj.weebly.com
-0.0.0.0 mnwild-my.sharepoint.com
 0.0.0.0 mnycryptoethwallet.com
 0.0.0.0 mnyctervailliet.com
 0.0.0.0 mnyctnerwallet.com
@@ -158641,7 +158538,6 @@
 0.0.0.0 moeitelosemooi.co.za
 0.0.0.0 moelter-film.de
 0.0.0.0 moertku.shop
-0.0.0.0 moeteduvn-my.sharepoint.com
 0.0.0.0 mof-gov-71fd1.firebaseapp.com
 0.0.0.0 mof-gov-71fd1.web.app
 0.0.0.0 mof-gov-9042e.firebaseapp.com
@@ -160108,7 +160004,6 @@
 0.0.0.0 mpctech.com
 0.0.0.0 mpdesign.mx
 0.0.0.0 mpenafiel.com
-0.0.0.0 mpequity.sharepoint.com
 0.0.0.0 mperutyy.firebaseapp.com
 0.0.0.0 mperutyy.web.app
 0.0.0.0 mpg-pipeline.com
@@ -160765,7 +160660,6 @@
 0.0.0.0 multicursosonline.com.br
 0.0.0.0 multidisciplinary-statuses-616239.framer.app
 0.0.0.0 multidispi.cyou
-0.0.0.0 multidocker-my.sharepoint.com
 0.0.0.0 multie.mx
 0.0.0.0 multiempaque.com
 0.0.0.0 multienter.com
@@ -162306,7 +162200,6 @@
 0.0.0.0 myluxurybargain.com
 0.0.0.0 mylwi.com
 0.0.0.0 mymaclogo.com
-0.0.0.0 mymacombagent.sharepoint.com
 0.0.0.0 mymadison-jmu.weebly.com
 0.0.0.0 mymadriver.com
 0.0.0.0 mymagickvale.com
@@ -163534,7 +163427,6 @@
 0.0.0.0 nanosens.com.tr
 0.0.0.0 nanotechnopolis.com
 0.0.0.0 nanotouchhub.site
-0.0.0.0 nanovault.sharepoint.com
 0.0.0.0 nanovia.site
 0.0.0.0 nanoystamp.homes
 0.0.0.0 nanqq.com
@@ -165698,21 +165590,6 @@
 0.0.0.0 netoptik.net
 0.0.0.0 netoqu.world
 0.0.0.0 netoraz.com
-0.0.0.0 netorg107319-my.sharepoint.com
-0.0.0.0 netorg140587-my.sharepoint.com
-0.0.0.0 netorg2775649-my.sharepoint.com
-0.0.0.0 netorg304921-my.sharepoint.com
-0.0.0.0 netorg3403047-my.sharepoint.com
-0.0.0.0 netorg4219258-my.sharepoint.com
-0.0.0.0 netorg492397-my.sharepoint.com
-0.0.0.0 netorg679262-my.sharepoint.com
-0.0.0.0 netorgft1432979-my.sharepoint.com
-0.0.0.0 netorgft1574311-my.sharepoint.com
-0.0.0.0 netorgft2045555-my.sharepoint.com
-0.0.0.0 netorgft3310162-my.sharepoint.com
-0.0.0.0 netorgft3310644.sharepoint.com
-0.0.0.0 netorgft4179072-my.sharepoint.com
-0.0.0.0 netorgft971973-my.sharepoint.com
 0.0.0.0 netpasscode-95681.firebaseapp.com
 0.0.0.0 netpasscode-95681.web.app
 0.0.0.0 netpathd.pro
@@ -167869,7 +167746,6 @@
 0.0.0.0 nlock.checking.sms.wfmobile.info
 0.0.0.0 nlonex-skrez-a7c109-wplm-ponvek.pages.dev
 0.0.0.0 nlponthewildside.com.au
-0.0.0.0 nlprocessing-my.sharepoint.com
 0.0.0.0 nlqyhl.com
 0.0.0.0 nlrindia.org
 0.0.0.0 nlsailing.com
@@ -176606,7 +176482,6 @@
 0.0.0.0 omputsfriseur.com
 0.0.0.0 ompw.shop
 0.0.0.0 omqv.kmxuengka.sbs
-0.0.0.0 omrch-my.sharepoint.com
 0.0.0.0 omsaihospitals.com
 0.0.0.0 omsanoluklu.com
 0.0.0.0 omsantoshedu.org
@@ -176755,7 +176630,6 @@
 0.0.0.0 onedrive.invoiceorder.attachment.manuelmalhao.com
 0.0.0.0 onedrive.islamicmission.org
 0.0.0.0 onedrive.iteachmakeup.com
-0.0.0.0 onedrive.live.com
 0.0.0.0 onedrive.live.com.c99a11a53a3748269e3f86d7ac38df11.tk
 0.0.0.0 onedrive.liveviewuserauthaspx209hr28jh.srv155695.hoster-test.ru
 0.0.0.0 onedrive.liveviewuserauthaspx209hr28jh.srv156450.hoster-test.ru
@@ -177506,7 +177380,6 @@
 0.0.0.0 ontariosnowboarders.ca
 0.0.0.0 ontbhrt.com
 0.0.0.0 ontenero.com
-0.0.0.0 ontextron-my.sharepoint.com
 0.0.0.0 ontheair.gr
 0.0.0.0 ontheballwebdesigns.com.au
 0.0.0.0 onthecornerdaycare.co.za
@@ -177644,7 +177517,6 @@
 0.0.0.0 op2-tec-authorized-docwmtm.firebaseapp.com
 0.0.0.0 op2-tec-authorized-docwmtm.web.app
 0.0.0.0 opa.vhvpybze.in
-0.0.0.0 opaafood-my.sharepoint.com
 0.0.0.0 opachallenge.com
 0.0.0.0 opacioutpa.cyou
 0.0.0.0 opaelevator.ir
@@ -178765,7 +178637,6 @@
 0.0.0.0 oriongroup.in
 0.0.0.0 orionproperties.in
 0.0.0.0 orionpsikolojibodrum.com
-0.0.0.0 orionservices-my.sharepoint.com
 0.0.0.0 oriontrustcyprus.com
 0.0.0.0 oriosense.site
 0.0.0.0 oriounspace.site
@@ -182176,7 +182047,6 @@
 0.0.0.0 parksuper.cyou
 0.0.0.0 parkthatcar.net
 0.0.0.0 parktoolblik.shop
-0.0.0.0 parkuniv-my.sharepoint.com
 0.0.0.0 parkviewhome.eu
 0.0.0.0 parkviewhotelbandung.com
 0.0.0.0 parkville.stonecanyonpizza.com
@@ -182683,7 +182553,6 @@
 0.0.0.0 patrionaitrade.net
 0.0.0.0 patriot.pbphgwbr.in
 0.0.0.0 patriotcollege.com
-0.0.0.0 patriotconstruction-my.sharepoint.com
 0.0.0.0 patriotes.org
 0.0.0.0 patriotshipyards.com
 0.0.0.0 patriotthreads.org
@@ -184585,7 +184454,6 @@
 0.0.0.0 pcsm-cpmh.org
 0.0.0.0 pcsphp.plainwellschools.org
 0.0.0.0 pcsss.s3.us-east-2.amazonaws.com
-0.0.0.0 pcswm-my.sharepoint.com
 0.0.0.0 pcsystemsinc.com
 0.0.0.0 pctconsulting.com
 0.0.0.0 pctech.net.pk
@@ -185086,7 +184954,6 @@
 0.0.0.0 pembrokechurch.org
 0.0.0.0 pembrokeshiregrassfedlamb.com
 0.0.0.0 pemclub.com
-0.0.0.0 pemcoltd-my.sharepoint.com
 0.0.0.0 pemepk.com
 0.0.0.0 pemex-program.com
 0.0.0.0 pemex-ultrasoftware.com
@@ -185932,7 +185799,6 @@
 0.0.0.0 pescicurva.cyou
 0.0.0.0 pesee.today
 0.0.0.0 peseg.com.br
-0.0.0.0 peselandcarr-my.sharepoint.com
 0.0.0.0 peseriale.com
 0.0.0.0 peshadar.com
 0.0.0.0 peshmergekan.com
@@ -187542,7 +187408,6 @@
 0.0.0.0 piperzinshold.net
 0.0.0.0 pipeswipe.net
 0.0.0.0 pipeto.xyz
-0.0.0.0 pipevalves-my.sharepoint.com
 0.0.0.0 pipings.levitrawelloch.in
 0.0.0.0 pipispezzi.it
 0.0.0.0 pipisscroc.store
@@ -187579,7 +187444,6 @@
 0.0.0.0 pirellif1.com.br
 0.0.0.0 pirepoine.adultdns.net
 0.0.0.0 piresearch.info
-0.0.0.0 piresinternational-my.sharepoint.com
 0.0.0.0 piridhighf.cyou
 0.0.0.0 piripro.com
 0.0.0.0 pirmaxa.sbs
@@ -193527,7 +193391,6 @@
 0.0.0.0 premieruksoccer.co.uk
 0.0.0.0 premiervaluemarketing.com
 0.0.0.0 premierwaterheaters.in
-0.0.0.0 premierworkplacesolutions-my.sharepoint.com
 0.0.0.0 premio-instagram.com
 0.0.0.0 premiofundrelixsoftware.com
 0.0.0.0 premioluxarionxtrade.com
@@ -195095,7 +194958,6 @@
 0.0.0.0 proforma-apple.com
 0.0.0.0 proformainvoice.professionaldiligence.net
 0.0.0.0 proformauberaba.com.br
-0.0.0.0 proformconcrete-my.sharepoint.com
 0.0.0.0 profort.live
 0.0.0.0 profosinubi.org
 0.0.0.0 profoundawakening.com
@@ -200062,7 +199924,6 @@
 0.0.0.0 qstar-backend.unframe.ai
 0.0.0.0 qsteens-edu.com
 0.0.0.0 qstillv.madinaboltcenter.com
-0.0.0.0 qstraintglobal-my.sharepoint.com
 0.0.0.0 qstre.jen-fong.com
 0.0.0.0 qsvpsg.site
 0.0.0.0 qsvrkifa.shop
@@ -208360,7 +208221,6 @@
 0.0.0.0 robinpenniston.wixstudio.com
 0.0.0.0 robinsminifurniture.com
 0.0.0.0 robinsnestfamilycare.com
-0.0.0.0 robinsonconstructioncom-my.sharepoint.com
 0.0.0.0 robinsonlewis1990.wixstudio.com
 0.0.0.0 robinsonpaz.com
 0.0.0.0 robintel.com
@@ -208568,7 +208428,6 @@
 0.0.0.0 rockycollado4403.myportfolio.com
 0.0.0.0 rockyinstincts.com.au
 0.0.0.0 rockymountainclinicalcounseling.com
-0.0.0.0 rockymountainreps.sharepoint.com
 0.0.0.0 rockysugg.myamishcountry.com
 0.0.0.0 rockywepner.com
 0.0.0.0 rocllarg.com
@@ -209193,7 +209052,6 @@
 0.0.0.0 rosespa.com.sg
 0.0.0.0 rosespartyideas.com
 0.0.0.0 rosesregency.com
-0.0.0.0 rosestreet-my.sharepoint.com
 0.0.0.0 rosetasticdesigns.com
 0.0.0.0 rosette.wavaigroup.com
 0.0.0.0 roseur.live
@@ -209201,7 +209059,6 @@
 0.0.0.0 rosewebmailaccountant.weebly.com
 0.0.0.0 rosewing.com
 0.0.0.0 rosexmas.000webhostapp.com
-0.0.0.0 roseych-my.sharepoint.com
 0.0.0.0 rosfid.agrosapiens.com.ar
 0.0.0.0 rosha62ru.428.com1.ru
 0.0.0.0 roshantrade.net
@@ -211550,7 +211407,6 @@
 0.0.0.0 safewater.rotary9350.co.za
 0.0.0.0 safeway-xp.com
 0.0.0.0 safex.biz
-0.0.0.0 safex.sharepoint.com
 0.0.0.0 safexsoftware.com
 0.0.0.0 safeyourbrowser.us
 0.0.0.0 safeypupost.eu.cc
@@ -214270,7 +214126,6 @@
 0.0.0.0 schuh415sale-bd.com
 0.0.0.0 schuhsale-bd.com
 0.0.0.0 schuldner.national-inkasso.de
-0.0.0.0 schuleweisslingen-my.sharepoint.com
 0.0.0.0 schulte.be
 0.0.0.0 schultzfinancial.com
 0.0.0.0 schultzremodelinginc.com
@@ -218752,7 +218607,6 @@
 0.0.0.0 sfl.meegmfio.in
 0.0.0.0 sflchronicle.com
 0.0.0.0 sflforums.com
-0.0.0.0 sflooring-my.sharepoint.com
 0.0.0.0 sfmc.com.br
 0.0.0.0 sfniiogaz.ru
 0.0.0.0 sfnindia.com
@@ -218873,7 +218727,6 @@
 0.0.0.0 sghiacirco.store
 0.0.0.0 sghsjsghghs090.weebly.com
 0.0.0.0 sghtrading.com
-0.0.0.0 sgijlaw-my.sharepoint.com
 0.0.0.0 sgin12-dhl.mdbgo.io
 0.0.0.0 sgin6-pdf.mdbgo.io
 0.0.0.0 sginfo.bolt.host
@@ -219231,7 +219084,6 @@
 0.0.0.0 sharefb.com
 0.0.0.0 sharefiledocc.000webhostapp.com
 0.0.0.0 sharefilesdropbox.com
-0.0.0.0 sharefilez-my.sharepoint.com
 0.0.0.0 shareitpointitout.ga
 0.0.0.0 shareitweddings.com
 0.0.0.0 sharelagi.com
@@ -222395,7 +222247,6 @@
 0.0.0.0 skillnestv.blog
 0.0.0.0 skillnestv.online
 0.0.0.0 skillranc.lol
-0.0.0.0 skillsimpact-my.sharepoint.com
 0.0.0.0 skillsion.online
 0.0.0.0 skillsmastering.com
 0.0.0.0 skillsproviders.com
@@ -222983,7 +222834,6 @@
 0.0.0.0 slimiest-warning.000webhostapp.com
 0.0.0.0 sliminfo.000webhostapp.com
 0.0.0.0 slimkorpa.com
-0.0.0.0 slimpatico-my.sharepoint.com
 0.0.0.0 slimy.duckdns.org
 0.0.0.0 slimzerona.com
 0.0.0.0 slingshot.qpujpkws.in
@@ -223869,7 +223719,6 @@
 0.0.0.0 smsclientorangebox.myfreesites.net
 0.0.0.0 smscode-santander.com
 0.0.0.0 smscollab.com
-0.0.0.0 smscorpaustralia-my.sharepoint.com
 0.0.0.0 smscourrier1.godaddysites.com
 0.0.0.0 smsdatagh.com
 0.0.0.0 smsending.online
@@ -225058,7 +224907,6 @@
 0.0.0.0 solorussianmodels.com
 0.0.0.0 solos-r-us.com
 0.0.0.0 solosnetwork.org.au
-0.0.0.0 solospizza-my.sharepoint.com
 0.0.0.0 solostemgenn.com
 0.0.0.0 solosunshine.com
 0.0.0.0 solotrattoria.com
@@ -227708,7 +227556,6 @@
 0.0.0.0 spraguesnursery.com
 0.0.0.0 sprajin.com
 0.0.0.0 spranquetis.top
-0.0.0.0 sprapol-my.sharepoint.com
 0.0.0.0 sprava-predplatneho.com
 0.0.0.0 sprawadzisiaj.com
 0.0.0.0 sprawd.click
@@ -229373,7 +229220,6 @@
 0.0.0.0 statesmanly-navigat.000webhostapp.com
 0.0.0.0 statesmedcoders.com
 0.0.0.0 statesnoon.whatmarketsdid.com
-0.0.0.0 statewaste-my.sharepoint.com
 0.0.0.0 statewidelighting.com
 0.0.0.0 statewideoverheadcranes.com.au
 0.0.0.0 stathero-engine.com
@@ -231153,7 +230999,6 @@
 0.0.0.0 strigspost.cyou
 0.0.0.0 strikeapose.co.uk
 0.0.0.0 strikefcranberry.rocksforgood.com
-0.0.0.0 strikeforceamc-my.sharepoint.com
 0.0.0.0 strikeforcelegal.net
 0.0.0.0 strikenaval.theqsolutions.com
 0.0.0.0 strikeright.scrubolotsoap.com
@@ -231659,7 +231504,6 @@
 0.0.0.0 suacclyasmo.store
 0.0.0.0 suachuacameragiare.com
 0.0.0.0 suacompanhia.com.br
-0.0.0.0 suade-my.sharepoint.com
 0.0.0.0 suamaemerecetramontinassl.com
 0.0.0.0 suanhanhmobile.vn
 0.0.0.0 suanne.ga
@@ -232365,7 +232209,6 @@
 0.0.0.0 sunbdk.site
 0.0.0.0 sunbeamworldwidellc.com
 0.0.0.0 sunbeauumshens.info
-0.0.0.0 sunbeltfireinc-my.sharepoint.com
 0.0.0.0 sunbird-bd.com
 0.0.0.0 sunbriarbakery.com
 0.0.0.0 sunbridge.co.ug
@@ -232768,7 +232611,6 @@
 0.0.0.0 superor.click
 0.0.0.0 superor.mom
 0.0.0.0 superor.shop
-0.0.0.0 superpark-my.sharepoint.com
 0.0.0.0 superpaym.live
 0.0.0.0 superpcry.store
 0.0.0.0 superperbe.store
@@ -235038,7 +234880,6 @@
 0.0.0.0 synoraveyrox-soft.com
 0.0.0.0 synoroid.com
 0.0.0.0 synotrix.site
-0.0.0.0 synovasa-my.sharepoint.com
 0.0.0.0 synovextraliax.site
 0.0.0.0 synphonix54.com
 0.0.0.0 synspad.firebaseapp.com
@@ -236838,7 +236679,6 @@
 0.0.0.0 tatweerogs.com
 0.0.0.0 tatyoo.com
 0.0.0.0 tau-ac-il.weebly.com
-0.0.0.0 taubergruppe-my.sharepoint.com
 0.0.0.0 taublu.digital
 0.0.0.0 tauga.ope-143109.pro
 0.0.0.0 taught.mm.am
@@ -238191,7 +238031,6 @@
 0.0.0.0 telecisxsu.work
 0.0.0.0 telecom-services-orange.herokuapp.com
 0.0.0.0 telecomdiary.com
-0.0.0.0 telecomenterpriseinc-my.sharepoint.com
 0.0.0.0 telecominsight.com
 0.0.0.0 telecommunicationsaustralia.com.au
 0.0.0.0 teleconicp.club
@@ -238750,7 +238589,6 @@
 0.0.0.0 tellculverscomsurvey.click
 0.0.0.0 teller.pbphgwbr.in
 0.0.0.0 tellersofhydepark.com
-0.0.0.0 telligentmasonry-my.sharepoint.com
 0.0.0.0 telliref.com
 0.0.0.0 telllstraaaanewww.weebly.com
 0.0.0.0 telllstraaadminnn.weebly.com
@@ -240227,7 +240065,6 @@
 0.0.0.0 tevoshop.waw.pl
 0.0.0.0 tevoug.site
 0.0.0.0 tevqorysva.com
-0.0.0.0 tevtlaw-my.sharepoint.com
 0.0.0.0 tevxplqnza.asia
 0.0.0.0 tevxplqnza.cyou
 0.0.0.0 tevxplqnza.ink
@@ -240959,7 +240796,6 @@
 0.0.0.0 texisfinanzatrade.com
 0.0.0.0 texlinepk.com
 0.0.0.0 texlinks.org
-0.0.0.0 texomainc-my.sharepoint.com
 0.0.0.0 texplvqnrd.help
 0.0.0.0 text-tee.weebly.com
 0.0.0.0 text.com.bd
@@ -241050,7 +240886,6 @@
 0.0.0.0 tfreawrtdf.weebly.com
 0.0.0.0 tfrel.com
 0.0.0.0 tfrjz.com
-0.0.0.0 tfsconte-my.sharepoint.com
 0.0.0.0 tfsfd.com
 0.0.0.0 tft.co.id
 0.0.0.0 tfuelscan.com
@@ -241458,7 +241293,6 @@
 0.0.0.0 theaffirnityseafood.com
 0.0.0.0 theafricanewspost.info
 0.0.0.0 theafricanlegacy.co.zw
-0.0.0.0 theagencyinccomau-my.sharepoint.com
 0.0.0.0 theagents.in
 0.0.0.0 theaglet.shop
 0.0.0.0 thealizaib.com
@@ -244591,7 +244425,6 @@
 0.0.0.0 todayprofit.org
 0.0.0.0 todayreorder.com
 0.0.0.0 todaysfixation.com
-0.0.0.0 todaysgroup-my.sharepoint.com
 0.0.0.0 todaysworldbulletin.live
 0.0.0.0 todaywirebrief.site
 0.0.0.0 todaywiredesk.click
@@ -244886,7 +244719,6 @@
 0.0.0.0 tomrek-reklama.pl
 0.0.0.0 tomross.shop
 0.0.0.0 tomrotchford.000webhostapp.com
-0.0.0.0 tomsarroscomau-my.sharepoint.com
 0.0.0.0 tomstatas.com
 0.0.0.0 tomstrashpaks.com.au
 0.0.0.0 tomstudionline.mom
@@ -245457,7 +245289,6 @@
 0.0.0.0 torvoimeka.info
 0.0.0.0 torvomedical.com
 0.0.0.0 torxavi.shop
-0.0.0.0 torxen-my.sharepoint.com
 0.0.0.0 torxino.shop
 0.0.0.0 torzavo.shop
 0.0.0.0 torzelo.shop
@@ -247939,7 +247770,6 @@
 0.0.0.0 truckee76.com
 0.0.0.0 truckeeyp.com
 0.0.0.0 truckerlawcenter.com
-0.0.0.0 truckhireaustraliacomau-my.sharepoint.com
 0.0.0.0 truckhiresolutions.com.au
 0.0.0.0 truckilasoudt.duckdns.org
 0.0.0.0 truckinghaughton.com
@@ -250037,7 +249867,6 @@
 0.0.0.0 uckno.com
 0.0.0.0 ucl-eg.net
 0.0.0.0 ucleisohn.com
-0.0.0.0 ucmo0-my.sharepoint.com
 0.0.0.0 ucoffee-machines.com
 0.0.0.0 ucok909.000webhostapp.com
 0.0.0.0 ucomp.edu-diplomys.com
@@ -250094,7 +249923,6 @@
 0.0.0.0 udmulyaabadi.com
 0.0.0.0 udoecse.shop
 0.0.0.0 udome-canne.firebaseapp.com
-0.0.0.0 udomx-my.sharepoint.com
 0.0.0.0 udonmohanamai.com
 0.0.0.0 udorafd.github.io
 0.0.0.0 udownloader.com
@@ -251629,7 +251457,6 @@
 0.0.0.0 unionconnectiononline.com
 0.0.0.0 unione-ae.com
 0.0.0.0 unionganadera.com.mx
-0.0.0.0 unioninstruments-my.sharepoint.com
 0.0.0.0 unioniptvbr.com
 0.0.0.0 unionlinejp.com
 0.0.0.0 unionstandardonlinebanking.com
@@ -254767,7 +254594,6 @@
 0.0.0.0 vangobongos.info
 0.0.0.0 vanguardbreakingnews.pro
 0.0.0.0 vanguardbuzzalert.pro
-0.0.0.0 vanguardenergypartners-my.sharepoint.com
 0.0.0.0 vanguardinvestor.net
 0.0.0.0 vanguardmaison.shop
 0.0.0.0 vanguardnewsfocus.pro
@@ -257003,7 +256829,6 @@
 0.0.0.0 verseart.pl
 0.0.0.0 versiallow.embroideryenterprises.com
 0.0.0.0 versicat.com
-0.0.0.0 versicherungsservicemfa-my.sharepoint.com
 0.0.0.0 versigerda.com
 0.0.0.0 versilabel.carmen-carmen.com
 0.0.0.0 versilink-2025.netlify.app
@@ -261406,7 +261231,6 @@
 0.0.0.0 volumexprime.net
 0.0.0.0 volumexpro.live
 0.0.0.0 voluntary-dance-668287.framer.app
-0.0.0.0 voluntarybenefitsatwork-my.sharepoint.com
 0.0.0.0 voluntarytreatment1stsk.com
 0.0.0.0 volunteerconnection.ca
 0.0.0.0 volunteers-fortheblind.org
@@ -261765,7 +261589,6 @@
 0.0.0.0 vpopku.su
 0.0.0.0 vpostelerc.firebaseapp.com
 0.0.0.0 vpostelerc.web.app
-0.0.0.0 vppartners2-my.sharepoint.com
 0.0.0.0 vppiz.weebly.com
 0.0.0.0 vpq.xitil.guidegoods.net
 0.0.0.0 vpr.fg6hfa.sbs
@@ -263222,7 +263045,6 @@
 0.0.0.0 watupro.co.ke
 0.0.0.0 watusu-diruka.info
 0.0.0.0 wau.mhainiae.fastsize.ru
-0.0.0.0 waubonsiemhccom-my.sharepoint.com
 0.0.0.0 wauje.com
 0.0.0.0 waukegan-harbor.com
 0.0.0.0 waukegannationalairport.com
@@ -266849,7 +266671,6 @@
 0.0.0.0 wireless-loginverification.info
 0.0.0.0 wireless-outlook.com
 0.0.0.0 wirelessnews.in
-0.0.0.0 wirelesstechnologyservice-my.sharepoint.com
 0.0.0.0 wirelesswebdevice.com
 0.0.0.0 wirelin101.weebly.com
 0.0.0.0 wirelivedesk.shop
@@ -267428,7 +267249,6 @@
 0.0.0.0 woodbdinan.cyou
 0.0.0.0 woodbeads.com
 0.0.0.0 woodbmf.com
-0.0.0.0 woodbridgegroup-my.sharepoint.com
 0.0.0.0 woodbridgegulf.com
 0.0.0.0 woodbug.com
 0.0.0.0 woodburnerslondon.co.uk
@@ -268314,7 +268134,6 @@
 0.0.0.0 wvmqquthmutualportmutual.000webhostapp.com
 0.0.0.0 wvmw.16mb.com
 0.0.0.0 wvpakistan.com
-0.0.0.0 wvstateu0-my.sharepoint.com
 0.0.0.0 wvturau.com
 0.0.0.0 wvubn.goqavat.yi.org
 0.0.0.0 wvv2v224-pages-dev.translate.goog
@@ -268398,7 +268217,6 @@
 0.0.0.0 wwacessorapido-portalcliente.blogspot.com
 0.0.0.0 wwamleli-ser.com
 0.0.0.0 wwbd.org
-0.0.0.0 wwbev-my.sharepoint.com
 0.0.0.0 wwdentalcare.com
 0.0.0.0 wwdza1.blogspot.com
 0.0.0.0 wweapple.com
@@ -355723,7 +355541,6 @@
 0.0.0.0 zelvorithax.com
 0.0.0.0 zelvutarapex.com
 0.0.0.0 zem-tulun.ru
-0.0.0.0 zemanconstruction-my.sharepoint.com
 0.0.0.0 zemantraki-de.live
 0.0.0.0 zemantraki.live
 0.0.0.0 zembari.vip

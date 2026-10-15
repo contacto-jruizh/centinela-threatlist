@@ -35,21 +35,24 @@ Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tra
 
 ## Nunca bloquear (regla fija)
 
-**WhatsApp, LinkedIn, Telegram y Spotify NUNCA se bloquean.** Están en
-`whitelist.txt` (partial match) y no se incluyen en ninguna lista de bloqueo:
+**WhatsApp, LinkedIn, Telegram, Spotify, Claude, Apple, Microsoft, YouTube y
+Adobe NUNCA se bloquean.** Cada uno vive en su propia allowlist (un dominio =
+una sola lista), y el generador aplica `whitelist.txt` **+ todas** las
+`*-allow.txt` a las listas `bulk/`, así que ningún feed puede bloquearlos:
 
-| Uso | Dominios |
-|---|---|
-| WhatsApp web / app / media | `whatsapp.com`, `whatsapp.net`, `wa.me` |
-| WhatsApp Business / Cloud API | `graph.facebook.com` |
-| LinkedIn | `linkedin.com`, `lnkd.in`, `licdn.com` |
-| Telegram | `telegram.org`, `telegram.me`, `t.me`, `telegra.ph`, `telegram.dog`, `tg.dev`, `telegram-cdn.org` |
-| Spotify (música) | `spotify.com`, `spotifycdn.com`, `scdn.co`, `spotifycharts.com`, `spotify.link` |
+| Uso | Lista | Dominios |
+|---|---|---|
+| WhatsApp web/app/media + API | `whatsapp-allow.txt` | `whatsapp.com`, `whatsapp.net`, `wa.me`, `graph.facebook.com`… |
+| LinkedIn / Telegram | `social-allow.txt` | `linkedin.com`, `lnkd.in`, `licdn.com`, `telegram.org`, `t.me`… |
+| Spotify (música) | `streaming-allow.txt` | `spotify.com`, `spotifycdn.com`, `scdn.co`… |
+| Claude / Anthropic | `ai-allow.txt` | `claude.ai`, `claude.com`, `api.anthropic.com`… |
+| Apple (sin Apple TV) | `apple-allow.txt` | `icloud.com`, `apps.apple.com`, `partiality.itunes.apple.com`… |
+| Microsoft (sin juegos) | `microsoft-allow.txt` | Office/M365, Outlook, Teams, OneDrive… |
+| YouTube | `youtube-allow.txt` | `youtube.com`, `googlevideo.com`… |
+| Globales | `whitelist.txt` | `google.com`, `translate.google.com`, `rae.es`, `adobe.com` |
 
-`whitelist.txt` es el filtro anti-FP que se aplica a las listas agregadas
-(`bulk/`), así que ningún feed puede bloquear estas. Además WhatsApp, LinkedIn
-y Telegram están en `social-allow.txt` (no aparecen en `social-block.txt`) y
-Spotify en `streaming-allow.txt`. Si añades una lista nueva, respeta esta regla.
+> Regla: **un dominio = una sola lista** (UniFi/Pi-hole exigen únicos).
+> `verify_allow_disjoint()` aborta si un dominio se repite entre allowlists.
 
 > Dominios requeridos por Claude / Claude Code:
 > https://code.claude.com/docs/en/network-config
@@ -99,7 +102,7 @@ Misma mecánica que las IA: una fuente de bloqueo y una allowlist opcional.
 | Lista | Archivo | Rol |
 |---|---|---|
 | Bloqueo streaming | `streaming-block.txt` | **Adlist** (bloquea) |
-| Streaming permitido | `streaming-allow.txt` | **Allowlist** (permite; vacía por defecto) |
+| Streaming permitido | `streaming-allow.txt` | **Allowlist** (permite; Spotify) |
 
 - `streaming-block.txt` bloquea:
   - **Video**: Netflix, Prime Video, Disney+, Hulu, Max/HBO, Roku, Peacock,

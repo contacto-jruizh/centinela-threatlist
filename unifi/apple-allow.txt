@@ -18,6 +18,9 @@ mask.icloud.com
 mesu.apple.com
 mzstatic.com
 ocsp.apple.com
+partiality.itunes-apple.com.akadns.net
+partiality.itunes.apple.com
+partiality.itunes.apple.com.edgekey.net
 push.apple.com
 store.apple.com
 support.apple.com
