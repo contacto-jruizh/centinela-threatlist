@@ -14,6 +14,10 @@ Listas separadas para **control** y **velocidad**:
 | `streaming-allow.txt` | Whitelist de streaming (Spotify permitido) | ~KB | inmediata |
 | `unifi/streaming-block.txt` (+`-inline`) | Streaming a bloquear, formato UniFi | ~KB | inmediata |
 | `unifi/streaming-allow.txt` (+`-inline`) | Streaming permitido, formato UniFi | ~KB | inmediata |
+| `social-block.txt` | Bloqueo de redes sociales (Pi-hole Adlist) | ~KB | inmediata |
+| `social-allow.txt` | Whitelist social (WhatsApp/LinkedIn/Telegram) | ~KB | inmediata |
+| `unifi/social-block.txt` (+`-inline`) | Redes sociales a bloquear, formato UniFi | ~KB | inmediata |
+| `unifi/social-allow.txt` (+`-inline`) | Redes permitidas, formato UniFi | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
@@ -26,19 +30,21 @@ Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tra
 
 ## Nunca bloquear (regla fija)
 
-**WhatsApp y Spotify NUNCA se bloquean** (ni WhatsApp web ni su API). Están en
+**WhatsApp, LinkedIn, Telegram y Spotify NUNCA se bloquean.** Están en
 `whitelist.txt` (partial match) y no se incluyen en ninguna lista de bloqueo:
 
 | Uso | Dominios |
 |---|---|
 | WhatsApp web / app / media | `whatsapp.com`, `whatsapp.net`, `wa.me` |
 | WhatsApp Business / Cloud API | `graph.facebook.com` |
+| LinkedIn | `linkedin.com`, `lnkd.in`, `licdn.com` |
+| Telegram | `telegram.org`, `telegram.me`, `t.me`, `telegra.ph`, `telegram.dog`, `tg.dev`, `telegram-cdn.org` |
 | Spotify (música) | `spotify.com`, `spotifycdn.com`, `scdn.co`, `spotifycharts.com`, `spotify.link` |
 
 `whitelist.txt` es el filtro anti-FP que se aplica a las listas agregadas
-(`bulk/`), así que ningún feed puede bloquear WhatsApp ni Spotify. Además
-Spotify está en `streaming-allow.txt`, por lo que tampoco aparece en
-`streaming-block.txt`. Si añades una lista nueva, respeta esta regla.
+(`bulk/`), así que ningún feed puede bloquear estas. Además WhatsApp, LinkedIn
+y Telegram están en `social-allow.txt` (no aparecen en `social-block.txt`) y
+Spotify en `streaming-allow.txt`. Si añades una lista nueva, respeta esta regla.
 
 ## Agregar un dominio (rápido, sin red)
 
@@ -113,6 +119,25 @@ URLs de Pi-hole:
 - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-block.txt`
 - Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-allow.txt`
 
+## Bloquear redes sociales
+
+| Lista | Archivo | Rol |
+|---|---|---|
+| Bloqueo redes sociales | `social-block.txt` | **Adlist** (bloquea) |
+| Redes permitidas | `social-allow.txt` | **Allowlist** (permite) |
+
+- `social-block.txt` bloquea Facebook (+ Messenger/Threads), Instagram, TikTok,
+  X/Twitter, Reddit, Snapchat, WeChat, Douyin, Kuaishou, Pinterest, Tumblr, VK,
+  Bluesky, Discord, Line, Viber… Se genera desde `data/custom/social-hosts`.
+- `social-allow.txt` **excluye** WhatsApp, LinkedIn y Telegram (regla fija).
+  Se permiten aunque estén en una regla amplia.
+- **YouTube no está aquí**: ya está en la lista de streaming. Tampoco se bloquea
+  `graph.facebook.com` (es la API de WhatsApp Business/Cloud).
+
+URLs de Pi-hole:
+- Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-block.txt`
+- Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-allow.txt`
+
 ## Usar en Pi-hole
 
 1. Sube este repo a GitHub como `centinela-threatlist`.
@@ -134,6 +159,10 @@ URLs de Pi-hole:
    **Streaming (opcional):**
    - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-block.txt`
    - Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-allow.txt`
+
+   **Redes sociales (opcional):**
+   - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-block.txt`
+   - Allowlist (permitir WhatsApp/LinkedIn/Telegram): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-allow.txt`
 3. Tools → Update Gravity.
 4. Verifica: `pihole -q nidir.info` debe dar match.
 
@@ -167,6 +196,10 @@ IA en ese formato (sin IP, sin comentarios):
 | `unifi/streaming-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 | `unifi/streaming-allow.txt` | un dominio por línea | pegar en la lista **Allow** |
 | `unifi/streaming-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/social-block.txt` | un dominio por línea | pegar en la lista **Block** |
+| `unifi/social-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/social-allow.txt` | un dominio por línea | pegar en la lista **Allow** |
+| `unifi/social-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 
 Ejemplo (formato inline):
 ```
@@ -188,6 +221,10 @@ URLs para copiar (todas publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/streaming-block-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/streaming-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/streaming-allow-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-block.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-block-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-allow-inline.txt`
 
 > Si tu versión de UniFi solo tiene un campo de texto, usa los `*-inline.txt`
 > (una sola línea con `;`); si admite pegar varias líneas, usa los normales.

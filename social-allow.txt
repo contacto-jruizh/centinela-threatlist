@@ -1,0 +1,25 @@
+# social-allow - Centinela: WHITELIST de redes sociales permitidas (Allowlist)
+#
+# Dominios que se PERMITEN aunque esten (o puedan estar) en social-block.txt.
+# Pi-hole / UniFi: el Allowlist gana siempre al bloqueo.
+#
+# REGLA FIJA: NUNCA bloquear WhatsApp, LinkedIn ni Telegram.
+
+# WhatsApp (web/app/media)
+whatsapp.com
+whatsapp.net
+wa.me
+# LinkedIn
+linkedin.com
+lnkd.in
+licdn.com
+# Telegram
+telegram.org
+telegram.me
+t.me
+telegra.ph
+telegram.dog
+tg.dev
+telegram-cdn.org
+
+# Formato: un dominio por linea.

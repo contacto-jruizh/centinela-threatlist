@@ -4,9 +4,9 @@
 Archivos generados:
   adlist.txt -> SOLO curaduria manual (Pi-hole, ligero, actualizacion inmediata)
   hosts      -> SOLO curaduria manual (formato /etc/hosts, ligero)
-  ai-block.txt / streaming-block.txt -> bloqueo curado (Pi-hole Adlist)
-                  desde data/custom/{ai,streaming}-hosts, menos el allowlist
-                  ({key}-allow.txt)
+  ai-block.txt / streaming-block.txt / social-block.txt -> bloqueo curado
+                  (Pi-hole Adlist) desde data/custom/{ai,streaming,social}-hosts,
+                  menos el allowlist ({key}-allow.txt)
   unifi/*.txt  -> mismas listas curadas en formato UniFi (sin IP; por linea y
                   variante -inline.txt separada por ';')
 
@@ -354,6 +354,13 @@ LISTS = [
         desc="# Bloquea servicios de streaming (Netflix, YouTube, Prime Video, Disney+,\n"
              "# Max, Roku, Twitch, etc.). Spotify y WhatsApp nunca se bloquean.",
         note="# Lo que quieras permitir va en streaming-allow.txt (Allowlist).",
+    ),
+    dict(
+        key="social", source="data/custom/social-hosts", allow="social-allow.txt",
+        title="bloqueo de redes sociales",
+        desc="# Bloquea redes sociales (Facebook, Instagram, TikTok, X/Twitter, Reddit,\n"
+             "# Snapchat, WeChat, Douyin, Kuaishou, Pinterest, Discord, etc.).",
+        note="# NUNCA se bloquean WhatsApp, LinkedIn ni Telegram: van en social-allow.txt.",
     ),
 ]
 

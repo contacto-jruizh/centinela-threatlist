@@ -1,0 +1,13 @@
+licdn.com
+linkedin.com
+lnkd.in
+t.me
+telegra.ph
+telegram-cdn.org
+telegram.dog
+telegram.me
+telegram.org
+tg.dev
+wa.me
+whatsapp.com
+whatsapp.net

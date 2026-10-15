@@ -1,6 +1,10 @@
 # Whitelist - dominios que NUNCA se bloquean (partial match: cubre subdominios)
 google.com
+
+# REGLA PERMANENTE: NUNCA bloquear LinkedIn.
 linkedin.com
+lnkd.in
+licdn.com
 
 # REGLA PERMANENTE: NUNCA bloquear WhatsApp (ni web ni API).
 # Web/app y media
@@ -9,6 +13,15 @@ whatsapp.net
 wa.me
 # WhatsApp Business / Cloud API (Meta Graph API)
 graph.facebook.com
+
+# REGLA PERMANENTE: NUNCA bloquear Telegram.
+telegram.org
+telegram.me
+t.me
+telegra.ph
+telegram.dog
+tg.dev
+telegram-cdn.org
 
 # REGLA PERMANENTE: NUNCA bloquear Spotify (musica).
 spotify.com

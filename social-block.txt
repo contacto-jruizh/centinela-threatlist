@@ -1,0 +1,100 @@
+# Title: Centinela ThreatList - bloqueo de redes sociales
+#
+# Bloquea redes sociales (Facebook, Instagram, TikTok, X/Twitter, Reddit,
+# Snapchat, WeChat, Douyin, Kuaishou, Pinterest, Discord, etc.).
+#
+# NUNCA se bloquean WhatsApp, LinkedIn ni Telegram: van en social-allow.txt.
+# Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: 15 October 2026 02:41:01 (UTC)
+# Dominios bloqueados: 82
+#
+# Pi-hole Adlist (bloqueo):      https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-block.txt
+# Pi-hole Allowlist (permitir):  https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/social-allow.txt
+# UniFi (formato UniFi):         https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/social-block.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+0.0.0.0 bsky.app
+0.0.0.0 bsky.social
+0.0.0.0 byteoversea.com
+0.0.0.0 cdninstagram.com
+0.0.0.0 connect.facebook.net
+0.0.0.0 discord.com
+0.0.0.0 discord.gg
+0.0.0.0 discordapp.com
+0.0.0.0 discordapp.net
+0.0.0.0 douyin.com
+0.0.0.0 douyincdn.com
+0.0.0.0 douyinpic.com
+0.0.0.0 douyinstatic.com
+0.0.0.0 facebook.com
+0.0.0.0 facebook.net
+0.0.0.0 fb.com
+0.0.0.0 fb.gg
+0.0.0.0 fbcdn.net
+0.0.0.0 fbsbx.com
+0.0.0.0 fbwat.ch
+0.0.0.0 gifshow.com
+0.0.0.0 ibytedtos.com
+0.0.0.0 iesdouyin.com
+0.0.0.0 ig.me
+0.0.0.0 instagr.am
+0.0.0.0 instagram.com
+0.0.0.0 kuaishou.com
+0.0.0.0 kwai-video.com
+0.0.0.0 kwai.com
+0.0.0.0 kwai.net
+0.0.0.0 kwaicdn.com
+0.0.0.0 line-apps.com
+0.0.0.0 line-scdn.net
+0.0.0.0 line.me
+0.0.0.0 m.facebook.com
+0.0.0.0 m.me
+0.0.0.0 mbasic.facebook.com
+0.0.0.0 messenger.com
+0.0.0.0 mmcdn.com
+0.0.0.0 mobile.twitter.com
+0.0.0.0 muscdn.com
+0.0.0.0 musical.ly
+0.0.0.0 ok.ru
+0.0.0.0 old.reddit.com
+0.0.0.0 pinimg.com
+0.0.0.0 pinterest.com
+0.0.0.0 redd.it
+0.0.0.0 reddit.com
+0.0.0.0 redditmedia.com
+0.0.0.0 redditstatic.com
+0.0.0.0 reddituploads.com
+0.0.0.0 sc-cdn.net
+0.0.0.0 snap.com
+0.0.0.0 snapchat.com
+0.0.0.0 t.co
+0.0.0.0 threads.com
+0.0.0.0 threads.net
+0.0.0.0 tiktok.com
+0.0.0.0 tiktokcdn-us.com
+0.0.0.0 tiktokcdn.com
+0.0.0.0 tiktokv.com
+0.0.0.0 ttwstatic.com
+0.0.0.0 tumblr.com
+0.0.0.0 twimg.com
+0.0.0.0 twitter.com
+0.0.0.0 userapi.com
+0.0.0.0 viber.com
+0.0.0.0 viber.me
+0.0.0.0 vk.com
+0.0.0.0 vk.me
+0.0.0.0 web.facebook.com
+0.0.0.0 wechat.com
+0.0.0.0 wechat.org
+0.0.0.0 weixin.qq.com
+0.0.0.0 www.facebook.com
+0.0.0.0 www.instagram.com
+0.0.0.0 www.reddit.com
+0.0.0.0 www.snapchat.com
+0.0.0.0 www.tiktok.com
+0.0.0.0 www.twitter.com
+0.0.0.0 wx.qq.com
+0.0.0.0 x.com
