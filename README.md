@@ -50,6 +50,9 @@ Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tra
 y Telegram están en `social-allow.txt` (no aparecen en `social-block.txt`) y
 Spotify en `streaming-allow.txt`. Si añades una lista nueva, respeta esta regla.
 
+> Dominios requeridos por Claude / Claude Code:
+> https://code.claude.com/docs/en/network-config
+
 ## Agregar un dominio (rápido, sin red)
 
 ```bash
