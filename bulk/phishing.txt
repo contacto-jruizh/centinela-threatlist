@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 14:07:43 (UTC)
-# Dominios en esta categoria: 358,172
+# Date: 15 October 2026 14:52:23 (UTC)
+# Dominios en esta categoria: 358,168
 #
 # Pi-hole Adlist (categoria phishing): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/phishing.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -61673,7 +61673,6 @@
 0.0.0.0 charming4838.com
 0.0.0.0 charmlogo.com
 0.0.0.0 charmosamoda.com.br
-0.0.0.0 charmoula.storage.googleapis.com
 0.0.0.0 charnakot.ru
 0.0.0.0 charqtelen.cyou
 0.0.0.0 charrete.com.br
@@ -64871,7 +64870,6 @@
 0.0.0.0 cloudspoon.work
 0.0.0.0 cloudsrvjk876nj987-dp1lu5k2i9vz.edgeone.dev
 0.0.0.0 cloudstorage-helpdesk.com
-0.0.0.0 cloudstorageservices1.storage.googleapis.com
 0.0.0.0 cloudstorageweb.info
 0.0.0.0 cloudsuns.blogspot.com
 0.0.0.0 cloudsync-center.site
@@ -230578,7 +230576,6 @@
 0.0.0.0 storage-set-lee.web.app
 0.0.0.0 storage.fairbox.pl
 0.0.0.0 storage.ghost.io
-0.0.0.0 storage.googleapis.com
 0.0.0.0 storage.ourmail.tk
 0.0.0.0 storage.yandexcloud.net
 0.0.0.0 storage4mailqoutaoffice.com
@@ -244202,7 +244199,6 @@
 0.0.0.0 tivxori.shop
 0.0.0.0 tivzano.shop
 0.0.0.0 tiwhxa.ga
-0.0.0.0 tiwliwla.storage.googleapis.com
 0.0.0.0 tiwofiana1.firebaseapp.com
 0.0.0.0 tiwofiana1.web.app
 0.0.0.0 tiwofiana10.firebaseapp.com

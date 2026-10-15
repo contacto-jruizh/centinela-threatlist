@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 14:07:43 (UTC)
-# Dominios en esta categoria: 220,255
+# Date: 15 October 2026 14:52:23 (UTC)
+# Dominios en esta categoria: 220,254
 #
 # Pi-hole Adlist (categoria threat-intel): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/threat-intel.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -204672,7 +204672,6 @@
 0.0.0.0 vkbprod.112.2o7.net
 0.0.0.0 vkbutton.com
 0.0.0.0 vkcdnservice.appspot.com
-0.0.0.0 vkcdnservice.appspot.com.storage.googleapis.com
 0.0.0.0 vkcqxaxtxrftu.online
 0.0.0.0 vkdenxezhjhgg.site
 0.0.0.0 vkdqiijvnljek.online

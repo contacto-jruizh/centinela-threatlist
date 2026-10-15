@@ -26,6 +26,22 @@ statsig.anthropic.com
 downloads.claude.ai
 clau.de
 
+# --- Claude Code (marketplace/plugins, installer, MCP, artifacts) ---
+mcp-proxy.anthropic.com
+bridge.claudeusercontent.com
+frame.claudeusercontent.com
+code.claude.com
+storage.googleapis.com
+registry.npmjs.org
+github.com
+raw.githubusercontent.com
+
+# --- Claude Code opcionales (telemetria/release; descomentar si hace falta) ---
+# *-review.googlesource.com
+# http-intake.logs.us5.datadoghq.com
+# browser-intake-us5.datadoghq.com
+# formulae.brew.sh
+
 # --- Microsoft Copilot (todo lo de Copilot de Microsoft) ---
 copilot.microsoft.com
 copilot.microsoft365.com

@@ -41,6 +41,15 @@ partiality.itunes.apple.com
 partiality.itunes.apple.com.edgekey.net
 partiality.itunes-apple.com.akadns.net
 
+# NUNCA bloquear Claude / Anthropic (claude.ai + Claude Code).
+anthropic.com
+claude.ai
+claude.com
+claude.dev
+claudeusercontent.com
+storage.googleapis.com
+registry.npmjs.org
+
 # Ejemplo:
 # canva.com
 # microsoftonline.com
