@@ -57,6 +57,10 @@ claudeusercontent.com
 storage.googleapis.com
 registry.npmjs.org
 
+# Permitir siempre: traduccion y diccionario
+translate.google.com
+rae.es
+
 # Ejemplo:
 # canva.com
 # microsoftonline.com

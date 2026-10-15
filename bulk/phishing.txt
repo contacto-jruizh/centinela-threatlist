@@ -4,7 +4,7 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 15:17:18 (UTC)
+# Date: 15 October 2026 15:40:18 (UTC)
 # Dominios en esta categoria: 358,161
 #
 # Pi-hole Adlist (categoria phishing): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/phishing.txt
