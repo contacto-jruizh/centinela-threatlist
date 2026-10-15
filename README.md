@@ -205,7 +205,7 @@ IA en ese formato (sin IP, sin comentarios):
 | `unifi/social-allow.txt` | un dominio por línea | pegar en la lista **Allow** |
 | `unifi/social-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 | `unifi/social-blacklist.txt` | `0.0.0.0 dominio` (una por línea) | **blacklist** social (hosts) |
-| `unifi/social-blacklist-inline.txt` | `0.0.0.0 dominio` separados por `;` | pegar en el campo de dominio |
+| `unifi/social-blacklist-inline.txt` | dominios separados por `;` (sin IP) | pegar en el campo de dominio |
 
 Ejemplo (formato inline):
 ```

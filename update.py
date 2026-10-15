@@ -341,7 +341,7 @@ def write_unifi(key, source_path, allow_path, emit_blacklist=False):
     for name, doms, hosts_fmt in pairs:
         body = [f"0.0.0.0 {d}" for d in doms] if hosts_fmt else doms
         (outdir / f"{name}.txt").write_text("\n".join(body) + "\n", encoding="utf-8")
-        (outdir / f"{name}-inline.txt").write_text(";".join(body) + "\n", encoding="utf-8")
+        (outdir / f"{name}-inline.txt").write_text(";".join(doms) + "\n", encoding="utf-8")
     extra = f" | unifi/{key}-blacklist.txt: {len(block)} dominios (0.0.0.0)" if emit_blacklist else ""
     print(f"[ok] unifi/{key}-block.txt: {len(block)} dominios | unifi/{key}-allow.txt: {len(allow)} dominios{extra}")
 
@@ -392,9 +392,9 @@ def verify_lists():
             uni_black = {l.split()[1] for l in
                          (ROOT / "unifi" / f"{key}-blacklist.txt").read_text().splitlines()
                          if l.startswith("0.0.0.0 ")}
-            uni_black_inline = {t.split()[1] for t in
+            uni_black_inline = {t for t in
                                 (ROOT / "unifi" / f"{key}-blacklist-inline.txt").read_text().strip().split(";")
-                                if t.startswith("0.0.0.0 ")}
+                                if t}
         else:
             uni_black = uni_black_inline = uni
         checks = {
