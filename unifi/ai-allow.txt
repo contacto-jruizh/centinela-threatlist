@@ -6,7 +6,16 @@ claude.ai
 claude.com
 claude.dev
 claudeusercontent.com
+cloud.microsoft
 console.anthropic.com
+copilot.cloud.microsoft
+copilot.com
+copilot.microsoft.com
+copilot.microsoft365.com
 downloads.claude.ai
+edgeservices.bing.com
+m365.cloud.microsoft
+m365copilot.com
 platform.claude.com
 statsig.anthropic.com
+sydney.bing.com

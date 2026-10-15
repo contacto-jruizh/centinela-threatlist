@@ -26,6 +26,22 @@ statsig.anthropic.com
 downloads.claude.ai
 clau.de
 
+# --- Microsoft Copilot (todo lo de Copilot de Microsoft) ---
+copilot.microsoft.com
+copilot.microsoft365.com
+copilot.cloud.microsoft
+m365.cloud.microsoft
+copilot.com
+m365copilot.com
+# Microsoft recomienda permitir TODO *.cloud.microsoft
+cloud.microsoft
+# Copilot en Edge / backend legacy (Bing)
+edgeservices.bing.com
+sydney.bing.com
+# --- GitHub Copilot (opcional; descomentar si aplica) ---
+# api.githubcopilot.com
+# copilot-proxy.githubusercontent.com
+
 # --- Opcionales (soporte/telemetria; descomentar si algo falla) ---
 # cdn.usefathom.com
 # cdn.growthbook.io

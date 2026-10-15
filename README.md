@@ -9,7 +9,7 @@ Listas separadas para **control** y **velocidad**:
 | `ai-block.txt` | Bloqueo de IA y sus APIs (Pi-hole Adlist) | ~KB | inmediata |
 | `ai-allow.txt` | Whitelist de IA permitidas (Pi-hole Allowlist) | ~KB | inmediata |
 | `unifi/ai-block.txt` (+`-inline`) | IA a bloquear, formato UniFi | ~KB | inmediata |
-| `unifi/ai-allow.txt` (+`-inline`) | IA permitidas (Claude), formato UniFi | ~KB | inmediata |
+| `unifi/ai-allow.txt` (+`-inline`) | IA permitidas (Claude + Copilot), formato UniFi | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
@@ -36,11 +36,15 @@ Dos listas complementarias:
 | IA permitidas | `ai-allow.txt` | **Allowlist** (permite) |
 
 - `ai-block.txt` bloquea proveedores de IA y sus endpoints/APIs (OpenAI/ChatGPT,
-  Gemini, Copilot, Perplexity, xAI/Grok, Mistral, Cohere, DeepSeek, Zhipu/z.ai,
-  etc.). Se genera desde `data/custom/ai-hosts`.
+  Gemini, Perplexity, xAI/Grok, Mistral, Cohere, DeepSeek, Zhipu/z.ai, etc.).
+  Se genera desde `data/custom/ai-hosts`. **Claude y Microsoft Copilot no se
+  bloquean** (van en `ai-allow.txt`).
 - `ai-allow.txt` **permite** dominios que de otro modo se bloquearían. De fábrica
-  solo lleva **Claude / Anthropic** (web + API). El Allowlist de Pi-hole gana
-  SIEMPRE al bloqueo, así que aunque un dominio esté en las dos listas, se permite.
+  lleva **Claude / Anthropic** (web + API) y **todo Microsoft Copilot**
+  (`copilot.microsoft.com`, `copilot.cloud.microsoft`, `m365.cloud.microsoft`,
+  `copilot.com`, `m365copilot.com`, `cloud.microsoft`, Copilot en Edge…). El
+  Allowlist de Pi-hole gana SIEMPRE al bloqueo, así que aunque un dominio esté
+  en las dos listas, se permite.
 
 Para bloquear otra IA: añade su dominio (y subdominios de API) a `data/custom/ai-hosts`.
 Para permitir otra IA: añade su dominio a `ai-allow.txt`.
@@ -107,9 +111,9 @@ example.com;example.net
 
 - **Bloquear IA:** `unifi/ai-block.txt` (o el `-inline`). Incluye
   `gemini.google.com`, `chatgpt.com`, `api.openai.com`, `chat.deepseek.com`, etc.
-- **Permitir IA (Claude):** `unifi/ai-allow.txt` (o el `-inline`). El allow de
-  UniFi tiene prioridad; sirve para que Claude no se bloquee aunque esté en una
-  regla amplia.
+- **Permitir IA (Claude + Microsoft Copilot):** `unifi/ai-allow.txt` (o el
+  `-inline`). El allow de UniFi tiene prioridad; sirve para que Claude y Copilot
+  no se bloqueen aunque estén en una regla amplia.
 
 URLs para copiar (las 4 están publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/ai-block.txt`

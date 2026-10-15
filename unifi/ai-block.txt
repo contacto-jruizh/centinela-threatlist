@@ -66,10 +66,6 @@ community.groq.com
 console.groq.com
 console.mistral.ai
 console.x.ai
-copilot.cloud.microsoft
-copilot.com
-copilot.microsoft.com
-copilot.microsoft365.com
 coral.cohere.com
 crixet.com
 dashboard.cohere.com
@@ -79,7 +75,6 @@ deepmind.google
 deepseek.com
 docs.z.ai
 dreamstudio.ai
-edgeservices.bing.com
 eleven-public-cdn.elevenlabs.io
 elevenlabs.com
 elevenlabs.io
@@ -137,7 +132,6 @@ studio-api.prod.suno.com
 studio-api.suno.ai
 suno.ai
 suno.com
-sydney.bing.com
 together.ai
 together.xyz
 tongyi.aliyun.com

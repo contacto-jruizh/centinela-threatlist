@@ -7,8 +7,8 @@
 # Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 10 October 2026 19:49:10 (UTC)
-# Dominios bloqueados: 152
+# Date: 15 October 2026 01:33:16 (UTC)
+# Dominios bloqueados: 146
 #
 # Pi-hole Adlist (bloqueo IA):   https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-block.txt
 # Pi-hole Allowlist (permitir):  https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/ai-allow.txt
@@ -85,10 +85,6 @@
 0.0.0.0 console.groq.com
 0.0.0.0 console.mistral.ai
 0.0.0.0 console.x.ai
-0.0.0.0 copilot.cloud.microsoft
-0.0.0.0 copilot.com
-0.0.0.0 copilot.microsoft.com
-0.0.0.0 copilot.microsoft365.com
 0.0.0.0 coral.cohere.com
 0.0.0.0 crixet.com
 0.0.0.0 dashboard.cohere.com
@@ -98,7 +94,6 @@
 0.0.0.0 deepseek.com
 0.0.0.0 docs.z.ai
 0.0.0.0 dreamstudio.ai
-0.0.0.0 edgeservices.bing.com
 0.0.0.0 eleven-public-cdn.elevenlabs.io
 0.0.0.0 elevenlabs.com
 0.0.0.0 elevenlabs.io
@@ -156,7 +151,6 @@
 0.0.0.0 studio-api.suno.ai
 0.0.0.0 suno.ai
 0.0.0.0 suno.com
-0.0.0.0 sydney.bing.com
 0.0.0.0 together.ai
 0.0.0.0 together.xyz
 0.0.0.0 tongyi.aliyun.com

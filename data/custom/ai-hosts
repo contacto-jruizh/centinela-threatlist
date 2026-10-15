@@ -45,14 +45,8 @@
 0.0.0.0 deepmind.google
 
 # ===============================================================
-# Microsoft Copilot (web, M365 y Copilot in Edge)
+# Microsoft Copilot: PERMITIDO (no se bloquea). Ver ai-allow.txt
 # ===============================================================
-0.0.0.0 copilot.microsoft.com
-0.0.0.0 copilot.microsoft365.com
-0.0.0.0 copilot.cloud.microsoft
-0.0.0.0 copilot.com
-0.0.0.0 edgeservices.bing.com
-0.0.0.0 sydney.bing.com
 
 # ===============================================================
 # Meta AI / Llama
