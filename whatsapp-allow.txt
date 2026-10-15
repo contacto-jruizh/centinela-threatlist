@@ -1,0 +1,22 @@
+# Title: Centinela ThreatList - allowlist whatsapp
+#
+# Dominios PERMITIDOS (whatsapp). Formato: uno por linea.
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: 15 October 2026 15:22:42 (UTC)
+# Dominios: 9
+#
+# Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt
+# UniFi:             https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/whatsapp-allow.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+dit.whatsapp.net
+graph.facebook.com
+mmg.whatsapp.net
+pps.whatsapp.net
+static.whatsapp.net
+wa.me
+web.whatsapp.com
+whatsapp.com
+whatsapp.net

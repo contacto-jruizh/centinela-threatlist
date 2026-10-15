@@ -1,0 +1,18 @@
+# whatsapp-allow - Centinela: ALLOWLIST WhatsApp (web, app, media y API)
+# Formato: un dominio por linea. Se publica como whatsapp-allow.txt (Pi-hole)
+# y unifi/whatsapp-allow.txt (formato UniFi).
+
+# --- Web / app ---
+whatsapp.com
+web.whatsapp.com
+whatsapp.net
+wa.me
+
+# --- Media / CDN ---
+mmg.whatsapp.net
+static.whatsapp.net
+dit.whatsapp.net
+pps.whatsapp.net
+
+# --- WhatsApp Business / Cloud API (Meta Graph API) ---
+graph.facebook.com

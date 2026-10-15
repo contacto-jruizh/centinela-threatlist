@@ -1,0 +1,38 @@
+# Title: Centinela ThreatList - allowlist apple
+#
+# Dominios PERMITIDOS (apple). Formato: uno por linea.
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: 15 October 2026 15:22:42 (UTC)
+# Dominios: 25
+#
+# Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/apple-allow.txt
+# UniFi:             https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/apple-allow.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+amp-api.apps.apple.com
+appleid.apple.com
+apps.apple.com
+cdn.icloud.com
+courier.push.apple.com
+crl.apple.com
+fmipmobile.icloud.com
+gdmf.apple.com
+gsa.apple.com
+icloud.apple.com
+icloud.com
+icloud.com.cn
+idmsa.apple.com
+iforgot.apple.com
+itunes.apple.com
+itunes.com
+mask.icloud.com
+mesu.apple.com
+mzstatic.com
+ocsp.apple.com
+push.apple.com
+store.apple.com
+support.apple.com
+swdist.apple.com
+swscan.apple.com

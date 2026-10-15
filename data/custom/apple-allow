@@ -1,0 +1,43 @@
+# apple-allow - Centinela: ALLOWLIST Apple (SIN Apple TV)
+# Formato: un dominio por linea. Se publica como apple-allow.txt (Pi-hole)
+# y unifi/apple-allow.txt (formato UniFi).
+#
+# NO se incluye el raiz apple.com ni Apple TV: tv.apple.com (y su app) quedan
+# fuera a proposito.
+
+# --- Cuenta Apple / inicio de sesion ---
+appleid.apple.com
+idmsa.apple.com
+gsa.apple.com
+iforgot.apple.com
+
+# --- iCloud ---
+icloud.com
+icloud.com.cn
+cdn.icloud.com
+icloud.apple.com
+mask.icloud.com
+fmipmobile.icloud.com
+
+# --- App Store / iTunes ---
+apps.apple.com
+itunes.apple.com
+itunes.com
+amp-api.apps.apple.com
+
+# --- CDN / assets ---
+mzstatic.com
+
+# --- Actualizaciones / push ---
+mesu.apple.com
+gdmf.apple.com
+swscan.apple.com
+swdist.apple.com
+push.apple.com
+courier.push.apple.com
+
+# --- Soporte / store / certificados ---
+support.apple.com
+store.apple.com
+crl.apple.com
+ocsp.apple.com

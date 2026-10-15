@@ -379,6 +379,35 @@ LISTS = [
     ),
 ]
 
+# Allowlists por fabricante (SOLO permitidos, sin bloqueo asociado).
+ALLOW_LISTS = ["microsoft", "apple", "whatsapp"]
+
+def write_vendor_allows(now):
+    """Allowlists por fabricante -> <vendor>-allow.txt (Pi-hole) y
+    unifi/<vendor>-allow.txt (+ -inline.txt con ';'). Sin comentarios en UniFi."""
+    outdir = ROOT / "unifi"
+    outdir.mkdir(exist_ok=True)
+    for name in ALLOW_LISTS:
+        doms = sorted(load_list(f"data/custom/{name}-allow"))
+        head = f"""# Title: Centinela ThreatList - allowlist {name}
+#
+# Dominios PERMITIDOS ({name}). Formato: uno por linea.
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: {now}
+# Dominios: {len(doms)}
+#
+# Pi-hole Allowlist: {REPO}/{name}-allow.txt
+# UniFi:             {REPO}/unifi/{name}-allow.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+"""
+        (ROOT / f"{name}-allow.txt").write_text(head + "\n".join(doms) + "\n", encoding="utf-8")
+        (outdir / f"{name}-allow.txt").write_text("\n".join(doms) + "\n", encoding="utf-8")
+        (outdir / f"{name}-allow-inline.txt").write_text(";".join(doms) + "\n", encoding="utf-8")
+        print(f"[ok] {name}-allow.txt: {len(doms)} dominios | unifi/{name}-allow.txt")
+
 def verify_lists():
     """Comprueba consistencia BLOQUEO vs PERMITIDO/EXCLUSIONES en cada lista.
     Falla (exit 1) si: (a) un dominio permitido sigue en el bloqueo, o
@@ -445,6 +474,7 @@ def main():
                                L["title"], L["desc"], L["note"], now)
             write_unifi(L["key"], L["source"], L["allow"], L.get("blacklist", False))
         verify_lists()
+        write_vendor_allows(now)
     if do_bulk:
         by_source = collect_by_source(args)
         write_categories(by_source, custom_domains, now)

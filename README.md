@@ -22,6 +22,7 @@ Listas separadas para **control** y **velocidad**:
 | `vpn-allow.txt` | VPN permitidas (vacía por ahora) | ~KB | inmediata |
 | `unifi/vpn-block.txt` (+`-inline`) | VPN a bloquear, formato UniFi | ~KB | inmediata |
 | `unifi/vpn-allow.txt` (+`-inline`) | VPN permitidas, formato UniFi | ~KB | inmediata |
+| `microsoft-allow.txt` / `apple-allow.txt` / `whatsapp-allow.txt` | Allowlists por fabricante (también `unifi/`) | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
@@ -171,6 +172,29 @@ URLs de Pi-hole:
 URLs de UniFi (formato UniFi; también `-inline.txt` con `;`):
 - Blacklist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-block.txt`
 - Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-allow.txt`
+
+## Allowlists por fabricante (Microsoft / Apple / WhatsApp)
+
+Listas de **solo permitidos** para subir a UniFi (o Pi-hole), sin bloqueo asociado:
+
+| Fabricante | Contenido | Excluye |
+|---|---|---|
+| Microsoft | M365/Office (login, Office, Outlook, Teams, SharePoint, OneDrive, Graph, Copilot) | **juegos/Xbox** (xbox.com, xboxlive.com, minecraft.net…) |
+| Apple | iCloud, App Store/iTunes, push, updates, cuenta | **Apple TV** (`tv.apple.com`) |
+| WhatsApp | web/app, media (`*.whatsapp.net`), API (Graph) | — |
+
+URLs UniFi (formato UniFi; también `-inline.txt` con `;`):
+- Microsoft: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/microsoft-allow.txt`
+- Apple: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/apple-allow.txt`
+- WhatsApp: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/whatsapp-allow.txt`
+
+URLs Pi-hole (Allowlist):
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/microsoft-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/apple-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt`
+
+> Editar fuentes: `data/custom/microsoft-allow`, `data/custom/apple-allow`,
+> `data/custom/whatsapp-allow` (un dominio por línea) y correr `update.py --curated`.
 
 ## Usar en Pi-hole
 

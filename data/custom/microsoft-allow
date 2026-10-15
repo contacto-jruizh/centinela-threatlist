@@ -1,0 +1,68 @@
+# microsoft-allow - Centinela: ALLOWLIST Microsoft 365 / Office (SIN juegos/Xbox)
+# Formato: un dominio por linea. Se publica como microsoft-allow.txt (Pi-hole)
+# y unifi/microsoft-allow.txt (formato UniFi).
+#
+# NO se incluye el raiz microsoft.com (permitiria subdominios no deseados) ni
+# NADA de juegos/Xbox: xbox.com, xboxlive.com, xboxservices.com, minecraft.net,
+# mojang.com, playfabapi.com, bethesda.net, zenimax, etc.
+
+# --- Identidad / inicio de sesion ---
+login.microsoftonline.com
+login.microsoft.com
+login.live.com
+login.windows.net
+sts.windows.net
+account.microsoft.com
+microsoftonline.com
+microsoftonline-p.com
+msauth.net
+msftauth.net
+msftauthimages.net
+aadcdn.msauth.net
+aadcdn.msftauth.net
+
+# --- Office / Microsoft 365 apps ---
+office.com
+office365.com
+office.net
+officeapps.live.com
+o365apps.net
+o365cdn.com
+cdn.office.net
+officecdn.microsoft.com
+microsoft365.com
+cloud.microsoft
+m365.cloud.microsoft
+portal.office.com
+products.office.com
+support.office.com
+support.microsoft.com
+assets.online.office.com
+
+# --- Outlook ---
+outlook.com
+outlook.office.com
+outlook.office365.com
+
+# --- Teams ---
+teams.microsoft.com
+teams.cloud.microsoft
+teams.cdn.office.net
+teams.events.data.microsoft.com
+eu-teams.events.data.microsoft.com
+
+# --- SharePoint / OneDrive ---
+sharepoint.com
+sharepointonline.com
+onedrive.com
+onedrive.live.com
+storage.live.com
+
+# --- Graph / Whiteboard / Copilot (M365) ---
+graph.microsoft.com
+whiteboard.microsoft.com
+copilot.microsoft.com
+copilot.microsoft365.com
+copilot.cloud.microsoft
+copilot.com
+m365copilot.com
