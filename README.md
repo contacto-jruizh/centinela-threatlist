@@ -87,10 +87,19 @@ Misma mecánica que las IA: una fuente de bloqueo y una allowlist opcional.
 | Bloqueo streaming | `streaming-block.txt` | **Adlist** (bloquea) |
 | Streaming permitido | `streaming-allow.txt` | **Allowlist** (permite; vacía por defecto) |
 
-- `streaming-block.txt` bloquea Netflix, YouTube (+`googlevideo.com`), Prime
-  Video, Disney+, Hulu, Max/HBO, Roku, Peacock, Paramount+, Twitch, Deezer,
-  Tidal, Bilibili, Crunchyroll, operadores de TV, etc. Se genera desde
-  `data/custom/streaming-hosts`. **Spotify no se bloquea** (está excluido).
+- `streaming-block.txt` bloquea:
+  - **Video**: Netflix, YouTube (+`googlevideo.com`), Prime Video, Disney+, Hulu,
+    Max/HBO, Roku, Peacock, Paramount+, Twitch, Vimeo, Dailymotion, etc.
+  - **Deportes**: oficiales (ESPN+, DAZN, Fubo, NBA/NFL/MLB/NHL, UFC, F1 TV…) y
+    agregadores pirata (Streameast, Crackstreams, Buffstreams, VIPBox, Methstreams,
+    Sportsurge, Rojadirecta, Footybite…).
+  - **Películas/series pirata**: 123Movies, Fmovies, Putlocker, Soap2Day,
+    YesMovies, SolarMovie, MyFlixer, HDToday, etc.
+  - **Anime**: 9anime, GoGoAnime, AnimePahe, HiAnime, WCOfun…
+  - **Torrents**: The Pirate Bay, 1337x, YTS, Nyaa, EZTV, TorrentGalaxy…
+  - **Música/TV/regionales**: Deezer, Tidal, Bilibili, Crunchyroll, Sky, BBC, etc.
+  Se genera desde `data/custom/streaming-hosts`. **Spotify y WhatsApp no se
+  bloquean** (excluidos). Los dominios pirata rotan, así que conviene mantenerlos.
 - `streaming-allow.txt` **excluye** dominios del bloqueo. De fábrica lleva
   Spotify; añade aquí lo que quieras permitir (y sus CDNs) y Pi-hole/UniFi lo
   dejará pasar aunque siga en `streaming-hosts`.
