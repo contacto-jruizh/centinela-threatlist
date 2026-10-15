@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 01 October 2026 04:19:29 (UTC)
-# Dominios en esta categoria: 74,795
+# Date: 15 October 2026 14:07:43 (UTC)
+# Dominios en esta categoria: 74,790
 #
 # Pi-hole Adlist (categoria ads-trackers): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/ads-trackers.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -3133,7 +3133,6 @@
 0.0.0.0 adengine.rt.ru
 0.0.0.0 adeptia.pl
 0.0.0.0 adetracking.com
-0.0.0.0 adeventtracker.spotify.com
 0.0.0.0 adexc.net
 0.0.0.0 adexchangedirect.com
 0.0.0.0 adexchangegate.com
@@ -35454,7 +35453,6 @@
 0.0.0.0 pixel-origin.mathtag.com
 0.0.0.0 pixel-s2s.mathtag.com
 0.0.0.0 pixel-secure.solvemedia.com
-0.0.0.0 pixel-static.spotify.com
 0.0.0.0 pixel-sync.sitescout.com
 0.0.0.0 pixel-tracking.sonic-us.supersonicads.com
 0.0.0.0 pixel-us-east.rubiconproject.com
@@ -35519,7 +35517,6 @@
 0.0.0.0 pixel.sojern.com
 0.0.0.0 pixel.solvemedia.com
 0.0.0.0 pixel.speakol.com
-0.0.0.0 pixel.spotify.com
 0.0.0.0 pixel.staticworld.net
 0.0.0.0 pixel.tapad.com
 0.0.0.0 pixel.vidoomy.com
@@ -42423,7 +42420,6 @@
 0.0.0.0 snap-exelon-pip-pro.pages.dev
 0.0.0.0 snap-pip-exelon.org
 0.0.0.0 snap.cba.pl
-0.0.0.0 snap.licdn.com
 0.0.0.0 snap.snapmobile.asia
 0.0.0.0 snapabug.appspot.com
 0.0.0.0 snapads.com
@@ -51074,7 +51070,6 @@
 0.0.0.0 wkmg.co.kr
 0.0.0.0 wks.ero-advertising.com
 0.0.0.0 wl.aniview.com.edgekey.net
-0.0.0.0 wl.spotify.com
 0.0.0.0 wlaptoplogic.122.2o7.net
 0.0.0.0 wlb1.cdn.stickyadstv.com.akadns.net
 0.0.0.0 wlb2.cdn.stickyadstv.com.akadns.net

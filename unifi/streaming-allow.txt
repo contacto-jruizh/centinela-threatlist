@@ -1,5 +1,10 @@
+ap-gew4.spotify.com
+ap-guc3.spotify.com
+ap-gue1.spotify.com
 scdn.co
+spclient.wg.spotify.com
 spotify.com
 spotify.link
 spotifycdn.com
 spotifycharts.com
+www.spotify.com

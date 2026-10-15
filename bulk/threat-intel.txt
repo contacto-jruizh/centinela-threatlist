@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 01 October 2026 04:19:29 (UTC)
-# Dominios en esta categoria: 220,278
+# Date: 15 October 2026 14:07:43 (UTC)
+# Dominios en esta categoria: 220,255
 #
 # Pi-hole Adlist (categoria threat-intel): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/threat-intel.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -14154,8 +14154,6 @@
 0.0.0.0 adevarulvision.pro
 0.0.0.0 adevbom.com
 0.0.0.0 adevents.msn.com
-0.0.0.0 adeventtracker.spotify.com
-0.0.0.0 adeventtrackermonitoring.spotify.com
 0.0.0.0 adevppl.com
 0.0.0.0 adex-retargeting.redbutton.de
 0.0.0.0 adex.media
@@ -16834,7 +16832,6 @@
 0.0.0.0 ads.sportsport.mk
 0.0.0.0 ads.sportsseoul.com
 0.0.0.0 ads.sportsvideo.org
-0.0.0.0 ads.spotify.com
 0.0.0.0 ads.spottedlublin.pl
 0.0.0.0 ads.spusu.at
 0.0.0.0 ads.spyxfamily.xyz
@@ -16896,7 +16893,6 @@
 0.0.0.0 ads.techxcite.com
 0.0.0.0 ads.tecnoempleo.com
 0.0.0.0 ads.tekom.de
-0.0.0.0 ads.telegram.org
 0.0.0.0 ads.telephone.city
 0.0.0.0 ads.telewebion.ir
 0.0.0.0 ads.telkomsel.com
@@ -18143,7 +18139,6 @@
 0.0.0.0 adstrim.live
 0.0.0.0 adstroop.com
 0.0.0.0 adstuber.com
-0.0.0.0 adstudio.spotify.com
 0.0.0.0 adstuna.com
 0.0.0.0 adsturn.com
 0.0.0.0 adstxtmarket.com
@@ -19197,7 +19192,6 @@
 0.0.0.0 aestheticlawspebble.com
 0.0.0.0 aestivator.com
 0.0.0.0 aeswz.com
-0.0.0.0 aet.spotify.com
 0.0.0.0 aetherandearthliving.com
 0.0.0.0 aetherismc.net
 0.0.0.0 aetherone.su
@@ -29014,7 +29008,6 @@
 0.0.0.0 analytics.sportverein-aachen.de
 0.0.0.0 analytics.sportybet.com
 0.0.0.0 analytics.spotern.com
-0.0.0.0 analytics.spotify.com
 0.0.0.0 analytics.spotimp3.net
 0.0.0.0 analytics.spreadshirt.de
 0.0.0.0 analytics.spreebote.de
@@ -41540,7 +41533,6 @@
 0.0.0.0 blonexglavixiumcircuit.com
 0.0.0.0 blonexglavixiumvault.com
 0.0.0.0 blonte.xyz
-0.0.0.0 bloodhound.spotify.com
 0.0.0.0 bloodid.xyz
 0.0.0.0 bloodleian.club
 0.0.0.0 bloodpressurehome.com
@@ -56126,7 +56118,6 @@
 0.0.0.0 crash2.zhihu.com
 0.0.0.0 crash79.imgbb.com
 0.0.0.0 crashchance.com
-0.0.0.0 crashdump.spotify.com
 0.0.0.0 crashedimpatientlybegin.com
 0.0.0.0 crashes.brightsignnetwork.com
 0.0.0.0 crashes.digibites.nl
@@ -56147,7 +56138,6 @@
 0.0.0.0 crashes.warframe.com
 0.0.0.0 crasheye.cn
 0.0.0.0 crashing-vor.dailykos.com
-0.0.0.0 crashlogs.whatsapp.net
 0.0.0.0 crashlytics.ru
 0.0.0.0 crashlytics.twitter.com
 0.0.0.0 crashlyticsreports-pa.googleapis.com
@@ -64653,7 +64643,6 @@
 0.0.0.0 diswontchose.com
 0.0.0.0 diszalando-euvip.shop
 0.0.0.0 dit-dit-dot.com
-0.0.0.0 dit.whatsapp.net
 0.0.0.0 dita6jhhqwoiz.cloudfront.net
 0.0.0.0 ditdotsol.com
 0.0.0.0 ditgroup-umami-a83bdd-3-140-41-108.traefik.me
@@ -110826,7 +110815,6 @@
 0.0.0.0 log.snow.me
 0.0.0.0 log.snssdk.com
 0.0.0.0 log.solo-latino.com
-0.0.0.0 log.spotify.com
 0.0.0.0 log.sprocket.bz
 0.0.0.0 log.sptag2.com
 0.0.0.0 log.sszg.markgame.com
@@ -111038,7 +111026,6 @@
 0.0.0.0 log2.radiko.jp
 0.0.0.0 log2.recoverymasterpro.com
 0.0.0.0 log2.sina.cn
-0.0.0.0 log2.spotify.com
 0.0.0.0 log2.wanmei.com
 0.0.0.0 log2.zuimeitianqi.com
 0.0.0.0 log22-applog-useast1a.tiktokv.com
@@ -123499,7 +123486,6 @@
 0.0.0.0 microchip.tt.omtrdc.net
 0.0.0.0 microchromejapan.b-cdn.net
 0.0.0.0 microcounter.de
-0.0.0.0 microfrontend-analytics-cdn.spotifycdn.com
 0.0.0.0 microg.net
 0.0.0.0 micrometer-metrics.slack.com
 0.0.0.0 micronews.eu
@@ -138817,9 +138803,6 @@
 0.0.0.0 parthea.shop
 0.0.0.0 parthscazz.store
 0.0.0.0 partial-burn.com
-0.0.0.0 partiality.itunes-apple.com.akadns.net
-0.0.0.0 partiality.itunes.apple.com
-0.0.0.0 partiality.itunes.apple.com.edgekey.net
 0.0.0.0 partiallytangerine.com
 0.0.0.0 partialtank.com
 0.0.0.0 participatechronic.com
@@ -142409,7 +142392,6 @@
 0.0.0.0 pixel-router.gazeta.pl
 0.0.0.0 pixel-see.com
 0.0.0.0 pixel-service.awoo.org
-0.0.0.0 pixel-static.spotify.com
 0.0.0.0 pixel-storage.konnektu.ru
 0.0.0.0 pixel-sync.sitescout.com
 0.0.0.0 pixel-sync.trafficmanager.net
@@ -142564,7 +142546,6 @@
 0.0.0.0 pixel.smorgads.com
 0.0.0.0 pixel.sojern.com
 0.0.0.0 pixel.sourcesync.io
-0.0.0.0 pixel.spotify.com
 0.0.0.0 pixel.springserve.com
 0.0.0.0 pixel.sprinklr.com
 0.0.0.0 pixel.staging.datalivemarketing.com.br
@@ -142637,7 +142618,6 @@
 0.0.0.0 pixels.mparticle.com
 0.0.0.0 pixels.pasilobus.com
 0.0.0.0 pixels.reignn.com
-0.0.0.0 pixels.spotify.com
 0.0.0.0 pixels.tapas.io
 0.0.0.0 pixels.whatsmyip.org
 0.0.0.0 pixels.zalify.com
@@ -147166,7 +147146,6 @@
 0.0.0.0 privatemist.com
 0.0.0.0 privateseiten.net
 0.0.0.0 privatesinglesmeet.com
-0.0.0.0 privatestats.whatsapp.net
 0.0.0.0 privatewebseiten.com
 0.0.0.0 privatpraxis-gyn.de
 0.0.0.0 privatproxy-blog.xyz
@@ -147704,7 +147683,6 @@
 0.0.0.0 promote.caixin.com
 0.0.0.0 promote.melangeandco.com
 0.0.0.0 promote.pair.com
-0.0.0.0 promote.telegram.org
 0.0.0.0 promoteblog.com
 0.0.0.0 promoteconditionerkeyboard.com
 0.0.0.0 promoted.sndcdn.com
@@ -196498,7 +196476,6 @@
 0.0.0.0 tv-show-tracker-81e25.firebaseapp.com
 0.0.0.0 tv-sideboards-sale.com
 0.0.0.0 tv-smart.co
-0.0.0.0 tv-static.scdn.co
 0.0.0.0 tv.data.adobedc.net
 0.0.0.0 tv.harpingargling.com
 0.0.0.0 tv.hermsdhan.com
