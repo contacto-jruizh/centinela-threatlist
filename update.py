@@ -375,6 +375,7 @@ LISTS = [
         desc="# Bloquea VPN, anonimizadores, proxies y botnets (Urban VPN, Hola,\n"
              "# Hotspot Shield, Psiphon, Tor, etc.).",
         note="# VPN permitidas: vpn-allow.txt (vacio por ahora).",
+        blacklist=True,
     ),
 ]
 

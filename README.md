@@ -241,6 +241,8 @@ IA en ese formato (sin IP, sin comentarios):
 | `unifi/vpn-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 | `unifi/vpn-allow.txt` | un dominio por línea | pegar en la lista **Allow** |
 | `unifi/vpn-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/vpn-blacklist.txt` | `0.0.0.0 dominio` (una por línea) | **blacklist** VPN (hosts) |
+| `unifi/vpn-blacklist-inline.txt` | dominios separados por `;` (sin IP) | pegar en el campo de dominio |
 
 Ejemplo (formato inline):
 ```
@@ -272,6 +274,8 @@ URLs para copiar (todas publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-block-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-allow-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-blacklist.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-blacklist-inline.txt`
 
 > Si tu versión de UniFi solo tiene un campo de texto, usa los `*-inline.txt`
 > (una sola línea con `;`); si admite pegar varias líneas, usa los normales.
