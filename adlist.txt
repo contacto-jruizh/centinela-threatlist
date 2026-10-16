@@ -4,8 +4,8 @@
 # actualizacion inmediata. Fuentes agregadas por categoria en la rama `bulk`.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 15 October 2026 16:56:55 (UTC)
-# Dominios curados: 8
+# Date: 16 October 2026 00:59:51 (UTC)
+# Dominios curados: 20
 #
 # Este archivo (Pi-hole Adlist): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
 # Agregado por categoria:        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/<categoria>.txt
@@ -16,10 +16,22 @@
 # Amenazas detectadas en campo
 # ===============================================================
 0.0.0.0 biograft.my.canva.site
+0.0.0.0 catmore88.com
+0.0.0.0 catmos99.com
+0.0.0.0 cbphe.com
+0.0.0.0 cbpheback.com
+0.0.0.0 clickby.net
+0.0.0.0 coslogdydy.in
 0.0.0.0 dunnfirst.com
+0.0.0.0 ipmoyu.com
+0.0.0.0 long.tv
 0.0.0.0 merrillwoodranch.com
 0.0.0.0 momentumprojectlab.com
 0.0.0.0 nidir.info
 0.0.0.0 raunaqengg.com
 0.0.0.0 ruslanstudio.com
 0.0.0.0 trikongroup.co.uk
+0.0.0.0 ycxrl.com
+0.0.0.0 ycxrldow.com
+0.0.0.0 yeyeyeye.xyz
+0.0.0.0 yxcrl.com
