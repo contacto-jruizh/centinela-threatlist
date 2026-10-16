@@ -11,6 +11,7 @@ google.com
 # Permitir siempre: traduccion / diccionario
 translate.google.com
 rae.es
+deepl.com
 
 # Permitir siempre: Adobe
 adobe.com

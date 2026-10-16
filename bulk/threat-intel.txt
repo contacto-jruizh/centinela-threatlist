@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 16 October 2026 01:06:23 (UTC)
-# Dominios en esta categoria: 220,125
+# Date: 16 October 2026 21:14:54 (UTC)
+# Dominios en esta categoria: 220,122
 #
 # Pi-hole Adlist (categoria threat-intel): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/threat-intel.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -71961,8 +71961,6 @@
 0.0.0.0 errors01.mircloud.de
 0.0.0.0 errorsafe.com
 0.0.0.0 errorshell.com
-0.0.0.0 errortracking-lb.deepl.com
-0.0.0.0 errortracking.deepl.com
 0.0.0.0 errortracking.mrbilit.net
 0.0.0.0 errortracking.snapp.site
 0.0.0.0 errrefaitoverby.qpon
@@ -87220,7 +87218,6 @@
 0.0.0.0 gtm.danskindustri.dk
 0.0.0.0 gtm.datenschutzexperte.de
 0.0.0.0 gtm.decupat.ro
-0.0.0.0 gtm.deepl.com
 0.0.0.0 gtm.dehatiapparels.com
 0.0.0.0 gtm.designity.com
 0.0.0.0 gtm.desigual.com
