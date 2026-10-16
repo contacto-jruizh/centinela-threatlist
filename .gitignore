@@ -109,3 +109,8 @@ data/tranco/
 data/PhishTank/
 
 # Nota: bulk/ (categorias) SI se versiona en main. dist/ queda ignorado (scratch).
+
+# --- brandwatch (local) ---
+scripts/brandwatch/ledger.sqlite
+scripts/brandwatch/out/
+candidates.md

@@ -470,3 +470,17 @@ estado sea "valid".
   listas públicas; no se envía ningún dato del equipo.
 - **GitHub Actions fijadas por SHA** (no por tag móvil), con **Dependabot**
   semanal (`.github/dependabot.yml`) para actualizarlas de forma controlada.
+
+## Protección de marca (brandwatch)
+
+Rastreo de clones/typosquatting de una marca (por defecto **Xuper TV**) con
+**dnstwist** + **phishing_catcher** (Certstream). En `scripts/brandwatch/`:
+`seeds.txt`, `watch.py`, `external.yaml` y README. La Action
+`.github/workflows/brandwatch.yml` corre semanal y **abre un issue con candidatos**
+para revisión — **no bloquea nada automáticamente**. Los confirmados se agregan a
+`data/custom/malware-hosts` (lista TV Box) y se publican con `update.py --curated`.
+
+```bash
+pip install dnstwist
+python3 scripts/brandwatch/watch.py --report
+```

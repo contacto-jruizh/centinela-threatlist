@@ -1,0 +1,15 @@
+# external.yaml - override para phishing_catcher (x0rz)
+# Copiar/pegar en phishing_catcher/external.yaml y correr ./catch_phishing.py
+# Umbrales: score >=65 potencial, >=80 likely, >=90 sospechoso.
+keywords:
+  'xuper': 60
+  'xupertv': 70
+  'xuper-tv': 70
+  'xuper tv': 70
+tlds:
+  '.xyz': 15
+  '.top': 15
+  '.cc': 10
+  '.live': 10
+  '.app': 5
+  '.tv': 5
