@@ -3,8 +3,8 @@
 # Formato /etc/hosts. SOLO curaduria propia; el agregado va por categoria.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 16 October 2026 16:56:43 (UTC)
-# Dominios curados: 9
+# Date: 16 October 2026 17:21:06 (UTC)
+# Dominios curados: 10
 #
 # ===============================================================
 
@@ -24,6 +24,7 @@ ff02::2 ip6-allrouters
 # Formato: IP dominio  (ej: 0.0.0.0 ejemplo.local)
 
 0.0.0.0 biograft.my.canva.site
+0.0.0.0 dehuiinvest.com
 0.0.0.0 dunnfirst.com
 0.0.0.0 merrillwoodranch.com
 0.0.0.0 momentumprojectlab.com

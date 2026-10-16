@@ -24,3 +24,5 @@
 # Phishing - 15-oct-2026
 # online.motions.click: intento de phishing reportado.
 0.0.0.0 online.motions.click
+# dehuiinvest.com: ataque dirigido (misma campana que biograft).
+0.0.0.0 dehuiinvest.com
