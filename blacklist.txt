@@ -20,3 +20,7 @@
 0.0.0.0 momentumprojectlab.com
 0.0.0.0 raunaqengg.com
 0.0.0.0 trikongroup.co.uk
+
+# Phishing - 15-oct-2026
+# online.motions.click: intento de phishing reportado.
+0.0.0.0 online.motions.click
