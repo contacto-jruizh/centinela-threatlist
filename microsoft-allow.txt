@@ -3,7 +3,7 @@
 # Dominios PERMITIDOS (microsoft). Formato: uno por linea.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 16 October 2026 01:00:54 (UTC)
+# Date: 16 October 2026 01:06:23 (UTC)
 # Dominios: 42
 #
 # Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/microsoft-allow.txt

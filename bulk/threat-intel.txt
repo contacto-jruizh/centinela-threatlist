@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 16 October 2026 00:59:51 (UTC)
-# Dominios en esta categoria: 220,120
+# Date: 16 October 2026 01:06:23 (UTC)
+# Dominios en esta categoria: 220,125
 #
 # Pi-hole Adlist (categoria threat-intel): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/threat-intel.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -47323,6 +47323,7 @@
 0.0.0.0 cboehaduvo.com
 0.0.0.0 cbogxhsvaqfxd.website
 0.0.0.0 cboufsrelp.com
+0.0.0.0 cbpheback.com
 0.0.0.0 cbplaw.cn
 0.0.0.0 cbpnm.scentbird.com
 0.0.0.0 cbpvejicpyr.com
@@ -97989,6 +97990,7 @@
 0.0.0.0 iplrzphyynhbe.website
 0.0.0.0 iplua.o.xoxknct.com
 0.0.0.0 ipm.atm.youku.com
+0.0.0.0 ipmoyu.com
 0.0.0.0 ipmoyu.xyz
 0.0.0.0 ipncbqbnuwtol.site
 0.0.0.0 ipnoid.com
@@ -215641,6 +215643,7 @@
 0.0.0.0 ycwkyxuspaxhm.space
 0.0.0.0 ycwsiwxfokyhn.site
 0.0.0.0 ycxad.com
+0.0.0.0 ycxrldow.com
 0.0.0.0 ycxxulehaukaw.website
 0.0.0.0 ycylp.com
 0.0.0.0 ycyxddmy.com
@@ -215818,6 +215821,7 @@
 0.0.0.0 yevvzltyoxbuy.website
 0.0.0.0 yewsgooney.com
 0.0.0.0 yexhsrfcrukeg.online
+0.0.0.0 yeyeyeye.xyz
 0.0.0.0 yeyeyun.com
 0.0.0.0 yeyswxtehnave.site
 0.0.0.0 yezics5luf.data.adobedc.net
@@ -217196,6 +217200,7 @@
 0.0.0.0 yx671.com
 0.0.0.0 yxaclumamb.com
 0.0.0.0 yxbzyppfgrhze.site
+0.0.0.0 yxcrl.com
 0.0.0.0 yxcruyhkddqkn.site
 0.0.0.0 yxcxheuw.net
 0.0.0.0 yxdwgk.com

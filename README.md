@@ -22,6 +22,8 @@ Listas separadas para **control** y **velocidad**:
 | `vpn-allow.txt` | VPN permitidas (vacía por ahora) | ~KB | inmediata |
 | `unifi/vpn-block.txt` (+`-inline`) | VPN a bloquear, formato UniFi | ~KB | inmediata |
 | `unifi/vpn-allow.txt` (+`-inline`) | VPN permitidas, formato UniFi | ~KB | inmediata |
+| `malware-block.txt` | Bloqueo malware/botnet TV Box (Pi-hole Adlist) | ~KB | inmediata |
+| `unifi/malware-block.txt` (+`-inline`) | Malware/botnet a bloquear, formato UniFi | ~KB | inmediata |
 | `microsoft-allow.txt` / `apple-allow.txt` / `whatsapp-allow.txt` | Allowlists por fabricante (también `unifi/`) | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
@@ -177,6 +179,30 @@ URLs de UniFi (formato UniFi; también `-inline.txt` con `;`):
 - Blacklist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-block.txt`
 - Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-allow.txt`
 
+## Bloquear malware / botnet (Android TV Box)
+
+IoCs de **Badbox / Badbox 2.0 / Vo1d / Peachpit** (C2 y fraude publicitario en TV
+Box genéricas T95/X96Q/SuperBox…). Curado porque la guarda Tranco los descartaba
+(están en el Top-1M por el tráfico infectado).
+
+| Lista | Archivo | Rol |
+|---|---|---|
+| Bloqueo malware/botnet | `malware-block.txt` | **Adlist** (bloquea) |
+| Permitir | `malware-allow.txt` | **Allowlist** (vacía) |
+
+Dominios: `ycxrl.com`, `ycxrldow.com`, `yxcrl.com`, `catmore88.com`, `catmos99.com`,
+`cbphe.com`, `cbpheback.com`, `ipmoyu.com`, `coslogdydy.in`, `yeyeyeye.xyz`,
+`clickby.net`, `long.tv`.
+
+URLs de Pi-hole:
+- Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/malware-block.txt`
+
+URLs de UniFi:
+- Blacklist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/malware-block.txt`
+
+> Además de DNS: el malware usa puertos **1080, 3128, 8118, 8888, 9050** y hace
+> tormentas ARP; conviene bloquear esos puertos y revisar OUI (Allwinner/Rockchip/Amlogic).
+
 ## Allowlists por fabricante (Microsoft / Apple / WhatsApp)
 
 Listas de **solo permitidos** para subir a UniFi (o Pi-hole), sin bloqueo asociado:
@@ -232,6 +258,9 @@ URLs Pi-hole (Allowlist):
    **VPN / anonimizadores (opcional):**
    - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/vpn-block.txt`
    - Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/vpn-allow.txt`
+
+   **Malware / botnet TV Box (opcional):**
+   - Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/malware-block.txt`
 3. Tools → Update Gravity.
 4. Verifica: `pihole -q nidir.info` debe dar match.
 
@@ -309,6 +338,8 @@ IA en ese formato (sin IP, sin comentarios):
 | `unifi/vpn-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 | `unifi/vpn-blacklist.txt` | `0.0.0.0 dominio` (una por línea) | **blacklist** VPN (hosts) |
 | `unifi/vpn-blacklist-inline.txt` | dominios separados por `;` (sin IP) | pegar en el campo de dominio |
+| `unifi/malware-block.txt` | un dominio por línea | pegar en la lista **Block** |
+| `unifi/malware-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 
 Ejemplo (formato inline):
 ```
@@ -340,6 +371,8 @@ URLs para copiar (todas publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-block-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-allow-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/malware-block.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/malware-block-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-blacklist.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-blacklist-inline.txt`
 

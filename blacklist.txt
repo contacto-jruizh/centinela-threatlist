@@ -20,21 +20,3 @@
 0.0.0.0 momentumprojectlab.com
 0.0.0.0 raunaqengg.com
 0.0.0.0 trikongroup.co.uk
-
-# Malware en Android TV Box genericas (Badbox / Vo1d / Peachpit) - 15-oct-2026
-# IoCs de C2 y fraude publicitario. Se curan aqui porque la guarda Tranco los
-# DESCARTABA del bulk (varios estan en el Top-1M por el trafico infectado).
-# Fuentes: HUMAN (Badbox/Peachpit), Dr.Web (Vo1d), DesktopECHO/T95-H616-Malware.
-0.0.0.0 ycxrl.com
-0.0.0.0 ycxrldow.com
-0.0.0.0 yxcrl.com
-0.0.0.0 catmore88.com
-0.0.0.0 catmos99.com
-0.0.0.0 cbphe.com
-0.0.0.0 cbpheback.com
-0.0.0.0 ipmoyu.com
-0.0.0.0 coslogdydy.in
-0.0.0.0 yeyeyeye.xyz
-0.0.0.0 clickby.net
-# long.tv: a menudo legitimo pero abusado por firmware malicioso (bloqueado a pedido)
-0.0.0.0 long.tv

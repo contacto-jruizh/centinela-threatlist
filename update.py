@@ -382,6 +382,13 @@ LISTS = [
         note="# VPN permitidas: vpn-allow.txt (vacio por ahora).",
         blacklist=True,
     ),
+    dict(
+        key="malware", source="data/custom/malware-hosts", allow="malware-allow.txt",
+        title="malware / botnet (Android TV Box: Badbox/Vo1d/Peachpit)",
+        desc="# Bloquea IoCs de C2 y fraude publicitario de malware en Android TV\n"
+             "# Box genericas. Curado (no pasa por la guarda Tranco).",
+        note="# Lo que quieras permitir va en malware-allow.txt (vacio por ahora).",
+    ),
 ]
 
 # Allowlists por fabricante (SOLO permitidos, sin bloqueo asociado).
