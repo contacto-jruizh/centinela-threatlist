@@ -8,7 +8,7 @@
 # Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 16 October 2026 00:59:51 (UTC)
+# Date: 16 October 2026 01:00:54 (UTC)
 # Dominios bloqueados: 307
 #
 # Pi-hole Adlist (bloqueo):      https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/streaming-block.txt
