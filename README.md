@@ -428,3 +428,12 @@ dig +short @<IP_DEL_PIHOLE> nidir.info
 Si despues de `pihole -g` sigue devolviendo IP real, revisa en Admin →
 Group Management → Adlists que la URL apunte a `main/adlist.txt` y que el
 estado sea "valid".
+
+## Seguridad
+
+- **Sin secretos ni datos locales publicados.** `MEMORY.md`, cachés de fuentes
+  (`data/*/hosts`), `data/tranco/` y `__pycache__/` están en `.gitignore`.
+- **Sin exfiltración.** El único tráfico del generador son descargas `GET` de
+  listas públicas; no se envía ningún dato del equipo.
+- **GitHub Actions fijadas por SHA** (no por tag móvil), con **Dependabot**
+  semanal (`.github/dependabot.yml`) para actualizarlas de forma controlada.

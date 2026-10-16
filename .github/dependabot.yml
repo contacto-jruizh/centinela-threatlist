@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # Mantiene las GitHub Actions fijadas por SHA actualizadas (abre PR semanal).
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
