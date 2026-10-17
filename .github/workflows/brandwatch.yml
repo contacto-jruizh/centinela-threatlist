@@ -20,7 +20,7 @@ jobs:
           python-version: "3.12"
       - name: Instalar dnstwist y escanear
         run: |
-          pip install --quiet dnstwist
+          pip install --quiet dnstwist dnspython
           python3 scripts/brandwatch/watch.py --report > candidates.md
           echo "----- candidatos -----"
           cat candidates.md

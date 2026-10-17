@@ -19,15 +19,23 @@ DEFAULT_SEEDS = HERE / "seeds.txt"
 DEFAULT_DB = HERE / "ledger.sqlite"
 
 
-def run_dnstwist(seed, timeout=300):
+def run_dnstwist(seed, whois=False, mxcheck=False, nameservers="", timeout=120):
+    """Enumera permutaciones registradas (solo DNS por defecto: rapido y estable).
+    --whois/--mxcheck/--nameservers son opcionales (pueden colgar)."""
     exe = shutil.which("dnstwist")
     if not exe:
-        sys.exit("error: dnstwist no instalado (pip install dnstwist)")
-    cmd = [exe, "--registered", "--whois", "--mxcheck",
-           "--format", "json", "--threads", "5", seed]
+        sys.exit("error: dnstwist no instalado (pip install dnstwist dnspython)")
+    cmd = [exe, "--registered", "--threads", "5", "--format", "json"]
+    if nameservers:
+        cmd += ["--nameservers", nameservers]
+    if whois:
+        cmd.insert(1, "--whois")
+    if mxcheck:
+        cmd.insert(1, "--mxcheck")
+    cmd.append(seed)
     try:
-        out = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout).stdout
-        return json.loads(out or "[]")
+        p = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        return json.loads(p.stdout or "[]")
     except Exception as e:
         print(f"  !! {seed}: {e}", file=sys.stderr)
         return []
@@ -91,6 +99,9 @@ def main():
     ap.add_argument("--db", default=str(DEFAULT_DB))
     ap.add_argument("--report", action="store_true", help="imprime candidatos (Markdown)")
     ap.add_argument("--top", type=int, default=200)
+    ap.add_argument("--whois", action="store_true", help="incluye WHOIS (lento)")
+    ap.add_argument("--mxcheck", action="store_true", help="incluye MX (SMTP, lento)")
+    ap.add_argument("--nameservers", default="", help="DNS alternos (p.ej. 1.1.1.1)")
     args = ap.parse_args()
 
     seeds = [s.strip() for s in Path(args.seeds).read_text().splitlines()
@@ -99,7 +110,8 @@ def main():
     init_db(conn)
     total = 0
     for s in seeds:
-        rows = run_dnstwist(s)
+        rows = run_dnstwist(s, whois=args.whois, mxcheck=args.mxcheck,
+                            nameservers=args.nameservers)
         upsert(conn, rows, s)
         total += len(rows)
         print(f"  -> {s}: {len(rows)} permutaciones")
