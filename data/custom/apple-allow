@@ -25,6 +25,15 @@ itunes.apple.com
 itunes.com
 amp-api.apps.apple.com
 
+# --- Apple Music (NO Apple TV) ---
+music.apple.com
+amp-api.music.apple.com
+amp-api-edge.music.apple.com
+api.music.apple.com
+audio-ssl.itunes.apple.com
+audio.itunes.apple.com
+play.itunes.apple.com
+
 # --- CDN / assets ---
 mzstatic.com
 

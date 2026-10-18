@@ -1,6 +1,11 @@
+amp-api-edge.music.apple.com
 amp-api.apps.apple.com
+amp-api.music.apple.com
+api.music.apple.com
 appleid.apple.com
 apps.apple.com
+audio-ssl.itunes.apple.com
+audio.itunes.apple.com
 cdn.icloud.com
 courier.push.apple.com
 crl.apple.com
@@ -16,11 +21,13 @@ itunes.apple.com
 itunes.com
 mask.icloud.com
 mesu.apple.com
+music.apple.com
 mzstatic.com
 ocsp.apple.com
 partiality.itunes-apple.com.akadns.net
 partiality.itunes.apple.com
 partiality.itunes.apple.com.edgekey.net
+play.itunes.apple.com
 push.apple.com
 store.apple.com
 support.apple.com
