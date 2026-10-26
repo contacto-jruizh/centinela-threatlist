@@ -3,7 +3,7 @@
 # Dominios PERMITIDOS (youtube). Formato: uno por linea.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 18 October 2026 21:43:32 (UTC)
+# Date: 26 October 2026 18:39:48 (UTC)
 # Dominios: 10
 #
 # Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/youtube-allow.txt

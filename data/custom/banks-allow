@@ -1,0 +1,87 @@
+# banks-allow - Centinela: ALLOWLIST bancos (permitir siempre)
+# Formato: un dominio por linea. Se publica como banks-allow.txt (Pi-hole) y
+# unifi/banks-allow.txt (+ -inline.txt con ';') para UniFi.
+#
+# Objetivo: banca en linea / apps moviles de BBVA Mexico y principales bancos.
+# Un dominio = una sola lista: NO duplicar en whitelist.txt ni en otras *-allow.
+# El generador aplica esta allowlist al bulk (ningun feed puede bloquear bancos).
+#
+# Seccion final: correo/analitica de BBVA (Adobe/Omniture/Demdex). No son
+# necesarios para que la app funcione, pero HaGeZi/StevenBlack los bloquean.
+
+# --- BBVA Mexico: web, portal, empresas, app ---
+bbva.mx
+www.bbva.mx
+portal.bbva.mx
+automarket.bbva.mx
+bbva.com.mx
+bbva.com
+www.bbva.com
+bbvaexperience.com
+assets.bbvaexperience.com
+caasbbva.com
+assets.caasbbva.com
+cardcovers.caasbbva.com
+bbvanet.com.mx
+empresas.bbvanet.com.mx
+a1.bbvanet.com.mx
+a5.bbvanet.com.mx
+bbvaempresas.mx
+pr.bbvaempresas.mx
+bbvabancomer.com.mx
+www.msftncsi.com.cb.bbvabancomer.com.mx
+
+# --- BBVA: plataformas, openweb, movil, archivos, identidad ---
+sec-stat-sec.live.platform.bbva.com
+aso-customers-global.live-01.platform.bbva.com
+openweb.bbva
+jda460ms.openweb.bbva
+bancomermovil.com
+glomo.bancomermovil.com
+bbva-files.s3.amazonaws.com
+veridas.com
+
+# --- Otros bancos Mexico / internacionales ---
+banorte.com
+santander.com.mx
+santander.com
+banamex.com
+citibanamex.com
+hsbc.com.mx
+hsbc.com
+scotiabank.com.mx
+scotiabank.com
+inbursa.com
+bancoazteca.com.mx
+bancoppel.com
+bancodelbienestar.gob.mx
+afirme.com
+banregio.com
+monex.com.mx
+actinver.com
+bvepormas.com
+compartamos.mx
+multiva.com.mx
+nu.com.mx
+heybanco.com
+klar.mx
+mercadopago.com.mx
+americanexpress.com.mx
+citi.com
+banxico.org.mx
+bankofamerica.com
+chase.com
+wellsfargo.com
+
+# --- BBVA: correo y analitica (opcional; no requerido por la app) ---
+image.email.bbva.mx
+click.email.bbva.mx
+archivingbbva.axtel.mx
+smetrics.bbva.mx
+smetrics.bbvanet.com.mx
+bbvamx.tt.omtrdc.net
+bbva.mx.ssl.sc.omtrdc.net
+bbvamxautomarket.112.2o7.net
+bbvabancomer.d3.sc.omtrdc.net
+bbvabancomer.demdex.net
+1to1.bbva.com

@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 16 October 2026 21:14:54 (UTC)
-# Dominios en esta categoria: 74,770
+# Date: 26 October 2026 18:39:48 (UTC)
+# Dominios en esta categoria: 74,765
 #
 # Pi-hole Adlist (categoria ads-trackers): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/ads-trackers.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -7504,7 +7504,6 @@
 0.0.0.0 analytics.cartoonnetworkmena.com
 0.0.0.0 analytics.ccgateway.net
 0.0.0.0 analytics.cdf.cl
-0.0.0.0 analytics.chase.com
 0.0.0.0 analytics.chilevision.cl
 0.0.0.0 analytics.chvnoticias.cl
 0.0.0.0 analytics.cibc.com
@@ -14932,7 +14931,6 @@
 0.0.0.0 content.yieldmanager.edgesuite.net
 0.0.0.0 content.zeronaught.com
 0.0.0.0 content.zontera.com
-0.0.0.0 content22.online.citi.com
 0.0.0.0 contentabc.com
 0.0.0.0 contentapi.celltick.com
 0.0.0.0 contentcleaner.com
@@ -30259,7 +30257,6 @@
 0.0.0.0 metrics.yellowbook.com
 0.0.0.0 metrics.yellowpages.com
 0.0.0.0 metrics.yousendit.com
-0.0.0.0 metrics1.citi.com
 0.0.0.0 metrics1.citibankonline.com
 0.0.0.0 metricscollector.lp.xcal.tv
 0.0.0.0 metricsync760.net
@@ -42037,11 +42034,9 @@
 0.0.0.0 smetrics.avnet.com
 0.0.0.0 smetrics.bancsabadell.com
 0.0.0.0 smetrics.bankia.es
-0.0.0.0 smetrics.bankofamerica.com
 0.0.0.0 smetrics.bankwest.com.au
 0.0.0.0 smetrics.bbb.org
 0.0.0.0 smetrics.bbva.es
-0.0.0.0 smetrics.bbva.mx
 0.0.0.0 smetrics.bcbsm.com
 0.0.0.0 smetrics.bedbathandbeyond.com
 0.0.0.0 smetrics.bestbuy.com

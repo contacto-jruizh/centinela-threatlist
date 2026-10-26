@@ -24,7 +24,7 @@ Listas separadas para **control** y **velocidad**:
 | `unifi/vpn-allow.txt` (+`-inline`) | VPN permitidas, formato UniFi | ~KB | inmediata |
 | `malware-block.txt` | Bloqueo malware/botnet TV Box (Pi-hole Adlist) | ~KB | inmediata |
 | `unifi/malware-block.txt` (+`-inline`) | Malware/botnet a bloquear, formato UniFi | ~KB | inmediata |
-| `microsoft-allow.txt` / `apple-allow.txt` / `whatsapp-allow.txt` | Allowlists por fabricante (también `unifi/`) | ~KB | inmediata |
+| `microsoft-allow.txt` / `apple-allow.txt` / `whatsapp-allow.txt` / `youtube-allow.txt` / `banks-allow.txt` | Allowlists sin bloqueo: fabricantes y bancos (también `unifi/`) | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
@@ -37,9 +37,9 @@ Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tra
 
 ## Nunca bloquear (regla fija)
 
-**WhatsApp, LinkedIn, Telegram, Spotify, Claude, Apple, Microsoft, YouTube y
-Adobe NUNCA se bloquean.** Cada uno vive en su propia allowlist (un dominio =
-una sola lista), y el generador aplica `whitelist.txt` **+ todas** las
+**WhatsApp, LinkedIn, Telegram, Spotify, Claude, Apple, Microsoft, YouTube,
+Adobe y la banca NUNCA se bloquean.** Cada uno vive en su propia allowlist (un
+dominio = una sola lista), y el generador aplica `whitelist.txt` **+ todas** las
 `*-allow.txt` a las listas `bulk/`, así que ningún feed puede bloquearlos:
 
 | Uso | Lista | Dominios |
@@ -51,6 +51,7 @@ una sola lista), y el generador aplica `whitelist.txt` **+ todas** las
 | Apple (sin Apple TV) | `apple-allow.txt` | `icloud.com`, `apps.apple.com`, `partiality.itunes.apple.com`… |
 | Microsoft (sin juegos) | `microsoft-allow.txt` | Office/M365, Outlook, Teams, OneDrive… |
 | YouTube | `youtube-allow.txt` | `youtube.com`, `googlevideo.com`… |
+| Bancos (BBVA, Banorte, Santander…) | `banks-allow.txt` | `bbva.mx`, `bbvanet.com.mx`, `banorte.com`, `santander.com.mx`… |
 | Globales | `whitelist.txt` | `google.com`, `translate.google.com`, `rae.es`, `adobe.com` |
 
 > Regla: **un dominio = una sola lista** (UniFi/Pi-hole exigen únicos).
@@ -203,7 +204,7 @@ URLs de UniFi:
 > Además de DNS: el malware usa puertos **1080, 3128, 8118, 8888, 9050** y hace
 > tormentas ARP; conviene bloquear esos puertos y revisar OUI (Allwinner/Rockchip/Amlogic).
 
-## Allowlists por fabricante (Microsoft / Apple / WhatsApp)
+## Allowlists sin bloqueo (Microsoft / Apple / WhatsApp / YouTube / bancos)
 
 Listas de **solo permitidos** para subir a UniFi (o Pi-hole), sin bloqueo asociado:
 
@@ -213,21 +214,26 @@ Listas de **solo permitidos** para subir a UniFi (o Pi-hole), sin bloqueo asocia
 | Apple | iCloud, App Store/iTunes, push, updates, cuenta | **Apple TV** (`tv.apple.com`) |
 | WhatsApp | web/app, media (`*.whatsapp.net`), API (Graph) | — |
 | YouTube | web, music, TV, CDN (`googlevideo.com`) | — |
+| Bancos | BBVA (web, app, bbvanet, empresas, plataformas/openweb) + Banorte, Santander, Banamex/Citibanamex, HSBC, Scotiabank, Inbursa, Azteca, BanCoppel, Bienestar, Afirme, Banregio, Monex, Actinver, BVE, Compartamos, Multiva, Nu, Hey, Klar, Mercado Pago, Amex, Citi, Banxico, BofA, Chase, Wells Fargo | — |
 
 URLs UniFi (formato UniFi; también `-inline.txt` con `;`):
 - Microsoft: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/microsoft-allow.txt`
 - Apple: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/apple-allow.txt`
 - WhatsApp: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/whatsapp-allow.txt`
 - YouTube: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/youtube-allow.txt`
+- Bancos: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/banks-allow.txt`
 
 URLs Pi-hole (Allowlist):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/microsoft-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/apple-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/youtube-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/banks-allow.txt`
 
 > Editar fuentes: `data/custom/microsoft-allow`, `data/custom/apple-allow`,
-> `data/custom/whatsapp-allow` (un dominio por línea) y correr `update.py --curated`.
+> `data/custom/whatsapp-allow`, `data/custom/youtube-allow`,
+> `data/custom/banks-allow` (un dominio por línea) y correr
+> `update.py --curated` (y `--noupdate` si quieres re-restar el bulk).
 
 ## Usar en Pi-hole
 
@@ -281,10 +287,12 @@ contrario), Pi-hole usa el **Allowlist / Antilist**:
    - Global / nunca bloquear (aplica a las `bulk/`): `whitelist.txt`.
    - Por categoría: `ai-allow.txt`, `streaming-allow.txt`, `social-allow.txt`, `vpn-allow.txt`.
    - Por fabricante: `microsoft-allow.txt`, `apple-allow.txt`, `whatsapp-allow.txt`
-     (fuentes en `data/custom/`).
+     y `youtube-allow.txt` (fuentes en `data/custom/`).
+   - Por sector: `banks-allow.txt` (bancos: BBVA, Banorte, Santander…;
+     fuente `data/custom/banks-allow`).
 2. Añade el dominio (uno por línea) y regenera:
    ```bash
-   python3 update.py --curated     # ai/streaming/social/vpn + fabricante
+   python3 update.py --curated     # ai/streaming/social/vpn + fabricantes + bancos
    python3 update.py --noupdate    # solo si tocaste whitelist.txt (afecta bulk/)
    ```
 3. En Pi-hole v6, súbelo como **Allowlist** (lista suscrita), o pega los dominios
@@ -300,6 +308,7 @@ URLs de Allowlist (Pi-hole):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/apple-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/youtube-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/banks-allow.txt`
 
 > Regla: **un dominio = una sola lista** (UniFi/Pi-hole exigen únicos).
 > `verify_allow_disjoint()` aborta si un dominio aparece en dos listas de allow.
@@ -313,8 +322,8 @@ Esto cubre subdominios del atacante.
 ## Usar en UniFi
 
 UniFi (Firewall / Content Filter) acepta dominios **uno por línea** o **todos en
-una sola línea separados por `;`**. La carpeta `unifi/` trae las mismas listas de
-IA en ese formato (sin IP, sin comentarios):
+una sola línea separados por `;`**. La carpeta `unifi/` trae las mismas listas
+(bloqueo y allowlists, incluida la de bancos) en ese formato (sin IP, sin comentarios):
 
 | Archivo | Formato | Uso |
 |---|---|---|
@@ -340,6 +349,8 @@ IA en ese formato (sin IP, sin comentarios):
 | `unifi/vpn-blacklist-inline.txt` | dominios separados por `;` (sin IP) | pegar en el campo de dominio |
 | `unifi/malware-block.txt` | un dominio por línea | pegar en la lista **Block** |
 | `unifi/malware-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/banks-allow.txt` | un dominio por línea | pegar en la lista **Allow** (bancos) |
+| `unifi/banks-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 
 Ejemplo (formato inline):
 ```
@@ -375,6 +386,8 @@ URLs para copiar (todas publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/malware-block-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-blacklist.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-blacklist-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/banks-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/banks-allow-inline.txt`
 
 > Si tu versión de UniFi solo tiene un campo de texto, usa los `*-inline.txt`
 > (una sola línea con `;`); si admite pegar varias líneas, usa los normales.

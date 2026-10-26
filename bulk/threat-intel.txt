@@ -4,8 +4,8 @@
 # Guard anti-FP: Tranco Top-1M en las fuentes no curadas. Sin curaduria manual.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 16 October 2026 21:14:54 (UTC)
-# Dominios en esta categoria: 220,122
+# Date: 26 October 2026 18:39:48 (UTC)
+# Dominios en esta categoria: 220,098
 #
 # Pi-hole Adlist (categoria threat-intel): https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/bulk/threat-intel.txt
 # Curaduria manual (ligero):        https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/adlist.txt
@@ -4344,7 +4344,6 @@
 0.0.0.0 1tamilmv.team
 0.0.0.0 1tds26q95.de
 0.0.0.0 1titan.com
-0.0.0.0 1to1.bbva.com
 0.0.0.0 1traf.ru
 0.0.0.0 1trust.app
 0.0.0.0 1ts03.top
@@ -24467,7 +24466,6 @@
 0.0.0.0 analytics.charisma.ir
 0.0.0.0 analytics.charlottetilbury.com
 0.0.0.0 analytics.chartonline.com
-0.0.0.0 analytics.chase.com
 0.0.0.0 analytics.chase.com.akadns.net
 0.0.0.0 analytics.chat-yamo.com
 0.0.0.0 analytics.chatautodm.com
@@ -37755,12 +37753,9 @@
 0.0.0.0 bbvaar.d3.sc.omtrdc.net
 0.0.0.0 bbvaar.zeabur.app
 0.0.0.0 bbvaargentina.tt.omtrdc.net
-0.0.0.0 bbvabancomer.d3.sc.omtrdc.net
 0.0.0.0 bbvacolombia.tt.omtrdc.net
 0.0.0.0 bbvade.tt.omtrdc.net
 0.0.0.0 bbvait.tt.omtrdc.net
-0.0.0.0 bbvamx.tt.omtrdc.net
-0.0.0.0 bbvamxautomarket.112.2o7.net
 0.0.0.0 bbvsfhmdpkyrf.online
 0.0.0.0 bbvte.statelymen.com
 0.0.0.0 bbwrnldnek.data.adobedc.net
@@ -44451,7 +44446,6 @@
 0.0.0.0 buoyant-most.pro
 0.0.0.0 buoydeparturediscontent.com
 0.0.0.0 buoyinglignum.cfd
-0.0.0.0 bup.bankofamerica.com
 0.0.0.0 bupa.d2.sc.omtrdc.net
 0.0.0.0 bupa.tt.omtrdc.net
 0.0.0.0 bupatp.com
@@ -73957,7 +73951,6 @@
 0.0.0.0 experiment-allocation.yelp.com
 0.0.0.0 experiment.pixverse.ai
 0.0.0.0 experimentalflinch.com
-0.0.0.0 experimentation.chase.com
 0.0.0.0 experimentcaptivityhidden.com
 0.0.0.0 experiments.apple.com
 0.0.0.0 experiments.apple.com.edgekey.net
@@ -84400,7 +84393,6 @@
 0.0.0.0 glass-bicycle.com
 0.0.0.0 glass-drama.com
 0.0.0.0 glass-hospital.com
-0.0.0.0 glassbox-hlx-igw.bankofamerica.com
 0.0.0.0 glassbroth.com
 0.0.0.0 glassdoor-dataplane.rudderstack.com
 0.0.0.0 glassesde.com
@@ -97048,7 +97040,6 @@
 0.0.0.0 insight-stats.com
 0.0.0.0 insight.alwaysfit.com.br
 0.0.0.0 insight.apothekenblatt.de
-0.0.0.0 insight.business.hsbc.com
 0.0.0.0 insight.danawa.com
 0.0.0.0 insight.ghallasgoth.com
 0.0.0.0 insight.hoefer-shop.de
@@ -119557,7 +119548,6 @@
 0.0.0.0 matt.mercadopago.com.ar
 0.0.0.0 matt.mercadopago.com.br
 0.0.0.0 matt.mercadopago.com.co
-0.0.0.0 matt.mercadopago.com.mx
 0.0.0.0 matt.mercadopago.com.pe
 0.0.0.0 matt.mercadopago.com.uy
 0.0.0.0 matt.mercadopago.com.ve
@@ -120293,7 +120283,6 @@
 0.0.0.0 measure.allbeauty.com
 0.0.0.0 measure.ameblo.jp
 0.0.0.0 measure.bbtrading.ch
-0.0.0.0 measure.chase.com
 0.0.0.0 measure.chienvert.com
 0.0.0.0 measure.dieterenmobilitycompany.be
 0.0.0.0 measure.displate.com
@@ -123029,7 +123018,6 @@
 0.0.0.0 metrics1-drcn-dt-dbankcloud-cn.gere.dbankedge.cn
 0.0.0.0 metrics1-drcn.dt.dbankcloud.cn
 0.0.0.0 metrics1-drcn.dt.dbankcloud.com
-0.0.0.0 metrics1.citi.com
 0.0.0.0 metrics1.citibankonline.com
 0.0.0.0 metrics1.data.dbankcloud.cn
 0.0.0.0 metrics1.experian.com
@@ -123465,7 +123453,6 @@
 0.0.0.0 mid.sngdxsn.com
 0.0.0.0 midalo.de
 0.0.0.0 midas-i.com
-0.0.0.0 midas.chase.com
 0.0.0.0 midas.pcmcloud.com
 0.0.0.0 midasmarkt.com
 0.0.0.0 midastandle.qpon
@@ -147211,11 +147198,9 @@
 0.0.0.0 prod-fra.europe-west3.telemetry.prod.savvy.security
 0.0.0.0 prod-global-ads-client.nu.com.co
 0.0.0.0 prod-global-mobile-analytics-global.nu.com.co
-0.0.0.0 prod-global-mobile-analytics-global.nu.com.mx
 0.0.0.0 prod-global-mobile-analytics-global.nu.net
 0.0.0.0 prod-global-mobile-analytics-global.nubank.com.br
 0.0.0.0 prod-global-mobile-analytics.nu.com.co
-0.0.0.0 prod-global-mobile-analytics.nu.com.mx
 0.0.0.0 prod-global-mobile-analytics.nuapp.us
 0.0.0.0 prod-global-sentry.popmart.com
 0.0.0.0 prod-ingress-crash-attach.playrix.com
@@ -147271,7 +147256,6 @@
 0.0.0.0 prod.log.frdun02.shadow.tech
 0.0.0.0 prod.log.frsbg01.shadow.tech
 0.0.0.0 prod.one.lt
-0.0.0.0 prod.report.nacustomerexperience.citi.com
 0.0.0.0 prod.sgtm.westfield.com
 0.0.0.0 prod.shop.analytics.kiliba.eu
 0.0.0.0 prod.telemetry.suds.wwro.aws.dev
@@ -172095,11 +172079,9 @@
 0.0.0.0 smetrics.avnet.com
 0.0.0.0 smetrics.axs.com
 0.0.0.0 smetrics.bamboohr.com
-0.0.0.0 smetrics.banamex.com
 0.0.0.0 smetrics.bancomundial.org
 0.0.0.0 smetrics.bancsabadell.com
 0.0.0.0 smetrics.bankinter.com
-0.0.0.0 smetrics.bankofamerica.com
 0.0.0.0 smetrics.bankofmelbourne.com.au
 0.0.0.0 smetrics.banksa.com.au
 0.0.0.0 smetrics.bankwest.com.au
@@ -172113,9 +172095,7 @@
 0.0.0.0 smetrics.bbva.de
 0.0.0.0 smetrics.bbva.es
 0.0.0.0 smetrics.bbva.it
-0.0.0.0 smetrics.bbva.mx
 0.0.0.0 smetrics.bbva.pe
-0.0.0.0 smetrics.bbvanet.com.mx
 0.0.0.0 smetrics.bcbsm.com
 0.0.0.0 smetrics.bcbsnc.com
 0.0.0.0 smetrics.beatsbydre.com
@@ -173893,7 +173873,6 @@
 0.0.0.0 somni.vikingrivercruises.com
 0.0.0.0 somnisleepstore.com
 0.0.0.0 somnit.equinox.com
-0.0.0.0 somniture.scotiabank.com
 0.0.0.0 somniture.stuff.co.nz
 0.0.0.0 somoaudience.com
 0.0.0.0 somosbancolombia.zeabur.app
@@ -182680,7 +182659,6 @@
 0.0.0.0 stmetrics.bbva.de
 0.0.0.0 stmetrics.bbva.es
 0.0.0.0 stmetrics.bbva.it
-0.0.0.0 stmetrics.bbva.mx
 0.0.0.0 stmicroelectronics.d3.sc.omtrdc.net
 0.0.0.0 stmicroelectronics.tt.omtrdc.net
 0.0.0.0 stmihbfmfzenn.online
@@ -186086,7 +186064,6 @@
 0.0.0.0 tagmanager.morningsave.com
 0.0.0.0 tagmanager.toast.com
 0.0.0.0 tagmanager.yodobashi.com
-0.0.0.0 tagmanager1.citi.com
 0.0.0.0 tagmanager1.citibankonline.com
 0.0.0.0 tagmwu.thalia.at
 0.0.0.0 tagrec.sphdigital.com
@@ -190407,7 +190384,6 @@
 0.0.0.0 tilqwekuszfa.com
 0.0.0.0 tilruzobsr.com
 0.0.0.0 tilstupi.in
-0.0.0.0 tilt.bankofamerica.com
 0.0.0.0 tiltersbattier.shop
 0.0.0.0 tiltgardenheadlight.com
 0.0.0.0 tiltonbots.com

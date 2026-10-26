@@ -391,22 +391,27 @@ LISTS = [
     ),
 ]
 
-# Allowlists por fabricante (SOLO permitidos, sin bloqueo asociado).
-ALLOW_LISTS = ["microsoft", "apple", "whatsapp", "youtube"]
+# Allowlists sin bloqueo asociado (SOLO permitidos): fabricantes + bancos.
+# Se publican como <name>-allow.txt (Pi-hole) y unifi/<name>-allow.txt (UniFi).
+ALLOW_LISTS = ["microsoft", "apple", "whatsapp", "youtube", "banks"]
 
-# Todos los .txt de allowlist (categoria + fabricante): el bulk los respeta.
+# Etiqueta humana para el encabezado (el nombre de archivo sigue en ingles).
+ALLOW_TITLES = {"banks": "bancos"}
+
+# Todos los .txt de allowlist (categoria + fabricante + bancos): el bulk los respeta.
 ALLOW_FILES = [f"{L['key']}-allow.txt" for L in LISTS] + [f"{n}-allow.txt" for n in ALLOW_LISTS]
 
 def write_vendor_allows(now):
-    """Allowlists por fabricante -> <vendor>-allow.txt (Pi-hole) y
-    unifi/<vendor>-allow.txt (+ -inline.txt con ';'). Sin comentarios en UniFi."""
+    """Allowlists sin bloqueo (fabricantes + bancos) -> <name>-allow.txt (Pi-hole)
+    y unifi/<name>-allow.txt (+ -inline.txt con ';'). Sin comentarios en UniFi."""
     outdir = ROOT / "unifi"
     outdir.mkdir(exist_ok=True)
     for name in ALLOW_LISTS:
+        label = ALLOW_TITLES.get(name, name)
         doms = sorted(load_list(f"data/custom/{name}-allow"))
-        head = f"""# Title: Centinela ThreatList - allowlist {name}
+        head = f"""# Title: Centinela ThreatList - allowlist {label}
 #
-# Dominios PERMITIDOS ({name}). Formato: uno por linea.
+# Dominios PERMITIDOS ({label}). Formato: uno por linea.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
 # Date: {now}
