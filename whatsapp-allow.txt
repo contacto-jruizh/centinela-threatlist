@@ -3,7 +3,7 @@
 # Dominios PERMITIDOS (whatsapp). Formato: uno por linea.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 26 October 2026 18:39:48 (UTC)
+# Date: 26 October 2026 18:44:37 (UTC)
 # Dominios: 9
 #
 # Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt
