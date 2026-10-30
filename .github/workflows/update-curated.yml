@@ -39,7 +39,7 @@ jobs:
           python-version: "3.12"
       - name: Generar adlist.txt + hosts + listas IA/streaming/social/vpn + unifi
         run: python3 update.py --curated
-      - uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
+      - uses: stefanzweifel/git-auto-commit-action@d0b01107b5db882071f96de5dd4b54961ea93f4c # v7.2.1
         with:
           commit_message: "chore: update curated adlist [skip ci]"
           file_pattern: "adlist.txt hosts ai-block.txt streaming-block.txt social-block.txt vpn-block.txt malware-block.txt microsoft-allow.txt apple-allow.txt whatsapp-allow.txt youtube-allow.txt banks-allow.txt unifi/*.txt"
