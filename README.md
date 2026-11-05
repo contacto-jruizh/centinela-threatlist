@@ -24,9 +24,9 @@ Listas separadas para **control** y **velocidad**:
 | `unifi/vpn-allow.txt` (+`-inline`) | VPN permitidas, formato UniFi | ~KB | inmediata |
 | `malware-block.txt` | Bloqueo malware/botnet TV Box (Pi-hole Adlist) | ~KB | inmediata |
 | `unifi/malware-block.txt` (+`-inline`) | Malware/botnet a bloquear, formato UniFi | ~KB | inmediata |
-| `gaming-block.txt` | Bloqueo tienda de videojuegos Steam (Pi-hole Adlist) | ~KB | inmediata |
+| `gaming-block.txt` | Bloqueo tiendas de videojuegos Steam/Nintendo (Pi-hole Adlist) | ~KB | inmediata |
 | `gaming-allow.txt` | Whitelist gaming (vacía por ahora) | ~KB | inmediata |
-| `unifi/gaming-block.txt` (+`-inline`) | Tienda Steam a bloquear, formato UniFi | ~KB | inmediata |
+| `unifi/gaming-block.txt` (+`-inline`) | Tiendas gaming a bloquear, formato UniFi | ~KB | inmediata |
 | `microsoft-allow.txt` / `apple-allow.txt` / `whatsapp-allow.txt` / `youtube-allow.txt` / `banks-allow.txt` | Allowlists sin bloqueo: fabricantes y bancos (también `unifi/`) | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
@@ -208,24 +208,34 @@ URLs de UniFi:
 > Además de DNS: el malware usa puertos **1080, 3128, 8118, 8888, 9050** y hace
 > tormentas ARP; conviene bloquear esos puertos y revisar OUI (Allwinner/Rockchip/Amlogic).
 
-## Bloquear tienda de videojuegos (Steam)
+## Bloquear tiendas de videojuegos (Steam / Nintendo)
 
-Bloquea **solo la tienda de Steam** (`store.steampowered.com`) y sus CDNs de
-assets (Akamai y Fastly), sin tocar el cliente ni la comunidad.
+Bloquea las tiendas de **Steam** y **Nintendo**, sin tocar el cliente ni la
+comunidad de Steam.
 
 | Lista | Archivo | Rol |
 |---|---|---|
-| Bloqueo tienda Steam | `gaming-block.txt` | **Adlist** (bloquea) |
+| Bloqueo tiendas gaming | `gaming-block.txt` | **Adlist** (bloquea) |
 | Permitir | `gaming-allow.txt` | **Allowlist** (vacía) |
 
-Dominios: `store.steampowered.com`, `checkout.steampowered.com` y los CDNs
+**Steam:** `store.steampowered.com`, `checkout.steampowered.com` y los CDNs
 `store|shared|cdn|video|community|clan|avatars` en `akamai.steamstatic.com` y
 `fastly.steamstatic.com`.
 
-> **No se bloquean** `login.steampowered.com` ni `api.steampowered.com`: son
-> compartidos por toda la plataforma (login, cliente, comunidad) y romperían
-> Steam completo, no solo la tienda. Los CDNs compartidos sí pueden afectar
-> carátulas/avatares del cliente; para evitarlo, permite el CDN en
+**Nintendo:** `www.nintendo.com`, `accounts.nintendo.com`,
+`m-lp1.baas.nintendo.com`, `click.ccg.nintendo.com` y
+`image.ccg.nintendo.com`.
+
+> **Steam:** no se bloquean `login.steampowered.com` ni `api.steampowered.com`:
+> son compartidos por toda la plataforma (login, cliente, comunidad) y
+> romperían Steam completo, no solo la tienda. Los CDNs compartidos sí pueden
+> afectar carátulas/avatares del cliente; para evitarlo, permite el CDN en
+> `gaming-allow.txt`.
+>
+> **Nintendo:** `accounts.nintendo.com` **sí** está bloqueado (pedido
+> explícito). Es el login de toda la cuenta Nintendo (web, eShop, My Nintendo
+> y servicios de Switch), no solo de la tienda: iniciar sesión dejará de
+> funcionar. Si solo quieres tumbar la tienda, permite esa cuenta en
 > `gaming-allow.txt`.
 
 URLs de Pi-hole:

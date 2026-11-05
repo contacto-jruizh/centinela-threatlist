@@ -393,10 +393,11 @@ LISTS = [
     ),
     dict(
         key="gaming", source="data/custom/gaming-hosts", allow="gaming-allow.txt",
-        title="tienda de videojuegos (Steam Store)",
-        desc="# Bloquea la tienda de Steam (store.steampowered.com + checkout) y sus\n"
-             "# CDNs de assets/JS/CSS/video (akamai y fastly). NO bloquea login ni\n"
-             "# api de Steam: son de toda la plataforma (cliente/comunidad/auth).",
+        title="tiendas de videojuegos (Steam / Nintendo)",
+        desc="# Bloquea tiendas de videojuegos: Steam (store + checkout + CDNs\n"
+             "# akamai/fastly) y Nintendo (sitio, eShop y CDNs de marketing).\n"
+             "# En Steam NO se bloquean login ni api (toda la plataforma). En\n"
+             "# Nintendo SI se bloquea accounts.nintendo.com (login de la cuenta).",
         note="# Lo que quieras permitir va en gaming-allow.txt (vacio por ahora).",
     ),
 ]

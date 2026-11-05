@@ -2,10 +2,12 @@
 # Formato: "0.0.0.0 dominio". Se publica como gaming-block.txt (Pi-hole Adlist)
 # y en unifi/gaming-block.txt (formato UniFi).
 #
-# Alcance: SOLO la tienda de Steam (store.steampowered.com) y sus CDNs de
-# assets/JS/CSS/video. NO se bloquean login.steampowered.com ni
-# api.steampowered.com: son de toda la plataforma (cliente, comunidad, auth)
-# y romperian Steam completo, no solo la tienda.
+# Alcance: tiendas de videojuegos. Steam (store + checkout + CDNs) y Nintendo
+# (sitio, eShop y CDNs de marketing). En Steam NO se bloquean
+# login.steampowered.com ni api.steampowered.com: son de toda la plataforma
+# (cliente, comunidad, auth) y romperian Steam completo, no solo la tienda.
+# En Nintendo, accounts.nintendo.com SI se bloquea (pedido explicito): es el
+# login de toda la cuenta Nintendo, no solo la tienda.
 #
 # IMPORTANTE (Pi-hole): match EXACTO. store.steampowered.com NO bloquea los
 # CDNs; por eso se enumeran akamai y fastly (Steam rota entre ambos).
@@ -39,3 +41,15 @@
 0.0.0.0 clan.fastly.steamstatic.com
 0.0.0.0 avatars.akamai.steamstatic.com
 0.0.0.0 avatars.fastly.steamstatic.com
+
+# ===============================================================
+# Nintendo (sitio, eShop y CDNs de marketing)
+# ===============================================================
+# OJO: accounts.nintendo.com es el login de TODA la cuenta Nintendo
+# (web, eShop, My Nintendo y servicios de Switch). Bloquearlo impide
+# iniciar sesion, no solo entrar a la tienda.
+0.0.0.0 accounts.nintendo.com
+0.0.0.0 m-lp1.baas.nintendo.com
+0.0.0.0 click.ccg.nintendo.com
+0.0.0.0 image.ccg.nintendo.com
+0.0.0.0 www.nintendo.com

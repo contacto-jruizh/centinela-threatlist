@@ -1,3 +1,4 @@
+accounts.nintendo.com
 avatars.akamai.steamstatic.com
 avatars.fastly.steamstatic.com
 cdn.akamai.steamstatic.com
@@ -5,8 +6,11 @@ cdn.fastly.steamstatic.com
 checkout.steampowered.com
 clan.akamai.steamstatic.com
 clan.fastly.steamstatic.com
+click.ccg.nintendo.com
 community.akamai.steamstatic.com
 community.fastly.steamstatic.com
+image.ccg.nintendo.com
+m-lp1.baas.nintendo.com
 shared.akamai.steamstatic.com
 shared.fastly.steamstatic.com
 store.akamai.steamstatic.com
@@ -14,3 +18,4 @@ store.fastly.steamstatic.com
 store.steampowered.com
 video.akamai.steamstatic.com
 video.fastly.steamstatic.com
+www.nintendo.com
