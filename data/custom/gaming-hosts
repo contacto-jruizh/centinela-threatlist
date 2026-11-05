@@ -1,0 +1,41 @@
+# gaming-hosts - Centinela: BLOQUEO de tienda de videojuegos (Steam Store)
+# Formato: "0.0.0.0 dominio". Se publica como gaming-block.txt (Pi-hole Adlist)
+# y en unifi/gaming-block.txt (formato UniFi).
+#
+# Alcance: SOLO la tienda de Steam (store.steampowered.com) y sus CDNs de
+# assets/JS/CSS/video. NO se bloquean login.steampowered.com ni
+# api.steampowered.com: son de toda la plataforma (cliente, comunidad, auth)
+# y romperian Steam completo, no solo la tienda.
+#
+# IMPORTANTE (Pi-hole): match EXACTO. store.steampowered.com NO bloquea los
+# CDNs; por eso se enumeran akamai y fastly (Steam rota entre ambos).
+# Estos CDNs tambien sirven caratulas al cliente/comunidad de Steam.
+# Lo que quieras permitir: gaming-allow.txt.
+
+# ===============================================================
+# Tienda / checkout
+# ===============================================================
+0.0.0.0 store.steampowered.com
+0.0.0.0 checkout.steampowered.com
+
+# ===============================================================
+# CDN de la tienda (HTML assets, JS, CSS, imagenes)
+# ===============================================================
+0.0.0.0 store.akamai.steamstatic.com
+0.0.0.0 store.fastly.steamstatic.com
+
+# ===============================================================
+# CDN compartidos usados por la tienda (imagenes, videos, avatares)
+# ===============================================================
+0.0.0.0 shared.akamai.steamstatic.com
+0.0.0.0 shared.fastly.steamstatic.com
+0.0.0.0 cdn.akamai.steamstatic.com
+0.0.0.0 cdn.fastly.steamstatic.com
+0.0.0.0 video.akamai.steamstatic.com
+0.0.0.0 video.fastly.steamstatic.com
+0.0.0.0 community.akamai.steamstatic.com
+0.0.0.0 community.fastly.steamstatic.com
+0.0.0.0 clan.akamai.steamstatic.com
+0.0.0.0 clan.fastly.steamstatic.com
+0.0.0.0 avatars.akamai.steamstatic.com
+0.0.0.0 avatars.fastly.steamstatic.com

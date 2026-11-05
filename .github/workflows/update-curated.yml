@@ -13,6 +13,7 @@ on:
       - "data/custom/social-hosts"
       - "data/custom/vpn-hosts"
       - "data/custom/malware-hosts"
+      - "data/custom/gaming-hosts"
       - "data/custom/microsoft-allow"
       - "data/custom/apple-allow"
       - "data/custom/whatsapp-allow"
@@ -22,6 +23,7 @@ on:
       - "streaming-allow.txt"
       - "social-allow.txt"
       - "vpn-allow.txt"
+      - "gaming-allow.txt"
       - "whitelist.txt"
       - "myhosts"
       - "update.py"
@@ -37,9 +39,9 @@ jobs:
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.12"
-      - name: Generar adlist.txt + hosts + listas IA/streaming/social/vpn + unifi
+      - name: Generar adlist.txt + hosts + listas IA/streaming/social/vpn/gaming/malware + unifi
         run: python3 update.py --curated
       - uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: "chore: update curated adlist [skip ci]"
-          file_pattern: "adlist.txt hosts ai-block.txt streaming-block.txt social-block.txt vpn-block.txt malware-block.txt microsoft-allow.txt apple-allow.txt whatsapp-allow.txt youtube-allow.txt banks-allow.txt unifi/*.txt"
+          file_pattern: "adlist.txt hosts ai-block.txt streaming-block.txt social-block.txt vpn-block.txt malware-block.txt gaming-block.txt gaming-allow.txt microsoft-allow.txt apple-allow.txt whatsapp-allow.txt youtube-allow.txt banks-allow.txt unifi/*.txt"

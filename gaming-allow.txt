@@ -1,0 +1,9 @@
+# gaming-allow - Centinela: WHITELIST de gaming permitido (Allowlist)
+#
+# Dominios que se PERMITEN aunque esten (o puedan estar) en gaming-block.txt.
+# Pi-hole / UniFi: el Allowlist gana siempre al bloqueo.
+#
+# De fabrica esta vacia. Para dejar pasar algo de Steam (por ejemplo, solo los
+# CDNs de imagenes), agrega aqui el dominio, uno por linea.
+#
+# Formato: un dominio por linea.

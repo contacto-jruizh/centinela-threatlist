@@ -4,9 +4,11 @@
 Archivos generados:
   adlist.txt -> SOLO curaduria manual (Pi-hole, ligero, actualizacion inmediata)
   hosts      -> SOLO curaduria manual (formato /etc/hosts, ligero)
-  ai-block.txt / streaming-block.txt / social-block.txt / vpn-block.txt ->
+  ai-block.txt / streaming-block.txt / social-block.txt / vpn-block.txt /
+  malware-block.txt / gaming-block.txt ->
                   bloqueo curado (Pi-hole Adlist) desde data/custom/
-                  {ai,streaming,social,vpn}-hosts, menos el allowlist ({key}-allow.txt)
+                  {ai,streaming,social,vpn,malware,gaming}-hosts, menos el
+                  allowlist ({key}-allow.txt)
   unifi/*.txt  -> mismas listas curadas en formato UniFi (sin IP; por linea y
                   variante -inline.txt separada por ';')
 
@@ -388,6 +390,14 @@ LISTS = [
         desc="# Bloquea IoCs de C2 y fraude publicitario de malware en Android TV\n"
              "# Box genericas. Curado (no pasa por la guarda Tranco).",
         note="# Lo que quieras permitir va en malware-allow.txt (vacio por ahora).",
+    ),
+    dict(
+        key="gaming", source="data/custom/gaming-hosts", allow="gaming-allow.txt",
+        title="tienda de videojuegos (Steam Store)",
+        desc="# Bloquea la tienda de Steam (store.steampowered.com + checkout) y sus\n"
+             "# CDNs de assets/JS/CSS/video (akamai y fastly). NO bloquea login ni\n"
+             "# api de Steam: son de toda la plataforma (cliente/comunidad/auth).",
+        note="# Lo que quieras permitir va en gaming-allow.txt (vacio por ahora).",
     ),
 ]
 

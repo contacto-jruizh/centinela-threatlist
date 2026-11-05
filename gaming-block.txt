@@ -1,0 +1,35 @@
+# Title: Centinela ThreatList - tienda de videojuegos (Steam Store)
+#
+# Bloquea la tienda de Steam (store.steampowered.com + checkout) y sus
+# CDNs de assets/JS/CSS/video (akamai y fastly). NO bloquea login ni
+# api de Steam: son de toda la plataforma (cliente/comunidad/auth).
+#
+# Lo que quieras permitir va en gaming-allow.txt (vacio por ahora).
+# Pi-hole: cada linea es match EXACTO; solo se enumeran subdominios y APIs.
+#
+# Curador: Jesus Ruiz, asesor de cyberseguridad
+# Date: 05 November 2026 21:52:56 (UTC)
+# Dominios bloqueados: 16
+#
+# Pi-hole Adlist (bloqueo):      https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/gaming-block.txt
+# Pi-hole Allowlist (permitir):  https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/gaming-allow.txt
+# UniFi (formato UniFi):         https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/gaming-block.txt
+# Project home page: https://github.com/contacto-jruizh/centinela-threatlist
+#
+# ===============================================================
+0.0.0.0 avatars.akamai.steamstatic.com
+0.0.0.0 avatars.fastly.steamstatic.com
+0.0.0.0 cdn.akamai.steamstatic.com
+0.0.0.0 cdn.fastly.steamstatic.com
+0.0.0.0 checkout.steampowered.com
+0.0.0.0 clan.akamai.steamstatic.com
+0.0.0.0 clan.fastly.steamstatic.com
+0.0.0.0 community.akamai.steamstatic.com
+0.0.0.0 community.fastly.steamstatic.com
+0.0.0.0 shared.akamai.steamstatic.com
+0.0.0.0 shared.fastly.steamstatic.com
+0.0.0.0 store.akamai.steamstatic.com
+0.0.0.0 store.fastly.steamstatic.com
+0.0.0.0 store.steampowered.com
+0.0.0.0 video.akamai.steamstatic.com
+0.0.0.0 video.fastly.steamstatic.com

@@ -24,6 +24,9 @@ Listas separadas para **control** y **velocidad**:
 | `unifi/vpn-allow.txt` (+`-inline`) | VPN permitidas, formato UniFi | ~KB | inmediata |
 | `malware-block.txt` | Bloqueo malware/botnet TV Box (Pi-hole Adlist) | ~KB | inmediata |
 | `unifi/malware-block.txt` (+`-inline`) | Malware/botnet a bloquear, formato UniFi | ~KB | inmediata |
+| `gaming-block.txt` | Bloqueo tienda de videojuegos Steam (Pi-hole Adlist) | ~KB | inmediata |
+| `gaming-allow.txt` | Whitelist gaming (vacía por ahora) | ~KB | inmediata |
+| `unifi/gaming-block.txt` (+`-inline`) | Tienda Steam a bloquear, formato UniFi | ~KB | inmediata |
 | `microsoft-allow.txt` / `apple-allow.txt` / `whatsapp-allow.txt` / `youtube-allow.txt` / `banks-allow.txt` | Allowlists sin bloqueo: fabricantes y bancos (también `unifi/`) | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
@@ -33,6 +36,7 @@ Listas separadas para **control** y **velocidad**:
 Fuentes curadas: `data/custom/hosts` + `blacklist.txt`.
 Listas de IA: `data/custom/ai-hosts` (bloqueo) y `ai-allow.txt` (permitir).
 Listas de streaming: `data/custom/streaming-hosts` (bloqueo) y `streaming-allow.txt`.
+Lista de gaming: `data/custom/gaming-hosts` (bloqueo) y `gaming-allow.txt`.
 Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tranco Top-1M.
 
 ## Nunca bloquear (regla fija)
@@ -203,6 +207,34 @@ URLs de UniFi:
 
 > Además de DNS: el malware usa puertos **1080, 3128, 8118, 8888, 9050** y hace
 > tormentas ARP; conviene bloquear esos puertos y revisar OUI (Allwinner/Rockchip/Amlogic).
+
+## Bloquear tienda de videojuegos (Steam)
+
+Bloquea **solo la tienda de Steam** (`store.steampowered.com`) y sus CDNs de
+assets (Akamai y Fastly), sin tocar el cliente ni la comunidad.
+
+| Lista | Archivo | Rol |
+|---|---|---|
+| Bloqueo tienda Steam | `gaming-block.txt` | **Adlist** (bloquea) |
+| Permitir | `gaming-allow.txt` | **Allowlist** (vacía) |
+
+Dominios: `store.steampowered.com`, `checkout.steampowered.com` y los CDNs
+`store|shared|cdn|video|community|clan|avatars` en `akamai.steamstatic.com` y
+`fastly.steamstatic.com`.
+
+> **No se bloquean** `login.steampowered.com` ni `api.steampowered.com`: son
+> compartidos por toda la plataforma (login, cliente, comunidad) y romperían
+> Steam completo, no solo la tienda. Los CDNs compartidos sí pueden afectar
+> carátulas/avatares del cliente; para evitarlo, permite el CDN en
+> `gaming-allow.txt`.
+
+URLs de Pi-hole:
+- Adlist (bloqueo): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/gaming-block.txt`
+- Allowlist (permitir): `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/gaming-allow.txt`
+
+URLs de UniFi:
+- Bloqueo: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/gaming-block.txt`
+- Permitir: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/gaming-allow.txt`
 
 ## Allowlists sin bloqueo (Microsoft / Apple / WhatsApp / YouTube / bancos)
 
