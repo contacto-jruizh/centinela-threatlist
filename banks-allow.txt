@@ -3,7 +3,7 @@
 # Dominios PERMITIDOS (bancos). Formato: uno por linea.
 #
 # Curador: Jesus Ruiz, asesor de cyberseguridad
-# Date: 05 November 2026 21:52:56 (UTC)
+# Date: 05 November 2026 21:53:09 (UTC)
 # Dominios: 69
 #
 # Pi-hole Allowlist: https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/banks-allow.txt
