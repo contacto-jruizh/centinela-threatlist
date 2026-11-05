@@ -16,6 +16,9 @@ deepl.com
 # Permitir siempre: Adobe
 adobe.com
 
+# Permitir siempre: Cosmotienda (partial: cubre subdominios)
+cosmotienda.com
+
 # Ejemplo:
 # canva.com
 # microsoftonline.com
