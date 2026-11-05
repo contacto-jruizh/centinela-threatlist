@@ -26,3 +26,11 @@
 0.0.0.0 online.motions.click
 # dehuiinvest.com: ataque dirigido (misma campana que biograft).
 0.0.0.0 dehuiinvest.com
+
+# Phishing - 05-nov-2026 (campana biograft)
+# login.energiapd.online: kit "Security check..." con favicon de Microsoft
+# OWA + Cloudflare Turnstile; noindex/nofollow. Credential-harvest M365.
+# Dominio registrado 28-sep-2026 (Hostinger, 1 ano) detras de Cloudflare.
+# Se bloquean el host del enlace y la raiz (Pi-hole: match EXACTO).
+0.0.0.0 login.energiapd.online
+0.0.0.0 energiapd.online
