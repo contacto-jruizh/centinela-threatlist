@@ -402,14 +402,14 @@ LISTS = [
     ),
 ]
 
-# Allowlists sin bloqueo asociado (SOLO permitidos): fabricantes + bancos.
+# Allowlists sin bloqueo asociado (SOLO permitidos): fabricantes + bancos + gobierno.
 # Se publican como <name>-allow.txt (Pi-hole) y unifi/<name>-allow.txt (UniFi).
-ALLOW_LISTS = ["microsoft", "apple", "whatsapp", "youtube", "banks"]
+ALLOW_LISTS = ["microsoft", "apple", "whatsapp", "youtube", "banks", "gobmx"]
 
 # Etiqueta humana para el encabezado (el nombre de archivo sigue en ingles).
-ALLOW_TITLES = {"banks": "bancos"}
+ALLOW_TITLES = {"banks": "bancos", "gobmx": "gobierno de Mexico"}
 
-# Todos los .txt de allowlist (categoria + fabricante + bancos): el bulk los respeta.
+# Todos los .txt de allowlist (categoria + fabricante + bancos + gobierno): el bulk los respeta.
 ALLOW_FILES = [f"{L['key']}-allow.txt" for L in LISTS] + [f"{n}-allow.txt" for n in ALLOW_LISTS]
 
 def write_vendor_allows(now):

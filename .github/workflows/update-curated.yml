@@ -19,6 +19,7 @@ on:
       - "data/custom/whatsapp-allow"
       - "data/custom/youtube-allow"
       - "data/custom/banks-allow"
+      - "data/custom/gobmx-allow"
       - "ai-allow.txt"
       - "streaming-allow.txt"
       - "social-allow.txt"
@@ -44,4 +45,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
         with:
           commit_message: "chore: update curated adlist [skip ci]"
-          file_pattern: "adlist.txt hosts ai-block.txt streaming-block.txt social-block.txt vpn-block.txt malware-block.txt gaming-block.txt gaming-allow.txt microsoft-allow.txt apple-allow.txt whatsapp-allow.txt youtube-allow.txt banks-allow.txt unifi/*.txt"
+          file_pattern: "adlist.txt hosts ai-block.txt streaming-block.txt social-block.txt vpn-block.txt malware-block.txt gaming-block.txt gaming-allow.txt microsoft-allow.txt apple-allow.txt whatsapp-allow.txt youtube-allow.txt banks-allow.txt gobmx-allow.txt unifi/*.txt"

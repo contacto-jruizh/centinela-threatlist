@@ -8,6 +8,12 @@
 
 google.com
 
+# Permitir siempre: Gobierno de Mexico (sufijo publico gob.mx)
+# gob.mx es la zona oficial del gobierno federal y estatal: el allow cubre
+# todos los *.gob.mx (sat.gob.mx, imss.gob.mx, cdmx.gob.mx...). El listado
+# curado de portales vive en gobmx-allow.txt (UniFi no acepta el raiz).
+gob.mx
+
 # Permitir siempre: traduccion / diccionario
 translate.google.com
 rae.es

@@ -27,7 +27,7 @@ Listas separadas para **control** y **velocidad**:
 | `gaming-block.txt` | Bloqueo tiendas de videojuegos Steam/Nintendo (Pi-hole Adlist) | ~KB | inmediata |
 | `gaming-allow.txt` | Whitelist gaming (vacía por ahora) | ~KB | inmediata |
 | `unifi/gaming-block.txt` (+`-inline`) | Tiendas gaming a bloquear, formato UniFi | ~KB | inmediata |
-| `microsoft-allow.txt` / `apple-allow.txt` / `whatsapp-allow.txt` / `youtube-allow.txt` / `banks-allow.txt` | Allowlists sin bloqueo: fabricantes y bancos (también `unifi/`) | ~KB | inmediata |
+| `microsoft-allow.txt` / `apple-allow.txt` / `whatsapp-allow.txt` / `youtube-allow.txt` / `banks-allow.txt` / `gobmx-allow.txt` | Allowlists sin bloqueo: fabricantes, bancos y gobierno de México (también `unifi/`) | ~KB | inmediata |
 | `bulk/ads-trackers.txt` | Agregado: ads/trackers | ~2 MB | mensual |
 | `bulk/malware.txt` | Agregado: malware (URLHaus) | ~10 KB | mensual |
 | `bulk/phishing.txt` | Agregado: phishing | ~10 MB | mensual |
@@ -42,7 +42,7 @@ Fuentes agregadas por categoría (carpeta `bulk/`), con guard anti-FP contra Tra
 ## Nunca bloquear (regla fija)
 
 **WhatsApp, LinkedIn, Telegram, Spotify, Claude, Apple, Microsoft, YouTube,
-Adobe y la banca NUNCA se bloquean.** Cada uno vive en su propia allowlist (un
+Adobe, la banca y el Gobierno de México NUNCA se bloquean.** Cada uno vive en su propia allowlist (un
 dominio = una sola lista), y el generador aplica `whitelist.txt` **+ todas** las
 `*-allow.txt` a las listas `bulk/`, así que ningún feed puede bloquearlos:
 
@@ -56,7 +56,8 @@ dominio = una sola lista), y el generador aplica `whitelist.txt` **+ todas** las
 | Microsoft (sin juegos) | `microsoft-allow.txt` | Office/M365, Outlook, Teams, OneDrive… |
 | YouTube | `youtube-allow.txt` | `youtube.com`, `googlevideo.com`… |
 | Bancos (BBVA, Banorte, Santander…) | `banks-allow.txt` | `bbva.mx`, `bbvanet.com.mx`, `banorte.com`, `santander.com.mx`… |
-| Globales | `whitelist.txt` | `google.com`, `translate.google.com`, `rae.es`, `adobe.com` |
+| Gobierno de México (federal, autónomo y estatal) | `gobmx-allow.txt` | `www.gob.mx`, `curp.gob.mx`, `sat.gob.mx`, `idse.imss.gob.mx`, `cdmx.gob.mx`… |
+| Globales | `whitelist.txt` | `gob.mx` (cubre todo `*.gob.mx`), `google.com`, `translate.google.com`, `rae.es`, `adobe.com` |
 
 > Regla: **un dominio = una sola lista** (UniFi/Pi-hole exigen únicos).
 > `verify_allow_disjoint()` aborta si un dominio se repite entre allowlists.
@@ -246,17 +247,18 @@ URLs de UniFi:
 - Bloqueo: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/gaming-block.txt`
 - Permitir: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/gaming-allow.txt`
 
-## Allowlists sin bloqueo (Microsoft / Apple / WhatsApp / YouTube / bancos)
+## Allowlists sin bloqueo (Microsoft / Apple / WhatsApp / YouTube / bancos / gobierno)
 
 Listas de **solo permitidos** para subir a UniFi (o Pi-hole), sin bloqueo asociado:
 
-| Fabricante | Contenido | Excluye |
+| Sector | Contenido | Excluye |
 |---|---|---|
 | Microsoft | M365/Office (login, Office, Outlook, Teams, SharePoint, OneDrive, Graph, Copilot) | **juegos/Xbox** (xbox.com, xboxlive.com, minecraft.net…) |
 | Apple | iCloud, App Store/iTunes, push, updates, cuenta | **Apple TV** (`tv.apple.com`) |
 | WhatsApp | web/app, media (`*.whatsapp.net`), API (Graph) | — |
 | YouTube | web, music, TV, CDN (`googlevideo.com`) | — |
 | Bancos | BBVA (web, app, bbvanet, empresas, plataformas/openweb) + Banorte, Santander, Banamex/Citibanamex, HSBC, Scotiabank, Inbursa, Azteca, BanCoppel, Bienestar, Afirme, Banregio, Monex, Actinver, BVE, Compartamos, Multiva, Nu, Hey, Klar, Mercado Pago, Amex, Citi, Banxico, BofA, Chase, Wells Fargo | — |
+| Gobierno de México | Portal gob.mx, CURP, SAT/SAT ID, IMSS/IDSE, ISSSTE, FOVISSSTE, Infonavit, CFE, Pemex, Hacienda, Economía, Profeco, Condusef, SEP, Salud, IMSS-Bienestar, INEGI, INE, IFT, COFECE, FGR, SCJN, Senado, Diputados, INM, Aduanas y los 32 portales estatales | — (no se bloquea ningún sitio oficial) |
 
 URLs UniFi (formato UniFi; también `-inline.txt` con `;`):
 - Microsoft: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/microsoft-allow.txt`
@@ -264,6 +266,7 @@ URLs UniFi (formato UniFi; también `-inline.txt` con `;`):
 - WhatsApp: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/whatsapp-allow.txt`
 - YouTube: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/youtube-allow.txt`
 - Bancos: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/banks-allow.txt`
+- Gobierno de México: `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/gobmx-allow.txt`
 
 URLs Pi-hole (Allowlist):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/microsoft-allow.txt`
@@ -271,10 +274,11 @@ URLs Pi-hole (Allowlist):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/youtube-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/banks-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/gobmx-allow.txt`
 
 > Editar fuentes: `data/custom/microsoft-allow`, `data/custom/apple-allow`,
 > `data/custom/whatsapp-allow`, `data/custom/youtube-allow`,
-> `data/custom/banks-allow` (un dominio por línea) y correr
+> `data/custom/banks-allow`, `data/custom/gobmx-allow` (un dominio por línea) y correr
 > `update.py --curated` (y `--noupdate` si quieres re-restar el bulk).
 
 ## Usar en Pi-hole
@@ -331,10 +335,12 @@ contrario), Pi-hole usa el **Allowlist / Antilist**:
    - Por fabricante: `microsoft-allow.txt`, `apple-allow.txt`, `whatsapp-allow.txt`
      y `youtube-allow.txt` (fuentes en `data/custom/`).
    - Por sector: `banks-allow.txt` (bancos: BBVA, Banorte, Santander…;
-     fuente `data/custom/banks-allow`).
+     fuente `data/custom/banks-allow`) y `gobmx-allow.txt` (Gobierno de México;
+     fuente `data/custom/gobmx-allow`). El raíz `gob.mx` va en `whitelist.txt`
+     para cubrir todo `*.gob.mx`.
 2. Añade el dominio (uno por línea) y regenera:
    ```bash
-   python3 update.py --curated     # ai/streaming/social/vpn + fabricantes + bancos
+   python3 update.py --curated     # ai/streaming/social/vpn + fabricantes + bancos + gobierno
    python3 update.py --noupdate    # solo si tocaste whitelist.txt (afecta bulk/)
    ```
 3. En Pi-hole v6, súbelo como **Allowlist** (lista suscrita), o pega los dominios
@@ -351,6 +357,7 @@ URLs de Allowlist (Pi-hole):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/whatsapp-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/youtube-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/banks-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/gobmx-allow.txt`
 
 > Regla: **un dominio = una sola lista** (UniFi/Pi-hole exigen únicos).
 > `verify_allow_disjoint()` aborta si un dominio aparece en dos listas de allow.
@@ -393,6 +400,8 @@ una sola línea separados por `;`**. La carpeta `unifi/` trae las mismas listas
 | `unifi/malware-block-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 | `unifi/banks-allow.txt` | un dominio por línea | pegar en la lista **Allow** (bancos) |
 | `unifi/banks-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
+| `unifi/gobmx-allow.txt` | un dominio por línea | pegar en la lista **Allow** (gobierno) |
+| `unifi/gobmx-allow-inline.txt` | una línea separada por `;` | pegar en el campo de dominio |
 
 Ejemplo (formato inline):
 ```
@@ -430,6 +439,8 @@ URLs para copiar (todas publicadas):
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/vpn-blacklist-inline.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/banks-allow.txt`
 - `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/banks-allow-inline.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/gobmx-allow.txt`
+- `https://raw.githubusercontent.com/contacto-jruizh/centinela-threatlist/main/unifi/gobmx-allow-inline.txt`
 
 > Si tu versión de UniFi solo tiene un campo de texto, usa los `*-inline.txt`
 > (una sola línea con `;`); si admite pegar varias líneas, usa los normales.

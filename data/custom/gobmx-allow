@@ -1,0 +1,133 @@
+# gobmx-allow - Centinela: ALLOWLIST Gobierno de Mexico (permitir siempre)
+# Formato: un dominio por linea. Se publica como gobmx-allow.txt (Pi-hole) y
+# unifi/gobmx-allow.txt (+ -inline.txt con ';') para UniFi.
+#
+# Objetivo: portales y servicios oficiales del Gobierno de Mexico (federales,
+# autonomos y estatales). Un dominio = una sola lista: NO duplicar en
+# whitelist.txt ni en otras *-allow.
+# El generador aplica esta allowlist al bulk (ningun feed puede bloquearlos).
+#
+# NOTA: gob.mx es un sufijo publico (Public Suffix List), no un dominio
+# registrable. Por eso NO se incluye el raiz aqui (UniFi lo rechaza); el raiz
+# vive en whitelist.txt (Pi-hole, match parcial: cubre todo *.gob.mx) y en esta
+# lista se enumeran los subdominios oficiales. Revisado/verificado por DNS y
+# HTTP el 18-nov-2026.
+
+# --- Nucleo / portal gob.mx ---
+www.gob.mx
+api.gob.mx
+datos.gob.mx
+cdn.datos.gob.mx
+framework-gb.cdn.gob.mx
+transparencia.gob.mx
+buengobierno.gob.mx
+alertadores.buengobierno.gob.mx
+sidec.buengobierno.gob.mx
+denuncias.gob.mx
+ordenjuridico.gob.mx
+
+# --- Identidad, hacienda y tramites clave ---
+curp.gob.mx
+sat.gob.mx
+satid.sat.gob.mx
+hacienda.gob.mx
+economia.gob.mx
+condusef.gob.mx
+profeco.gob.mx
+impi.gob.mx
+cnbv.gob.mx
+consar.gob.mx
+aduanas.gob.mx
+migracion.gob.mx
+sepomex.gob.mx
+
+# --- Seguridad social, vivienda y trabajo ---
+imss.gob.mx
+idse.imss.gob.mx
+issste.gob.mx
+fovissste.gob.mx
+pensionissste.gob.mx
+infonavit.org.mx
+fonacot.gob.mx
+empleo.gob.mx
+stps.gob.mx
+inapam.gob.mx
+
+# --- Salud y deporte ---
+salud.gob.mx
+imssbienestar.gob.mx
+insp.mx
+conade.gob.mx
+
+# --- Educacion y cultura ---
+sep.gob.mx
+cultura.gob.mx
+inah.gob.mx
+inba.gob.mx
+bellasartes.gob.mx
+
+# --- Energia, medio ambiente y proteccion civil ---
+cfe.mx
+pemex.com
+semarnat.gob.mx
+conagua.gob.mx
+cenapred.gob.mx
+
+# --- Seguridad, justicia y transparencia ---
+sspc.gob.mx
+defensa.gob.mx
+semar.gob.mx
+fgr.org.mx
+cndh.org.mx
+scjn.gob.mx
+tfja.gob.mx
+cjf.gob.mx
+te.gob.mx
+
+# --- Poderes federales y relaciones exteriores ---
+presidencia.gob.mx
+senado.gob.mx
+diputados.gob.mx
+sre.gob.mx
+
+# --- Organismos autonomos y estadistica ---
+inegi.org.mx
+ine.mx
+ift.org.mx
+cofece.mx
+sectur.gob.mx
+visitmexico.com
+
+# --- Portales estatales (32 entidades) ---
+aguascalientes.gob.mx
+bajacalifornia.gob.mx
+bcs.gob.mx
+campeche.gob.mx
+cdmx.gob.mx
+chiapas.gob.mx
+chihuahua.gob.mx
+coahuila.gob.mx
+colima.gob.mx
+durango.gob.mx
+edomex.gob.mx
+guanajuato.gob.mx
+guerrero.gob.mx
+hidalgo.gob.mx
+jalisco.gob.mx
+michoacan.gob.mx
+morelos.gob.mx
+nayarit.gob.mx
+nl.gob.mx
+oaxaca.gob.mx
+puebla.gob.mx
+queretaro.gob.mx
+qroo.gob.mx
+sinaloa.gob.mx
+slp.gob.mx
+sonora.gob.mx
+tabasco.gob.mx
+tamaulipas.gob.mx
+tlaxcala.gob.mx
+veracruz.gob.mx
+yucatan.gob.mx
+zacatecas.gob.mx
